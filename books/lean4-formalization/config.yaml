@@ -1,0 +1,36 @@
+title: "Lean 4で始める数学の形式化：入門から確率微分方程式まで"
+summary: |
+  Lean 4 と Mathlib を使って、次元定理・位相空間・測度論・確率微分方程式を
+  段階的に形式化する実践的シリーズ。全4巻構成。
+  各章に練習問題（解答例付き）・つまずきQ&A・読者レベル別補足コラムを完備。
+topics:
+  - lean
+  - mathlib
+  - mathematics
+  - theorem-proving
+published: false
+price: 4900
+chapters:
+  - intro
+  - part1
+  - ch01
+  - ch02
+  - ch03
+  - ch04
+  - ch05
+  - part2
+  - ch06
+  - ch07
+  - ch08
+  - ch09
+  - ch10
+  - ch11
+  - part3
+  - ch12
+  - ch13
+  - ch14
+  - ch15
+  - ch16
+  - ch17
+  - ch18
+  - part4
