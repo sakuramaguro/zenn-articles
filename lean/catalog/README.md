@@ -4,16 +4,16 @@
 
 前回の一次点検は各ブロックに import Mathlib を補って独立実行した結果です。本文の前提を引き継がないため、正常終了もエラーも完成度の判定には使いません。
 
-第0段階のビルド対象は [README](../README.md) を参照してください。断片の文脈指定は組立て方の指示で、組立て済み・証明済みを意味しません。
+現在のビルド対象は [README](../README.md) を参照してください。断片の文脈指定は組立て方の指示で、組立て済み・証明済みを意味しません。
 
 生のコードは `python3 scripts/catalog.py extract` で `.generated/raw/ID.lean` に、importも含めて原文どおり抽出されます。
 
 | 分類 | 数 |
 |---|---:|
-| 完成例・実行コマンド | 289 |
+| 完成例・実行コマンド | 291 |
 | 前後に続く断片 | 79 |
 | 意図的なエラー例 | 12 |
-| 練習問題・未完成の骨格 | 26 |
+| 練習問題・未完成の骨格 | 27 |
 | 説明用の抜粋 | 15 |
 
 対応表と機械可読データは章ごとに分けています。原稿全体の版とファイル一覧は [index.json](index.json) に記録しています。
@@ -22,9 +22,9 @@
 |---|---:|---|---|
 | [ch01.md](../../books/lean4-formalization/ch01.md) | 14 | [対応表](chapters/ch01.md) | [JSON](chapters/ch01.json) |
 | [ch02.md](../../books/lean4-formalization/ch02.md) | 19 | [対応表](chapters/ch02.md) | [JSON](chapters/ch02.json) |
-| [ch03.md](../../books/lean4-formalization/ch03.md) | 22 | [対応表](chapters/ch03.md) | [JSON](chapters/ch03.json) |
+| [ch03.md](../../books/lean4-formalization/ch03.md) | 24 | [対応表](chapters/ch03.md) | [JSON](chapters/ch03.json) |
 | [ch04.md](../../books/lean4-formalization/ch04.md) | 23 | [対応表](chapters/ch04.md) | [JSON](chapters/ch04.json) |
-| [ch05.md](../../books/lean4-formalization/ch05.md) | 30 | [対応表](chapters/ch05.md) | [JSON](chapters/ch05.json) |
+| [ch05.md](../../books/lean4-formalization/ch05.md) | 31 | [対応表](chapters/ch05.md) | [JSON](chapters/ch05.json) |
 | [ch06.md](../../books/lean4-formalization/ch06.md) | 48 | [対応表](chapters/ch06.md) | [JSON](chapters/ch06.json) |
 | [ch07.md](../../books/lean4-formalization/ch07.md) | 41 | [対応表](chapters/ch07.md) | [JSON](chapters/ch07.json) |
 | [ch08.md](../../books/lean4-formalization/ch08.md) | 36 | [対応表](chapters/ch08.md) | [JSON](chapters/ch08.json) |

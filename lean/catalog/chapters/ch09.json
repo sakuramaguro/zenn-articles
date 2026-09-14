@@ -683,7 +683,7 @@
     "source": "books/lean4-formalization/ch09.md",
     "line": 624,
     "end": 631,
-    "sha256": "ca6947795b5e22ad8af5e7e7a6f0e881661a99782bf6989e689378d486d4a591",
+    "sha256": "bac9a36000f2b3f6c54c8490270598633a70788c99fdf4c14749c43a01158430",
     "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
@@ -708,9 +708,13 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch09_020",
+      "source_sha256": "ca6947795b5e22ad8af5e7e7a6f0e881661a99782bf6989e689378d486d4a591",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage1a_status": "revised_not_certified"
   },
   {
     "id": "ch09_021",
@@ -955,7 +959,7 @@
     "source": "books/lean4-formalization/ch09.md",
     "line": 777,
     "end": 785,
-    "sha256": "6d58fa139c73d16fa204d3bf5986d257c4df08077d8a6a30d6b2f8e0cd15887f",
+    "sha256": "29fc2f36f3908a55043e36650e9b93ea5674ecc13b964468668ba9d55da322d1",
     "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
@@ -980,8 +984,12 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch09_028",
+      "source_sha256": "6d58fa139c73d16fa204d3bf5986d257c4df08077d8a6a30d6b2f8e0cd15887f",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage1a_status": "revised_not_certified"
   }
 ]

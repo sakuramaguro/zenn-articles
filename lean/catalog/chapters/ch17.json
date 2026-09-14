@@ -486,7 +486,7 @@
     "source": "books/lean4-formalization/ch17.md",
     "line": 484,
     "end": 500,
-    "sha256": "7248911926e2e01e7f168f037f5575ebd339ddc6607748db375c82fa2c03eb71",
+    "sha256": "4f134188f25f78e99d3b8aabdc38092a93fd225a0bbae1418872d1c396d7b67f",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
@@ -522,11 +522,15 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_012",
+      "source_sha256": "7248911926e2e01e7f168f037f5575ebd339ddc6607748db375c82fa2c03eb71",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P2-033"
-    ]
+    ],
+    "stage1a_status": "revised_not_certified"
   },
   {
     "id": "ch17_013",

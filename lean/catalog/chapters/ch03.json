@@ -4,7 +4,7 @@
     "source": "books/lean4-formalization/ch03.md",
     "line": 15,
     "end": 37,
-    "sha256": "648f8a20305d69a01d7fb4cbf244196241b99072fca08892d9c55238e08a23b5",
+    "sha256": "34ffd89fc32a7c9d12e3159a1a1093cfa662485def3868a5f6c56b9181b7834c",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.0 本章のゴール ──── ゴール逆算型アプローチ",
     "category": "complete",
     "role": "本文",
@@ -21,14 +21,20 @@
     "fixture": ".generated/raw/ch03_001.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_001",
+      "source_sha256": "648f8a20305d69a01d7fb4cbf244196241b99072fca08892d9c55238e08a23b5",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-02"
+    ],
+    "stage1a_status": "compiled_source"
   },
   {
     "id": "ch03_002",
@@ -106,12 +112,12 @@
     "id": "ch03_004",
     "source": "books/lean4-formalization/ch03.md",
     "line": 117,
-    "end": 119,
-    "sha256": "b971d0d0a56f60fcc3fc4a7a6102af332e4ac4e48498a87fcdbc796163b8d83c",
+    "end": 122,
+    "sha256": "f6ea715f6de5e48bc3b52ba35fe2bbe3b9c0b17f9c46e3812c66cc3f99bbcac2",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.1 `rfl` の罠 ──── 定義的等値という最初の壁",
     "category": "expected_error",
     "role": "本文",
-    "reason": "エラーを観察・説明するために提示されたコード。実際の失敗理由は修正段階で照合する。",
+    "reason": "偽の自然数等式に対するrflとnorm_numの失敗を観察する例。段階1-Aで失敗理由を照合する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
@@ -123,7 +129,9 @@
         "line": "import Mathlib"
       }
     ],
-    "own_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
     "fixture": ".generated/raw/ch03_004.lean",
     "validation_mode": "assert_expected_diagnostic",
     "repair_stage": 2,
@@ -132,17 +140,60 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_004",
+      "source_sha256": "b971d0d0a56f60fcc3fc4a7a6102af332e4ac4e48498a87fcdbc796163b8d83c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P1-01"
-    ]
+    ],
+    "stage1a_status": "diagnostic_case"
   },
   {
     "id": "ch03_005",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 138,
-    "end": 146,
+    "line": 128,
+    "end": 133,
+    "sha256": "aa43e75b59ca9b2c491a1c30eadfdb4fe6fd0f4208b17e125902823d25a60fb6",
+    "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.1 `rfl` の罠 ──── 定義的等値という最初の壁",
+    "category": "complete",
+    "role": "本文",
+    "reason": "偽の等式の否定を証明する完成例。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックを独立したファイルで実行する。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch03_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch03_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": true,
+    "stage0_status": "not_present_in_stage0",
+    "prior_probe": {
+      "status": "not_run",
+      "sorry_warning": false,
+      "method": "Added in stage 1-A; no stage-0 probe"
+    },
+    "issue_ids": [
+      "P1-01"
+    ],
+    "stage1a_status": "compiled_source"
+  },
+  {
+    "id": "ch03_006",
+    "source": "books/lean4-formalization/ch03.md",
+    "line": 152,
+    "end": 160,
     "sha256": "14e2000c07654126ccd8051c2bf8ff3b35492698f7e8722885905f0c38dabd57",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.2 最大の失敗 ──── AIへの「丸投げ」とハルシネーションの地獄",
     "category": "expected_error",
@@ -162,7 +213,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch03_005.lean",
+    "fixture": ".generated/raw/ch03_006.lean",
     "validation_mode": "assert_expected_diagnostic",
     "repair_stage": 2,
     "priority_one": false,
@@ -170,16 +221,19 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_005",
+      "source_sha256": "14e2000c07654126ccd8051c2bf8ff3b35492698f7e8722885905f0c38dabd57",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_006",
+    "id": "ch03_007",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 176,
-    "end": 179,
-    "sha256": "e22a90c88842b197d88e2956c858e8e83c4b34ced379735bc3819aa7731ae43c",
+    "line": 190,
+    "end": 193,
+    "sha256": "21e4fc832af657be1daa9ca11006bf1271133c8317c827f363d579b546d915f1",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.2 最大の失敗 ──── AIへの「丸投げ」とハルシネーションの地獄",
     "category": "complete",
     "role": "本文",
@@ -187,7 +241,7 @@
     "contains_sorry": false,
     "context": {
       "blocks": [
-        "ch03_005"
+        "ch03_006"
       ],
       "instruction": "add_five の def だけを先に置く。誤った #eval は継承しない。"
     },
@@ -198,7 +252,7 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch03_006.lean",
+    "fixture": ".generated/raw/ch03_007.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
@@ -206,15 +260,19 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_006",
+      "source_sha256": "e22a90c88842b197d88e2956c858e8e83c4b34ced379735bc3819aa7731ae43c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage1a_status": "revised_not_certified"
   },
   {
-    "id": "ch03_007",
+    "id": "ch03_008",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 259,
-    "end": 263,
+    "line": 273,
+    "end": 277,
     "sha256": "ad56e11c24b164b2cfb5a43dfa3aa50f4de3956bb2a39e5bc1e19d80c9822a07",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.3 Mathlibの定理が見つからない ──── `Unknown constant` の絶望",
     "category": "expected_error",
@@ -234,7 +292,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch03_007.lean",
+    "fixture": ".generated/raw/ch03_008.lean",
     "validation_mode": "assert_expected_diagnostic",
     "repair_stage": 2,
     "priority_one": false,
@@ -242,15 +300,18 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_007",
+      "source_sha256": "ad56e11c24b164b2cfb5a43dfa3aa50f4de3956bb2a39e5bc1e19d80c9822a07",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_008",
+    "id": "ch03_009",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 284,
-    "end": 290,
+    "line": 298,
+    "end": 304,
     "sha256": "be0c95056975eb326492554c7dcd546c0f7dceef24e4af0acba78329c0acab45",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.3 Mathlibの定理が見つからない ──── `Unknown constant` の絶望 / ### 救世主となる内蔵タクティク `exact?` と `apply?`",
     "category": "complete",
@@ -270,7 +331,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch03_008.lean",
+    "fixture": ".generated/raw/ch03_009.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
@@ -278,15 +339,18 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_008",
+      "source_sha256": "be0c95056975eb326492554c7dcd546c0f7dceef24e4af0acba78329c0acab45",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_009",
+    "id": "ch03_010",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 305,
-    "end": 308,
+    "line": 319,
+    "end": 322,
     "sha256": "5b48f4956dbd0fc73e9e5b055046743f5cb15c81bb8f033ac17b9a5452e493f2",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.3 Mathlibの定理が見つからない ──── `Unknown constant` の絶望 / ### 救世主となる内蔵タクティク `exact?` と `apply?`",
     "category": "fragment",
@@ -295,7 +359,7 @@
     "contains_sorry": false,
     "context": {
       "blocks": [
-        "ch03_008"
+        "ch03_009"
       ],
       "instruction": "test の exact? を置換し、a・b を引き継ぐ。"
     },
@@ -306,7 +370,7 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch03_009.lean",
+    "fixture": ".generated/raw/ch03_010.lean",
     "validation_mode": "assemble_then_compile",
     "repair_stage": 2,
     "priority_one": false,
@@ -314,15 +378,18 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_009",
+      "source_sha256": "5b48f4956dbd0fc73e9e5b055046743f5cb15c81bb8f033ac17b9a5452e493f2",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_010",
+    "id": "ch03_011",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 333,
-    "end": 340,
+    "line": 347,
+    "end": 354,
     "sha256": "ffb37d27ff760a764369430912a248d7ec7d0890728a30426aa1ded4fee58091",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.4 型クラスの沼 ──── `failed to synthesize instance` を解剖します",
     "category": "expected_error",
@@ -342,7 +409,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch03_010.lean",
+    "fixture": ".generated/raw/ch03_011.lean",
     "validation_mode": "assert_expected_diagnostic",
     "repair_stage": 2,
     "priority_one": false,
@@ -350,15 +417,18 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_010",
+      "source_sha256": "ffb37d27ff760a764369430912a248d7ec7d0890728a30426aa1ded4fee58091",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_011",
+    "id": "ch03_012",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 360,
-    "end": 366,
+    "line": 374,
+    "end": 380,
     "sha256": "17cef8330f92173869bc8e8865d846c453b8630b4904ba03952d117130153b76",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.4 型クラスの沼 ──── `failed to synthesize instance` を解剖します",
     "category": "complete",
@@ -376,7 +446,7 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch03_011.lean",
+    "fixture": ".generated/raw/ch03_012.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
@@ -384,16 +454,19 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_011",
+      "source_sha256": "17cef8330f92173869bc8e8865d846c453b8630b4904ba03952d117130153b76",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_012",
+    "id": "ch03_013",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 412,
-    "end": 421,
-    "sha256": "24d7140dd596a1eca45678b8a2b3cdbf1a220a4cf368436f93c685d53308254c",
+    "line": 426,
+    "end": 435,
+    "sha256": "f8a3c86eff0191a54083cdeb0adc75905136d46841a1447f944e112cda084222",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.5 `sorry` ──── 絶望を先送りにする技術",
     "category": "unfinished",
     "role": "本文",
@@ -412,32 +485,38 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch03_012.lean",
+    "fixture": ".generated/raw/ch03_013.lean",
     "validation_mode": "track_holes_separately",
     "repair_stage": 2,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_012",
+      "source_sha256": "24d7140dd596a1eca45678b8a2b3cdbf1a220a4cf368436f93c685d53308254c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-02"
+    ],
+    "stage1a_status": "revised_not_certified"
   },
   {
-    "id": "ch03_013",
+    "id": "ch03_014",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 436,
-    "end": 442,
-    "sha256": "df001215a13abdd1197322a7ccddfad59fd4bf9e8c286555a931a9f8cf8bbf60",
+    "line": 450,
+    "end": 455,
+    "sha256": "587095b3e3342cb25e01d19f2068aff39b475fd0718e34021bb24fb72dcf0909",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.5 `sorry` ──── 絶望を先送りにする技術",
-    "category": "complete",
+    "category": "unfinished",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
-    "contains_sorry": false,
+    "reason": "Falseさえsorryで仮置きできることを示す未証明の例。完成証明には含めない。",
+    "contains_sorry": true,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "このブロックを独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -446,23 +525,70 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch03_013.lean",
+    "fixture": ".generated/raw/ch03_014.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": true,
+    "stage0_status": "not_present_in_stage0",
+    "prior_probe": {
+      "status": "not_run",
+      "sorry_warning": false,
+      "method": "Added in stage 1-A; no stage-0 probe"
+    },
+    "issue_ids": [
+      "P1-02"
+    ],
+    "stage1a_status": "diagnostic_case"
+  },
+  {
+    "id": "ch03_015",
+    "source": "books/lean4-formalization/ch03.md",
+    "line": 468,
+    "end": 478,
+    "sha256": "1174019e386672eaa0b2f685a1443dfaa1c3a5f9198623caa8b7cbdd7890a3cc",
+    "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.5 `sorry` ──── 絶望を先送りにする技術",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch03_013"
+      ],
+      "instruction": "骨格版hard_proofをこの完成版へ置き換える。同じファイルに両方の宣言を並べない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch03_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch03_015.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_013",
+      "source_sha256": "df001215a13abdd1197322a7ccddfad59fd4bf9e8c286555a931a9f8cf8bbf60",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-02"
+    ],
+    "stage1a_status": "compiled_source"
   },
   {
-    "id": "ch03_014",
+    "id": "ch03_016",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 500,
-    "end": 504,
+    "line": 542,
+    "end": 546,
     "sha256": "933677da887d8248c097c6afacdfa4cb2cae8e7667ba9c5d9aaa72f27e05ec95",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
     "category": "expected_error",
@@ -480,7 +606,7 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch03_014.lean",
+    "fixture": ".generated/raw/ch03_016.lean",
     "validation_mode": "assert_expected_diagnostic",
     "repair_stage": 2,
     "priority_one": false,
@@ -488,15 +614,18 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_014",
+      "source_sha256": "933677da887d8248c097c6afacdfa4cb2cae8e7667ba9c5d9aaa72f27e05ec95",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_015",
+    "id": "ch03_017",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 518,
-    "end": 522,
+    "line": 560,
+    "end": 564,
     "sha256": "b264801941a1d267b7cd5d96593d37b9e49d92df7f79873b91e8f6428bcb4e96",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
@@ -514,7 +643,7 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch03_015.lean",
+    "fixture": ".generated/raw/ch03_017.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
@@ -522,15 +651,18 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_015",
+      "source_sha256": "b264801941a1d267b7cd5d96593d37b9e49d92df7f79873b91e8f6428bcb4e96",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_016",
+    "id": "ch03_018",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 531,
-    "end": 534,
+    "line": 573,
+    "end": 576,
     "sha256": "f596dd0601558bdff581b691a0249ee315521c6bc3c2d2dd230e4c96a38aa74b",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
@@ -548,7 +680,7 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch03_016.lean",
+    "fixture": ".generated/raw/ch03_018.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
@@ -556,15 +688,18 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_016",
+      "source_sha256": "f596dd0601558bdff581b691a0249ee315521c6bc3c2d2dd230e4c96a38aa74b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_017",
+    "id": "ch03_019",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 544,
-    "end": 552,
+    "line": 586,
+    "end": 594,
     "sha256": "c5af43ae37ffd4693af5af26e9cbb504ceeae88c26143f69c3f043ca970e7a20",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
     "category": "expected_error",
@@ -584,7 +719,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch03_017.lean",
+    "fixture": ".generated/raw/ch03_019.lean",
     "validation_mode": "assert_expected_diagnostic",
     "repair_stage": 2,
     "priority_one": false,
@@ -592,15 +727,18 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_017",
+      "source_sha256": "c5af43ae37ffd4693af5af26e9cbb504ceeae88c26143f69c3f043ca970e7a20",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch03_018",
+    "id": "ch03_020",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 566,
-    "end": 576,
+    "line": 608,
+    "end": 618,
     "sha256": "72ed07d8ce775694b890c66f57f2f32e3c7877d4288d24fa82a8c6518e97316e",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
@@ -620,99 +758,30 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch03_018.lean",
-    "validation_mode": "compile_after_context_review",
-    "repair_stage": 2,
-    "priority_one": false,
-    "stage0_status": "classified_not_certified",
-    "prior_probe": {
-      "status": "pass",
-      "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
-    },
-    "issue_ids": []
-  },
-  {
-    "id": "ch03_019",
-    "source": "books/lean4-formalization/ch03.md",
-    "line": 585,
-    "end": 590,
-    "sha256": "23172fb5b2cc109cb35f92e37027b6e29cdd63a8c7e120a43f8548ce9371c50b",
-    "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
-    "category": "complete",
-    "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
-    "contains_sorry": false,
-    "context": {
-      "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
-    },
-    "preceding_setup": [
-      {
-        "block": "ch03_001",
-        "line": "import Mathlib"
-      }
-    ],
-    "own_setup": [],
-    "fixture": ".generated/raw/ch03_019.lean",
-    "validation_mode": "compile_after_context_review",
-    "repair_stage": 2,
-    "priority_one": false,
-    "stage0_status": "classified_not_certified",
-    "prior_probe": {
-      "status": "error",
-      "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
-    },
-    "issue_ids": [
-      "P2-004"
-    ]
-  },
-  {
-    "id": "ch03_020",
-    "source": "books/lean4-formalization/ch03.md",
-    "line": 600,
-    "end": 607,
-    "sha256": "f7acd2e96f4fc8618bc639cb3816b1b44a2c55a88770317a8fb47acc4cfe1008",
-    "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
-    "category": "unfinished",
-    "role": "問題文",
-    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
-    "contains_sorry": true,
-    "context": {
-      "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
-    },
-    "preceding_setup": [
-      {
-        "block": "ch03_001",
-        "line": "import Mathlib"
-      }
-    ],
-    "own_setup": [
-      "import Mathlib"
-    ],
     "fixture": ".generated/raw/ch03_020.lean",
-    "validation_mode": "track_holes_separately",
+    "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
-      "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_018",
+      "source_sha256": "72ed07d8ce775694b890c66f57f2f32e3c7877d4288d24fa82a8c6518e97316e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
     "id": "ch03_021",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 633,
-    "end": 641,
-    "sha256": "91303abc2bfe114329abdfea3444cf1aa12c438190986f1449675a52e19ab047",
+    "line": 627,
+    "end": 632,
+    "sha256": "23172fb5b2cc109cb35f92e37027b6e29cdd63a8c7e120a43f8548ce9371c50b",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
-    "role": "解答を見る",
+    "role": "別解を見る",
     "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
     "contains_sorry": false,
     "context": {
@@ -732,17 +801,98 @@
     "priority_one": false,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
-      "status": "pass",
+      "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_019",
+      "source_sha256": "23172fb5b2cc109cb35f92e37027b6e29cdd63a8c7e120a43f8548ce9371c50b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P2-004"
+    ]
   },
   {
     "id": "ch03_022",
     "source": "books/lean4-formalization/ch03.md",
-    "line": 650,
-    "end": 654,
+    "line": 642,
+    "end": 649,
+    "sha256": "f7acd2e96f4fc8618bc639cb3816b1b44a2c55a88770317a8fb47acc4cfe1008",
+    "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch03_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch03_022.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_020",
+      "source_sha256": "f7acd2e96f4fc8618bc639cb3816b1b44a2c55a88770317a8fb47acc4cfe1008",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch03_023",
+    "source": "books/lean4-formalization/ch03.md",
+    "line": 675,
+    "end": 683,
+    "sha256": "91303abc2bfe114329abdfea3444cf1aa12c438190986f1449675a52e19ab047",
+    "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch03_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch03_023.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_021",
+      "source_sha256": "91303abc2bfe114329abdfea3444cf1aa12c438190986f1449675a52e19ab047",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch03_024",
+    "source": "books/lean4-formalization/ch03.md",
+    "line": 692,
+    "end": 696,
     "sha256": "cdd6c69bc453e0f319cdd20b8c07085dd02e936e80a51290edf8274cad7c8b5e",
     "section": "# 第3章：Claudeを使った型エラー突破術 〜エラーと友達になる日まで〜 / ## 3.X まとめ ──── 第3章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
@@ -760,7 +910,7 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch03_022.lean",
+    "fixture": ".generated/raw/ch03_024.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
@@ -768,7 +918,10 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch03_022",
+      "source_sha256": "cdd6c69bc453e0f319cdd20b8c07085dd02e936e80a51290edf8274cad7c8b5e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P2-004"

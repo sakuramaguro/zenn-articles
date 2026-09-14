@@ -2,25 +2,25 @@
   "schema_version": 2,
   "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4",
   "source_files": {
-    "books/lean4-formalization/ch01.md": "ea88db95a65a2fe27a73746d3c4880f442f84dc0f4203d16895acf0fe223c806",
+    "books/lean4-formalization/ch01.md": "ad4542fab8e8381cfa3e54d30e3b369772c883b5e9a85c97712753e2b2346cfc",
     "books/lean4-formalization/ch02.md": "ad6ddcfbae0d69cd9e84b33dbd29071976e768e777e7cae0ac5375fbd8a1bd91",
-    "books/lean4-formalization/ch03.md": "1effa0ea4dd2ae7e74001687ea0f41588b9359925792ab1090e49f737315dfe8",
+    "books/lean4-formalization/ch03.md": "faaf16c06b976fed9e66ed1585acd69fe53aad715f96c7f8a879661de3a1809e",
     "books/lean4-formalization/ch04.md": "5bc60cdab428b2b4a71755e5e2782e2b72d4bc7841e541c9019f64b3c53b5f42",
-    "books/lean4-formalization/ch05.md": "340cac84cc97e698fd3a911a21a8c7f9bcbc93c4d4897633399fc8c4753b523b",
+    "books/lean4-formalization/ch05.md": "ff538b400dd9a03c05165cacd5954e6856c85bdd032bc2499255e6398477fe82",
     "books/lean4-formalization/ch06.md": "3ce0ca8df0dfa1606722dca2a276d12a7e9052991a3456566151e27aaea70da2",
     "books/lean4-formalization/ch07.md": "4dad0f05e814657b33ed42371ec786c6ab5434b22522e0b00768550a9260ea8d",
     "books/lean4-formalization/ch08.md": "45e0343efbd2f54a2e7ef51c879e23e6063d7982b981d884334c2ea60578cbba",
-    "books/lean4-formalization/ch09.md": "da515ec436ddd16a18561e27daacce2e028f4e523e6b7e0fef61c428c412f61c",
+    "books/lean4-formalization/ch09.md": "51086ea833532b82118639dd3906e7d9e0de080e254f000f451190448017c761",
     "books/lean4-formalization/ch10.md": "bbe73236a25b6d5ca0599943b4ebaa7e83b13ab5b6662d2c184804c048bcf23d",
-    "books/lean4-formalization/ch11.md": "7664f344d6ec834fec604276a858921a31135d5233d0665353484e9230e08a21",
+    "books/lean4-formalization/ch11.md": "18f32ee9e56ba78fbe91dd6278a36c633d7e3c98a142de23e1beb3f942f3e51e",
     "books/lean4-formalization/ch12.md": "c2f46554f3814772093d491fe00ea4d81026c32cd64730071f375016e95a3820",
     "books/lean4-formalization/ch13.md": "c63425557d9c0942df3308d2f2d05806840d98b7a0586eaea7e2fccfea16e9e3",
     "books/lean4-formalization/ch14.md": "62dfdf9172e7dde715b3cc00a592261489ebdfa6a1e36b34a85cc4a5c070beed",
     "books/lean4-formalization/ch15.md": "e61765b5ff62203519914a0790c970138fcefd7934a9be72d702ac1305d3efed",
-    "books/lean4-formalization/ch16.md": "369ce5e1e3fd908443b5cac07ea9b82276c4a199a0f30a652ee16fce70ae24be",
-    "books/lean4-formalization/ch17.md": "8fcba35218aac8d173e3287d461f11bcef9c5e9b914de5e39ccd5746a36e179b",
+    "books/lean4-formalization/ch16.md": "a0a8abd72b32e76501f208308c40185f9ed172716d126a82826eb4214c922648",
+    "books/lean4-formalization/ch17.md": "f6513d34313c333cdf91c7d2da424cc03ab10ce38053e2951ff4556242343245",
     "books/lean4-formalization/ch18.md": "98f918e479213195209451db6ddee27bf5935b5113abbfb45074abceb87eb554",
-    "books/lean4-formalization/intro.md": "a2716d665875902573f63a9520562fc2af09622c3411095d1f3acc015c76612e",
+    "books/lean4-formalization/intro.md": "5d87e35a466a18a6e494c5607ff58adaed98b9893b17c85adf01af9cea662a64",
     "books/lean4-formalization/part1.md": "cff17d63fcdf75ff8ee5945fcaddafb8eeaace30b3df158437e99df6b2d45113",
     "books/lean4-formalization/part2.md": "2d61c035a8c26060c962eb6de5fc1310022b3495eb4317ae166d62ed6c96200b",
     "books/lean4-formalization/part3.md": "19f116da416dec9e56708170c5739071433b2cf3f1152d6b8e66a9c8cb062af2",
@@ -33,6 +33,22 @@
     },
     {
       "block": "ch05_021",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch03_001",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_005",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_015",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch05_022",
       "module_file": "LeanBook/Chapters/Ch05.lean"
     }
   ],
@@ -56,5 +72,56 @@
     "chapters/ch17.json",
     "chapters/ch18.json",
     "chapters/intro.json"
+  ],
+  "verification_stage": "1-A",
+  "diagnostics": [
+    {
+      "id": "false_equality",
+      "blocks": [
+        "ch03_004"
+      ],
+      "kind": "error",
+      "error_count": 2,
+      "patterns": [
+        "Tactic `rfl` failed",
+        "not definitionally equal",
+        "error: unsolved goals",
+        "⊢ False"
+      ]
+    },
+    {
+      "id": "unfinished_false",
+      "blocks": [
+        "ch03_014"
+      ],
+      "kind": "sorry",
+      "declaration": "unfinished_false"
+    },
+    {
+      "id": "dimension_skeleton",
+      "blocks": [
+        "ch05_004"
+      ],
+      "kind": "sorry",
+      "declaration": "dimension_theorem",
+      "append": "#print axioms dimension_theorem\n"
+    },
+    {
+      "id": "completed_hard_proof",
+      "blocks": [
+        "ch03_015"
+      ],
+      "kind": "pass",
+      "declaration": "hard_proof"
+    },
+    {
+      "id": "completed_dimension",
+      "blocks": [
+        "ch05_021",
+        "ch05_022"
+      ],
+      "kind": "pass",
+      "declaration": "dimension_theorem"
+    }
   ]
 }

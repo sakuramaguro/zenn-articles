@@ -26,4 +26,8 @@ theorem dimension_theorem {K V W : Type*}
   -- No goals ✓
 -- END SOURCE ch05_021
 
+-- BEGIN SOURCE ch05_022
+#print axioms dimension_theorem
+-- END SOURCE ch05_022
+
 end LeanBook.Ch05

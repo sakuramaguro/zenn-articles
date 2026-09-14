@@ -575,7 +575,7 @@
     "source": "books/lean4-formalization/ch16.md",
     "line": 405,
     "end": 416,
-    "sha256": "d8f17b3328a55af1dec50004ea1f48d9e4c4efefbd96e171ef53a385e188d45c",
+    "sha256": "48b4824a0aaf597fe04e8b24b1dc175e25b493f7eefd74cc0d744b1df962493d",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
@@ -611,9 +611,13 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch16_014",
+      "source_sha256": "d8f17b3328a55af1dec50004ea1f48d9e4c4efefbd96e171ef53a385e188d45c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage1a_status": "revised_not_certified"
   },
   {
     "id": "ch16_015",

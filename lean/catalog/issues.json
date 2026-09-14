@@ -3,7 +3,7 @@
     "id": "P1-01",
     "priority": "P1",
     "stage": 1,
-    "status": "planned",
+    "status": "resolved",
     "description": "偽の等式を `norm_num` で証明できるとしている",
     "locations": [
       {
@@ -13,16 +13,22 @@
       }
     ],
     "blocks": [
-      "ch03_004"
+      "ch03_004",
+      "ch03_005"
     ],
     "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
-    "acceptance": "偽の等式をタクティク変更で証明できるという記述を訂正し、否定の完成例をビルドする。"
+    "acceptance": "偽の等式をタクティク変更で証明できるという記述を訂正し、否定の完成例をビルドする。",
+    "resolution": {
+      "stage": "1-A",
+      "record": "STAGE1A.md",
+      "evidence": "catalog/stage1a-verification.json"
+    }
   },
   {
     "id": "P1-02",
     "priority": "P1",
     "stage": 1,
-    "status": "planned",
+    "status": "resolved",
     "description": "`sorry` が通ることを論理的な骨格の正しさの保証としている",
     "locations": [
       {
@@ -47,10 +53,22 @@
       }
     ],
     "blocks": [
-      "ch05_005"
+      "ch03_001",
+      "ch03_013",
+      "ch03_014",
+      "ch03_015",
+      "ch05_004",
+      "ch05_005",
+      "ch05_021",
+      "ch05_022"
     ],
     "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
-    "acceptance": "sorry・No goals・型検査・公理依存が保証する範囲を本文、解答、Q&Aで揃える。完成した主要定理にsorryAx依存がない。"
+    "acceptance": "sorry・No goals・型検査・公理依存が保証する範囲を本文、解答、Q&Aで揃える。完成した主要定理にsorryAx依存がない。",
+    "resolution": {
+      "stage": "1-A",
+      "record": "STAGE1A.md",
+      "evidence": "catalog/stage1a-verification.json"
+    }
   },
   {
     "id": "P1-03",
@@ -303,8 +321,8 @@
       }
     ],
     "blocks": [
-      "ch03_019",
-      "ch03_022"
+      "ch03_021",
+      "ch03_024"
     ],
     "scope": "ch03.md:584–592、ch03.md:648–656",
     "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
@@ -1175,7 +1193,8 @@
     "locations": [],
     "blocks": [],
     "scope": "全章の「No goals」「解答」「要確認」",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "progress": "段階1-AでNo goalsとsorry・未確認APIを併記した紛らわしい表示を訂正。全解答の完成・表示統一は各章の修正と段階5に残す。"
   },
   {
     "id": "P3-044",

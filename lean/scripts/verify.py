@@ -9,6 +9,7 @@ import signal
 import subprocess
 import sys
 from datetime import datetime, timezone
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import catalog
@@ -18,7 +19,7 @@ LOGS = ROOT / '.generated/logs'
 ALLOWED_AXIOMS = {'propext', 'Classical.choice', 'Quot.sound'}
 
 
-def run(args: list[str], logfile: str, cwd: Path = ROOT) -> str:
+def run(args: list[str], logfile: str, cwd: Path = ROOT, expected_returncode: int = 0) -> str:
     process = subprocess.Popen(args, cwd=cwd, stdout=subprocess.PIPE,
                                stderr=subprocess.STDOUT, text=True, start_new_session=True)
     try:
@@ -29,8 +30,8 @@ def run(args: list[str], logfile: str, cwd: Path = ROOT) -> str:
         (LOGS / logfile).write_text(output)
         raise RuntimeError(f'Timeout; see .generated/logs/{logfile}')
     (LOGS / logfile).write_text(output)
-    if process.returncode:
-        raise RuntimeError(f'Command failed ({process.returncode}); see .generated/logs/{logfile}')
+    if process.returncode != expected_returncode:
+        raise RuntimeError(f'Unexpected exit code {process.returncode}, expected {expected_returncode}; see .generated/logs/{logfile}')
     return output
 
 
@@ -49,6 +50,45 @@ def parse_axioms(output: str, expected: list[str]) -> dict[str, list[str]]:
     if set(dependencies) != set(expected):
         raise ValueError(f'Audit coverage mismatch: {set(dependencies) ^ set(expected)}')
     return dependencies
+
+
+def validate_diagnostic_output(case: dict, output: str) -> dict:
+    kind = case['kind']
+    if kind == 'error':
+        errors = len(re.findall(r'\berror:', output))
+        if errors != case['error_count'] or any(pattern not in output for pattern in case['patterns']):
+            raise ValueError(f'{case["id"]}: expected error reason differs')
+        return {'kind': kind, 'errors': errors, 'expected_reason_confirmed': True}
+    name = case['declaration']
+    if kind == 'pass':
+        if 'warning:' in output or 'error:' in output:
+            raise ValueError(f'{case["id"]}: unexpected diagnostic')
+        return {'kind': kind, 'axioms': parse_axioms(output, [name])[name]}
+    match = re.search(r"'" + re.escape(name) + r"' depends on axioms: \[([^\]]*)\]", output)
+    axioms = {x.strip() for x in match[1].split(',')} if match else set()
+    if ('warning: declaration uses `sorry`' not in output or 'error:' in output
+            or 'sorryAx' not in axioms or not axioms <= ALLOWED_AXIOMS | {'sorryAx'}):
+        raise ValueError(f'{case["id"]}: expected sorry warning/axioms differ')
+    return {'kind': kind, 'axioms': sorted(axioms), 'expected_warning_confirmed': True}
+
+
+def check_diagnostics(data: dict, actual: dict) -> dict:
+    directory = ROOT / '.generated/diagnostics'
+    directory.mkdir(exist_ok=True)
+
+    def check(case):
+        # Each lesson runs in a separate Lean process. Its assumptions cannot
+        # enter the completed LeanBook modules or the main axiom audit.
+        content = '\n'.join(actual[b]['code'] for b in case['blocks']) + case.get('append', '')
+        path = directory / (case['id'] + '.lean')
+        path.write_text(content)
+        output = run(['lake', 'env', 'lean', '-DwarningAsError=false', str(path.relative_to(ROOT))],
+                     f'diagnostic-{case["id"]}.log', expected_returncode=1 if case['kind'] == 'error' else 0)
+        result = validate_diagnostic_output(case, output)
+        return case['id'], dict(result, blocks=case['blocks'])
+
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        return dict(pool.map(check, data.get('diagnostics', [])))
 
 
 def main() -> None:
@@ -88,14 +128,17 @@ def main() -> None:
     if re.search(r'\bwarning:|\bsorryAx\b', output):
         raise ValueError('Audit contains warnings or sorryAx')
     axioms = parse_axioms(output, expected)
+    print(f'Build and {len(axioms)} axiom checks passed. Checking manuscript diagnostics...', flush=True)
+    diagnostics = check_diagnostics(data, actual)
     result = dict(status='passed', checked_at=datetime.now(timezone.utc).isoformat(),
                   review_base=data['review_base'], toolchain=toolchain, lean_version=version,
                   dependencies=dependencies, manuscript_files=len(data['source_files']),
                   catalog_blocks=len(actual), compiled_source_blocks=[m['block'] for m in data['compiled_mappings']],
-                  audited_declarations=axioms,
-                  scope='Stage 0 reference examples and two manuscript blocks; not all 421 blocks')
+                  audited_declarations=axioms, diagnostics=diagnostics,
+                  verification_stage=data.get('verification_stage', '0'),
+                  scope='Selected manuscript blocks and reference corrections; not the whole book')
     result_file.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
-    print(f'Build passed. Axioms checked: {len(axioms)} declarations; no sorryAx.', flush=True)
+    print(f'Build passed. Completed declarations: {len(axioms)}; no sorryAx. Diagnostic cases: {len(diagnostics)}.', flush=True)
     print('Result: .generated/verification.json; logs: .generated/logs/')
 
 

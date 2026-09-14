@@ -139,6 +139,18 @@ def validate(data: dict | None = None) -> tuple[dict, dict]:
         for line in code.splitlines():
             if line.startswith("import ") and line not in text.splitlines():
                 raise ValueError(f"Missing original import: {marker}: {line}")
+    cases = data.get("diagnostics", [])
+    if len({case["id"] for case in cases}) != len(cases):
+        raise ValueError("Duplicate diagnostic IDs")
+    for case in cases:
+        if not case["blocks"] or not set(case["blocks"]) <= set(actual):
+            raise ValueError(f"{case['id']}: dangling diagnostic source")
+        if case["kind"] not in {"error", "sorry", "pass"}:
+            raise ValueError(f"{case['id']}: unknown diagnostic kind")
+        if case["kind"] == "error" and (not case.get("patterns") or case.get("error_count", 0) < 1):
+            raise ValueError(f"{case['id']}: expected error is unspecified")
+        if case["kind"] != "error" and not case.get("declaration"):
+            raise ValueError(f"{case['id']}: missing diagnostic declaration")
     issues = json.loads((ROOT / "catalog/issues.json").read_text())
     if len({item["id"] for item in issues}) != len(issues):
         raise ValueError("Duplicate issue IDs")
@@ -149,6 +161,13 @@ def validate(data: dict | None = None) -> tuple[dict, dict]:
             raise ValueError(f"{item['id']}: dangling issue block reference")
         if item["stage"] not in range(1, 7) or not item["acceptance"]:
             raise ValueError(f"{item['id']}: missing stage or completion criterion")
+        if item["status"] not in {"planned", "in_progress", "resolved"}:
+            raise ValueError(f"{item['id']}: unknown issue status")
+        if item["status"] == "resolved":
+            resolution = item.get("resolution", {})
+            for key in ("record", "evidence"):
+                if not resolution.get(key) or not (ROOT / resolution[key]).is_file():
+                    raise ValueError(f"{item['id']}: missing resolution {key}")
         for location in item["locations"]:
             if location["source"] not in data["source_files"]:
                 raise ValueError(f"{item['id']}: unknown manuscript source")
@@ -168,7 +187,7 @@ def render(data: dict) -> str:
     lines = ["# 原稿コードの分類と検証先", "",
              "この表の分類は掲載目的を表し、実行成功の判定ではありません。完成例に不備があっても完成例のまま修正対象として残します。", "",
              "前回の一次点検は各ブロックに import Mathlib を補って独立実行した結果です。本文の前提を引き継がないため、正常終了もエラーも完成度の判定には使いません。", "",
-             "第0段階のビルド対象は [README](../README.md) を参照してください。断片の文脈指定は組立て方の指示で、組立て済み・証明済みを意味しません。", "",
+             "現在のビルド対象は [README](../README.md) を参照してください。断片の文脈指定は組立て方の指示で、組立て済み・証明済みを意味しません。", "",
              "生のコードは `python3 scripts/catalog.py extract` で `.generated/raw/ID.lean` に、importも含めて原文どおり抽出されます。", "",
              "| 分類 | 数 |", "|---|---:|"]
     lines += [f"| {label} | {counts[key]} |" for key, label in LABELS.items()]
@@ -204,14 +223,17 @@ def render_issues() -> str:
     issues = json.loads((ROOT / "catalog/issues.json").read_text())
     base = json.loads(CATALOG.read_text())["review_base"]
     lines = ["# レビュー指摘と修正段階", "",
-             "段階0では対応関係を記録します。以下の指摘は本文への修正をまだ完了していません。位置は初回レビューの版への固定リンクです。再掲や関連説明も各段階で照合します。", "",
+             "位置は初回レビューの版への固定リンクです。plannedは未着手、in_progressは作業中、resolvedは記録した範囲で修正・検証済みを表します。再掲や関連説明も各段階で照合します。", "",
              "コードと重ならない文章・画像の指摘にもIDを付けています。ブロック数と指摘数は一致しません。完了条件の全文は issues.json に記録しています。", "",
              "| ID | 段階 | 対象 | 問題と修正方針 | 状態 |", "|---|---:|---|---|---|"]
     for item in issues:
         links = [f"[{Path(p['source']).name}:{p['line']}](https://github.com/sakuramaguro/zenn-articles/blob/{base}/{p['source']}#L{p['line']}-L{p['end']})"
                  for p in item["locations"]]
         where = "、".join(links) if links else item["scope"]
-        fields = [item["id"], str(item["stage"]), where, item["description"], item["status"]]
+        status = item["status"]
+        if status == "resolved":
+            status += f"（[記録](../{item['resolution']['record']})）"
+        fields = [item["id"], str(item["stage"]), where, item["description"], status]
         lines.append("| " + " | ".join(f.replace("|", "\\|").replace("\n", " ") for f in fields) + " |")
     return "\n".join(lines) + "\n"
 

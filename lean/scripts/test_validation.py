@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 import catalog
-from verify import parse_axioms
+from verify import parse_axioms, validate_diagnostic_output
 
 
 class CatalogChecks(unittest.TestCase):
@@ -38,6 +38,11 @@ class CatalogChecks(unittest.TestCase):
         row = next(b for b in self.data['blocks'] if b['category'] == 'fragment')
         row['context']['blocks'] = ['missing_001']
         with self.assertRaisesRegex(ValueError, 'dangling context'):
+            catalog.validate(self.data)
+
+    def test_missing_diagnostic_source_is_rejected(self):
+        self.data['diagnostics'][0]['blocks'] = ['missing_001']
+        with self.assertRaisesRegex(ValueError, 'dangling diagnostic source'):
             catalog.validate(self.data)
 
 
@@ -99,6 +104,29 @@ class AxiomChecks(unittest.TestCase):
     def test_missing_audit_output_is_rejected(self):
         with self.assertRaisesRegex(ValueError, 'coverage mismatch'):
             parse_axioms("'a' does not depend on any axioms", ['a', 'b'])
+
+
+class DiagnosticChecks(unittest.TestCase):
+    def test_unrelated_failure_is_rejected(self):
+        case = {'id': 'bad_proof', 'kind': 'error', 'error_count': 1, 'patterns': ['unsolved goals']}
+        with self.assertRaisesRegex(ValueError, 'expected error reason differs'):
+            validate_diagnostic_output(case, 'error: unknown module Mathlib')
+
+    def test_additional_error_is_rejected(self):
+        case = {'id': 'bad_proof', 'kind': 'error', 'error_count': 1, 'patterns': ['unsolved goals']}
+        with self.assertRaisesRegex(ValueError, 'expected error reason differs'):
+            validate_diagnostic_output(case, 'error: unsolved goals\nerror: unknown identifier')
+
+    def test_sorry_lesson_requires_both_warning_and_axiom(self):
+        case = {'id': 'lesson', 'kind': 'sorry', 'declaration': 'a'}
+        for output in ["'a' depends on axioms: [sorryAx]", "warning: declaration uses `sorry`\n'a' depends on axioms: [propext]"]:
+            with self.subTest(output=output), self.assertRaisesRegex(ValueError, 'expected sorry warning/axioms differ'):
+                validate_diagnostic_output(case, output)
+
+    def test_sorry_lesson_cannot_pass_as_completed_proof(self):
+        case = {'id': 'lesson', 'kind': 'pass', 'declaration': 'a'}
+        with self.assertRaisesRegex(ValueError, 'unexpected diagnostic'):
+            validate_diagnostic_output(case, "warning: declaration uses `sorry`\n'a' depends on axioms: [sorryAx]")
 
 
 if __name__ == '__main__':

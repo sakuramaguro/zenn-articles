@@ -28,7 +28,8 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage1a_status": "compiled_source"
   },
   {
     "id": "ch01_002",

@@ -129,14 +129,17 @@
     "fixture": ".generated/raw/ch05_004.lean",
     "validation_mode": "track_holes_separately",
     "repair_stage": 2,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-02"
+    ],
+    "stage1a_status": "diagnostic_case"
   },
   {
     "id": "ch05_005",
@@ -745,7 +748,7 @@
     "fixture": ".generated/raw/ch05_021.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "compiled_source",
     "prior_probe": {
       "status": "pass",
@@ -753,14 +756,55 @@
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
     "issue_ids": [
+      "P1-02",
       "P2-007"
-    ]
+    ],
+    "stage1a_status": "compiled_source"
   },
   {
     "id": "ch05_022",
     "source": "books/lean4-formalization/ch05.md",
-    "line": 648,
-    "end": 656,
+    "line": 625,
+    "end": 627,
+    "sha256": "30034ba01fdf428f5b8d72e2b4e1809ca465e0e8353a3680b4da9707bb9c6cc3",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.6 完成 ──── Lean 4が証明した次元定理",
+    "category": "complete",
+    "role": "本文",
+    "reason": "完成したdimension_theoremの公理依存を表示するコマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_021"
+      ],
+      "instruction": "完成版dimension_theoremの宣言の後へ置く。骨格版と同名宣言を二重に置かない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_022.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": true,
+    "stage0_status": "not_present_in_stage0",
+    "prior_probe": {
+      "status": "not_run",
+      "sorry_warning": false,
+      "method": "Added in stage 1-A; no stage-0 probe"
+    },
+    "issue_ids": [
+      "P1-02"
+    ],
+    "stage1a_status": "compiled_source"
+  },
+  {
+    "id": "ch05_023",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 660,
+    "end": 668,
     "sha256": "4e59ecd7af2d46745d11ba0f0d42e5d5f68098614f950a4e84368a08afd62551",
     "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.7 第2巻以降への大きな伏線 / ### 有限次元の外に広がる世界",
     "category": "expected_error",
@@ -780,7 +824,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch05_022.lean",
+    "fixture": ".generated/raw/ch05_023.lean",
     "validation_mode": "assert_expected_diagnostic",
     "repair_stage": 2,
     "priority_one": false,
@@ -788,15 +832,18 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_022",
+      "source_sha256": "4e59ecd7af2d46745d11ba0f0d42e5d5f68098614f950a4e84368a08afd62551",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch05_023",
+    "id": "ch05_024",
     "source": "books/lean4-formalization/ch05.md",
-    "line": 703,
-    "end": 710,
+    "line": 715,
+    "end": 722,
     "sha256": "e8ac89d844e7d60f07fb7d540a52e5f8a45194dd6044ac780ed90cca72742d73",
     "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
@@ -816,7 +863,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch05_023.lean",
+    "fixture": ".generated/raw/ch05_024.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
@@ -824,15 +871,18 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_023",
+      "source_sha256": "e8ac89d844e7d60f07fb7d540a52e5f8a45194dd6044ac780ed90cca72742d73",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch05_024",
+    "id": "ch05_025",
     "source": "books/lean4-formalization/ch05.md",
-    "line": 747,
-    "end": 759,
+    "line": 759,
+    "end": 771,
     "sha256": "74fc2d7665cdae0de4a66805f92839cd7ea5c3562f66c8b8e7c5844fe8667703",
     "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
@@ -850,7 +900,7 @@
       }
     ],
     "own_setup": [],
-    "fixture": ".generated/raw/ch05_024.lean",
+    "fixture": ".generated/raw/ch05_025.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
@@ -858,15 +908,18 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_024",
+      "source_sha256": "74fc2d7665cdae0de4a66805f92839cd7ea5c3562f66c8b8e7c5844fe8667703",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch05_025",
+    "id": "ch05_026",
     "source": "books/lean4-formalization/ch05.md",
-    "line": 769,
-    "end": 780,
+    "line": 781,
+    "end": 792,
     "sha256": "6ea3766ed4e9b2e18bb728f1c4f4199260c08b5a839a6ffb4ff260fe40341446",
     "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
     "category": "unfinished",
@@ -886,7 +939,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch05_025.lean",
+    "fixture": ".generated/raw/ch05_026.lean",
     "validation_mode": "track_holes_separately",
     "repair_stage": 2,
     "priority_one": false,
@@ -894,15 +947,18 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_025",
+      "source_sha256": "6ea3766ed4e9b2e18bb728f1c4f4199260c08b5a839a6ffb4ff260fe40341446",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch05_026",
+    "id": "ch05_027",
     "source": "books/lean4-formalization/ch05.md",
-    "line": 792,
-    "end": 799,
+    "line": 804,
+    "end": 811,
     "sha256": "56a1a1187deb77a6f89d2f04fb147ae4d34e22031db0ffa6bdfdde710d24bd55",
     "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
@@ -911,43 +967,7 @@
     "contains_sorry": false,
     "context": {
       "blocks": [
-        "ch05_025"
-      ],
-      "instruction": "問題の variable 宣言（K,V と型クラス）を先に置く。問題の sorry は解答に含めない。"
-    },
-    "preceding_setup": [
-      {
-        "block": "ch05_001",
-        "line": "import Mathlib"
-      }
-    ],
-    "own_setup": [],
-    "fixture": ".generated/raw/ch05_026.lean",
-    "validation_mode": "compile_after_context_review",
-    "repair_stage": 2,
-    "priority_one": false,
-    "stage0_status": "classified_not_certified",
-    "prior_probe": {
-      "status": "error",
-      "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
-    },
-    "issue_ids": []
-  },
-  {
-    "id": "ch05_027",
-    "source": "books/lean4-formalization/ch05.md",
-    "line": 808,
-    "end": 814,
-    "sha256": "b77f965168c7a80e1a83ef47036fe68ac152245e0eaf678b1b731205330ef063",
-    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
-    "category": "complete",
-    "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
-    "contains_sorry": false,
-    "context": {
-      "blocks": [
-        "ch05_025"
+        "ch05_026"
       ],
       "instruction": "問題の variable 宣言（K,V と型クラス）を先に置く。問題の sorry は解答に含めない。"
     },
@@ -966,15 +986,57 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_026",
+      "source_sha256": "56a1a1187deb77a6f89d2f04fb147ae4d34e22031db0ffa6bdfdde710d24bd55",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
     "id": "ch05_028",
     "source": "books/lean4-formalization/ch05.md",
-    "line": 824,
-    "end": 837,
+    "line": 820,
+    "end": 826,
+    "sha256": "b77f965168c7a80e1a83ef47036fe68ac152245e0eaf678b1b731205330ef063",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_026"
+      ],
+      "instruction": "問題の variable 宣言（K,V と型クラス）を先に置く。問題の sorry は解答に含めない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_028.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_027",
+      "source_sha256": "b77f965168c7a80e1a83ef47036fe68ac152245e0eaf678b1b731205330ef063",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_029",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 836,
+    "end": 849,
     "sha256": "bacdd8a2c955b1cf4da595344a72ceb7455c74555e2d855b4bc716809254ea28",
     "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
     "category": "unfinished",
@@ -994,7 +1056,7 @@
     "own_setup": [
       "import Mathlib"
     ],
-    "fixture": ".generated/raw/ch05_028.lean",
+    "fixture": ".generated/raw/ch05_029.lean",
     "validation_mode": "track_holes_separately",
     "repair_stage": 2,
     "priority_one": false,
@@ -1002,15 +1064,18 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_028",
+      "source_sha256": "bacdd8a2c955b1cf4da595344a72ceb7455c74555e2d855b4bc716809254ea28",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   },
   {
-    "id": "ch05_029",
+    "id": "ch05_030",
     "source": "books/lean4-formalization/ch05.md",
-    "line": 851,
-    "end": 857,
+    "line": 863,
+    "end": 869,
     "sha256": "ab51c7f2782663513b890b7417b91d39f4452f7f8daed2aa7674cd38c81b72d4",
     "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
@@ -1019,43 +1084,7 @@
     "contains_sorry": false,
     "context": {
       "blocks": [
-        "ch05_028"
-      ],
-      "instruction": "問題の variable 宣言（K,V,W,f と型クラス）を先に置く。"
-    },
-    "preceding_setup": [
-      {
-        "block": "ch05_001",
-        "line": "import Mathlib"
-      }
-    ],
-    "own_setup": [],
-    "fixture": ".generated/raw/ch05_029.lean",
-    "validation_mode": "compile_after_context_review",
-    "repair_stage": 2,
-    "priority_one": false,
-    "stage0_status": "classified_not_certified",
-    "prior_probe": {
-      "status": "error",
-      "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
-    },
-    "issue_ids": []
-  },
-  {
-    "id": "ch05_030",
-    "source": "books/lean4-formalization/ch05.md",
-    "line": 866,
-    "end": 870,
-    "sha256": "7d2abd9abfbe070ddba24e8b7c0205c022c60d8cd90b91cd3f5e923d2918acd5",
-    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
-    "category": "complete",
-    "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
-    "contains_sorry": false,
-    "context": {
-      "blocks": [
-        "ch05_028"
+        "ch05_029"
       ],
       "instruction": "問題の variable 宣言（K,V,W,f と型クラス）を先に置く。"
     },
@@ -1074,7 +1103,49 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_029",
+      "source_sha256": "ab51c7f2782663513b890b7417b91d39f4452f7f8daed2aa7674cd38c81b72d4",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_031",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 878,
+    "end": 882,
+    "sha256": "7d2abd9abfbe070ddba24e8b7c0205c022c60d8cd90b91cd3f5e923d2918acd5",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_029"
+      ],
+      "instruction": "問題の variable 宣言（K,V,W,f と型クラス）を先に置く。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_031.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_030",
+      "source_sha256": "7d2abd9abfbe070ddba24e8b7c0205c022c60d8cd90b91cd3f5e923d2918acd5",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": []
   }

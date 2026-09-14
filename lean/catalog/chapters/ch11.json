@@ -807,7 +807,7 @@
     "source": "books/lean4-formalization/ch11.md",
     "line": 582,
     "end": 598,
-    "sha256": "05e62314f5ff5494b0ca413d2def8998628342345e4877e03e156a9aa2fdabca",
+    "sha256": "401d4f153c8796fd88d1a56deed851779d30fc53e86976f7b4e449182ff4cf59",
     "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
@@ -832,9 +832,13 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch11_023",
+      "source_sha256": "05e62314f5ff5494b0ca413d2def8998628342345e4877e03e156a9aa2fdabca",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage1a_status": "revised_not_certified"
   },
   {
     "id": "ch11_024",
