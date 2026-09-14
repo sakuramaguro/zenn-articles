@@ -1,0 +1,987 @@
+[
+  {
+    "id": "ch09_001",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 13,
+    "end": 27,
+    "sha256": "55ef07255d2973d939d41e05d5f34d79c5403cc99a1e5b67579e3ec6bfcd7353",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.0 本章のゴールを先に見せる ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch09_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_002",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 51,
+    "end": 58,
+    "sha256": "4b863e231f22c7fcbc966f2a35811bc8ed18192473e1966ba318b7310776c108",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.1 完備性の動機 ──── $\\mathbb{Q}$ の「穴」を体感する / ### 有理数列の不思議な失敗",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_003",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 72,
+    "end": 75,
+    "sha256": "5ce8d1d39b3584ebbb1d13f3cfd02b545786a296c1bafe754e298e3a725d2615",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.1 完備性の動機 ──── $\\mathbb{Q}$ の「穴」を体感する / ### なぜ $\\mathbb{R}$ は完備なのか",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_004",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 95,
+    "end": 107,
+    "sha256": "16f17fad946979474527f8b958de3d16eeba13298aac194934a956613ab2109c",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.2 Cauchy 列の定義 ──── 数学⇔Lean完全翻訳 / ### Leanの実装：`CauchySeq`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_005",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 118,
+    "end": 122,
+    "sha256": "fbd386b6032e539e1d27cda52495b54225608c04d6e61fab9d1675aa5ca3e5b5",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.2 Cauchy 列の定義 ──── 数学⇔Lean完全翻訳 / ### Leanの実装：`CauchySeq`",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch09_006"
+      ],
+      "instruction": "ch09_005 の by 内に ch09_006 を配置する。",
+      "assembly_group": "ch09_005"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_005.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_006",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 135,
+    "end": 138,
+    "sha256": "4735bda652c5fd12f7838414ba6d01a4a4ab381bc358eabfc56c0dcdd0229677",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.2 Cauchy 列の定義 ──── 数学⇔Lean完全翻訳 / ### Leanの実装：`CauchySeq`",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch09_005"
+      ],
+      "instruction": "ch09_005 の by 内に ch09_006 を配置する。",
+      "assembly_group": "ch09_005"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_006.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_007",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 185,
+    "end": 196,
+    "sha256": "66f242aff657cd5594f88e5fc319ab6bda60c83e13d7ba16db609e8fbff1b6ee",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.3 Filter.Cauchy ──── フィルターが「Cauchy」になるとき / ### Leanの実装：`Filter.Cauchy`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-015"
+    ]
+  },
+  {
+    "id": "ch09_008",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 210,
+    "end": 215,
+    "sha256": "040fbd7968178409d35eaf035426af9d9c03c82952051acdc30ca22b5384de48",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.3 Filter.Cauchy ──── フィルターが「Cauchy」になるとき / ### Leanの実装：`Filter.Cauchy`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-015"
+    ]
+  },
+  {
+    "id": "ch09_009",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 248,
+    "end": 256,
+    "sha256": "c355e7956124acf6b725a3e2337f6440b3cbddd9653f782c91265bd752458b10",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.4 `CompleteSpace` 型クラス ──── 免許証の解剖 / ### Leanの実装：`CompleteSpace`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_010",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 268,
+    "end": 276,
+    "sha256": "8cd2607b0b0085c83f6a3f40d0df6157dfbafe34cc5589e3601ecc3e2012cf46",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.4 `CompleteSpace` 型クラス ──── 免許証の解剖 / ### 主要な完備空間のインスタンス",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_011",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 297,
+    "end": 302,
+    "sha256": "7b544f7a8dd2f444ddc4ce380076fe76c7eb763a4f7f00a3a73ba6115877b9f2",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.5 収束定理の完全実況 ──── 本章の勝利命題を証明する / ### 定理の確認",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_012",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 308,
+    "end": 313,
+    "sha256": "d032fe280f431357df9b6ac33e7b63eccc73a540861c8845ce49aad7d7cfa3cc",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.5 収束定理の完全実況 ──── 本章の勝利命題を証明する / ### 完全実況：ステップバイステップ",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch09_013"
+      ],
+      "instruction": "ch09_012 の by 内に ch09_013 を配置する。",
+      "assembly_group": "ch09_012"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_012.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_013",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 330,
+    "end": 333,
+    "sha256": "b8e9d01a489742db0eebae75d0b7e074b5f68b61a1428405a2772c6ed4f35fde",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.5 収束定理の完全実況 ──── 本章の勝利命題を証明する / ### 完全実況：ステップバイステップ",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch09_012"
+      ],
+      "instruction": "ch09_012 の by 内に ch09_013 を配置する。",
+      "assembly_group": "ch09_012"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_013.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_014",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 345,
+    "end": 350,
+    "sha256": "065cba9eb79d7a26962cbedee71b15fa0fa67cb4a1541eba0fd78052bf9fa3b7",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.5 収束定理の完全実況 ──── 本章の勝利命題を証明する / ### 手動で展開する：`calc` による距離の評価",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch09_015",
+        "ch09_016",
+        "ch09_017"
+      ],
+      "instruction": "幾何数列の Cauchy 性。ch09_015 は ch09_014 の apply の再掲なので一度だけ使い、残りをその後に配置する。",
+      "assembly_group": "ch09_014"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_014.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_015",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 354,
+    "end": 356,
+    "sha256": "cd3ff5efce7934c8ab85701b592dbfd8a582764142078f2f75b4e8f7804a8817",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.5 収束定理の完全実況 ──── 本章の勝利命題を証明する / ### 手動で展開する：`calc` による距離の評価",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch09_014",
+        "ch09_016",
+        "ch09_017"
+      ],
+      "instruction": "幾何数列の Cauchy 性。ch09_015 は ch09_014 の apply の再掲なので一度だけ使い、残りをその後に配置する。",
+      "assembly_group": "ch09_014"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_015.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_016",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 366,
+    "end": 372,
+    "sha256": "ecfe0151f8f0c39c87fa89cfa34da30b65b23081102e62070bc82bf6682d400d",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.5 収束定理の完全実況 ──── 本章の勝利命題を証明する / ### 手動で展開する：`calc` による距離の評価",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch09_014",
+        "ch09_015",
+        "ch09_017"
+      ],
+      "instruction": "幾何数列の Cauchy 性。ch09_015 は ch09_014 の apply の再掲なので一度だけ使い、残りをその後に配置する。",
+      "assembly_group": "ch09_014"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_016.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_017",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 387,
+    "end": 402,
+    "sha256": "f11b506dcc015f43581c4dbea24abf18085c24684554a0f9fe5c8dc83b6aa06e",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.5 収束定理の完全実況 ──── 本章の勝利命題を証明する / ### 手動で展開する：`calc` による距離の評価",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch09_014",
+        "ch09_015",
+        "ch09_016"
+      ],
+      "instruction": "幾何数列の Cauchy 性。ch09_015 は ch09_014 の apply の再掲なので一度だけ使い、残りをその後に配置する。",
+      "assembly_group": "ch09_014"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_017.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_018",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 462,
+    "end": 478,
+    "sha256": "c001978754fe5ca166ac3130b331ea31537955c896ab10e5bee6e2a2ee066556",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.6 完備化 ──── 「穴を埋める」操作のLean形式化 / ### Leanの実装：`UniformSpace.Completion`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_019",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 533,
+    "end": 541,
+    "sha256": "2d56864486728a59de1fdd2793f558eb3d587b01a106605bef0e567f3920299f",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 4.8 本章のまとめ：無限次元への装備が揃った",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_020",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 624,
+    "end": 631,
+    "sha256": "ca6947795b5e22ad8af5e7e7a6f0e881661a99782bf6989e689378d486d4a591",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_020.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_021",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 638,
+    "end": 642,
+    "sha256": "9479001363bf087d4e235c43948ce416742e2054f61d4251d5930c12cfaf9c62",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_021.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_022",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 655,
+    "end": 660,
+    "sha256": "4694195ab440769a89ff40bc27224f994589e2cb4c26e64cb5995a875725f6f0",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_022.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_023",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 668,
+    "end": 674,
+    "sha256": "fa54131ae3585454425a4f2dd074258a5a809248b9630328e0696e66676f1176",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_023.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_024",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 696,
+    "end": 717,
+    "sha256": "263169e854fd5e3ab9c80ad174508bd55a2d6090ded0ea111ec07e1fa9b1baa9",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_024.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_025",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 727,
+    "end": 732,
+    "sha256": "3d3318f21ea41faaf9772c45b8f6c3f0ec438372a6a28f70238a937ccb2eeff6",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_025.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_026",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 741,
+    "end": 747,
+    "sha256": "1c6bf440d8e2c41c7d4f735068f711a1fd158bda66793e7e94d39ca0c4c110ef",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_026.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_027",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 760,
+    "end": 767,
+    "sha256": "071616e156da0e9a15d2b4cb5cf711bdc54161832260dbf00a00617002db6593",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_027.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch09_028",
+    "source": "books/lean4-formalization/ch09.md",
+    "line": 777,
+    "end": 785,
+    "sha256": "6d58fa139c73d16fa204d3bf5986d257c4df08077d8a6a30d6b2f8e0cd15887f",
+    "section": "# 第4章：完備性と Cauchy 列 〜「行き先」がなくても収束する世界〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch09_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch09_028.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]

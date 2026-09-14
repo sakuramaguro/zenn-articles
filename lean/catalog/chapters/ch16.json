@@ -1,0 +1,753 @@
+[
+  {
+    "id": "ch16_001",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 11,
+    "end": 45,
+    "sha256": "e0a245d4a80e55ce231bd3762356714381bc0bd1bb11dd2b7bf4157f260e37c9",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_002",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 69,
+    "end": 92,
+    "sha256": "2f4ad17492d850442bcf3824cf9f47f98c0d6c8dadfb57bd7e58e17957b990a0",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.1 `lintegral`（`∫⁻`）とは何か ──── 非負可測関数の積分 / ### Lean の実装：`MeasureTheory.lintegral`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory ENNReal"
+    ],
+    "fixture": ".generated/raw/ch16_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-028"
+    ]
+  },
+  {
+    "id": "ch16_003",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 118,
+    "end": 131,
+    "sha256": "dbe56079688494dd0f65db219596eccf9ea7f0948507733dbf246109ce0f9d5d",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.2 `integral`（Bochner積分、`∫`）とは何か / ### Lean の実装：`integral`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_004",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 138,
+    "end": 141,
+    "sha256": "1999cda9a23ecf4a876f8ed65d0dd78c2927db7aea7a1c86bdf91ad3440292ef",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.2 `integral`（Bochner積分、`∫`）とは何か / ### Lean の実装：`integral`",
+    "category": "excerpt",
+    "role": "本文",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch16_004.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_005",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 156,
+    "end": 171,
+    "sha256": "b42c1ea0d30c564a5c8e9a760014ac0f3f9e3ceec18a9ff16b1997396c109b66",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.3 `Integrable` の条件 ──── `HasFiniteIntegral` と可測性 / ### Lean の実装：`Integrable`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-029"
+    ]
+  },
+  {
+    "id": "ch16_006",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 178,
+    "end": 192,
+    "sha256": "1490ea048d21c0d012297f63edda9d27dcae6a90b0f6946d17d3142d73600825",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.3 `Integrable` の条件 ──── `HasFiniteIntegral` と可測性 / ### Lean の実装：`Integrable`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-030"
+    ]
+  },
+  {
+    "id": "ch16_007",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 212,
+    "end": 222,
+    "sha256": "c3052860bd09aafa1cc28b1909c9fd3427874c9b8ef801bfa69d2bbfac36354f",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.4 リーマン積分との比較 ──── ディリクレ関数の例",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-030"
+    ]
+  },
+  {
+    "id": "ch16_008",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 232,
+    "end": 241,
+    "sha256": "d997c106d35ca160e0552cc40e63ad7ec9bacaf3b68d748376d0bcd1ca94ad97",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.5 `lintegral` と `integral` の関係 ──── 実況中継 / ### 関係の全体像",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-030"
+    ]
+  },
+  {
+    "id": "ch16_009",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 255,
+    "end": 262,
+    "sha256": "3dd4b4b69750632bdf33ceeb9c642971d5409d9e7695321f88f1efd0bacf1845",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.5 `lintegral` と `integral` の関係 ──── 実況中継 / ### 実況中継①：`integral_add` で積分の加法性を確認する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch16_005"
+      ],
+      "instruction": "open MeasureTheory を引き継ぐ。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch16_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_010",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 289,
+    "end": 296,
+    "sha256": "c01927913e4b06a47f77ad633efed892648a168dfa33fe690b4b3cde05012b3b",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.5 `lintegral` と `integral` の関係 ──── 実況中継 / ### 実況中継②：`integral_smul` で積分のスカラー倍を確認する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch16_005"
+      ],
+      "instruction": "open MeasureTheory を引き継ぐ。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch16_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_011",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 317,
+    "end": 324,
+    "sha256": "c55676ca615b7e819e060bcc07e994ffb0971eaccf0cc7110aaa0f1cc1b5fed5",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.5 `lintegral` と `integral` の関係 ──── 実況中継 / ### `norm_integral_le_integral_norm` の確認",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch16_005"
+      ],
+      "instruction": "open MeasureTheory を引き継ぐ。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch16_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_012",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 364,
+    "end": 373,
+    "sha256": "261527cf17ebfaf29849f9dc5b98960a0de07a17e2c6b03f399286618a20b1a5",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_013",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 382,
+    "end": 386,
+    "sha256": "72f37d25d083c48ced691a5c2a6d363fa5a16c64ac2c8dad7cfe174af8cd5e7b",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_013.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_014",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 405,
+    "end": 416,
+    "sha256": "d8f17b3328a55af1dec50004ea1f48d9e4c4efefbd96e171ef53a385e188d45c",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_015",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 425,
+    "end": 434,
+    "sha256": "8f38b74f262060974cff84d8447854df2bbed3f8db18ffa4bb87be76e954de81",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_016",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 453,
+    "end": 465,
+    "sha256": "3e1c21cf3742e984e622c5bc0df899e94b124f7fc74267b44b05e5e44e092e61",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch16_017",
+    "source": "books/lean4-formalization/ch16.md",
+    "line": 474,
+    "end": 481,
+    "sha256": "12b444452ae5904f3ab0427a4d7deb82a12a4277557c71c4204ad1a725ca3441",
+    "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch16_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch16_001",
+        "line": "open MeasureTheory"
+      },
+      {
+        "block": "ch16_002",
+        "line": "open MeasureTheory ENNReal"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch16_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-06"
+    ]
+  }
+]

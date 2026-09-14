@@ -1,0 +1,485 @@
+[
+  {
+    "id": "ch15_001",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 11,
+    "end": 38,
+    "sha256": "245bfe8ca47a7f996a2513a3fb5cb03cdf2ab8fb94dd8dd32ce4ff96af272a51",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-026"
+    ]
+  },
+  {
+    "id": "ch15_002",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 97,
+    "end": 103,
+    "sha256": "a2323be68b3b145eb634e22e4d8ec4abca6f998435e057f04dd0199a294bb132",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.3 `SimpleFunc α β` を解剖します / ### Lean の実装：`MeasureTheory.SimpleFunc`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_003",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 119,
+    "end": 135,
+    "sha256": "2aa7dee124499a1c9910e24e70beb72c2c6bd29958cc9e589a058ef7a389ebf2",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.3 `SimpleFunc α β` を解剖します / ### Lean の実装：`MeasureTheory.SimpleFunc`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_004",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 165,
+    "end": 182,
+    "sha256": "e9292d77386f32147a7c53b362edfce2f15bbab7c0c796875556d7fba7cf17b4",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.5 `SimpleFunc.lintegral` の実装 ──── 実況中継 / ### Lean の実装：単関数の積分",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_005",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 188,
+    "end": 201,
+    "sha256": "7db42cf7e9803944b94a13d8772c6c1f927bf662848d1dd0cca9c7b38bed5b28",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.5 `SimpleFunc.lintegral` の実装 ──── 実況中継 / ### 実況中継：`[0,1]` 上の定数 3 の積分が `3` になることを証明する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch15_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-026"
+    ]
+  },
+  {
+    "id": "ch15_006",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 259,
+    "end": 275,
+    "sha256": "e2adb942f36b29100e118b5eb347b990cee7d754ef232f5578ba16c71eda5ba5",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.6 非負可測関数を単関数で近似する ──── `SimpleFunc.eapprox` / ### Lean の実装：`SimpleFunc.eapprox`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_007",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 318,
+    "end": 332,
+    "sha256": "0b7f1546a2299f824d7d9b810e71d25bd408c921135661cc455485611ae08787",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.7 まとめ ──── 第4章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_008",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 341,
+    "end": 347,
+    "sha256": "d3cd1d53821350585f529aafbf84ef349bb8c106c71312dbe453c5c6152b8d44",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.7 まとめ ──── 第4章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_009",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 366,
+    "end": 382,
+    "sha256": "521623899d5a472f2da794ae78aa1402db7222ee53546b2d224c046730373f1e",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.7 まとめ ──── 第4章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_010",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 391,
+    "end": 397,
+    "sha256": "d9f8f84f526239736bedfd5e218d8d633d4b0d172c26b2ca1259c5a7f50b9a5c",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.7 まとめ ──── 第4章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_011",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 416,
+    "end": 426,
+    "sha256": "f428015b4b5ec1f1f59399d0f3f055e506ab842d24f6ab4b986d82d63cab3c40",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.7 まとめ ──── 第4章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch15_012",
+    "source": "books/lean4-formalization/ch15.md",
+    "line": 435,
+    "end": 441,
+    "sha256": "61e64106262d62bdbebc554f0c738678ae2fbae35053efac99378ffd0796c044",
+    "section": "# 第4章：単関数と積分の足場 〜`SimpleFunc`を解剖する〜 / ## 4.7 まとめ ──── 第4章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch15_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch15_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch15_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-028"
+    ]
+  }
+]

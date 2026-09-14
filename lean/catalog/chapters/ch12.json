@@ -1,0 +1,807 @@
+[
+  {
+    "id": "ch12_001",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 17,
+    "end": 31,
+    "sha256": "70eecf551e078102be6ae998ac8a23468688fe7547b4e3cd6930bdc07eb26928",
+    "section": "# プロローグ：Banachの先へ 〜完備性が拓く積分の世界〜 / ## 0.1 第2巻の到達点 ──── 完備性という魔法の鍵",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_002",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 87,
+    "end": 110,
+    "sha256": "5ff76bbd63d51266d90ce938949f9397faa45aabe83f37dde25b87d93878034b",
+    "section": "# プロローグ：Banachの先へ 〜完備性が拓く積分の世界〜 / ## 0.2 完備性では測れないもの ──── ディリクレ関数の挑戦",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch12_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_003",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 139,
+    "end": 153,
+    "sha256": "58d1b583e88d1bc89fd9fdf301decd801e4ad2815d736c04ca156436ef0206f7",
+    "section": "# プロローグ：Banachの先へ 〜完備性が拓く積分の世界〜 / ## 0.3 第3巻の地図 ──── これから登る山の全景",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch12_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_004",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 168,
+    "end": 200,
+    "sha256": "77f625e373ff710a098591e5e067b8b99d0b2d4a2f8902de75669540292d7039",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_005",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 278,
+    "end": 283,
+    "sha256": "7b509b06cd02ce2c171363ebe1e4ed8949e724fe81c47f51bbbf970d1c7442a0",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.3 `MeasurableSpace` の構造体を解剖します / ### Lean の実装：`MeasurableSpace`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_006",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 317,
+    "end": 332,
+    "sha256": "7d8c8c5a8e6ba6474043c3bd0f2ac543196dbf9f1baa02556623a4b25cbcb679",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.3 `MeasurableSpace` の構造体を解剖します / ### 基本的な可測集合の操作",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_007",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 360,
+    "end": 367,
+    "sha256": "c30d3359d2dc96143574da071d150c9f5fa46451ba040971c0c317c03e2f6733",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### Lean の実装：`generateFrom` と `borel`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_008",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 373,
+    "end": 376,
+    "sha256": "cf8582df4a14fa5bc0dc376b906d0bb3b9e8bbdec667c355ee379f415cb13915",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### Lean の実装：`generateFrom` と `borel`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch12_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_009",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 385,
+    "end": 389,
+    "sha256": "02d4e644b13dca28cbde88e3abc0243fd5389ddc0eaf43ee646c6c146d612f14",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### Lean の実装：`generateFrom` と `borel`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch12_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_010",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 395,
+    "end": 403,
+    "sha256": "13983a540c716446a51504d9c5afde558cca2326220fcf8b1dc8ac251452eb35",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### Lean の実装：`BorelSpace` という免許証",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch12_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_011",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 417,
+    "end": 425,
+    "sha256": "238745aed8bac31db43279729d8b1748e12533f7b24504512bbf6587fe2d9a44",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### 証明の実況中継：開区間 $(0, 1)$ が可測集合であること",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_012",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 453,
+    "end": 459,
+    "sha256": "95a6eb7f5fa09227bc0135a6fa839af07eca4e64180ee84ef1d5b467afcb42b4",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### 証明の実況中継：開区間 $(0, 1)$ が可測集合であること",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch12_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_013",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 493,
+    "end": 500,
+    "sha256": "763bc698ba544052beece4c414cbbe42bed949d8d7cd8813d13dd81e674fc95a",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.5 まとめ ──── 第1章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_013.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_014",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 513,
+    "end": 520,
+    "sha256": "a84d6e9e95d25fca05221dce9814cc0f95a7181c44a4e47508d2dd5f601038e7",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.5 まとめ ──── 第1章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_015",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 529,
+    "end": 535,
+    "sha256": "59a3aab8632de7ac451bbe24a174e1e5c9bf4f0a07b22f8febc393b6c45dafbb",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.5 まとめ ──── 第1章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch12_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-022"
+    ]
+  },
+  {
+    "id": "ch12_016",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 554,
+    "end": 565,
+    "sha256": "0271ca7335fdaf7201172999fe55cff6201203c5ee761a416f2b5fcf7c29a624",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.5 まとめ ──── 第1章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-022"
+    ]
+  },
+  {
+    "id": "ch12_017",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 574,
+    "end": 580,
+    "sha256": "01c8eb9ffe5c0d3e158d69374548849efde953f4b7432ecfc31d9750eefec535",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.5 まとめ ──── 第1章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch12_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-022"
+    ]
+  },
+  {
+    "id": "ch12_018",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 599,
+    "end": 610,
+    "sha256": "9e13096fef633db5c9a868f53e105c9a614244c3dc083e74fb412981393a8692",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.5 まとめ ──── 第1章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch12_019",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 619,
+    "end": 624,
+    "sha256": "fb821d9bb78ea5847fb9f0a12b08de3b2e603ab83d43a0c722ac77261ce66000",
+    "section": "# 第1章：σ-代数と可測空間 〜集合族に「構造の免許証」を与える〜 / ## 1.5 まとめ ──── 第1章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch12_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch12_002",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch12_003",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch12_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]

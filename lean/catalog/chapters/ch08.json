@@ -1,0 +1,1100 @@
+[
+  {
+    "id": "ch08_001",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 15,
+    "end": 28,
+    "sha256": "9e6ac71d7e7ba7436968c689c2a297535d36b0558d915492acdf0c2a76fea0a0",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.0 本章のゴールを先に見せる ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_002",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 69,
+    "end": 81,
+    "sha256": "c6e9ee3dfbda2ef46a94209a1864e55fbde565c989c635f10f1b8868c663d89d",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.1 位相空間という抽象化 ──── 距離を持たない「開集合の世界」 / ### Leanの実装：`TopologicalSpace` 型クラス",
+    "category": "excerpt",
+    "role": "本文",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_002.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_003",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 96,
+    "end": 104,
+    "sha256": "d2441e485d3e784cb4cf0b56abfb5acf3c9d5ace256e163b04f9c9dc05f638b9",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.1 位相空間という抽象化 ──── 距離を持たない「開集合の世界」 / ### Leanの実装：`TopologicalSpace` 型クラス",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_004",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 118,
+    "end": 131,
+    "sha256": "bbc6dbe36ece2d871796c08aaa24988aba4b9d381d3e1161af3e43385413ba06",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.1 位相空間という抽象化 ──── 距離を持たない「開集合の世界」 / ### Leanの実装：`TopologicalSpace` 型クラス",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_005",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 138,
+    "end": 142,
+    "sha256": "0dd768e9babebc3dc88dfece90c90bc46e13ad408a8737e88656e4559eb71061",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.1 位相空間という抽象化 ──── 距離を持たない「開集合の世界」 / ### Leanの実装：`TopologicalSpace` 型クラス",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_006",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 167,
+    "end": 176,
+    "sha256": "82aaf7d927bc44b34f7b6f06385d53789803af6eccebdf68ddcc3a41e23fcd6e",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.2 連続性の位相的定義 ──── 開集合の逆像 / ### Leanの実装：`Continuous` と `isOpen_preimage`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_007",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 196,
+    "end": 205,
+    "sha256": "27b39bc0e6b109603ce6cd54256b999b715632944cd36e57be821c33fa443d07",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.2 連続性の位相的定義 ──── 開集合の逆像 / ### 3つの連続性定義の完全な対応表",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_008",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 251,
+    "end": 260,
+    "sha256": "3721c63c829147ba94df6adfbdd630cca4e5409100d80b5ebf78070e149c3e97",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.3 `nhds` の真の姿 ──── 第1章の伏線回収 / ### Leanの実装：`⨅` と `𝓟`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_009",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 264,
+    "end": 269,
+    "sha256": "e9f0739d932380288e4386b6a241b62e15041d198a530f056e792df523d7cd7a",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.3 `nhds` の真の姿 ──── 第1章の伏線回収 / ### Leanの実装：`⨅` と `𝓟`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_010",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 330,
+    "end": 335,
+    "sha256": "1f8ce481176747b6969efb468db1522fc9ddaf97c7c9e0582de5423271f87fab",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.4 合成定理の証明 ──── InfoView完全実況 / ### 完全実況",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_011",
+        "ch08_012",
+        "ch08_013",
+        "ch08_014"
+      ],
+      "instruction": "合成の連続性。ch08_010 の by 内へ順に配置し、hf,hg,s,hs を引き継ぐ。",
+      "assembly_group": "ch08_010"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_010.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_011",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 353,
+    "end": 355,
+    "sha256": "4ab839a266b1ff770b1df5f454c5e25959a7316ffb3166dc49180f2a6a8e6178",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.4 合成定理の証明 ──── InfoView完全実況 / ### 完全実況",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_010",
+        "ch08_012",
+        "ch08_013",
+        "ch08_014"
+      ],
+      "instruction": "合成の連続性。ch08_010 の by 内へ順に配置し、hf,hg,s,hs を引き継ぐ。",
+      "assembly_group": "ch08_010"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_011.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_012",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 363,
+    "end": 365,
+    "sha256": "fb6311155595753ad90c91d9c542d99e434045b8337b75f5d38a400c63b67eda",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.4 合成定理の証明 ──── InfoView完全実況 / ### 完全実況",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_010",
+        "ch08_011",
+        "ch08_013",
+        "ch08_014"
+      ],
+      "instruction": "合成の連続性。ch08_010 の by 内へ順に配置し、hf,hg,s,hs を引き継ぐ。",
+      "assembly_group": "ch08_010"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_012.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_013",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 375,
+    "end": 377,
+    "sha256": "ddb5e4348a19c073d15ab43a9449a685b553ce6e3ed253ffaa84b4deb6962ba1",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.4 合成定理の証明 ──── InfoView完全実況 / ### 完全実況",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_010",
+        "ch08_011",
+        "ch08_012",
+        "ch08_014"
+      ],
+      "instruction": "合成の連続性。ch08_010 の by 内へ順に配置し、hf,hg,s,hs を引き継ぐ。",
+      "assembly_group": "ch08_010"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_013.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_014",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 387,
+    "end": 390,
+    "sha256": "f50106275df81d3c8b713fcaafc1693c5210ea4af75f2b0fccda8f6c965a59f6",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.4 合成定理の証明 ──── InfoView完全実況 / ### 完全実況",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_010",
+        "ch08_011",
+        "ch08_012",
+        "ch08_013"
+      ],
+      "instruction": "合成の連続性。ch08_010 の by 内へ順に配置し、hf,hg,s,hs を引き継ぐ。",
+      "assembly_group": "ch08_010"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_014.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_015",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 401,
+    "end": 404,
+    "sha256": "5cd280c3c421a74532f117ad0251772a5d56e55847da7a567790e0ad8d3dbde4",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.4 合成定理の証明 ──── InfoView完全実況 / ### 完全実況",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_016",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 411,
+    "end": 417,
+    "sha256": "42bd1556d63933a0312dcb1319ccbd7033f492ad7a65cf063fdf3268731adb35",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.4 合成定理の証明 ──── InfoView完全実況 / ### Mathlibの一行バージョン",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_017",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 438,
+    "end": 449,
+    "sha256": "c590f6ec4e4b3614c074fe5224cccf66080f7fde8618996be07a4d348190260d",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.5 コンパクト集合 ──── 有限性の抽象化 / ### Leanの実装：`IsCompact`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_018",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 464,
+    "end": 478,
+    "sha256": "28901279bdea732a415df82824b64d5658c00ead4e0d46850d4d08c687d1154d",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.5 コンパクト集合 ──── 有限性の抽象化 / ### ℝ上のコンパクト集合：Heine-Borel定理",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_019",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 485,
+    "end": 498,
+    "sha256": "993c66e47950a9943fd701e62607a43d943c04bd36de36b3c20aca3ba937f982",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.5 コンパクト集合 ──── 有限性の抽象化 / ### ℝ上のコンパクト集合：Heine-Borel定理",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-08"
+    ]
+  },
+  {
+    "id": "ch08_020",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 525,
+    "end": 543,
+    "sha256": "0577c52bb0d4a72fbbcbe18b0d34bb84208f1d33bf7b1c7eef1b2b11ae4c3e9d",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.6 閉集合・内部・閉包 ──── 位相の基本語彙",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_020.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_021",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 555,
+    "end": 559,
+    "sha256": "4001f9040dbe04baca47861f626a3c80b116f2efdd93989b1f19a26a8f883ceb",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.6 閉集合・内部・閉包 ──── 位相の基本語彙",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_021.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_022",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 570,
+    "end": 573,
+    "sha256": "dd50f7d3289089d6cca95eab84ab3c2c1f5f4dc139e795f35953c1f5d5fde7b7",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.6 閉集合・内部・閉包 ──── 位相の基本語彙",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_021"
+      ],
+      "instruction": "ch08_021 の by 内の証明項を示す再掲。独立コマンドではない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_022.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_023",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 593,
+    "end": 599,
+    "sha256": "1d283afd8b7957e3a0386016319b825133f9c46523f0234c2b7d0039a0bc78c5",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.7 コンパクト集合上の連続関数の最大値定理 / ### Mathlibでの形式化",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_023.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_024",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 603,
+    "end": 606,
+    "sha256": "72af37b4247bd16d67f5d6774d3cb341f73a3090d6cb38f5e59682194a9b0b60",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.7 コンパクト集合上の連続関数の最大値定理 / ### Mathlibでの形式化",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_025",
+        "ch08_026",
+        "ch08_027"
+      ],
+      "instruction": "最大値の存在。ch08_024 の by 内で主適用と2つの枝を組み立てる。",
+      "assembly_group": "ch08_024"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_024.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_025",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 616,
+    "end": 618,
+    "sha256": "e4f2e8523186932c8aed5a72703519dfcf7bc6983106554bf8e35be4b8103a00",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.7 コンパクト集合上の連続関数の最大値定理 / ### Mathlibでの形式化",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_024",
+        "ch08_026",
+        "ch08_027"
+      ],
+      "instruction": "最大値の存在。ch08_024 の by 内で主適用と2つの枝を組み立てる。",
+      "assembly_group": "ch08_024"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_025.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_026",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 628,
+    "end": 630,
+    "sha256": "8056cc24154c94590a4bec7af8113f888069d30e0e133374713c7ddbc6204646",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.7 コンパクト集合上の連続関数の最大値定理 / ### Mathlibでの形式化",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_024",
+        "ch08_025",
+        "ch08_027"
+      ],
+      "instruction": "最大値の存在。ch08_024 の by 内で主適用と2つの枝を組み立てる。",
+      "assembly_group": "ch08_024"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_026.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_027",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 639,
+    "end": 642,
+    "sha256": "93111d201cbabcf8566cde032c75a7e307e00246df2fef4db45c46e039e9c783",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 3.7 コンパクト集合上の連続関数の最大値定理 / ### Mathlibでの形式化",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch08_024",
+        "ch08_025",
+        "ch08_026"
+      ],
+      "instruction": "最大値の存在。ch08_024 の by 内で主適用と2つの枝を組み立てる。",
+      "assembly_group": "ch08_024"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_027.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_028",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 733,
+    "end": 751,
+    "sha256": "efa1aeb76d223bcc3697fd179b061db70ba98a38855b074750535541de1c354d",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_028.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_029",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 761,
+    "end": 770,
+    "sha256": "a5d38fd6797f566a3840ea6b5164c69952ba120367cf937926f3881a6a0e2e33",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_029.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_030",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 779,
+    "end": 784,
+    "sha256": "c1bcd2f3d69c7224259a18b50def4038ff722f8b5a7ba1c65297a3dc0033c828",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_030.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_031",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 797,
+    "end": 810,
+    "sha256": "6d1849a4eeaf31ad8e8a1eb0022e82be247609367137f0985f4c1a70738259f7",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_031.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_032",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 818,
+    "end": 825,
+    "sha256": "49c4c285bfb4444af25199c5f2ecec07938b5d190d8cdb8c3d905bdf667b4a9a",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_032.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_033",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 834,
+    "end": 840,
+    "sha256": "cba46dfbc872824115f2e4f7d6c0c263fc3fcc23145fbbb2490a4009b9e084dd",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_033.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_034",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 853,
+    "end": 858,
+    "sha256": "a10d06f8f92033b4ad6cbec69475228e80ac7c0ed0e956602402b9b70c4f6f88",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_034.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_035",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 871,
+    "end": 876,
+    "sha256": "f2c10b6fec3fbc026da7cbb0e7e9280741c7d9a80c3ba8989cdb44c98cf7d64a",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_035.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch08_036",
+    "source": "books/lean4-formalization/ch08.md",
+    "line": 880,
+    "end": 884,
+    "sha256": "c099aad8ad6ab94f11b182563b708f9d6357d628032a4919b97cd505e3794af4",
+    "section": "# 第3章：位相空間という骨格 〜`dist`を捨てても連続性は生き残る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch08_036.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]

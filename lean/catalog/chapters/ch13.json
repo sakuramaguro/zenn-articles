@@ -1,0 +1,694 @@
+[
+  {
+    "id": "ch13_001",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 11,
+    "end": 50,
+    "sha256": "21714df9b75ac2fbdad6fd860c516c01f70b2e8d24613a78ac080db35f5d7aeb",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_002",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 110,
+    "end": 121,
+    "sha256": "9b693e1c2d29b673039a75d05235661d1dad0592917050e7cb6294146def30cf",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.3 `Measure α` を解剖します ──── OuterMeasure との関係 / ### Lean の実装：`MeasureTheory.Measure`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_003",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 149,
+    "end": 170,
+    "sha256": "cb5a10c6f70d3b73df6927d20a1c8272cba784aa8796763625a7317f75c33c4e",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.3 `Measure α` を解剖します ──── OuterMeasure との関係 / ### Lean の実装：`MeasureTheory.Measure`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-023"
+    ]
+  },
+  {
+    "id": "ch13_004",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 182,
+    "end": 189,
+    "sha256": "d3c61aa750b86238e66cc7b5713e98cbd36dfd3cf300876a9feca27b34677c92",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.4 具体例三選 ──── Lebesgue・数え上げ・Dirac / ### 例1：Lebesgue 測度",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_005",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 195,
+    "end": 204,
+    "sha256": "b5f3b4db4d432c2e626ac276954a8bfebe11fb2609528cf5f01a29d597dbf29c",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.4 具体例三選 ──── Lebesgue・数え上げ・Dirac / ### 例1：Lebesgue 測度 / #### 証明の実況中継：$\\lambda([0,3]) = 3$ を確認する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_006",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 238,
+    "end": 251,
+    "sha256": "94fddfda0c4138586e798572eef8a534aa6af7af8a051863de49d41821082e14",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.4 具体例三選 ──── Lebesgue・数え上げ・Dirac / ### 例1：Lebesgue 測度 / #### 証明の実況中継：$\\lambda([0,3]) = 3$ を確認する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_007",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 257,
+    "end": 273,
+    "sha256": "1b40bb123cd2c13aea4cf1bf1c92a0e64aa82d2fbdd50872aeb7b1269c359a03",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.4 具体例三選 ──── Lebesgue・数え上げ・Dirac / ### 例2：数え上げ測度",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_008",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 285,
+    "end": 303,
+    "sha256": "f04013e1bd8a39b28b05e1f08f8cffb63b4607ed1816f7bdcbcc481acea9ab53",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.4 具体例三選 ──── Lebesgue・数え上げ・Dirac / ### 例3：Dirac 測度",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_009",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 315,
+    "end": 330,
+    "sha256": "f111c88306afccd38b36a2d5a01ebcf5e1030f141c973cd339b2633e5b01302b",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.5 確率測度 ──── 第4巻への布石 / ### Lean の実装：`IsProbabilityMeasure`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_010",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 339,
+    "end": 342,
+    "sha256": "bc8480b6d091354f0b55f62d3ebb6fb05dde54969e2f84a3a34efef837c8f454",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.5 確率測度 ──── 第4巻への布石 / ### Lean の実装：`IsProbabilityMeasure`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch13_009"
+      ],
+      "instruction": "open MeasureTheory を引き継いで確率空間の変数宣言を確認する。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch13_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_011",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 383,
+    "end": 390,
+    "sha256": "c3bef727d190aa39a19bf25ca1bffba1d53cbf44be9be8f8c7629df9983c09fa",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_012",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 399,
+    "end": 403,
+    "sha256": "ac3fe407de3656f97394c407729db22f4483641c09611f9a1c66c5c5554fdeeb",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_013",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 411,
+    "end": 417,
+    "sha256": "a7d0bb31a0f08ec5cd321547e351012228bfc4330388c518cea1f7aaeca6b344",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_013.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-023"
+    ]
+  },
+  {
+    "id": "ch13_014",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 430,
+    "end": 437,
+    "sha256": "f32dab48e2f091d973edfb1c6d62e943c5d5fb316285aaa0f9fcd0dd7c6d4f6c",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-023"
+    ]
+  },
+  {
+    "id": "ch13_015",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 446,
+    "end": 452,
+    "sha256": "e326b9cf821c2a264e3bb4f0e085e7d997dee759775897ee66180fd230138933",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-023"
+    ]
+  },
+  {
+    "id": "ch13_016",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 471,
+    "end": 480,
+    "sha256": "0b4a8f404044f8b4676307b1497bd08c433e03089701694504bc41f76bacdf77",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch13_017",
+    "source": "books/lean4-formalization/ch13.md",
+    "line": 489,
+    "end": 495,
+    "sha256": "e7cf2fd6255bb71f603def1ca1038ae9869d23672ca86f91394dd5ed8d135287",
+    "section": "# 第2章：測度空間の建設 〜「大きさ」を公理から作る〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch13_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch13_001",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch13_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]

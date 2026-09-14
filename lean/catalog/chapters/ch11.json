@@ -1,0 +1,943 @@
+[
+  {
+    "id": "ch11_001",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 13,
+    "end": 26,
+    "sha256": "a88ac26844431e98b2f63d1881014a8f9ac155fdc642985f9e604cee8294e063",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.0 本章の最終ゴールを先に見せる ──── そして第1章の呪文が戻ってくる",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch11_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-04"
+    ]
+  },
+  {
+    "id": "ch11_002",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 30,
+    "end": 38,
+    "sha256": "3556bc8a4a3b74784d864ae229ae49e1c2362ba77dc88e2e9c425e00cbf0411f",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.0 本章の最終ゴールを先に見せる ──── そして第1章の呪文が戻ってくる",
+    "category": "excerpt",
+    "role": "本文",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_002.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_003",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 64,
+    "end": 75,
+    "sha256": "5501b7f474116fcb78da326ac34800cb9f62a8915a249204b760506d7bfe1b8c",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.1 縮小写像の解剖 ──── `ContractingWith` の数学⇔Lean翻訳 / ### Leanの実装：`LipschitzWith` と `ContractingWith`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_004",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 86,
+    "end": 95,
+    "sha256": "a7aec3847698c00d264208e88be525c472500ae87f5ca21e0e7c9d3beb071871",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.1 縮小写像の解剖 ──── `ContractingWith` の数学⇔Lean翻訳 / ### Leanの実装：`LipschitzWith` と `ContractingWith`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_005",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 127,
+    "end": 135,
+    "sha256": "8ebdb96466956f0232b2c176f3abd0dc91753b3f74f98cbdde56e137d519afac",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.2 Banachの不動点定理 ──── ラスボスの召喚 / ### Leanでの形式化：定理の型を読む",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-04"
+    ]
+  },
+  {
+    "id": "ch11_006",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 162,
+    "end": 165,
+    "sha256": "d6eb1ef4cf9ef6c76a511315587863f36401e93a55b8444ed25dea6ba7c95f14",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.3 ラスボス討伐の実況中継 ──── 全道具が収束する瞬間 / ### 具体例：$f(x) = x/2$ の不動点",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_007",
+        "ch11_008",
+        "ch11_009",
+        "ch11_010",
+        "ch11_011"
+      ],
+      "instruction": "ch11_006 の by 内へ配置。hf の構築の2つの枝と、その後の不動点の取り出しを分けて組み立てる。API はP1修正対象。",
+      "assembly_group": "ch11_006"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_006.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_007",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 177,
+    "end": 182,
+    "sha256": "215fb897850fa7ce881e3d3a1854c7ad2373eab825b892534dfa75caeadb86ec",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.3 ラスボス討伐の実況中継 ──── 全道具が収束する瞬間 / ### 具体例：$f(x) = x/2$ の不動点",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_006",
+        "ch11_008",
+        "ch11_009",
+        "ch11_010",
+        "ch11_011"
+      ],
+      "instruction": "ch11_006 の by 内へ配置。hf の構築の2つの枝と、その後の不動点の取り出しを分けて組み立てる。API はP1修正対象。",
+      "assembly_group": "ch11_006"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_007.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_008",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 189,
+    "end": 193,
+    "sha256": "9e92280793287413e62da1d9525bb0649d0a4cb1d87055eb527059a4a7ac340e",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.3 ラスボス討伐の実況中継 ──── 全道具が収束する瞬間 / ### 具体例：$f(x) = x/2$ の不動点",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_006",
+        "ch11_007",
+        "ch11_009",
+        "ch11_010",
+        "ch11_011"
+      ],
+      "instruction": "ch11_006 の by 内へ配置。hf の構築の2つの枝と、その後の不動点の取り出しを分けて組み立てる。API はP1修正対象。",
+      "assembly_group": "ch11_006"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_008.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_009",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 202,
+    "end": 206,
+    "sha256": "d30673970c1eaecbb8540036136f496f8ea1a9b98c2a4c5c3b783da56ac4d0d5",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.3 ラスボス討伐の実況中継 ──── 全道具が収束する瞬間 / ### 具体例：$f(x) = x/2$ の不動点",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_006",
+        "ch11_007",
+        "ch11_008",
+        "ch11_010",
+        "ch11_011"
+      ],
+      "instruction": "ch11_006 の by 内へ配置。hf の構築の2つの枝と、その後の不動点の取り出しを分けて組み立てる。API はP1修正対象。",
+      "assembly_group": "ch11_006"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_009.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_010",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 216,
+    "end": 218,
+    "sha256": "ad375d2e3ac97787bd5ef97cb29230be32aee8de56bc830ff3f3b5ccd782da0d",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.3 ラスボス討伐の実況中継 ──── 全道具が収束する瞬間 / ### 具体例：$f(x) = x/2$ の不動点",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_006",
+        "ch11_007",
+        "ch11_008",
+        "ch11_009",
+        "ch11_011"
+      ],
+      "instruction": "ch11_006 の by 内へ配置。hf の構築の2つの枝と、その後の不動点の取り出しを分けて組み立てる。API はP1修正対象。",
+      "assembly_group": "ch11_006"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_010.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_011",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 229,
+    "end": 232,
+    "sha256": "2ff882599b1716c1dc094fe7b21e0f4ed0109db2d8e9f9fbbafbe5cd4898c9ee",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.3 ラスボス討伐の実況中継 ──── 全道具が収束する瞬間 / ### 具体例：$f(x) = x/2$ の不動点",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_006",
+        "ch11_007",
+        "ch11_008",
+        "ch11_009",
+        "ch11_010"
+      ],
+      "instruction": "ch11_006 の by 内へ配置。hf の構築の2つの枝と、その後の不動点の取り出しを分けて組み立てる。API はP1修正対象。",
+      "assembly_group": "ch11_006"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_011.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_012",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 252,
+    "end": 261,
+    "sha256": "0ca37d26202316ab315603da9691edd958cf411891dedc93bd6d51957016a4e5",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.3 ラスボス討伐の実況中継 ──── 全道具が収束する瞬間 / ### より一般的な例：完備距離空間上の縮小写像",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-04"
+    ]
+  },
+  {
+    "id": "ch11_013",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 279,
+    "end": 281,
+    "sha256": "ad375d2e3ac97787bd5ef97cb29230be32aee8de56bc830ff3f3b5ccd782da0d",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.3 ラスボス討伐の実況中継 ──── 全道具が収束する瞬間 / ### より一般的な例：完備距離空間上の縮小写像",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_012"
+      ],
+      "instruction": "一般不動点定理の obtain の再掲。X,k,f,hf を引き継ぐ。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_013.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_014",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 298,
+    "end": 302,
+    "sha256": "59bcab29a563fc5e7343bb5c8a093b98728e59d9afbe81bb9df772e6d811bab4",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.4 反復列の収束：`Tendsto` が完結する",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_015"
+      ],
+      "instruction": "ch11_014 の by 内へ ch11_015 を配置する。反復収束の API 修正が必要。",
+      "assembly_group": "ch11_014"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_014.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_015",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 315,
+    "end": 320,
+    "sha256": "e0119e07559d6ddbb4fb1a8a3d9fca6a46c3401f9a5d7d477e6ee9971b76af16",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.4 反復列の収束：`Tendsto` が完結する",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_014"
+      ],
+      "instruction": "ch11_014 の by 内へ ch11_015 を配置する。反復収束の API 修正が必要。",
+      "assembly_group": "ch11_014"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_015.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-04"
+    ]
+  },
+  {
+    "id": "ch11_016",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 344,
+    "end": 367,
+    "sha256": "e875e80fd1ab477411b766afe09ee2524f7278e07b70a1a4cd9f14b45bda4dcf",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.5 免許証の総決算 ──── 全章の道具が不動点定理に収束する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_017",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 386,
+    "end": 391,
+    "sha256": "1cb397c6c3a4bb65a48f3a1d6df4daff8bced24b5f9ed27d7c9e44144d149ea5",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.6 大団円 ──── 第1章の偽の予告コードへ",
+    "category": "expected_error",
+    "role": "本文",
+    "reason": "エラーを観察・説明するために提示されたコード。実際の失敗理由は修正段階で照合する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_017.lean",
+    "validation_mode": "assert_expected_diagnostic",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_018",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 397,
+    "end": 406,
+    "sha256": "448ad4fc48287db8c951c7d8e13e8fc39cfda4fd62e7d140bfe2657611c297d6",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.6 大団円 ──── 第1章の偽の予告コードへ",
+    "category": "excerpt",
+    "role": "本文",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_018.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_019",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 498,
+    "end": 502,
+    "sha256": "b7b74b5d72b89c1dccf9b8fee0c145f72d82b6e62f1b4e5e7fbfaad04c3babc7",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_020",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 509,
+    "end": 517,
+    "sha256": "0ff7748efbafb0f4017745fd353f80cdc6948a19c03891e8a3cf3644125da887",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_020.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_021",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 528,
+    "end": 545,
+    "sha256": "4aaa331177613e2489bb3cd6c95754c75cea9cf226368e2d6a7b07fd0f3d22c4",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_021.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_022",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 553,
+    "end": 562,
+    "sha256": "190dc9bc1fa09c2da5138a966e44126d6455cf260684610495f8268961be70ab",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_022.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_023",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 582,
+    "end": 598,
+    "sha256": "05e62314f5ff5494b0ca413d2def8998628342345e4877e03e156a9aa2fdabca",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_023.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_024",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 606,
+    "end": 621,
+    "sha256": "5decfdbd95025aa9637d13331fefdd2a56f1a4749ee3eab524eae1e044770849",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_024.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_025",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 653,
+    "end": 659,
+    "sha256": "0d12697ba667e98e05b81cff5f4bc3c4b605fa7cacf965c951406b97a175729a",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_025.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch11_026",
+    "source": "books/lean4-formalization/ch11.md",
+    "line": 676,
+    "end": 686,
+    "sha256": "d0fd5ad518e587e345d32b8347b49bdafc30d23649a7d5ade8de1b410c4e0eb6",
+    "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch11_025"
+      ],
+      "instruction": "型略記 ℓ² の宣言のみを引き継ぐ。sorry を含む example は継承しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch11_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch11_026.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]

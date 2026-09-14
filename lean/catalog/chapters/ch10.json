@@ -1,0 +1,907 @@
+[
+  {
+    "id": "ch10_001",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 13,
+    "end": 27,
+    "sha256": "bd3743ca18ca309f67a1ede79a1c3341f625b4ce5125734cf339a61e73943fb3",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.0 本章のゴールを先に見せる ──── そして著者の絶望も",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch10_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-016"
+    ]
+  },
+  {
+    "id": "ch10_002",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 50,
+    "end": 53,
+    "sha256": "4ffcea9477202a9d0cd48e62bb8b651e0718e379f0a9807da82fe4f4130adf24",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.1 `lp` 空間とは何者か ──── Mathlib の深淵を覗く / ### 最初の `#check` から始める",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_003",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 63,
+    "end": 66,
+    "sha256": "dae9ecdd95dd862aa1dc77a5b70004836b17d77c3f2bf511dbd6519fb3daf8a5",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.1 `lp` 空間とは何者か ──── Mathlib の深淵を覗く / ### 最初の `#check` から始める",
+    "category": "excerpt",
+    "role": "本文",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_003.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_004",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 76,
+    "end": 85,
+    "sha256": "921feb3da7bda280554a5eabde530fac15b3d48808cb57c8a1c70f594f92cb4d",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.1 `lp` 空間とは何者か ──── Mathlib の深淵を覗く / ### `lp` の数学的中身",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_005",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 95,
+    "end": 101,
+    "sha256": "52b912ec169f4b0eef668ff6283681c47a441e9fb5e8de49efd3671754456080",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.1 `lp` 空間とは何者か ──── Mathlib の深淵を覗く / ### `lp` の数学的中身",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-017"
+    ]
+  },
+  {
+    "id": "ch10_006",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 120,
+    "end": 127,
+    "sha256": "343f59f9aa9b4d787d41bc93787ac325e011d5c879bddad2bd6372767f24a9a3",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.2 免許証の確認 ──── `MetricSpace` と `CompleteSpace` / ### `MetricSpace` の確認",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_007",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 131,
+    "end": 133,
+    "sha256": "1aadf09d9c7d6946189c1b8725320ad33d5aa85fd539b2b0aada318956c01c99",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.2 免許証の確認 ──── `MetricSpace` と `CompleteSpace` / ### `MetricSpace` の確認",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_008",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 139,
+    "end": 141,
+    "sha256": "95c73f2bbab7d5b86b81ac0defa9c3aa0e590689369b0effe823d0551c972c8c",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.2 免許証の確認 ──── `MetricSpace` と `CompleteSpace` / ### `MetricSpace` の確認",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch10_007"
+      ],
+      "instruction": "ch10_007 を by 証明に書いた場合の本体。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_008.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_009",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 149,
+    "end": 157,
+    "sha256": "165c479842aeef8289a9ec9fd892a0999009ea3353b5b9d721da4cd6c510f102",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.2 免許証の確認 ──── `MetricSpace` と `CompleteSpace` / ### `CompleteSpace` の確認",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_010",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 176,
+    "end": 181,
+    "sha256": "b1ff45c35ba8b6b641507d2b768704cbd350bbe8f397f3410faa113662a5113a",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.2 免許証の確認 ──── `MetricSpace` と `CompleteSpace` / ### `HeineBorelSpace` の不在",
+    "category": "excerpt",
+    "role": "本文",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_010.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-08"
+    ]
+  },
+  {
+    "id": "ch10_011",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 215,
+    "end": 218,
+    "sha256": "6fd83f4ad991aa27d6ec27b3f0718f483c57972b2fd25747ea92aa264f9f172e",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.3 有限次元の直感、崩壊の瞬間 ──── 単位球は非コンパクト / ### Lean での確認",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-016"
+    ]
+  },
+  {
+    "id": "ch10_012",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 222,
+    "end": 232,
+    "sha256": "9dfe1717f6a20d3706c27f30ff5fb7a6e94dec7eedbe493548751ba15ede26ef",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.3 有限次元の直感、崩壊の瞬間 ──── 単位球は非コンパクト / ### Lean での確認",
+    "category": "unfinished",
+    "role": "本文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [
+        "ch10_011"
+      ],
+      "instruction": "標準基底 e の定義が必要。その定義自体の API 修正も必要。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_012.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_013",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 264,
+    "end": 275,
+    "sha256": "d9bd16bef9f91df57063079ffd90ef8c7217f88107a570f6b6ffb991c45f1c39",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.3 有限次元の直感、崩壊の瞬間 ──── 単位球は非コンパクト / ### 収束部分列が取れない ──── Heine-Borel 崩壊の核心",
+    "category": "unfinished",
+    "role": "本文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_013.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_014",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 300,
+    "end": 308,
+    "sha256": "4b240fe3b7e074946ef34402215daf700dd0331ec3d61d8ddf0b7bf8fb59abd1",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.4 無限次元で「使えるもの」と「使えないもの」の整理 / ### 使えるもの（免許証あり）",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch10_001"
+      ],
+      "instruction": "ℓ² の型略記を引き継ぐ。識別子の構文は修正対象。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_015",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 312,
+    "end": 323,
+    "sha256": "dd42995d6dfbe7b9dbbbd0214e8e27fc9c0146f1e33c70e9af424e357bcdcdd1",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.4 無限次元で「使えるもの」と「使えないもの」の整理 / ### 使えないもの（免許証なし）",
+    "category": "excerpt",
+    "role": "本文",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_015.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_016",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 360,
+    "end": 367,
+    "sha256": "035e66da6b5ee4bd33a6138a9f405a91b4967cac77429215375dfc17e9a0983e",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.5 `lp` の構造を少し深く ──── ノルムと内積",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_017",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 400,
+    "end": 418,
+    "sha256": "d1e653faa84841f310e823b7b2b25d6581b0ef86958a093d95ffbb303ecbee6c",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.6 本章のまとめ ──── 崩壊と希望",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_018",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 444,
+    "end": 455,
+    "sha256": "ceabfd46990747c1a334e6b9662dc87c385a6316491767aa8e97ad69a433ad7a",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.6 本章のまとめ ──── 崩壊と希望",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_019",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 486,
+    "end": 489,
+    "sha256": "7aea81bae0fe5efc621caf920c8d3eff4b1ba63395739987ca6f77d988a7e19f",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-08"
+    ]
+  },
+  {
+    "id": "ch10_020",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 495,
+    "end": 498,
+    "sha256": "92b5f3bb0f3104411df794ed7a1f07c59ba3db5f394241b550496743d59fd2e6",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
+    "category": "excerpt",
+    "role": "✅ 解答を見る",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_020.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-08"
+    ]
+  },
+  {
+    "id": "ch10_021",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 504,
+    "end": 507,
+    "sha256": "7cd3f2f3a4a1934335eb7151b612a1866d26b276f8df687fef29c9386e6d3896",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
+    "category": "excerpt",
+    "role": "✅ 解答を見る",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_021.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-08"
+    ]
+  },
+  {
+    "id": "ch10_022",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 517,
+    "end": 521,
+    "sha256": "86a7af07ef4c26b56a5f38e12524e8f9cdfa25940ef51c3e3893837ed310d8e9",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_022.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_023",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 530,
+    "end": 538,
+    "sha256": "c3bc6e7bad39eabcc00251157dfbcfcc1927b3d41b4910df1cd77a8d6fe1aaea",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_023.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch10_024",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 549,
+    "end": 562,
+    "sha256": "d692f37d6eb8a7cd75f630fb84d0990eb2cf9216f6a3991b843274250893007c",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_024.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-018"
+    ]
+  },
+  {
+    "id": "ch10_025",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 572,
+    "end": 579,
+    "sha256": "a9d87ffd749ef0370b24ba75684ed3a5641b24464bf2872ba7b29d84de2a96da",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_025.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-018"
+    ]
+  },
+  {
+    "id": "ch10_026",
+    "source": "books/lean4-formalization/ch10.md",
+    "line": 660,
+    "end": 664,
+    "sha256": "9f195a216b3ed4a724500c0f92d3ce8843429ee762a316a4f74ef8b138b5b86b",
+    "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch10_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch10_026.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]

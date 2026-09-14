@@ -1,0 +1,1081 @@
+[
+  {
+    "id": "ch05_001",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 15,
+    "end": 42,
+    "sha256": "ca93b666a240f657010a15ae46a6652900dca4e8aa5ec036be4b369dab377d35",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-007"
+    ]
+  },
+  {
+    "id": "ch05_002",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 88,
+    "end": 93,
+    "sha256": "44b42f101f5da32d36601abd39040aaef140524092baba5469e34547c6053b3f",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.1 数学的準備 ──── 次元定理と `V →ₗ[K] W` を解剖します / ### Lean の実装：`LinearMap` を解剖します",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_003",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 107,
+    "end": 117,
+    "sha256": "72ef4749c6d497038101180af0499e382fb33864f4881d16aa88a8019570daff",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.1 数学的準備 ──── 次元定理と `V →ₗ[K] W` を解剖します / ### `V →ₗ[K] W` 記法の読み方",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_004",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 162,
+    "end": 180,
+    "sha256": "584345d01c962025f8c13ffe3231abacfe97570156373b7093f14acc7b62bbcd",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.2 最初の絶望 ──── `sorry` だらけの骨格を作る",
+    "category": "unfinished",
+    "role": "本文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_004.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_005",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 198,
+    "end": 206,
+    "sha256": "ab8cd2b45847136c59b6d25ec381591d6f7075192c31c454438a1673fb4d2e7d",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.2 最初の絶望 ──── `sorry` だらけの骨格を作る / ### `have` によるサブゴール分割",
+    "category": "excerpt",
+    "role": "本文",
+    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_005.lean",
+    "validation_mode": "compare_with_definition_or_output",
+    "repair_stage": 2,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-02"
+    ]
+  },
+  {
+    "id": "ch05_006",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 245,
+    "end": 252,
+    "sha256": "91a312fca5ed2f33de26c491608a3a94481f98369e40e903441bdfcf1bd8916d",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.3 型クラスの壁 ──── 免許証を一枚ずつ貼る",
+    "category": "expected_error",
+    "role": "本文",
+    "reason": "エラーを観察・説明するために提示されたコード。実際の失敗理由は修正段階で照合する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_006.lean",
+    "validation_mode": "assert_expected_diagnostic",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_007",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 274,
+    "end": 276,
+    "sha256": "58b01cf7fe0214a9623184ea1a645dccff7ecce4f0fc428a937c1359802e9786",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.3 型クラスの壁 ──── 免許証を一枚ずつ貼る",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_006"
+      ],
+      "instruction": "型クラスの段階追加。f の引数より前に挿入し、直前段階の宣言を置き換える。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_007.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_008",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 289,
+    "end": 292,
+    "sha256": "389391aeb28266e6cfc8cf66838b912eb014eadc0f2201f12b35776b2df64d21",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.3 型クラスの壁 ──── 免許証を一枚ずつ貼る",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_006"
+      ],
+      "instruction": "型クラスの段階追加。f の引数より前に挿入し、直前段階の宣言を置き換える。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_008.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_009",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 303,
+    "end": 306,
+    "sha256": "10370f0fb0307f72ea2d36e9e21dc3cfb112ca65aaa39178b44b6ea4b615dfdc",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.3 型クラスの壁 ──── 免許証を一枚ずつ貼る",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_006"
+      ],
+      "instruction": "型クラスの段階追加。f の引数より前に挿入し、直前段階の宣言を置き換える。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_009.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_010",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 317,
+    "end": 320,
+    "sha256": "3a2ec93537d151513653c9d505308494af96c4b82aef8d18bb3fe2a8178dc240",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.3 型クラスの壁 ──── 免許証を一枚ずつ貼る",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_006"
+      ],
+      "instruction": "型クラスの段階追加。f の引数より前に挿入し、直前段階の宣言を置き換える。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_010.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-008"
+    ]
+  },
+  {
+    "id": "ch05_011",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 349,
+    "end": 352,
+    "sha256": "84ddc7a49889e95ee797c2e6623671c2bf6a2d503c0830b0fd60a16fa8fd3140",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.4 Claudeとの協働 ──── Mathlibの定理を掘り当てる / ### `exact?` が自力で発見した——`h_ker` の場合",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_004",
+        "ch05_021"
+      ],
+      "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_011.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_012",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 365,
+    "end": 370,
+    "sha256": "118edc4cb23b98795108c6b69229dbc873be80487109e5fb4f9b2da9fe068303",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.4 Claudeとの協働 ──── Mathlibの定理を掘り当てる / ### `exact?` が自力で発見した——`h_ker` の場合",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_004",
+        "ch05_021"
+      ],
+      "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_012.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_013",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 390,
+    "end": 393,
+    "sha256": "3c2d3712cce3c74cdd7e35e392a7d1a82c98f9635654adf3257df7ee73eb1ece",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.4 Claudeとの協働 ──── Mathlibの定理を掘り当てる / ### 同様に `h_range` も `exact?` で",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_004",
+        "ch05_021"
+      ],
+      "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_013.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_014",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 405,
+    "end": 410,
+    "sha256": "7cf691943c04e8f69ae7502b087e73145ddbaf0b8075e9ea1a22476038f36604",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.4 Claudeとの協働 ──── Mathlibの定理を掘り当てる / ### 同様に `h_range` も `exact?` で",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_004",
+        "ch05_021"
+      ],
+      "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_014.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_015",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 460,
+    "end": 463,
+    "sha256": "08c1aa19eec7b41a8caa6377a63a1180f0f15934e556c5282be93e66683e397b",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.4 Claudeとの協働 ──── Mathlibの定理を掘り当てる / ### `exact?` の限界——最終ステップでのタイムアウト",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_016",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 484,
+    "end": 489,
+    "sha256": "19ab6ae454770f43b1788e781ce322f9eb29fe62d63014df6175476837c627ea",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.5 `sorry` を一つずつ葬る ──── 完全証明への道 / ### sorry①を葬る——`h_ker`（核の有限次元性）",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_004",
+        "ch05_021"
+      ],
+      "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_016.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_017",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 505,
+    "end": 510,
+    "sha256": "b7e3f770b8ad73bb07d8e05546bca4e219abf2d47736bc5b9fb03758f6492ff9",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.5 `sorry` を一つずつ葬る ──── 完全証明への道 / ### sorry②を葬る——`h_range`（像の有限次元性）",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_004",
+        "ch05_021"
+      ],
+      "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_017.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_018",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 526,
+    "end": 528,
+    "sha256": "d7df391b7ab92e78f1eca86834855f3cbf80a4f7eacc3fb380194690df679d2b",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.5 `sorry` を一つずつ葬る ──── 完全証明への道 / ### sorry③を葬る——次元の加法性（最終決戦）",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_019",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 545,
+    "end": 549,
+    "sha256": "197e4b60c6a0acdb3fb76d8eee31239726bf39d3d32d27615c954f11e18c1043",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.5 `sorry` を一つずつ葬る ──── 完全証明への道 / ### sorry③を葬る——次元の加法性（最終決戦）",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_004",
+        "ch05_021"
+      ],
+      "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_019.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_020",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 573,
+    "end": 575,
+    "sha256": "9c1d4ee5310586334c5996511afa7761097ff00a8c7512bd58eafa4f14875511",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.5 `sorry` を一つずつ葬る ──── 完全証明への道 / ### sorry③を葬る——次元の加法性（最終決戦）",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_004",
+        "ch05_021"
+      ],
+      "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_020.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_021",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 594,
+    "end": 617,
+    "sha256": "d4a149381dd500eb4f886312bf1b5238571794b901bd035724f06f3715334f0b",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.6 完成 ──── Lean 4が証明した次元定理",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_021.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "compiled_source",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-007"
+    ]
+  },
+  {
+    "id": "ch05_022",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 648,
+    "end": 656,
+    "sha256": "4e59ecd7af2d46745d11ba0f0d42e5d5f68098614f950a4e84368a08afd62551",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.7 第2巻以降への大きな伏線 / ### 有限次元の外に広がる世界",
+    "category": "expected_error",
+    "role": "本文",
+    "reason": "エラーを観察・説明するために提示されたコード。実際の失敗理由は修正段階で照合する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_022.lean",
+    "validation_mode": "assert_expected_diagnostic",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_023",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 703,
+    "end": 710,
+    "sha256": "e8ac89d844e7d60f07fb7d540a52e5f8a45194dd6044ac780ed90cca72742d73",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "問題文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_023.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_024",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 747,
+    "end": 759,
+    "sha256": "74fc2d7665cdae0de4a66805f92839cd7ea5c3562f66c8b8e7c5844fe8667703",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_024.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_025",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 769,
+    "end": 780,
+    "sha256": "6ea3766ed4e9b2e18bb728f1c4f4199260c08b5a839a6ffb4ff260fe40341446",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_025.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_026",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 792,
+    "end": 799,
+    "sha256": "56a1a1187deb77a6f89d2f04fb147ae4d34e22031db0ffa6bdfdde710d24bd55",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_025"
+      ],
+      "instruction": "問題の variable 宣言（K,V と型クラス）を先に置く。問題の sorry は解答に含めない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_026.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_027",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 808,
+    "end": 814,
+    "sha256": "b77f965168c7a80e1a83ef47036fe68ac152245e0eaf678b1b731205330ef063",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_025"
+      ],
+      "instruction": "問題の variable 宣言（K,V と型クラス）を先に置く。問題の sorry は解答に含めない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_027.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_028",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 824,
+    "end": 837,
+    "sha256": "bacdd8a2c955b1cf4da595344a72ceb7455c74555e2d855b4bc716809254ea28",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_028.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_029",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 851,
+    "end": 857,
+    "sha256": "ab51c7f2782663513b890b7417b91d39f4452f7f8daed2aa7674cd38c81b72d4",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_028"
+      ],
+      "instruction": "問題の variable 宣言（K,V,W,f と型クラス）を先に置く。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_029.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch05_030",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 866,
+    "end": 870,
+    "sha256": "7d2abd9abfbe070ddba24e8b7c0205c022c60d8cd90b91cd3f5e923d2918acd5",
+    "section": "# 第5章：sorryを葬る日 〜次元定理の完全証明〜 / ## 5.X まとめ ──── 第5章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_028"
+      ],
+      "instruction": "問題の variable 宣言（K,V,W,f と型クラス）を先に置く。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch05_001",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_030.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]

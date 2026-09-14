@@ -1,0 +1,607 @@
+[
+  {
+    "id": "ch14_001",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 11,
+    "end": 39,
+    "sha256": "e3be498d7b9ce0faa916b8d62412dc62108bcfd80953e0bf666dcf8fe0d09ac1",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch14_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_002",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 83,
+    "end": 94,
+    "sha256": "7ad21214661a5cee22605fc5805ccd41f65649fb4934faf172a88b8579d6447d",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch14_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_003",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 98,
+    "end": 118,
+    "sha256": "2d0fff11b8befc0ff6c401809c683eac3cf0d47af25c469d38066a55aa5a00c0",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch14_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_004",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 122,
+    "end": 130,
+    "sha256": "33432f3ff1a667561475c2b91ea68d6194e12c39a6218eded27ad7f3f89f30af",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable` / #### 証明の実況中継：`Continuous f → Measurable f` を tactic で追う",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch14_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_005",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 168,
+    "end": 203,
+    "sha256": "8beea5c683b678169485aaedc9dd8e62a1525637263398e0810fe54604c7da5f",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### Lean の実装：`∀ᵐ x ∂μ` と `f =ᵐ[μ] g`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch14_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-024"
+    ]
+  },
+  {
+    "id": "ch14_006",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 211,
+    "end": 216,
+    "sha256": "5b5395685d727af9d8bb7f2db00fd26354c35786e40fdb5625ebb85cffe04749",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### 実況中継：`ae_restrict_of_ae` で制限測度に降ろす",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch14_001"
+      ],
+      "instruction": "open MeasureTheory Filter を引き継ぐ。API の存在は別途確認する。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch14_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-024"
+    ]
+  },
+  {
+    "id": "ch14_007",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 220,
+    "end": 224,
+    "sha256": "cea99adcc4e2e063feaa22ce628e40a5b8a9882b4e5c63466a113991c62baa79",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### 実況中継：`ae_restrict_of_ae` で制限測度に降ろす",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch14_001"
+      ],
+      "instruction": "open MeasureTheory Filter を引き継ぐ。API の存在は別途確認する。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch14_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-024"
+    ]
+  },
+  {
+    "id": "ch14_008",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 262,
+    "end": 280,
+    "sha256": "6141e3d82c49eed7b5048d4d0d48d4d6de325208bf6d7a381bccfccad0cff174",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.5 `AEMeasurable` と `Measurable` の違い / ### Lean の実装：`AEMeasurable`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch14_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_009",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 323,
+    "end": 329,
+    "sha256": "798d237b37eca11ac8146f29e7a0e122a7ee5b8c5a65a4f1b3252e16ec468e1d",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch14_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_010",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 338,
+    "end": 342,
+    "sha256": "80fcbd21d45c9f63650962381d9f41a87a8ff444b7a3d187fe8c8fdf7982aee6",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch14_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_011",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 361,
+    "end": 367,
+    "sha256": "1239c834e9c2791f8227c43d2527120a79a319d09f253641756d1ae267dc3c34",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch14_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_012",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 376,
+    "end": 383,
+    "sha256": "1cf03aa662f030c3e28cff063d7b3323aad5a0079e688531d85b8d3917861ec2",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch14_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_013",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 402,
+    "end": 409,
+    "sha256": "3854d09f989e326d1cfd1c05b822263e344bb2b5bbc395976f4e2aa1ca7c5b0c",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch14_013.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch14_014",
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 418,
+    "end": 423,
+    "sha256": "76196688a2d0b7e172e16e2de3a83ed6f9398d859d38c7df8ccbfba21f451e13",
+    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch14_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch14_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch14_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch14_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]

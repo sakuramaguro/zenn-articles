@@ -1,0 +1,575 @@
+[
+  {
+    "id": "ch17_001",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 11,
+    "end": 38,
+    "sha256": "5d5300959764f6680851b467411fe997ccf5f9b62b6d74c0b17b918fad7d8212",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch17_002",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 84,
+    "end": 96,
+    "sha256": "d4eb6dd69e94ac425762d435c57c8cda902c242d4cd536318c0d9eda8bed5b6b",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.2 単調収束定理（MCT） ──── `lintegral_iSup` / ### Lean の実装：`lintegral_iSup`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch17_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch17_003",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 106,
+    "end": 121,
+    "sha256": "59c1b7669611b05a53e3b7644da87f92cd8aa4117c2a8ea3a2904e6d920fbc96",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.2 単調収束定理（MCT） ──── `lintegral_iSup` / ### 実況中継：`lintegral_iSup` の直接適用",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch17_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch17_004",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 165,
+    "end": 174,
+    "sha256": "f698a57c53c05be54cac8fd3b0b87fceee8bcec28e4690f7ede44a605d2d976a",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.3 Fatouの補題 ──── `lintegral_liminf_le` / ### Lean の実装：`lintegral_liminf_le`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch17_005",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 196,
+    "end": 211,
+    "sha256": "6b70cf9e44d9e4ab96658ba1ebda1cb723eea71fec2d59920b4cff848c287fe5",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.3 Fatouの補題 ──── `lintegral_liminf_le` / ### 実況中継：`lintegral_liminf_le` の直接適用",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-05"
+    ]
+  },
+  {
+    "id": "ch17_006",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 259,
+    "end": 265,
+    "sha256": "c3138c4a4c5c4239ace8308ad225af9cc1827371c2b1a8e614614c6026e83d75",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.4 優収束定理（DCT） ──── `tendsto_integral_of_dominated_convergence` / ### Lean の実装：`tendsto_integral_of_dominated_convergence`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch17_007",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 286,
+    "end": 303,
+    "sha256": "4eed08c714dc4d62454e659f988927c95138cd620f20c592be314cdf4ac79a2d",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.4 優収束定理（DCT） ──── `tendsto_integral_of_dominated_convergence` / ### 実況中継：`tendsto_integral_of_dominated_convergence` の直接適用",
+    "category": "complete",
+    "role": "本文",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P1-05"
+    ]
+  },
+  {
+    "id": "ch17_008",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 388,
+    "end": 403,
+    "sha256": "a678112faf5f46a222c06ab1ab5b4eb51b3687c06d932ecce838895b18e7ec2c",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch17_009",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 412,
+    "end": 420,
+    "sha256": "ca3d176e78e7013e44de495ce48bc7db0aca2bf5c4b69642cb50f5535fe4b828",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch17_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch17_010",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 439,
+    "end": 449,
+    "sha256": "daeac64cbe79d7454a6f0b6d7f296e92e99c083d9aff71eee6cdce60dcfdb7eb",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-028"
+    ]
+  },
+  {
+    "id": "ch17_011",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 458,
+    "end": 465,
+    "sha256": "b533bbe602a419f2dfb20d6883d5151226f64d319761d713b1cba98974d5ef37",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch17_012",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 484,
+    "end": 500,
+    "sha256": "7248911926e2e01e7f168f037f5575ebd339ddc6607748db375c82fa2c03eb71",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-033"
+    ]
+  },
+  {
+    "id": "ch17_013",
+    "source": "books/lean4-formalization/ch17.md",
+    "line": 509,
+    "end": 518,
+    "sha256": "0be91e1e99f31942f36cc8030003f06b7aa46120b2e6fe51d0fac0fa524f9438",
+    "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch17_001",
+        "line": "import Mathlib"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_002",
+        "line": "open MeasureTheory"
+      }
+    ],
+    "own_setup": [
+      "open MeasureTheory Filter"
+    ],
+    "fixture": ".generated/raw/ch17_013.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": []
+  }
+]
