@@ -7,19 +7,19 @@
     "books/lean4-formalization/ch03.md": "faaf16c06b976fed9e66ed1585acd69fe53aad715f96c7f8a879661de3a1809e",
     "books/lean4-formalization/ch04.md": "5bc60cdab428b2b4a71755e5e2782e2b72d4bc7841e541c9019f64b3c53b5f42",
     "books/lean4-formalization/ch05.md": "ff538b400dd9a03c05165cacd5954e6856c85bdd032bc2499255e6398477fe82",
-    "books/lean4-formalization/ch06.md": "3ce0ca8df0dfa1606722dca2a276d12a7e9052991a3456566151e27aaea70da2",
-    "books/lean4-formalization/ch07.md": "4dad0f05e814657b33ed42371ec786c6ab5434b22522e0b00768550a9260ea8d",
-    "books/lean4-formalization/ch08.md": "45e0343efbd2f54a2e7ef51c879e23e6063d7982b981d884334c2ea60578cbba",
-    "books/lean4-formalization/ch09.md": "51086ea833532b82118639dd3906e7d9e0de080e254f000f451190448017c761",
-    "books/lean4-formalization/ch10.md": "bbe73236a25b6d5ca0599943b4ebaa7e83b13ab5b6662d2c184804c048bcf23d",
-    "books/lean4-formalization/ch11.md": "18f32ee9e56ba78fbe91dd6278a36c633d7e3c98a142de23e1beb3f942f3e51e",
+    "books/lean4-formalization/ch06.md": "a0e11f2299884fa198ec1e92a5b6a627228a3d721d1c6b8a28ad616d87880748",
+    "books/lean4-formalization/ch07.md": "d21ab4ba4f3d39eec654983d9014cb92013e3ba53981d6748daaaa79b1b27f84",
+    "books/lean4-formalization/ch08.md": "e0586938e820c1cacf841f0be4bedb10fee9181271807af14f8b632acfd1e740",
+    "books/lean4-formalization/ch09.md": "8025edf74c8f9539ba45d3900367978aa1ab43fee0c6008ba26aa0dcd8586376",
+    "books/lean4-formalization/ch10.md": "3b1362298332cfaa04cca58cb466f0ba7549c731dfa8d8cc07f4737e2d835037",
+    "books/lean4-formalization/ch11.md": "6681350ed2f919713693e46094b09abf7f68617cf546588027775b997ac38857",
     "books/lean4-formalization/ch12.md": "c2f46554f3814772093d491fe00ea4d81026c32cd64730071f375016e95a3820",
     "books/lean4-formalization/ch13.md": "c63425557d9c0942df3308d2f2d05806840d98b7a0586eaea7e2fccfea16e9e3",
     "books/lean4-formalization/ch14.md": "62dfdf9172e7dde715b3cc00a592261489ebdfa6a1e36b34a85cc4a5c070beed",
     "books/lean4-formalization/ch15.md": "e61765b5ff62203519914a0790c970138fcefd7934a9be72d702ac1305d3efed",
     "books/lean4-formalization/ch16.md": "a0a8abd72b32e76501f208308c40185f9ed172716d126a82826eb4214c922648",
     "books/lean4-formalization/ch17.md": "f6513d34313c333cdf91c7d2da424cc03ab10ce38053e2951ff4556242343245",
-    "books/lean4-formalization/ch18.md": "98f918e479213195209451db6ddee27bf5935b5113abbfb45074abceb87eb554",
+    "books/lean4-formalization/ch18.md": "20b561d1e032ed707636f36243bbf981f285e3321dc54188ee9e305253b5a89e",
     "books/lean4-formalization/intro.md": "5d87e35a466a18a6e494c5607ff58adaed98b9893b17c85adf01af9cea662a64",
     "books/lean4-formalization/part1.md": "cff17d63fcdf75ff8ee5945fcaddafb8eeaace30b3df158437e99df6b2d45113",
     "books/lean4-formalization/part2.md": "2d61c035a8c26060c962eb6de5fc1310022b3495eb4317ae166d62ed6c96200b",
@@ -50,6 +50,86 @@
     {
       "block": "ch05_022",
       "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch06_004",
+      "module_file": "LeanBook/Chapters/Ch06.lean"
+    },
+    {
+      "block": "ch07_040",
+      "module_file": "LeanBook/Chapters/Ch07.lean"
+    },
+    {
+      "block": "ch07_041",
+      "module_file": "LeanBook/Chapters/Ch07.lean"
+    },
+    {
+      "block": "ch08_018",
+      "module_file": "LeanBook/Chapters/Ch08.lean"
+    },
+    {
+      "block": "ch08_019",
+      "module_file": "LeanBook/Chapters/Ch08.lean"
+    },
+    {
+      "block": "ch10_001",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_005",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_006",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_007",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_010",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_011",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_012",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_013",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_014",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_015",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_017",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_019",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_020",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_021",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_022",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
     }
   ],
   "block_files": [
@@ -73,7 +153,7 @@
     "chapters/ch18.json",
     "chapters/intro.json"
   ],
-  "verification_stage": "1-A",
+  "verification_stage": "1-B",
   "diagnostics": [
     {
       "id": "false_equality",

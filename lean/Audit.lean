@@ -17,3 +17,15 @@ import LeanBook
 #print axioms ManuscriptReview.dirichletIntegral
 #print axioms ManuscriptReview.dominatedConvergence
 #print axioms ManuscriptReview.expectation
+
+#print axioms LeanBook.Ch06.continuousCompositionEpsilonDelta
+#print axioms LeanBook.Ch07.zeroDistanceDistinct
+#print axioms LeanBook.Ch07.zeroDistanceNotSeparating
+#print axioms LeanBook.Ch08.compactIffClosedBounded
+#print axioms LeanBook.Ch10.e
+#print axioms LeanBook.Ch10.norm_e
+#print axioms LeanBook.Ch10.basis_separated
+#print axioms LeanBook.Ch10.unitClosedBall_not_compact
+#print axioms LeanBook.Ch10.ell2_not_proper
+#print axioms LeanBook.Ch10.ell2_not_finiteDimensional
+#print axioms LeanBook.Ch10.notProperOfInfiniteDimensional

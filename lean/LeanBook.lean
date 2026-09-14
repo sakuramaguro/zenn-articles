@@ -2,3 +2,7 @@ import LeanBook.Baseline
 import LeanBook.Chapters.Ch01
 import LeanBook.Chapters.Ch03
 import LeanBook.Chapters.Ch05
+import LeanBook.Chapters.Ch06
+import LeanBook.Chapters.Ch07
+import LeanBook.Chapters.Ch08
+import LeanBook.Chapters.Ch10

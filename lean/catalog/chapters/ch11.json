@@ -569,7 +569,7 @@
     "source": "books/lean4-formalization/ch11.md",
     "line": 344,
     "end": 367,
-    "sha256": "e875e80fd1ab477411b766afe09ee2524f7278e07b70a1a4cd9f14b45bda4dcf",
+    "sha256": "122602e8cc8d8d2fd8a4eea6f61fc2f6ddceecc8333c48340a66212a64c02d1a",
     "section": "# 第6章：Banachの不動点定理 〜完備性がもたらす究極の魔法〜 / ## 6.5 免許証の総決算 ──── 全章の道具が不動点定理に収束する",
     "category": "complete",
     "role": "本文",
@@ -594,9 +594,13 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch11_016",
+      "source_sha256": "e875e80fd1ab477411b766afe09ee2524f7278e07b70a1a4cd9f14b45bda4dcf",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage1b_status": "revised_not_certified"
   },
   {
     "id": "ch11_017",

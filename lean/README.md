@@ -1,6 +1,6 @@
 # Lean 4形式化本の検証環境
 
-段階0で検証環境と原稿の対応表を整備し、段階1-Aで偽の等式・未証明部分・ゴール表示の説明を修正しました。対象は `books/lean4-formalization` の全23本のMarkdownです。初回の421ブロックに説明用の例と確認コマンドを3個追加し、現在は424ブロックを記録しています。
+段階0で検証環境と原稿の対応表を整備し、段階1-Aで偽の等式・未証明部分・ゴール表示の説明を、段階1-Bで合成の仮定・擬距離と商・閉球のコンパクト性を修正しました。対象は `books/lean4-formalization` の全23本のMarkdownです。初回の421ブロックに説明用の例と確認コマンドを3個追加し、現在は424ブロックを記録しています。
 
 ## 採用する版
 
@@ -36,17 +36,21 @@ python3 scripts/catalog.py check
 
 検査スクリプト自体の変更時は `python3 scripts/test_validation.py` も実行します。コードの欠落・変更や、文脈参照の欠落、未確認の公理を成功扱いしないことを確認します。
 
-## 現在の実行検証範囲（段階1-A）
+## 現在の実行検証範囲（段階1-B）
 
 | ファイル | 内容 |
 |---|---|
 | `LeanBook/Chapters/Ch01.lean` | 原稿の `ch01_001`：環境確認と最初の定理 |
 | `LeanBook/Chapters/Ch03.lean` | 原稿の `ch03_001`・`ch03_005`・`ch03_015`：章の到達例、偽の等式の否定、完成した `hard_proof` |
 | `LeanBook/Chapters/Ch05.lean` | 原稿の `ch05_021`・`ch05_022`：次元定理の完成例と公理確認 |
+| `LeanBook/Chapters/Ch06.lean` | ε-δによる合成の連続性：1ブロック |
+| `LeanBook/Chapters/Ch07.lean` | 2点の擬距離と分離条件の否定：2ブロック |
+| `LeanBook/Chapters/Ch08.lean` | ProperSpaceとHeine–Borel型の同値：2ブロック |
+| `LeanBook/Chapters/Ch10.lean` | ℓ²の基底、単位閉球の非コンパクト性、ProperSpace・有限次元性の否定など：15ブロック |
 | `LeanBook/Baseline.lean` | レビューで検証した修正例：連続性、不動点、積分、収束定理など |
-| `Audit.lean` | 上記で名前を付けた17宣言の公理依存 |
+| `Audit.lean` | 上記で名前を付けた28宣言の公理依存 |
 
-章別ファイルは原稿のimportを維持し、名前の衝突を防ぐ名前空間を追加しています。`BEGIN SOURCE` と `END SOURCE` の間は原稿からの抽出内容と照合します。Baselineは今後の修正に使う参照例で、現在の本文と一致するという意味ではありません。
+掲載コードのビルド対象は計26ブロックです。章別ファイルは原稿のimportを維持し、名前の衝突を防ぐ名前空間を追加しています。`BEGIN SOURCE` と `END SOURCE` の間は原稿からの抽出内容と照合します。Baselineは今後の修正に使う参照例で、現在の本文と一致するという意味ではありません。
 
 警告をビルドエラーとして扱います。主要な宣言については `sorryAx` だけでなく、未確認の公理への依存も検出します。許容する標準公理は `propext`、`Classical.choice`、`Quot.sound` で、各宣言が使うものをログに記録します。検査対象の追加時には `Audit.lean` も更新します。
 
@@ -58,6 +62,7 @@ python3 scripts/catalog.py check
 
 ## 原稿と修正計画の対応
 
+- [段階1-Bの修正・検証記録](STAGE1B.md)
 - [段階1-Aの修正・検証記録](STAGE1A.md) / [段階0の実施記録](STAGE0.md)
 - [全424ブロックの分類表](catalog/README.md)
 - [章別データの索引](catalog/index.json)・[各章の前提・挿入位置・検証先](catalog/chapters/)

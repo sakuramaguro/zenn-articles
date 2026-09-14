@@ -74,7 +74,7 @@
     "id": "P1-03",
     "priority": "P1",
     "stage": 1,
-    "status": "planned",
+    "status": "resolved",
     "description": "合成の連続性の例に必要な仮定がない",
     "locations": [
       {
@@ -87,7 +87,12 @@
       "ch06_004"
     ],
     "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
-    "acceptance": "外側の関数のf(a)での連続性を仮定し、本文の主張・証明・反例の説明を整合させる。"
+    "acceptance": "外側の関数のf(a)での連続性を仮定し、本文の主張・証明・反例の説明を整合させる。",
+    "resolution": {
+      "stage": "1-B",
+      "record": "STAGE1B.md",
+      "evidence": "catalog/stage1b-verification.json"
+    }
   },
   {
     "id": "P1-04",
@@ -179,7 +184,7 @@
     "id": "P1-07",
     "priority": "P1",
     "stage": 1,
-    "status": "planned",
+    "status": "resolved",
     "description": "擬距離の例で商を取る前後が逆になっている",
     "locations": [
       {
@@ -189,16 +194,22 @@
       }
     ],
     "blocks": [
-      "ch07_040"
+      "ch07_040",
+      "ch07_041"
     ],
     "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
-    "acceptance": "商の前の擬距離と商の後の距離を区別し、例・第18章のLpの説明と整合させる。"
+    "acceptance": "商の前の擬距離と商の後の距離を区別し、例・第18章のLpの説明と整合させる。",
+    "resolution": {
+      "stage": "1-B",
+      "record": "STAGE1B.md",
+      "evidence": "catalog/stage1b-verification.json"
+    }
   },
   {
     "id": "P1-08",
     "priority": "P1",
     "stage": 1,
-    "status": "planned",
+    "status": "resolved",
     "description": "Heine–Borel性の説明が実在しない型クラスを中心に組まれている",
     "locations": [
       {
@@ -218,14 +229,31 @@
       }
     ],
     "blocks": [
+      "ch08_018",
       "ch08_019",
+      "ch10_001",
+      "ch10_005",
+      "ch10_006",
+      "ch10_007",
       "ch10_010",
+      "ch10_011",
+      "ch10_012",
+      "ch10_013",
+      "ch10_014",
+      "ch10_015",
+      "ch10_017",
       "ch10_019",
       "ch10_020",
-      "ch10_021"
+      "ch10_021",
+      "ch10_022"
     ],
     "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
-    "acceptance": "ProperSpaceと実際の定理の仮定を確認し、インスタンス探索の失敗と数学的な非存在を区別する。"
+    "acceptance": "ProperSpaceと実際の定理の仮定を確認し、インスタンス探索の失敗と数学的な非存在を区別する。",
+    "resolution": {
+      "stage": "1-B",
+      "record": "STAGE1B.md",
+      "evidence": "catalog/stage1b-verification.json"
+    }
   },
   {
     "id": "P2-001",
@@ -518,7 +546,8 @@
       "ch07_041"
     ],
     "scope": "ch07.md:269–279、ch07.md:793–800、ch07.md:869–895",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "progress": "段階1-Bで擬距離の例・不明なインスタンス名を修正。閉球の閉性と余分なタクティクは段階3に残る。"
   },
   {
     "id": "P2-013",
@@ -612,7 +641,8 @@
       "ch10_011"
     ],
     "scope": "ch10.md:11–20、ch10.md:215–220",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "progress": "段階1-Bで第10章のell2とlp.singleを修正・検証。第11章などの再掲の構文は不動点の修正時にも確認する。"
   },
   {
     "id": "P2-017",

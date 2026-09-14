@@ -1416,16 +1416,16 @@
     "id": "ch07_040",
     "source": "books/lean4-formalization/ch07.md",
     "line": 869,
-    "end": 880,
-    "sha256": "5a855d0676aa8024aec06509ad02f12e5bc4362222a8c92ef4362007b369b345",
+    "end": 884,
+    "sha256": "18aa95c5445dd2a599d1f6f75a87f9acb25c4610f81b2db2e4ac5e5cc731666c",
     "section": "# 第2章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Bで確認する完成証明または実行コマンド。原稿のコードを章別ファイルと照合してビルドする。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "このブロックのimportを含めて独立したファイルで実行できる。"
     },
     "preceding_setup": [
       {
@@ -1433,7 +1433,9 @@
         "line": "import Mathlib"
       }
     ],
-    "own_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
     "fixture": ".generated/raw/ch07_040.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 3,
@@ -1442,27 +1444,33 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_040",
+      "source_sha256": "5a855d0676aa8024aec06509ad02f12e5bc4362222a8c92ef4362007b369b345",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P1-07",
       "P2-012"
-    ]
+    ],
+    "stage1b_status": "compiled_source"
   },
   {
     "id": "ch07_041",
     "source": "books/lean4-formalization/ch07.md",
-    "line": 890,
-    "end": 895,
-    "sha256": "f330cc56e4ba8a79450dc02100f1d6705ce30032d1c6e6eeb0112a872edfd6ef",
+    "line": 894,
+    "end": 899,
+    "sha256": "af5894c58489f9539041fc37eafb6ee6ce27a4d495e849fbf113e9ebe555a9c4",
     "section": "# 第2章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Bで確認する完成証明または実行コマンド。原稿のコードを章別ファイルと照合してビルドする。",
     "contains_sorry": false,
     "context": {
-      "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "blocks": [
+        "ch07_040"
+      ],
+      "instruction": "列挙したブロックを順番に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -1474,15 +1482,20 @@
     "fixture": ".generated/raw/ch07_041.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 3,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_041",
+      "source_sha256": "f330cc56e4ba8a79450dc02100f1d6705ce30032d1c6e6eeb0112a872edfd6ef",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
+      "P1-07",
       "P2-012"
-    ]
+    ],
+    "stage1b_status": "compiled_source"
   }
 ]
