@@ -737,16 +737,18 @@
     "id": "ch10_018",
     "source": "books/lean4-formalization/ch10.md",
     "line": 431,
-    "end": 442,
-    "sha256": "ceabfd46990747c1a334e6b9662dc87c385a6316491767aa8e97ad69a433ad7a",
+    "end": 438,
+    "sha256": "bc9279b3679530bbd791c2fbbf0f0fb473e67dc6be36da97090e19c8d515748d",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 5.6 本章のまとめ ──── 崩壊と希望",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
     "contains_sorry": false,
     "context": {
-      "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "blocks": [
+        "ch10_001"
+      ],
+      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -762,20 +764,26 @@
     "fixture": ".generated/raw/ch10_018.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 3,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch10_018",
+      "source_sha256": "ceabfd46990747c1a334e6b9662dc87c385a6316491767aa8e97ad69a433ad7a",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-04"
+    ],
+    "stage1c_status": "compiled_source"
   },
   {
     "id": "ch10_019",
     "source": "books/lean4-formalization/ch10.md",
-    "line": 473,
-    "end": 475,
+    "line": 469,
+    "end": 471,
     "sha256": "2d6557d7bc47a88382344213a2258cc80c46745fddb7327d598c7fa787701b4e",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
     "category": "complete",
@@ -820,8 +828,8 @@
   {
     "id": "ch10_020",
     "source": "books/lean4-formalization/ch10.md",
-    "line": 481,
-    "end": 484,
+    "line": 477,
+    "end": 480,
     "sha256": "8309bd8bf6dfb8b9846a010c0986defe68ef173d2be4f07843db7bce19f61a72",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
     "category": "complete",
@@ -869,8 +877,8 @@
   {
     "id": "ch10_021",
     "source": "books/lean4-formalization/ch10.md",
-    "line": 490,
-    "end": 498,
+    "line": 486,
+    "end": 494,
     "sha256": "ff0bc1884297dbfc00ae6998c0a2f8d4f6e1270122e957f973222aeb41e759ec",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
     "category": "complete",
@@ -915,8 +923,8 @@
   {
     "id": "ch10_022",
     "source": "books/lean4-formalization/ch10.md",
-    "line": 508,
-    "end": 511,
+    "line": 504,
+    "end": 507,
     "sha256": "cfeb3b5428abbf7079e40d71ec4782e5ac67bdebece17563d1f488dcdbdc3712",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
     "category": "complete",
@@ -961,8 +969,8 @@
   {
     "id": "ch10_023",
     "source": "books/lean4-formalization/ch10.md",
-    "line": 520,
-    "end": 528,
+    "line": 516,
+    "end": 524,
     "sha256": "c3bc6e7bad39eabcc00251157dfbcfcc1927b3d41b4910df1cd77a8d6fe1aaea",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
     "category": "unfinished",
@@ -999,8 +1007,8 @@
   {
     "id": "ch10_024",
     "source": "books/lean4-formalization/ch10.md",
-    "line": 539,
-    "end": 552,
+    "line": 535,
+    "end": 548,
     "sha256": "d692f37d6eb8a7cd75f630fb84d0990eb2cf9216f6a3991b843274250893007c",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
     "category": "complete",
@@ -1039,8 +1047,8 @@
   {
     "id": "ch10_025",
     "source": "books/lean4-formalization/ch10.md",
-    "line": 562,
-    "end": 569,
+    "line": 558,
+    "end": 565,
     "sha256": "a9d87ffd749ef0370b24ba75684ed3a5641b24464bf2872ba7b29d84de2a96da",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
     "category": "complete",
@@ -1079,8 +1087,8 @@
   {
     "id": "ch10_026",
     "source": "books/lean4-formalization/ch10.md",
-    "line": 650,
-    "end": 654,
+    "line": 646,
+    "end": 650,
     "sha256": "9f195a216b3ed4a724500c0f92d3ce8843429ee762a316a4f74ef8b138b5b86b",
     "section": "# 第5章：有限次元の直感が崩壊する日 〜「有界閉集合はコンパクト」への反例と $\\ell^2$ 空間〜 / ## 章末練習問題",
     "category": "complete",

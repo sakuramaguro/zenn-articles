@@ -11,9 +11,9 @@
     "books/lean4-formalization/ch07.md": "d21ab4ba4f3d39eec654983d9014cb92013e3ba53981d6748daaaa79b1b27f84",
     "books/lean4-formalization/ch08.md": "e0586938e820c1cacf841f0be4bedb10fee9181271807af14f8b632acfd1e740",
     "books/lean4-formalization/ch09.md": "8025edf74c8f9539ba45d3900367978aa1ab43fee0c6008ba26aa0dcd8586376",
-    "books/lean4-formalization/ch10.md": "3b1362298332cfaa04cca58cb466f0ba7549c731dfa8d8cc07f4737e2d835037",
-    "books/lean4-formalization/ch11.md": "6681350ed2f919713693e46094b09abf7f68617cf546588027775b997ac38857",
-    "books/lean4-formalization/ch12.md": "c2f46554f3814772093d491fe00ea4d81026c32cd64730071f375016e95a3820",
+    "books/lean4-formalization/ch10.md": "53f7bc9f94e77564f20412bb4efb0278d5d33b0f505e08ebac3394dadd181a1d",
+    "books/lean4-formalization/ch11.md": "2da343b8b4531f3f5543d924193a453e2ce23a034eacdff25f9a3241669f9b4b",
+    "books/lean4-formalization/ch12.md": "096885e8300d8c1a4b7882144f04b6dc70a8f342aad59981c6a69a091f3f8a1e",
     "books/lean4-formalization/ch13.md": "c63425557d9c0942df3308d2f2d05806840d98b7a0586eaea7e2fccfea16e9e3",
     "books/lean4-formalization/ch14.md": "62dfdf9172e7dde715b3cc00a592261489ebdfa6a1e36b34a85cc4a5c070beed",
     "books/lean4-formalization/ch15.md": "e61765b5ff62203519914a0790c970138fcefd7934a9be72d702ac1305d3efed",
@@ -22,7 +22,7 @@
     "books/lean4-formalization/ch18.md": "20b561d1e032ed707636f36243bbf981f285e3321dc54188ee9e305253b5a89e",
     "books/lean4-formalization/intro.md": "5d87e35a466a18a6e494c5607ff58adaed98b9893b17c85adf01af9cea662a64",
     "books/lean4-formalization/part1.md": "cff17d63fcdf75ff8ee5945fcaddafb8eeaace30b3df158437e99df6b2d45113",
-    "books/lean4-formalization/part2.md": "2d61c035a8c26060c962eb6de5fc1310022b3495eb4317ae166d62ed6c96200b",
+    "books/lean4-formalization/part2.md": "dfa9e14d303ad6bf44ec03242ea75e6f4541436e5ba442fdde15cb521234ae34",
     "books/lean4-formalization/part3.md": "19f116da416dec9e56708170c5739071433b2cf3f1152d6b8e66a9c8cb062af2",
     "books/lean4-formalization/part4.md": "641f93f1c729c7f494270927a1c345f837d7abc6b9e20f8182106d5c48364c32"
   },
@@ -130,6 +130,110 @@
     {
       "block": "ch10_022",
       "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_018",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch11_001",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_002",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_003",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_004",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_005",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_006",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_007",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_008",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_009",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_010",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_011",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_012",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_013",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_014",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_015",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_016",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_018",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_019",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_021",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_022",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_023",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_024",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_025",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch11_026",
+      "module_file": "LeanBook/Chapters/Ch11.lean"
+    },
+    {
+      "block": "ch12_001",
+      "module_file": "LeanBook/Chapters/Ch12.lean"
     }
   ],
   "block_files": [
@@ -153,7 +257,7 @@
     "chapters/ch18.json",
     "chapters/intro.json"
   ],
-  "verification_stage": "1-B",
+  "verification_stage": "1-C",
   "diagnostics": [
     {
       "id": "false_equality",
@@ -202,6 +306,26 @@
       ],
       "kind": "pass",
       "declaration": "dimension_theorem"
+    },
+    {
+      "id": "continuity_without_hypothesis",
+      "blocks": [
+        "ch11_017"
+      ],
+      "kind": "error",
+      "error_count": 1,
+      "patterns": [
+        "`exact?` could not close the goal"
+      ]
+    },
+    {
+      "id": "affine_contraction_exercise",
+      "blocks": [
+        "ch11_020"
+      ],
+      "kind": "sorry",
+      "declaration": "affine_contraction_exercise",
+      "append": "\n#print axioms affine_contraction_exercise\n"
     }
   ]
 }

@@ -98,7 +98,7 @@
     "id": "P1-04",
     "priority": "P1",
     "stage": 1,
-    "status": "planned",
+    "status": "resolved",
     "description": "Banach不動点定理の中心コードを組み直す必要がある",
     "locations": [
       {
@@ -123,13 +123,42 @@
       }
     ],
     "blocks": [
+      "ch10_018",
       "ch11_001",
+      "ch11_002",
+      "ch11_003",
+      "ch11_004",
       "ch11_005",
+      "ch11_006",
+      "ch11_007",
+      "ch11_008",
+      "ch11_009",
+      "ch11_010",
+      "ch11_011",
       "ch11_012",
-      "ch11_015"
+      "ch11_013",
+      "ch11_014",
+      "ch11_015",
+      "ch11_016",
+      "ch11_017",
+      "ch11_018",
+      "ch11_019",
+      "ch11_020",
+      "ch11_021",
+      "ch11_022",
+      "ch11_023",
+      "ch11_024",
+      "ch11_025",
+      "ch11_026",
+      "ch12_001"
     ],
     "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
-    "acceptance": "非空性を加えた一意存在・反復収束・具体例をビルドし、第10〜12章の予告、再掲、出力も同じAPIに揃える。"
+    "acceptance": "非空性を加えた一意存在・反復収束・具体例をビルドし、第10〜12章の予告、再掲、出力も同じAPIに揃える。",
+    "resolution": {
+      "stage": "1-C",
+      "record": "STAGE1C.md",
+      "evidence": "catalog/stage1c-verification.json"
+    }
   },
   {
     "id": "P1-05",
@@ -622,7 +651,7 @@
     "id": "P2-016",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "識別子 `ℓ²` は検証版で構文エラー。`ell2` などにするか `«ℓ²»` と引用する。`lp.single` は指数が明示引数なので、標準基底は `lp.single 2 n (1 : ℝ)` の形。修正例を添付。",
     "locations": [
       {
@@ -638,11 +667,18 @@
     ],
     "blocks": [
       "ch10_001",
-      "ch10_011"
+      "ch10_011",
+      "ch11_016",
+      "ch11_025"
     ],
     "scope": "ch10.md:11–20、ch10.md:215–220",
     "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
-    "progress": "段階1-Bで第10章のell2とlp.singleを修正・検証。第11章などの再掲の構文は不動点の修正時にも確認する。"
+    "progress": "段階1-Bで第10章、段階1-Cで第11章の再掲・演習もell2と既存のlp演算へ修正。",
+    "resolution": {
+      "stage": "1-C",
+      "record": "STAGE1C.md",
+      "evidence": "catalog/stage1c-verification.json"
+    }
   },
   {
     "id": "P2-017",
@@ -687,7 +723,7 @@
     "id": "P2-019",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "`(x+1)/(x+2)` の定義域 `[0,∞)` は閉集合であり、像もその中に入る。`cos` が全実数上で縮小にならない理由は0近傍ではなく、`π/2` 近傍で差分比が1に近づくこと。`[a,b] ⊂ (0,π)` だけでは縮小性を保証できない。",
     "locations": [
       {
@@ -698,7 +734,12 @@
     ],
     "blocks": [],
     "scope": "ch11.md:478–490",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-C",
+      "record": "STAGE1C.md",
+      "evidence": "catalog/stage1c-verification.json"
+    }
   },
   {
     "id": "P2-020",
@@ -1167,7 +1208,8 @@
     ],
     "blocks": [],
     "scope": "part2.md:10、part3.md:10、part4.md:13–14",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "progress": "段階1-CでPart 2の到達目標を既存不動点定理の適用と具体例の検証に合わせた。Part 3/4と序文の範囲、全体表示の確認は段階5に残る。"
   },
   {
     "id": "P2-040",

@@ -6,3 +6,5 @@ import LeanBook.Chapters.Ch06
 import LeanBook.Chapters.Ch07
 import LeanBook.Chapters.Ch08
 import LeanBook.Chapters.Ch10
+import LeanBook.Chapters.Ch11
+import LeanBook.Chapters.Ch12

@@ -138,4 +138,13 @@ theorem notProperOfInfiniteDimensional {E : Type*}
 #check FiniteDimensional.of_isCompact_closedBall
 -- END SOURCE ch10_022
 
+-- BEGIN SOURCE ch10_018
+-- 次章で使うMathlibのAPI（本章冒頭のimportを引き継ぐ）
+#check ContractingWith
+#check @ContractingWith.fixedPoint
+#check @ContractingWith.fixedPoint_isFixedPt
+#check @ContractingWith.fixedPoint_unique
+#check @ContractingWith.tendsto_iterate_fixedPoint
+-- END SOURCE ch10_018
+
 end LeanBook.Ch10
