@@ -2,11 +2,11 @@
   "schema_version": 2,
   "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4",
   "source_files": {
-    "books/lean4-formalization/ch01.md": "ad4542fab8e8381cfa3e54d30e3b369772c883b5e9a85c97712753e2b2346cfc",
-    "books/lean4-formalization/ch02.md": "ad6ddcfbae0d69cd9e84b33dbd29071976e768e777e7cae0ac5375fbd8a1bd91",
-    "books/lean4-formalization/ch03.md": "faaf16c06b976fed9e66ed1585acd69fe53aad715f96c7f8a879661de3a1809e",
-    "books/lean4-formalization/ch04.md": "5bc60cdab428b2b4a71755e5e2782e2b72d4bc7841e541c9019f64b3c53b5f42",
-    "books/lean4-formalization/ch05.md": "ff538b400dd9a03c05165cacd5954e6856c85bdd032bc2499255e6398477fe82",
+    "books/lean4-formalization/ch01.md": "ec4e2f97aeaa50474df9d75b2f91ef1d48425f0381cdf7181ea54fd66d54397b",
+    "books/lean4-formalization/ch02.md": "46987a2ae3fb5e49e65c99fb340a191e12b801de48480ae3ed7e9fe743644a1b",
+    "books/lean4-formalization/ch03.md": "0bf3a7ad255800a06897a0d1ca0e1cc43d7c028eaec99fb9716d5ddb65b4838c",
+    "books/lean4-formalization/ch04.md": "d420c548655b84b4975c0ffe68194c9d5cacda11beb525bc00f29675408120ff",
+    "books/lean4-formalization/ch05.md": "5fe9e82a129e817ea432932df891adccf7c1daf2f096d2751d2e831ee58f1fdb",
     "books/lean4-formalization/ch06.md": "a0e11f2299884fa198ec1e92a5b6a627228a3d721d1c6b8a28ad616d87880748",
     "books/lean4-formalization/ch07.md": "d21ab4ba4f3d39eec654983d9014cb92013e3ba53981d6748daaaa79b1b27f84",
     "books/lean4-formalization/ch08.md": "e0586938e820c1cacf841f0be4bedb10fee9181271807af14f8b632acfd1e740",
@@ -20,8 +20,8 @@
     "books/lean4-formalization/ch16.md": "cbeb936aff10c4d44cfcbe3ec972fb19d2fb5eb20a6e72559f01b61718b57550",
     "books/lean4-formalization/ch17.md": "63275e848333fe9c9cd32adc82642ea9367f6a645685d96b2a7b666f233b4539",
     "books/lean4-formalization/ch18.md": "20b561d1e032ed707636f36243bbf981f285e3321dc54188ee9e305253b5a89e",
-    "books/lean4-formalization/intro.md": "5d87e35a466a18a6e494c5607ff58adaed98b9893b17c85adf01af9cea662a64",
-    "books/lean4-formalization/part1.md": "cff17d63fcdf75ff8ee5945fcaddafb8eeaace30b3df158437e99df6b2d45113",
+    "books/lean4-formalization/intro.md": "9abde601b98e117277d0fa26572f6855a0e0f97069c8f032d964008d2d93a9e1",
+    "books/lean4-formalization/part1.md": "15f83784ef3e486ac9ac82c993dd242633de70a2ab9c6dc98249eb9c192cb323",
     "books/lean4-formalization/part2.md": "dfa9e14d303ad6bf44ec03242ea75e6f4541436e5ba442fdde15cb521234ae34",
     "books/lean4-formalization/part3.md": "4a10d5fabac9a9acd306ddfca32e78fac5867a284fd3ce20ca1ac2bc92f1824b",
     "books/lean4-formalization/part4.md": "641f93f1c729c7f494270927a1c345f837d7abc6b9e20f8182106d5c48364c32"
@@ -32,11 +32,119 @@
       "module_file": "LeanBook/Chapters/Ch01.lean"
     },
     {
-      "block": "ch05_021",
-      "module_file": "LeanBook/Chapters/Ch05.lean"
+      "block": "ch01_002",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_003",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_004",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_005",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_007",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_008",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_010",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_011",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_013",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch01_014",
+      "module_file": "LeanBook/Chapters/Ch01.lean"
+    },
+    {
+      "block": "ch02_001",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_002",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_003",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_004",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_005",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_006",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_007",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_008",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_009",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_010",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_011",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_012",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_013",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_015",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_016",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_018",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
+    },
+    {
+      "block": "ch02_019",
+      "module_file": "LeanBook/Chapters/Ch02.lean"
     },
     {
       "block": "ch03_001",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_003",
       "module_file": "LeanBook/Chapters/Ch03.lean"
     },
     {
@@ -44,11 +152,235 @@
       "module_file": "LeanBook/Chapters/Ch03.lean"
     },
     {
+      "block": "ch03_007",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_009",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_010",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_012",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
       "block": "ch03_015",
       "module_file": "LeanBook/Chapters/Ch03.lean"
     },
     {
+      "block": "ch03_017",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_018",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_020",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_021",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_023",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch03_024",
+      "module_file": "LeanBook/Chapters/Ch03.lean"
+    },
+    {
+      "block": "ch04_001",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_002",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_003",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_004",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_005",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_006",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_007",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_008",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_009",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_010",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_011",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_012",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_013",
+      "module_file": "LeanBook/Chapters/Ch04Imports.lean"
+    },
+    {
+      "block": "ch04_014",
+      "module_file": "LeanBook/Chapters/Ch04MinImports.lean"
+    },
+    {
+      "block": "ch04_015",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_016",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_017",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_019",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_020",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_022",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch04_023",
+      "module_file": "LeanBook/Chapters/Ch04.lean"
+    },
+    {
+      "block": "ch05_001",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_002",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_003",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_005",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_007",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_008",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_009",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_010",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_011",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_012",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_013",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_014",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_015",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_016",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_017",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_018",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_019",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_020",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_021",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
       "block": "ch05_022",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_024",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_025",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_027",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_028",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_030",
+      "module_file": "LeanBook/Chapters/Ch05.lean"
+    },
+    {
+      "block": "ch05_031",
       "module_file": "LeanBook/Chapters/Ch05.lean"
     },
     {
@@ -116,6 +448,10 @@
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
     {
+      "block": "ch10_018",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
       "block": "ch10_019",
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
@@ -129,10 +465,6 @@
     },
     {
       "block": "ch10_022",
-      "module_file": "LeanBook/Chapters/Ch10.lean"
-    },
-    {
-      "block": "ch10_018",
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
     {
@@ -338,6 +670,10 @@
     {
       "block": "ch17_013",
       "module_file": "LeanBook/Chapters/Ch17.lean"
+    },
+    {
+      "block": "intro_001",
+      "module_file": "LeanBook/Chapters/Intro.lean"
     }
   ],
   "block_files": [
@@ -361,7 +697,7 @@
     "chapters/ch18.json",
     "chapters/intro.json"
   ],
-  "verification_stage": "1-D",
+  "verification_stage": "2",
   "diagnostics": [
     {
       "id": "false_equality",
@@ -430,6 +766,204 @@
       "kind": "sorry",
       "declaration": "affine_contraction_exercise",
       "append": "\n#print axioms affine_contraction_exercise\n"
+    },
+    {
+      "id": "stage2_ch01_006",
+      "blocks": [
+        "ch01_006"
+      ],
+      "kind": "sorry",
+      "declaration": "multiplication_exercise",
+      "append": "\n#print axioms multiplication_exercise\n"
+    },
+    {
+      "id": "stage2_ch01_009",
+      "blocks": [
+        "ch01_009"
+      ],
+      "kind": "sorry",
+      "declaration": "square_exercise",
+      "append": "\n#print axioms square_exercise\n"
+    },
+    {
+      "id": "stage2_ch01_012",
+      "blocks": [
+        "ch01_012"
+      ],
+      "kind": "sorry",
+      "declaration": "trans_exercise",
+      "append": "\n#print axioms trans_exercise\n"
+    },
+    {
+      "id": "stage2_ch02_014",
+      "blocks": [
+        "ch02_014"
+      ],
+      "kind": "sorry",
+      "declaration": "add_zero_exercise",
+      "append": "\n#print axioms add_zero_exercise\n"
+    },
+    {
+      "id": "stage2_ch02_017",
+      "blocks": [
+        "ch02_017"
+      ],
+      "kind": "sorry",
+      "declaration": "strict_trans_exercise",
+      "append": "\n#print axioms strict_trans_exercise\n"
+    },
+    {
+      "id": "stage2_ch03_002",
+      "blocks": [
+        "ch03_002"
+      ],
+      "kind": "error",
+      "error_count": 1,
+      "patterns": [
+        "Tactic `rfl` failed",
+        "not definitionally equal",
+        "⊢ a + b = b + a"
+      ]
+    },
+    {
+      "id": "stage2_ch03_006",
+      "blocks": [
+        "ch03_006"
+      ],
+      "kind": "error",
+      "error_count": 1,
+      "patterns": [
+        "Application type mismatch",
+        "String",
+        "ℕ",
+        "add_five \"hello\""
+      ]
+    },
+    {
+      "id": "stage2_ch03_008",
+      "blocks": [
+        "ch03_008"
+      ],
+      "kind": "error",
+      "error_count": 1,
+      "patterns": [
+        "Unknown constant `Nat.add_comm_wrong`"
+      ]
+    },
+    {
+      "id": "stage2_ch03_011",
+      "blocks": [
+        "ch03_011"
+      ],
+      "kind": "error",
+      "error_count": 1,
+      "patterns": [
+        "failed to synthesize instance of type class",
+        "HAdd α α"
+      ]
+    },
+    {
+      "id": "stage2_ch03_013",
+      "blocks": [
+        "ch03_013"
+      ],
+      "kind": "sorry",
+      "declaration": "hard_proof",
+      "append": "\n#print axioms hard_proof\n"
+    },
+    {
+      "id": "stage2_ch03_016",
+      "blocks": [
+        "ch03_016"
+      ],
+      "kind": "error",
+      "error_count": 1,
+      "patterns": [
+        "Tactic `rfl` failed",
+        "not definitionally equal",
+        "⊢ a * b = b * a"
+      ]
+    },
+    {
+      "id": "stage2_ch03_019",
+      "blocks": [
+        "ch03_019"
+      ],
+      "kind": "error",
+      "error_count": 1,
+      "patterns": [
+        "failed to synthesize instance of type class",
+        "HMul α α"
+      ]
+    },
+    {
+      "id": "stage2_ch03_022",
+      "blocks": [
+        "ch03_022"
+      ],
+      "kind": "sorry",
+      "declaration": "even_square_plus_self",
+      "append": "\n#print axioms even_square_plus_self\n"
+    },
+    {
+      "id": "stage2_ch04_018",
+      "blocks": [
+        "ch04_018"
+      ],
+      "kind": "sorry",
+      "declaration": "succ_bound_exercise",
+      "append": "\n#print axioms succ_bound_exercise\n"
+    },
+    {
+      "id": "stage2_ch04_021",
+      "blocks": [
+        "ch04_021"
+      ],
+      "kind": "sorry",
+      "declaration": "card_nonneg_exercise",
+      "append": "\n#print axioms card_nonneg_exercise\n"
+    },
+    {
+      "id": "stage2_ch05_006",
+      "blocks": [
+        "ch05_006"
+      ],
+      "kind": "error",
+      "error_count": 2,
+      "patterns": [
+        "failed to synthesize instance of type class",
+        "NonAssocSemiring K",
+        "\n  Semiring K"
+      ]
+    },
+    {
+      "id": "stage2_ch05_023",
+      "blocks": [
+        "ch05_023"
+      ],
+      "kind": "error",
+      "error_count": 1,
+      "patterns": [
+        "`exact?` could not close the goal"
+      ]
+    },
+    {
+      "id": "stage2_ch05_026",
+      "blocks": [
+        "ch05_026"
+      ],
+      "kind": "sorry",
+      "declaration": "zero_kernel_exercise",
+      "append": "\n#print axioms zero_kernel_exercise\n"
+    },
+    {
+      "id": "stage2_ch05_029",
+      "blocks": [
+        "ch05_029"
+      ],
+      "kind": "sorry",
+      "declaration": "kernel_finite_exercise",
+      "append": "\n#print axioms kernel_finite_exercise\n"
     }
   ]
 }

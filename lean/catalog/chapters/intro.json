@@ -8,11 +8,11 @@
     "section": "# はじめに / ## このシリーズの最終到達点",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
     "preceding_setup": [],
     "own_setup": [
@@ -29,6 +29,9 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P2-001"
+    ],
+    "stage2_status": "compiled_source"
   }
 ]

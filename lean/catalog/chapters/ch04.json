@@ -2,17 +2,17 @@
   {
     "id": "ch04_001",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 15,
-    "end": 40,
+    "line": 18,
+    "end": 43,
     "sha256": "b4b6bc4f1e21539416448df6d3319f20522f81c3357938d964ea867bdadd6c1b",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.0 本章のゴール ──── ゴール逆算型アプローチ",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
     "preceding_setup": [],
     "own_setup": [
@@ -28,29 +28,25 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_002",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 94,
-    "end": 99,
+    "line": 90,
+    "end": 95,
     "sha256": "973b4aecb1c749df720a278742a68c2db261eeb21cbcc95a22211a9793c7706a",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.2 `#check` と `#print` ──── 型シグネチャと定義を解剖します / ### `#check` ──── 型シグネチャを読む",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -64,29 +60,25 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_003",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 126,
-    "end": 131,
+    "line": 122,
+    "end": 127,
     "sha256": "47caadbc8afccca367acce99be686b5cfcb4da790e6ac9ee7daaa7882a00b2e8",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.2 `#check` と `#print` ──── 型シグネチャと定義を解剖します / ### `#print` ──── 定義の内部を解剖します",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -100,29 +92,25 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_004",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 148,
-    "end": 153,
+    "line": 144,
+    "end": 149,
     "sha256": "7878eb4f050328a023e0103eacc1d6c69df5293add83ff4443def4dd6db5a66f",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.2 `#check` と `#print` ──── 型シグネチャと定義を解剖します / ### `#print` ──── 定義の内部を解剖します",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -136,29 +124,25 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_005",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 180,
-    "end": 186,
+    "line": 176,
+    "end": 182,
     "sha256": "4ce9066f58e74a70edc38555428e48b44724a0c00ba3d40d58425d63bdb8a1ad",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.3 `exact?` と `apply?` ──── Mathlibを自動検索する / ### `exact?` ──── ゴールを一発で解決する補題を探す",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -172,65 +156,72 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_006",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 199,
-    "end": 202,
-    "sha256": "5b48f4956dbd0fc73e9e5b055046743f5cb15c81bb8f033ac17b9a5452e493f2",
+    "line": 195,
+    "end": 199,
+    "sha256": "d7d139be74194144094db644966a5876503b6fec4b7af781a7b094c7092cc72a",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.3 `exact?` と `apply?` ──── Mathlibを自動検索する / ### `exact?` ──── ゴールを一発で解決する補題を探す",
-    "category": "fragment",
+    "category": "complete",
     "role": "本文",
-    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
-      "blocks": [
-        "ch04_005"
-      ],
-      "instruction": "test の exact? を置換する。"
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch04_006.lean",
-    "validation_mode": "assemble_then_compile",
+    "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_006",
+      "source_sha256": "5b48f4956dbd0fc73e9e5b055046743f5cb15c81bb8f033ac17b9a5452e493f2",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "5b48f4956dbd0fc73e9e5b055046743f5cb15c81bb8f033ac17b9a5452e493f2",
+      "line": 199,
+      "end": 202,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch04_005"
+        ],
+        "instruction": "test の exact? を置換する。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_007",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 210,
-    "end": 216,
+    "line": 207,
+    "end": 213,
     "sha256": "a5dc6c2a23524f3dcdb4335cba2029b0ec6a1746340b9d1bc29772ece40c51df",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.3 `exact?` と `apply?` ──── Mathlibを自動検索する / ### `apply?` ──── ゴールを変形する補題を探す",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -244,65 +235,72 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_008",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 227,
-    "end": 230,
-    "sha256": "5829458810956d31b4182d3db68efd21e24ff3c77d9ccfea4c3eaea4a93e026e",
+    "line": 224,
+    "end": 228,
+    "sha256": "2942895b8bc18a225928cc1e4aeab1801b9dc19cd8a2798ae756d50e1e175785",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.3 `exact?` と `apply?` ──── Mathlibを自動検索する / ### `apply?` ──── ゴールを変形する補題を探す",
-    "category": "fragment",
+    "category": "complete",
     "role": "本文",
-    "reason": "前後の宣言・証明を引き継ぐ途中の断片。挿入箇所を指定して組み立てる。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
-      "blocks": [
-        "ch04_007"
-      ],
-      "instruction": "example の apply? を置換し、h1・h2 を引き継ぐ。"
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch04_008.lean",
-    "validation_mode": "assemble_then_compile",
+    "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_008",
+      "source_sha256": "5829458810956d31b4182d3db68efd21e24ff3c77d9ccfea4c3eaea4a93e026e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "5829458810956d31b4182d3db68efd21e24ff3c77d9ccfea4c3eaea4a93e026e",
+      "line": 227,
+      "end": 230,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch04_007"
+        ],
+        "instruction": "example の apply? を置換し、h1・h2 を引き継ぐ。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_009",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 257,
-    "end": 264,
+    "line": 255,
+    "end": 262,
     "sha256": "cdeebfb14383a5822047307da66a5ef04381bc204428557319c95cc4757604e2",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.4 名前空間と `open` ──── `Nat.add_comm` の `Nat.` の正体 / ### 名前空間の仕組み",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -316,29 +314,27 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P2-005"
+    ],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_010",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 281,
-    "end": 297,
-    "sha256": "266b0c2e228de095bd82eaf23a347b34d98c35f4b82319e0609de0cee2255603",
+    "line": 279,
+    "end": 295,
+    "sha256": "0033c84bc1d699757a6882db796cb6e25cfe3b3a2731d7ed349748900377a3fa",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.4 名前空間と `open` ──── `Nat.add_comm` の `Nat.` の正体 / ### `open` で名前空間を短縮する",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -350,83 +346,91 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_010",
+      "source_sha256": "266b0c2e228de095bd82eaf23a347b34d98c35f4b82319e0609de0cee2255603",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P2-005"
+    ],
+    "before_stage2": {
+      "sha256": "266b0c2e228de095bd82eaf23a347b34d98c35f4b82319e0609de0cee2255603",
+      "line": 281,
+      "end": 297,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_011",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 304,
-    "end": 316,
-    "sha256": "44bdfc352355c43152459bfabd2e3ac68e97195785c4c46d2dd7a13069997a71",
+    "line": 302,
+    "end": 315,
+    "sha256": "018e19d257dca019378834599f5a88d646f5ac420adf4667d5edbfc0e04f366b",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.4 名前空間と `open` ──── `Nat.add_comm` の `Nat.` の正体 / ### `open` で名前空間を短縮する",
-    "category": "excerpt",
+    "category": "complete",
     "role": "本文",
-    "reason": "構造・記法・コメントによる説明用の抜粋。実行可能な完成例の成功率には含めない。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
-      "open Mathlib  -- ❌ 何万もの名前が一度に展開される",
-      "open Nat in ...         -- ✅ Nat だけ",
-      "open LinearMap in ...   -- ✅ LinearMap だけ"
+      "import Mathlib",
+      "open Nat in",
+      "open MeasureTheory in"
     ],
     "fixture": ".generated/raw/ch04_011.lean",
-    "validation_mode": "compare_with_definition_or_output",
+    "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
     "priority_one": false,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_011",
+      "source_sha256": "44bdfc352355c43152459bfabd2e3ac68e97195785c4c46d2dd7a13069997a71",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P2-005"
-    ]
+    ],
+    "before_stage2": {
+      "sha256": "44bdfc352355c43152459bfabd2e3ac68e97195785c4c46d2dd7a13069997a71",
+      "line": 304,
+      "end": 316,
+      "category": "excerpt",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_012",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 329,
-    "end": 334,
-    "sha256": "9c8b321def19fc362a1098342b2a6ffa72276e580c581ea7288bd8cfa638c0a8",
+    "line": 328,
+    "end": 331,
+    "sha256": "769ee366c225e590c3cc44585f8aac6547fe78fab2d0fe4f96648501b945eeb1",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.5 `import Mathlib` vs 個別インポート ──── 速度と精度のトレードオフ / ### `import Mathlib` の実態",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -438,47 +442,44 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_012",
+      "source_sha256": "9c8b321def19fc362a1098342b2a6ffa72276e580c581ea7288bd8cfa638c0a8",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "9c8b321def19fc362a1098342b2a6ffa72276e580c581ea7288bd8cfa638c0a8",
+      "line": 329,
+      "end": 334,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_013",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 340,
-    "end": 348,
-    "sha256": "b01f9068f32452897e8d9f1a1d064e7326eec7a6e8446e0cda6e23058aef8b83",
+    "line": 337,
+    "end": 346,
+    "sha256": "29ccad9b0e51a3eab1bbd748329c72bca32a9bcf9cdcb8747a09c71b26f8258a",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.5 `import Mathlib` vs 個別インポート ──── 速度と精度のトレードオフ / ### 個別インポートの書き方",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
-      "import Mathlib.LinearAlgebra.FiniteDimensional",
+      "import Mathlib.LinearAlgebra.FiniteDimensional.Basic",
       "import Mathlib.LinearAlgebra.Dimension.Finrank",
-      "import Mathlib.MeasureTheory.Integral.Bochner",
+      "import Mathlib.MeasureTheory.Integral.Bochner.Basic",
       "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
     ],
     "fixture": ".generated/raw/ch04_013.lean",
@@ -489,62 +490,45 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_013",
+      "source_sha256": "b01f9068f32452897e8d9f1a1d064e7326eec7a6e8446e0cda6e23058aef8b83",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P2-006"
-    ]
+    ],
+    "before_stage2": {
+      "sha256": "b01f9068f32452897e8d9f1a1d064e7326eec7a6e8446e0cda6e23058aef8b83",
+      "line": 340,
+      "end": 348,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_014",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 364,
+    "line": 362,
     "end": 368,
-    "sha256": "3ea95fd8655635b68c0028208ad245e500a53304fd887bee0aae103b3a6fc1cb",
+    "sha256": "141f1ac3cadef9e6dc1bf676cf5f359387d62c3ea31625a32e0b6bf83ab8a12d",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.5 `import Mathlib` vs 個別インポート ──── 速度と精度のトレードオフ / ### 個別インポートの書き方",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch04_014.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -553,59 +537,42 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_014",
+      "source_sha256": "3ea95fd8655635b68c0028208ad245e500a53304fd887bee0aae103b3a6fc1cb",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P2-006"
+    ],
+    "before_stage2": {
+      "sha256": "3ea95fd8655635b68c0028208ad245e500a53304fd887bee0aae103b3a6fc1cb",
+      "line": 364,
+      "end": 368,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_015",
     "source": "books/lean4-formalization/ch04.md",
     "line": 463,
     "end": 481,
-    "sha256": "b7834ed0effbe119ac55bb0368584afd0f68ee2ee87009b9efdf7f4e185ed9f2",
+    "sha256": "2674e8569ac6f4c4bbc222ec49139634ce8b96f0fcbc4581384d4b43d0c1b254",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.8 タクティクの使い分け総まとめ ──── 算術系",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -617,9 +584,23 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_015",
+      "source_sha256": "b7834ed0effbe119ac55bb0368584afd0f68ee2ee87009b9efdf7f4e185ed9f2",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "b7834ed0effbe119ac55bb0368584afd0f68ee2ee87009b9efdf7f4e185ed9f2",
+      "line": 463,
+      "end": 481,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_016",
@@ -630,46 +611,13 @@
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.X まとめ ──── 第4章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "問題文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -683,58 +631,28 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_017",
     "source": "books/lean4-formalization/ch04.md",
     "line": 563,
     "end": 568,
-    "sha256": "5dbc3d3d2ed6365aa37b269cafd9c64338970c84c412d2e197cf45b35b50eb45",
+    "sha256": "a7405191dd2ea2f291b70fa013c30e3f75a54460b5c87dc0c699c949476ec0d8",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.X まとめ ──── 第4章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch04_017.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -743,16 +661,30 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_017",
+      "source_sha256": "5dbc3d3d2ed6365aa37b269cafd9c64338970c84c412d2e197cf45b35b50eb45",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "5dbc3d3d2ed6365aa37b269cafd9c64338970c84c412d2e197cf45b35b50eb45",
+      "line": 563,
+      "end": 568,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_018",
     "source": "books/lean4-formalization/ch04.md",
     "line": 578,
     "end": 585,
-    "sha256": "a31f64d425236269284fa87ce468ac0b627a622029f75260e831a801404c50b3",
+    "sha256": "22d6908b0a25b7996ba208dff2ea73c72a41c5fd2e4d85d33ad8cd444c0a75eb",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.X まとめ ──── 第4章の全対応表と練習問題 / ### 練習問題",
     "category": "unfinished",
     "role": "問題文",
@@ -760,42 +692,9 @@
     "contains_sorry": true,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -807,60 +706,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_018",
+      "source_sha256": "a31f64d425236269284fa87ce468ac0b627a622029f75260e831a801404c50b3",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "a31f64d425236269284fa87ce468ac0b627a622029f75260e831a801404c50b3",
+      "line": 578,
+      "end": 585,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
   },
   {
     "id": "ch04_019",
     "source": "books/lean4-formalization/ch04.md",
     "line": 597,
     "end": 601,
-    "sha256": "8055371da63a285d2d166cbeeddeec7dede3c708dbdb0827b0c404c7fb4e1db9",
+    "sha256": "aeae702fcccbcb0d086f86865b62fd336dd92f5b54e74b05c738c37c079d8c1f",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.X まとめ ──── 第4章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch04_019.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -869,60 +751,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_019",
+      "source_sha256": "8055371da63a285d2d166cbeeddeec7dede3c708dbdb0827b0c404c7fb4e1db9",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "8055371da63a285d2d166cbeeddeec7dede3c708dbdb0827b0c404c7fb4e1db9",
+      "line": 597,
+      "end": 601,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_020",
     "source": "books/lean4-formalization/ch04.md",
     "line": 610,
-    "end": 614,
-    "sha256": "e927c70d59b3ab63f38930d1df40ed3c8a7ea5ed86967cbe18de0ae950df9c32",
+    "end": 615,
+    "sha256": "ec281cf8456b1e567094abc7052ee39255064c2c65fe4e4aff82dd53aaab45a4",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.X まとめ ──── 第4章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch04_020.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -931,16 +796,30 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_020",
+      "source_sha256": "e927c70d59b3ab63f38930d1df40ed3c8a7ea5ed86967cbe18de0ae950df9c32",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "e927c70d59b3ab63f38930d1df40ed3c8a7ea5ed86967cbe18de0ae950df9c32",
+      "line": 610,
+      "end": 614,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_021",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 624,
-    "end": 631,
-    "sha256": "a395f454b26d69a2e99b27ae81805a9fb96317d7f3d328a8743021ce27c0382d",
+    "line": 625,
+    "end": 632,
+    "sha256": "d630a69a9de6ffa0087cce63abf70f4ede84b8b0beb706f03f4121375bd8bc0f",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.X まとめ ──── 第4章の全対応表と練習問題 / ### 練習問題",
     "category": "unfinished",
     "role": "問題文",
@@ -948,42 +827,9 @@
     "contains_sorry": true,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -995,60 +841,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_021",
+      "source_sha256": "a395f454b26d69a2e99b27ae81805a9fb96317d7f3d328a8743021ce27c0382d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "a395f454b26d69a2e99b27ae81805a9fb96317d7f3d328a8743021ce27c0382d",
+      "line": 624,
+      "end": 631,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
   },
   {
     "id": "ch04_022",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 648,
-    "end": 657,
-    "sha256": "fc6e39c7421bede3eb140aa3bd85c118f2693f8a43740911049b24f70a8b53d5",
+    "line": 649,
+    "end": 659,
+    "sha256": "a64e56a9860aa2e11527a168ea260b20e6f8354f15d07470c54b10644346db22",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.X まとめ ──── 第4章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch04_022.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -1057,60 +886,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_022",
+      "source_sha256": "fc6e39c7421bede3eb140aa3bd85c118f2693f8a43740911049b24f70a8b53d5",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "fc6e39c7421bede3eb140aa3bd85c118f2693f8a43740911049b24f70a8b53d5",
+      "line": 648,
+      "end": 657,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch04_023",
     "source": "books/lean4-formalization/ch04.md",
-    "line": 666,
-    "end": 670,
-    "sha256": "d696bb102fdcaaae89beb2faad0084a35d711b87facee906e2d87377e259c7db",
+    "line": 668,
+    "end": 673,
+    "sha256": "3dcaafab40884007dc8dc59027187dde5e6b5189259d3d06b709d776977bf00c",
     "section": "# 第4章：Mathlibの歩き方 〜10万の定理という武器庫を泳ぐ〜 / ## 4.X まとめ ──── 第4章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch04_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Mathlib  -- ❌ 何万もの名前が一度に展開される"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open Nat in ...         -- ✅ Nat だけ"
-      },
-      {
-        "block": "ch04_011",
-        "line": "open LinearMap in ...   -- ✅ LinearMap だけ"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.FiniteDimensional"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.LinearAlgebra.Dimension.Finrank"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Integral.Bochner"
-      },
-      {
-        "block": "ch04_013",
-        "line": "import Mathlib.MeasureTheory.Measure.Lebesgue.Basic"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch04_023.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -1119,8 +931,22 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch04_023",
+      "source_sha256": "d696bb102fdcaaae89beb2faad0084a35d711b87facee906e2d87377e259c7db",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "d696bb102fdcaaae89beb2faad0084a35d711b87facee906e2d87377e259c7db",
+      "line": 666,
+      "end": 670,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   }
 ]

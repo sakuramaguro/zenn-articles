@@ -85,3 +85,61 @@ import LeanBook
 #print axioms LeanBook.Ch16.exp_neg_integrable
 
 #print axioms LeanBook.Ch16.exp_neg_integrable_parts
+
+#print axioms LeanBook.Ch01.one_plus_one
+
+#print axioms LeanBook.Ch01.first_theorem_recap
+
+#print axioms LeanBook.Ch02.proof_term_example
+
+#print axioms LeanBook.Ch02.natAsInt
+
+#print axioms LeanBook.Ch02.natAsInt_eq
+
+#print axioms LeanBook.Ch03.add_comm_fixed
+
+#print axioms LeanBook.Ch03.add_five_fixed
+
+#print axioms LeanBook.Ch03.test
+
+#print axioms LeanBook.Ch03.add_comm_explicit
+
+#print axioms LeanBook.Ch03.commMonoid_mul_comm
+
+#print axioms LeanBook.Ch03.even_square_plus_self
+
+#print axioms LeanBook.Ch03.even_square_plus_self_calc
+
+#print axioms LeanBook.Ch04.test
+
+#print axioms LeanBook.Ch04.add_comm_explicit
+
+#print axioms LeanBook.Ch04.trans_explicit
+
+#print axioms LeanBook.Ch04.succ_bound
+
+#print axioms LeanBook.Ch05.dimension_theorem_preview
+
+#print axioms LeanBook.Ch05.have_example
+
+#print axioms LeanBook.Ch05.range_from_assumptions
+
+#print axioms LeanBook.Ch05.kernel_finite_search
+
+#print axioms LeanBook.Ch05.range_finite_search
+
+#print axioms LeanBook.Ch05.kernel_finite_inferred
+
+#print axioms LeanBook.Ch05.range_finite_inferred
+
+#print axioms LeanBook.Ch05.dimension_in_steps
+
+#print axioms LeanBook.Ch05.zero_kernel_finrank
+
+#print axioms LeanBook.Ch05.zero_kernel_finrank_rw
+
+#print axioms LeanBook.Ch05.kernel_finite_exercise_answer
+
+#print axioms LeanBook.Ch05.kernel_finite_exercise_explicit
+
+#print axioms LeanBook.Ch04.import_example

@@ -107,6 +107,34 @@ class AxiomChecks(unittest.TestCase):
 
 
 class DiagnosticChecks(unittest.TestCase):
+    def test_coded_error_reason_is_checked(self):
+        case = {'id': 'missing_name', 'kind': 'error', 'error_count': 1,
+                'patterns': ['Unknown constant `Nat.add_comm_wrong`']}
+        result = validate_diagnostic_output(
+            case, 'error(lean.unknownIdentifier): Unknown constant `Nat.add_comm_wrong`')
+        self.assertEqual(result['errors'], 1)
+
+    def test_extra_coded_error_is_rejected(self):
+        case = {'id': 'bad_proof', 'kind': 'error', 'error_count': 1, 'patterns': ['unsolved goals']}
+        with self.assertRaisesRegex(ValueError, 'expected error reason differs'):
+            validate_diagnostic_output(
+                case, 'error: unsolved goals\nerror(lean.unknownIdentifier): Unknown constant `x`')
+
+    def test_completed_proof_rejects_coded_diagnostics(self):
+        case = {'id': 'completed', 'kind': 'pass', 'declaration': 'a'}
+        for severity in ('error', 'warning'):
+            with self.subTest(severity=severity), self.assertRaisesRegex(ValueError, 'unexpected diagnostic'):
+                validate_diagnostic_output(
+                    case, f"{severity}(lean.synthInstanceFailed): failed to synthesize\n"
+                    "'a' does not depend on any axioms")
+
+    def test_sorry_lesson_rejects_additional_coded_error(self):
+        case = {'id': 'lesson', 'kind': 'sorry', 'declaration': 'a'}
+        with self.assertRaisesRegex(ValueError, 'expected sorry warning/axioms differ'):
+            validate_diagnostic_output(
+                case, "warning: declaration uses `sorry`\n'a' depends on axioms: [sorryAx]\n"
+                'error(lean.synthInstanceFailed): failed to synthesize')
+
     def test_unrelated_failure_is_rejected(self):
         case = {'id': 'bad_proof', 'kind': 'error', 'error_count': 1, 'patterns': ['unsolved goals']}
         with self.assertRaisesRegex(ValueError, 'expected error reason differs'):

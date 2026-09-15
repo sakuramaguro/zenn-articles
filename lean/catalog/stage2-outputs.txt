@@ -1,0 +1,179 @@
+Stage 2: selected compiler output (Lean 4.29.0-rc6).
+Whole-book verification is not implied.
+
+=== ch01_001 ===
+"Hello, Lean!"
+1 + 1 = 2 : Prop
+'first_theorem' depends on axioms: [propext]
+
+=== ch02_001 ===
+inferInstance : Add ℕ
+class Add.{u} (α : Type u) : Type u
+number of parameters: 1
+fields:
+  Add.add : α → α → α
+constructor:
+  Add.mk.{u} {α : Type u} (add : α → α → α) : Add α
+
+=== ch02_006 ===
+class Monoid.{u} (M : Type u) : Type u
+number of parameters: 1
+parents:
+  Monoid.toSemigroup : Semigroup M
+  Monoid.toMulOneClass : MulOneClass M
+fields:
+  Mul.mul : M → M → M
+  Semigroup.mul_assoc : ∀ (a b c : M), a * b * c = a * (b * c)
+  One.one : M
+  MulOneClass.one_mul : ∀ (a : M), 1 * a = a
+  MulOneClass.mul_one : ∀ (a : M), a * 1 = a
+  Monoid.npow : ℕ → M → M :=
+    npowRecAuto
+  Monoid.npow_zero : ∀ (x : M), Monoid.npow 0 x = 1 := by
+    intros; rfl
+  Monoid.npow_succ : ∀ (n : ℕ) (x : M), Monoid.npow (n + 1) x = Monoid.npow n x * x := by
+    intros; rfl
+constructor:
+  Monoid.mk.{u} {M : Type u} [toSemigroup : Semigroup M] [toOne : One M] (one_mul : ∀ (a : M), 1 * a = a)
+    (mul_one : ∀ (a : M), a * 1 = a) (npow : ℕ → M → M) (npow_zero : ∀ (x : M), npow 0 x = 1 := by intros; rfl)
+    (npow_succ : ∀ (n : ℕ) (x : M), npow (n + 1) x = npow n x * x := by intros; rfl) : Monoid M
+field notation resolution order:
+  Monoid, Semigroup, MulOneClass, MulOne, One, Mul
+@mul_assoc : ∀ {G : Type u_1} [inst : Semigroup G] (a b c : G), a * b * c = a * (b * c)
+@one_mul : ∀ {M : Type u_1} [inst : MulOneClass M] (a : M), 1 * a = a
+@mul_one : ∀ {M : Type u_1} [inst : MulOneClass M] (a : M), a * 1 = a
+
+=== ch02_007 ===
+inferInstance : CommSemiring ℕ
+inferInstance : Field ℝ
+inferInstance : LinearOrder ℝ
+inferInstance : IsStrictOrderedRing ℝ
+
+=== ch02_012 ===
+inferInstance : CommRing ℤ
+class CommRing.{u} (α : Type u) : Type u
+number of parameters: 1
+parents:
+  CommRing.toRing : Ring α
+  CommRing.toCommMonoid : CommMonoid α
+fields:
+  Add.add : α → α → α
+  AddSemigroup.add_assoc : ∀ (a b c : α), a + b + c = a + (b + c)
+  Zero.zero : α
+  AddZeroClass.zero_add : ∀ (a : α), 0 + a = a
+  AddZeroClass.add_zero : ∀ (a : α), a + 0 = a
+  AddMonoid.nsmul : ℕ → α → α
+  AddMonoid.nsmul_zero : ∀ (x : α), AddMonoid.nsmul 0 x = 0 := by
+    intros; rfl
+  AddMonoid.nsmul_succ : ∀ (n : ℕ) (x : α), AddMonoid.nsmul (n + 1) x = AddMonoid.nsmul n x + x := by
+    intros; rfl
+  AddCommMagma.add_comm : ∀ (a b : α), a + b = b + a
+  Mul.mul : α → α → α
+  Distrib.left_distrib : ∀ (a b c : α), a * (b + c) = a * b + a * c
+  Distrib.right_distrib : ∀ (a b c : α), (a + b) * c = a * c + b * c
+  MulZeroClass.zero_mul : ∀ (a : α), 0 * a = 0
+  MulZeroClass.mul_zero : ∀ (a : α), a * 0 = 0
+  Semigroup.mul_assoc : ∀ (a b c : α), a * b * c = a * (b * c)
+  One.one : α
+  MulOneClass.one_mul : ∀ (a : α), 1 * a = a
+  MulOneClass.mul_one : ∀ (a : α), a * 1 = a
+  NatCast.natCast : ℕ → α :=
+    Nat.unaryCast
+  AddMonoidWithOne.natCast_zero : ↑0 = 0 := by
+    intros; rfl
+  AddMonoidWithOne.natCast_succ : ∀ (n : ℕ), ↑(n + 1) = ↑n + 1 := by
+    intros; rfl
+  Monoid.npow : ℕ → α → α :=
+    npowRecAuto
+  Monoid.npow_zero : ∀ (x : α), Semiring.npow 0 x = 1 := by
+    intros; rfl
+  Monoid.npow_succ : ∀ (n : ℕ) (x : α), Semiring.npow (n + 1) x = Semiring.npow n x * x := by
+    intros; rfl
+  Neg.neg : α → α
+  Sub.sub : α → α → α :=
+    SubNegMonoid.sub'
+  SubNegMonoid.sub_eq_add_neg : ∀ (a b : α), a - b = a + -b := by
+    intros; rfl
+  SubNegMonoid.zsmul : ℤ → α → α
+  SubNegMonoid.zsmul_zero' : ∀ (a : α), Ring.zsmul 0 a = 0 := by
+    intros; rfl
+  SubNegMonoid.zsmul_succ' : ∀ (n : ℕ) (a : α), Ring.zsmul (↑n.succ) a = Ring.zsmul (↑n) a + a := by
+    intros; rfl
+  SubNegMonoid.zsmul_neg' : ∀ (n : ℕ) (a : α), Ring.zsmul (Int.negSucc n) a = -Ring.zsmul (↑n.succ) a := by
+    intros; rfl
+  AddGroup.neg_add_cancel : ∀ (a : α), -a + a = 0
+  IntCast.intCast : ℤ → α :=
+    Int.castDef
+  AddGroupWithOne.intCast_ofNat : ∀ (n : ℕ), IntCast.intCast ↑n = ↑n := by
+    intros; rfl
+  AddGroupWithOne.intCast_negSucc : ∀ (n : ℕ), IntCast.intCast (Int.negSucc n) = -↑(n + 1) := by
+    intros; rfl
+  CommMagma.mul_comm : ∀ (a b : α), a * b = b * a
+constructor:
+  CommRing.mk.{u} {α : Type u} [toRing : Ring α] (mul_comm : ∀ (a b : α), a * b = b * a) : CommRing α
+field notation resolution order:
+  CommRing, Ring, CommMonoid, Semiring, AddCommGroup, AddGroupWithOne, NonUnitalSemiring, NonAssocSemiring, MonoidWithZero, NonUnitalNonAssocSemiring, Monoid, MulZeroOneClass, SemigroupWithZero, AddCommMonoidWithOne, CommSemigroup, MulOneClass, IntCast, AddMonoidWithOne, AddGroup, AddCommMonoid, Distrib, Semigroup, MulZeroClass, MulOne, NatCast, SubNegMonoid, AddMonoid, One, Neg, Sub, AddCommSemigroup, AddSemigroup, AddZeroClass, AddZero, CommMagma, Mul, Zero, AddCommMagma, Add
+
+=== ch02_013 ===
+inferInstance : Ring ℤ
+inferInstance : AddCommGroup ℤ
+inferInstance : LinearOrder ℤ
+inferInstance : IsStrictOrderedRing ℤ
+
+=== ch04_005 ===
+Try this:
+  [apply] exact Nat.add_comm a b
+'test' does not depend on any axioms
+
+=== ch04_007 ===
+Try this:
+  [apply] exact Nat.le_trans h1 h2
+
+=== ch04_011 ===
+add_comm.{u_1} {G : Type u_1} [AddCommMagma G] (a b : G) : a + b = b + a
+MeasureTheory.integral.{u_6, u_7} {α : Type u_6} {G : Type u_7} [NormedAddCommGroup G] [NormedSpace ℝ G]
+  {x✝ : MeasurableSpace α} (μ : Measure α) (f : α → G) : G
+Nat.add_comm (n m : ℕ) : n + m = m + n
+MeasureTheory.integral.{u_6, u_7} {α : Type u_6} {G : Type u_7} [NormedAddCommGroup G] [NormedSpace ℝ G]
+  {x✝ : MeasurableSpace α} (μ : MeasureTheory.Measure α) (f : α → G) : G
+
+=== ch04_013 ===
+Module.finrank.{u_1, u_2} (R : Type u_1) (M : Type u_2) [Semiring R] [AddCommMonoid M] [Module R M] : ℕ
+MeasureTheory.integral.{u_6, u_7} {α : Type u_6} {G : Type u_7} [NormedAddCommGroup G] [NormedSpace ℝ G]
+  {x✝ : MeasurableSpace α} (μ : MeasureTheory.Measure α) (f : α → G) : G
+
+=== ch04_014 ===
+public import Mathlib.Data.Nat.Notation
+'import_example' does not depend on any axioms
+
+=== ch05_011 ===
+Try this:
+  [apply] exact FiniteDimensional.finiteDimensional_submodule f.ker
+'kernel_finite_search' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch05_013 ===
+Try this:
+  [apply] exact Module.Finite.range f
+'range_finite_search' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch05_015 ===
+@LinearMap.finrank_range_add_finrank_ker : ∀ {K : Type u_1} {V : Type u_2} [inst : DivisionRing K]
+  [inst_1 : AddCommGroup V] [inst_2 : Module K V] {V₂ : Type u_3} [inst_3 : AddCommGroup V₂] [inst_4 : Module K V₂]
+  [FiniteDimensional K V] (f : V →ₗ[K] V₂), Module.finrank K ↥f.range + Module.finrank K ↥f.ker = Module.finrank K V
+
+=== ch05_021-ch05_022 ===
+'dimension_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch05_019 + trace_state + ch05_020 ===
+K : Type u_1
+V : Type u_2
+W : Type u_3
+inst✝⁵ : Field K
+inst✝⁴ : AddCommGroup V
+inst✝³ : Module K V
+inst✝² : FiniteDimensional K V
+inst✝¹ : AddCommGroup W
+inst✝ : Module K W
+f : V →ₗ[K] W
+key : Module.finrank K ↥f.range + Module.finrank K ↥f.ker = Module.finrank K V
+⊢ Module.finrank K V = Module.finrank K ↥f.ker + Module.finrank K ↥f.range

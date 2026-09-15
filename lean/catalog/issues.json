@@ -315,7 +315,7 @@
     "id": "P2-001",
     "priority": "P2",
     "stage": 2,
-    "status": "planned",
+    "status": "resolved",
     "description": "「型＝証明」「命題と同じ型の値」は修正。「命題 `P : Prop` 自体を型として、その項 `h : P` を作るのが証明」とする。`Nat`→`Int` のcoercionは文脈により自動挿入されるので「自動的には変換されない」と一律に言わない。",
     "locations": [
       {
@@ -329,15 +329,24 @@
         "end": 80
       }
     ],
-    "blocks": [],
+    "blocks": [
+      "intro_001",
+      "ch02_002",
+      "ch02_003"
+    ],
     "scope": "intro.md:77–83、ch02.md:80",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
   },
   {
     "id": "P2-002",
     "priority": "P2",
     "stage": 2,
-    "status": "planned",
+    "status": "resolved",
     "description": "ビルド失敗の原因をキャッシュ取得だけに限定しない。`lake build` と `npm install` も同じ処理ではない。プロジェクト・版・エラー本文を確認し、キャッシュ取得とビルドを区別する。無条件のclean→全ビルドは読者の待ち時間を増やす。",
     "locations": [
       {
@@ -353,13 +362,18 @@
     ],
     "blocks": [],
     "scope": "ch01.md:441–455、ch04.md:83",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
   },
   {
     "id": "P2-003",
     "priority": "P2",
     "stage": 2,
-    "status": "planned",
+    "status": "resolved",
     "description": "`Monoid` の省略出力で結合律を担う構造を落とさない。`LinearOrderedField`・`OrderedCommRing` は検証版で不明。例を `Field ℝ`・`LinearOrder ℝ`・`IsStrictOrderedRing ℝ` などに合わせる。`#check (inferInstance : ...)` の出力もコンストラクタ名と取り違えない。",
     "locations": [
       {
@@ -379,18 +393,28 @@
       }
     ],
     "blocks": [
+      "ch02_001",
+      "ch02_004",
+      "ch02_005",
       "ch02_006",
       "ch02_007",
+      "ch02_011",
+      "ch02_012",
       "ch02_013"
     ],
     "scope": "ch02.md:130–141、ch02.md:165–167、ch02.md:344",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
   },
   {
     "id": "P2-004",
     "priority": "P2",
     "stage": 2,
-    "status": "planned",
+    "status": "resolved",
     "description": "`[CommMonoid α]` に `ring` が使えるという別解は失敗する。既存の `mul_comm` にする。非線形な `2 ∣ n²+n` も `omega` 一発では解けなかった。本文の `Nat.even_mul_succ_self` を使う解答は利用できる。",
     "locations": [
       {
@@ -405,17 +429,26 @@
       }
     ],
     "blocks": [
+      "ch03_019",
+      "ch03_020",
       "ch03_021",
+      "ch03_022",
+      "ch03_023",
       "ch03_024"
     ],
     "scope": "ch03.md:584–592、ch03.md:648–656",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
   },
   {
     "id": "P2-005",
     "priority": "P2",
     "stage": 2,
-    "status": "planned",
+    "status": "resolved",
     "description": "`open Mathlib` が「Mathlibの何万もの名前を一度に展開する」とする説明はモジュールと名前空間の混同。Mathlibの定理はrootや `Nat`・`MeasureTheory` などに分かれている。検証版では `open Mathlib` 自体は受理されるため、これを「存在しない名前空間のエラー」と説明するのも避ける。",
     "locations": [
       {
@@ -425,16 +458,23 @@
       }
     ],
     "blocks": [
+      "ch04_009",
+      "ch04_010",
       "ch04_011"
     ],
     "scope": "ch04.md:305–318",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
   },
   {
     "id": "P2-006",
     "priority": "P2",
     "stage": 2,
-    "status": "planned",
+    "status": "resolved",
     "description": "`Mathlib.LinearAlgebra.FiniteDimensional` と `Mathlib.MeasureTheory.Integral.Bochner` の `.lean` ファイルが検証版にない。例えば各 `.Basic` など、目的の定理を含む実在するimport先を示す。",
     "locations": [
       {
@@ -444,16 +484,22 @@
       }
     ],
     "blocks": [
-      "ch04_013"
+      "ch04_013",
+      "ch04_014"
     ],
     "scope": "ch04.md:342–347",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
   },
   {
     "id": "P2-007",
     "priority": "P2",
     "stage": 2,
-    "status": "planned",
+    "status": "resolved",
     "description": "第5章の完成例は動作するが、核・像の有限次元性を取り出したあと、既存の次元定理そのものを適用している。「Mathlibの次元定理を用いた形式化・適用」と明記すると到達目標が正確。`h_ker`・`h_range` は最終証明に使われておらず、必要な証明手順として説明しない。",
     "locations": [
       {
@@ -474,16 +520,41 @@
     ],
     "blocks": [
       "ch05_001",
-      "ch05_021"
+      "ch05_002",
+      "ch05_003",
+      "ch05_004",
+      "ch05_005",
+      "ch05_006",
+      "ch05_007",
+      "ch05_008",
+      "ch05_009",
+      "ch05_010",
+      "ch05_011",
+      "ch05_012",
+      "ch05_013",
+      "ch05_014",
+      "ch05_015",
+      "ch05_016",
+      "ch05_017",
+      "ch05_018",
+      "ch05_019",
+      "ch05_020",
+      "ch05_021",
+      "ch05_022"
     ],
     "scope": "part1.md:10、ch05.md:30–40、ch05.md:597–615",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
   },
   {
     "id": "P2-008",
     "priority": "P2",
     "stage": 2,
-    "status": "planned",
+    "status": "resolved",
     "description": "有限次元性は「次元を実行計算できる」こととは別。`finrank` の非計算的な定義にも触れる。「無限次元では次元定理が成立しない」は過大で、基数値の次元には一般化がある。「この自然数値の定式化で有限次元性を用いる」と限定する。",
     "locations": [
       {
@@ -498,10 +569,20 @@
       }
     ],
     "blocks": [
-      "ch05_010"
+      "ch05_001",
+      "ch05_007",
+      "ch05_008",
+      "ch05_009",
+      "ch05_010",
+      "ch05_021"
     ],
     "scope": "ch05.md:319–329、ch05.md:637",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
   },
   {
     "id": "P2-009",
@@ -1273,7 +1354,7 @@
     "id": "P2-040",
     "priority": "P2",
     "stage": 5,
-    "status": "planned",
+    "status": "in_progress",
     "description": "`../images/vol1/fig-01.png` は原稿位置から解決するとファイルが存在しない。`/images/vol1/fig-01.png` に直す。対象Markdown中のローカル画像参照で、この不存在を検出した。",
     "locations": [
       {
@@ -1284,7 +1365,8 @@
     ],
     "blocks": [],
     "scope": "intro.md:42",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "progress": "段階2で参照を /images/vol1/fig-01.png へ修正。全章の表示確認は段階5で実施する。"
   },
   {
     "id": "P2-041",

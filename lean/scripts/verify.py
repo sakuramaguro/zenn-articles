@@ -17,6 +17,7 @@ import catalog
 ROOT = catalog.ROOT
 LOGS = ROOT / '.generated/logs'
 ALLOWED_AXIOMS = {'propext', 'Classical.choice', 'Quot.sound'}
+DIAGNOSTIC_PATTERN = r'\b(error|warning)(?:\([^\n]*?\))?:'
 
 
 def run(args: list[str], logfile: str, cwd: Path = ROOT, expected_returncode: int = 0) -> str:
@@ -54,19 +55,21 @@ def parse_axioms(output: str, expected: list[str]) -> dict[str, list[str]]:
 
 def validate_diagnostic_output(case: dict, output: str) -> dict:
     kind = case['kind']
+    # Lean also emits coded diagnostics such as error(lean.unknownIdentifier).
+    severities = re.findall(DIAGNOSTIC_PATTERN, output)
     if kind == 'error':
-        errors = len(re.findall(r'\berror:', output))
+        errors = severities.count('error')
         if errors != case['error_count'] or any(pattern not in output for pattern in case['patterns']):
             raise ValueError(f'{case["id"]}: expected error reason differs')
         return {'kind': kind, 'errors': errors, 'expected_reason_confirmed': True}
     name = case['declaration']
     if kind == 'pass':
-        if 'warning:' in output or 'error:' in output:
+        if severities:
             raise ValueError(f'{case["id"]}: unexpected diagnostic')
         return {'kind': kind, 'axioms': parse_axioms(output, [name])[name]}
     match = re.search(r"'" + re.escape(name) + r"' depends on axioms: \[([^\]]*)\]", output)
     axioms = {x.strip() for x in match[1].split(',')} if match else set()
-    if ('warning: declaration uses `sorry`' not in output or 'error:' in output
+    if ('warning: declaration uses `sorry`' not in output or 'error' in severities
             or 'sorryAx' not in axioms or not axioms <= ALLOWED_AXIOMS | {'sorryAx'}):
         raise ValueError(f'{case["id"]}: expected sorry warning/axioms differ')
     return {'kind': kind, 'axioms': sorted(axioms), 'expected_warning_confirmed': True}

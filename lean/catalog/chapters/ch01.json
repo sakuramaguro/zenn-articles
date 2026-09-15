@@ -2,17 +2,17 @@
   {
     "id": "ch01_001",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 11,
-    "end": 28,
-    "sha256": "0a1fddd977975ef85a03ebc0a816bff8cf9778658e45f6eb0f1ec48f8ff332e4",
+    "line": 14,
+    "end": 31,
+    "sha256": "87349f81d13e7ba75006d81667a6424f631a327de290e55426d6a695f9c8a851",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.0 本章のゴール ──── ゴール逆算型アプローチ",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
     "preceding_setup": [],
     "own_setup": [
@@ -26,33 +26,44 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_001",
+      "source_sha256": "0a1fddd977975ef85a03ebc0a816bff8cf9778658e45f6eb0f1ec48f8ff332e4",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [],
-    "stage1a_status": "compiled_source"
+    "stage1a_status": "compiled_source",
+    "before_stage2": {
+      "sha256": "0a1fddd977975ef85a03ebc0a816bff8cf9778658e45f6eb0f1ec48f8ff332e4",
+      "line": 11,
+      "end": 28,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_002",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 146,
-    "end": 148,
-    "sha256": "6d3f426e393fc071b3e09885a22b3dacb68960ae7b19f2c4f5be57eeadb70235",
+    "line": 134,
+    "end": 137,
+    "sha256": "a86eabe83dbaef718b03f8ac3e8a3b140fcb8f55e4afefb0a470154b10f4da2b",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.3 環境構築 ──── 最初の `#eval \"Hello, Lean!\"` まで / ### `#eval \"Hello, Lean!\"` を実行する",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_002.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -61,31 +72,40 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_002",
+      "source_sha256": "6d3f426e393fc071b3e09885a22b3dacb68960ae7b19f2c4f5be57eeadb70235",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "6d3f426e393fc071b3e09885a22b3dacb68960ae7b19f2c4f5be57eeadb70235",
+      "line": 146,
+      "end": 148,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_003",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 179,
-    "end": 192,
+    "line": 168,
+    "end": 181,
     "sha256": "6c8a9a84ccfbc2b5b73c3d2dd2d986826dae63bd60763824747190b9d351cb1c",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.4 `#check` ──── 型を調べる最強のコマンド",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -99,29 +119,25 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_004",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 212,
-    "end": 222,
+    "line": 201,
+    "end": 211,
     "sha256": "e5f185f597292ea7048982b504c03430add83e011b1e02931c5983f9b09d517d",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.5 最初の証明 ──── `example` と `theorem` の使い分け / ### `example` と `theorem` ──── 何が違うか",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -135,29 +151,25 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_005",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 238,
-    "end": 246,
-    "sha256": "59f956ba37a0c3a371adda72eb8b8c5ea5fff7940ec8e8d3d586173385b6de8d",
+    "line": 227,
+    "end": 235,
+    "sha256": "93d001d7da6845af7b06e3b599b1284a4ee5d40f0a7f748d18ba736d24abebb7",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.5 最初の証明 ──── `example` と `theorem` の使い分け / ### 最初の `Goals accomplished!`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -169,16 +181,30 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_005",
+      "source_sha256": "59f956ba37a0c3a371adda72eb8b8c5ea5fff7940ec8e8d3d586173385b6de8d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "59f956ba37a0c3a371adda72eb8b8c5ea5fff7940ec8e8d3d586173385b6de8d",
+      "line": 238,
+      "end": 246,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_006",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 309,
-    "end": 312,
-    "sha256": "1e69883c695a086340a3022f7bc4b86122363f886754ec40f765315e32b973f2",
+    "line": 298,
+    "end": 302,
+    "sha256": "05df1fb2cf653d551129925dc45d74f1c8a7a6dee6e9d7f8e23e22184557b19a",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "unfinished",
     "role": "問題文",
@@ -186,15 +212,12 @@
     "contains_sorry": true,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_006.lean",
     "validation_mode": "track_holes_separately",
     "repair_stage": 2,
@@ -203,32 +226,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_006",
+      "source_sha256": "1e69883c695a086340a3022f7bc4b86122363f886754ec40f765315e32b973f2",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "1e69883c695a086340a3022f7bc4b86122363f886754ec40f765315e32b973f2",
+      "line": 309,
+      "end": 312,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
   },
   {
     "id": "ch01_007",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 324,
-    "end": 328,
-    "sha256": "e0c0e86e8210f5ec7a41c1d770ccf6cd4ffe6a992b2e7f9d2652ddd894cdf70d",
+    "line": 314,
+    "end": 319,
+    "sha256": "c9c9c664412e2a98a6db19189ec17492dd50f51cdb0e868b55db1c14179b4858",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_007.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -237,32 +271,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_007",
+      "source_sha256": "e0c0e86e8210f5ec7a41c1d770ccf6cd4ffe6a992b2e7f9d2652ddd894cdf70d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "e0c0e86e8210f5ec7a41c1d770ccf6cd4ffe6a992b2e7f9d2652ddd894cdf70d",
+      "line": 324,
+      "end": 328,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_008",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 337,
-    "end": 341,
-    "sha256": "09b6ef5f3544b698ce5a56d72b3fdb24b7283dac6a1cabe38d6c59b4b36967e6",
+    "line": 328,
+    "end": 333,
+    "sha256": "bdcb1321bc60d8d8c94c0db8dd8fb5b6ab8764dacf372154c2ea95c1f20f4d17",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_008.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -271,16 +316,30 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_008",
+      "source_sha256": "09b6ef5f3544b698ce5a56d72b3fdb24b7283dac6a1cabe38d6c59b4b36967e6",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "09b6ef5f3544b698ce5a56d72b3fdb24b7283dac6a1cabe38d6c59b4b36967e6",
+      "line": 337,
+      "end": 341,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_009",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 351,
-    "end": 355,
-    "sha256": "23c8782a9366fcdbedd871d554f4d615fd1351dee327141352677864d612527c",
+    "line": 343,
+    "end": 348,
+    "sha256": "70cb273e72259910dfc11ec49a513612b0235f961e780caf6ccdf08be152cc82",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "unfinished",
     "role": "問題文",
@@ -288,15 +347,12 @@
     "contains_sorry": true,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_009.lean",
     "validation_mode": "track_holes_separately",
     "repair_stage": 2,
@@ -305,32 +361,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_009",
+      "source_sha256": "23c8782a9366fcdbedd871d554f4d615fd1351dee327141352677864d612527c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "23c8782a9366fcdbedd871d554f4d615fd1351dee327141352677864d612527c",
+      "line": 351,
+      "end": 355,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
   },
   {
     "id": "ch01_010",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 367,
-    "end": 371,
-    "sha256": "4f6bd7069ae75f236caba7e7e92b7eceba431c4994a84e45df428dfb92c659ba",
+    "line": 360,
+    "end": 365,
+    "sha256": "ecfb2ae12da18e2b818d867923f75b553658546124262876a37921c590c2a5ed",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_010.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -339,32 +406,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_010",
+      "source_sha256": "4f6bd7069ae75f236caba7e7e92b7eceba431c4994a84e45df428dfb92c659ba",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "4f6bd7069ae75f236caba7e7e92b7eceba431c4994a84e45df428dfb92c659ba",
+      "line": 367,
+      "end": 371,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_011",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 380,
-    "end": 385,
-    "sha256": "6e7869a448c6d4d18aa0e92e588f76c8716eedc6af390d529f39b88856181e57",
+    "line": 374,
+    "end": 380,
+    "sha256": "4b5b2a69297a3ca7a11eedaffcee05ca2fd95629420cc8609046c3986a821fd9",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_011.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -373,16 +451,30 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_011",
+      "source_sha256": "6e7869a448c6d4d18aa0e92e588f76c8716eedc6af390d529f39b88856181e57",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "6e7869a448c6d4d18aa0e92e588f76c8716eedc6af390d529f39b88856181e57",
+      "line": 380,
+      "end": 385,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_012",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 395,
-    "end": 399,
-    "sha256": "a36d682aff57b3ad86c3a96327a651bcf03fcd6e69f24a4a12ac1981de0cb3a3",
+    "line": 390,
+    "end": 395,
+    "sha256": "4e0283de412ab88861a0d2434f32b35f4edd132d247f1689e8555f81468ce489",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "unfinished",
     "role": "問題文",
@@ -390,15 +482,12 @@
     "contains_sorry": true,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_012.lean",
     "validation_mode": "track_holes_separately",
     "repair_stage": 2,
@@ -407,32 +496,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_012",
+      "source_sha256": "a36d682aff57b3ad86c3a96327a651bcf03fcd6e69f24a4a12ac1981de0cb3a3",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "a36d682aff57b3ad86c3a96327a651bcf03fcd6e69f24a4a12ac1981de0cb3a3",
+      "line": 395,
+      "end": 399,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
   },
   {
     "id": "ch01_013",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 411,
-    "end": 415,
-    "sha256": "9be7e9684da2b8eac29d307261de3e53dc5a21c65183e367efdae8e7848bf133",
+    "line": 407,
+    "end": 412,
+    "sha256": "9417dea59509d53c7570884d197baba5d5db572e5f80799446d7080de2b04836",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_013.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -441,32 +541,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_013",
+      "source_sha256": "9be7e9684da2b8eac29d307261de3e53dc5a21c65183e367efdae8e7848bf133",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "9be7e9684da2b8eac29d307261de3e53dc5a21c65183e367efdae8e7848bf133",
+      "line": 411,
+      "end": 415,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   },
   {
     "id": "ch01_014",
     "source": "books/lean4-formalization/ch01.md",
-    "line": 424,
-    "end": 428,
-    "sha256": "60ff432f355d94ed528f8c747482ef07f43783b6a8d6f6bf59a1e3f07d517cd1",
+    "line": 421,
+    "end": 426,
+    "sha256": "045afcf435e95b625fda0bb7561e491f97f12baeb1a76c2a7f9a21708db951af",
     "section": "# 第1章：なぜ私はLean 4を始めたのか 〜最初の `Goals accomplished!` まで〜 / ## 1.X まとめ ──── 第1章の全対応表と練習問題 / ### 練習問題",
     "category": "complete",
     "role": "別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch01_001",
-        "line": "import Mathlib"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch01_014.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 2,
@@ -475,8 +586,22 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch01_014",
+      "source_sha256": "60ff432f355d94ed528f8c747482ef07f43783b6a8d6f6bf59a1e3f07d517cd1",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "60ff432f355d94ed528f8c747482ef07f43783b6a8d6f6bf59a1e3f07d517cd1",
+      "line": 424,
+      "end": 428,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
   }
 ]
