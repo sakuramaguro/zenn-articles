@@ -588,9 +588,51 @@
     "id": "P2-009",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
-    "description": "冒頭の「再掲」には `hf : ContinuousAt f a` が増えている。この例の `exact?` は実行すると `exact hf` を提案する。一方、後の再掲は仮定なし。失敗する例と修正済み例を明確に区別する。",
+    "status": "resolved",
+    "description": "冒頭の「再掲」には hf : ContinuousAt f a が増えており、仮定付きの例は探索が成功する。後の仮定なしの失敗例と修正済み例を区別し、実際の探索結果と説明を合わせる。",
     "locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 15,
+        "end": 21
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 25,
+        "end": 48
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 58,
+        "end": 65
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 623,
+        "end": 630
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 642,
+        "end": 648
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 661,
+        "end": 664
+      }
+    ],
+    "blocks": [
+      "ch06_001",
+      "ch06_002",
+      "ch06_003",
+      "ch06_023",
+      "ch06_024",
+      "ch06_025"
+    ],
+    "scope": "段階3-Aで本文・演習・Q&Aを照合。locationsは修正後の代表コード、before_stage3a_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3a_locations": [
       {
         "source": "books/lean4-formalization/ch06.md",
         "line": 13,
@@ -602,20 +644,44 @@
         "end": 65
       }
     ],
-    "blocks": [
-      "ch06_001",
-      "ch06_003"
-    ],
-    "scope": "ch06.md:13–21、ch06.md:56–65",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "resolution": {
+      "stage": "3-A",
+      "record": "STAGE3A.md",
+      "evidence": "catalog/stage3a-verification.json",
+      "independent_evidence": "catalog/stage3a-source-checks.json"
+    }
   },
   {
     "id": "P2-010",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "近傍の逆像の集合族の包含が逆。`V ∈ 𝓝(f a) → f ⁻¹' V ∈ 𝓝 a` と書くのが確実。`nhds 0` は開集合だけの族ではなく、0の開近傍を含む集合全体。例えば `[-1,1]` も所属する。",
     "locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 394,
+        "end": 407
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 522,
+        "end": 532
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 690,
+        "end": 697
+      }
+    ],
+    "blocks": [
+      "ch06_014",
+      "ch06_017",
+      "ch06_027"
+    ],
+    "scope": "段階3-Aで本文・演習・Q&Aを照合。locationsは修正後の代表コード、before_stage3a_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3a_locations": [
       {
         "source": "books/lean4-formalization/ch06.md",
         "line": 648,
@@ -632,34 +698,118 @@
         "end": 1095
       }
     ],
-    "blocks": [],
-    "scope": "ch06.md:648、ch06.md:928、ch06.md:1092–1095",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "resolution": {
+      "stage": "3-A",
+      "record": "STAGE3A.md",
+      "evidence": "catalog/stage3a-verification.json",
+      "independent_evidence": "catalog/stage3a-source-checks.json"
+    }
   },
   {
     "id": "P2-011",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "点で値を変えた関数の極限は、点を除く極限と `Tendsto f (nhds a) ...` を区別する。`𝓝[≠] a` と `𝓝 a` の違いを短く補足すると、連続性との関係が正確になる。",
     "locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 1086,
+        "end": 1107
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 1117,
+        "end": 1141
+      }
+    ],
+    "blocks": [
+      "ch06_045",
+      "ch06_046"
+    ],
+    "scope": "段階3-Aで本文・演習・Q&Aを照合。locationsは修正後の代表コード、before_stage3a_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3a_locations": [
       {
         "source": "books/lean4-formalization/ch06.md",
         "line": 94,
         "end": 98
       }
     ],
-    "blocks": [],
-    "scope": "ch06.md:94–98",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "resolution": {
+      "stage": "3-A",
+      "record": "STAGE3A.md",
+      "evidence": "catalog/stage3a-verification.json",
+      "independent_evidence": "catalog/stage3a-source-checks.json"
+    }
   },
   {
     "id": "P2-012",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "完成例にも `No goals to be solved`、不明な `Metric.closedBall_eq_preimage_dist`・擬距離インスタンス名がある。途中でゴールが閉じた後のタクティクを削除し、閉球の閉性は利用可能な `Metric.isClosed_closedBall` などを用いて確認する。",
     "locations": [
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 113,
+        "end": 132
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 282,
+        "end": 290
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 296,
+        "end": 301
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 309,
+        "end": 311
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 814,
+        "end": 821
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 834,
+        "end": 842
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 850,
+        "end": 858
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 929,
+        "end": 944
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 954,
+        "end": 959
+      }
+    ],
+    "blocks": [
+      "ch07_004",
+      "ch07_012",
+      "ch07_013",
+      "ch07_014",
+      "ch07_035",
+      "ch07_036",
+      "ch07_037",
+      "ch07_040",
+      "ch07_041"
+    ],
+    "scope": "段階3-Aで本文・演習・Q&Aを照合。locationsは修正後の代表コード、before_stage3a_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3a_locations": [
       {
         "source": "books/lean4-formalization/ch07.md",
         "line": 269,
@@ -676,15 +826,12 @@
         "end": 895
       }
     ],
-    "blocks": [
-      "ch07_012",
-      "ch07_037",
-      "ch07_040",
-      "ch07_041"
-    ],
-    "scope": "ch07.md:269–279、ch07.md:793–800、ch07.md:869–895",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
-    "progress": "段階1-Bで擬距離の例・不明なインスタンス名を修正。閉球の閉性と余分なタクティクは段階3に残る。"
+    "resolution": {
+      "stage": "3-A",
+      "record": "STAGE3A.md",
+      "evidence": "catalog/stage3a-verification.json",
+      "independent_evidence": "catalog/stage3a-source-checks.json"
+    }
   },
   {
     "id": "P2-013",
