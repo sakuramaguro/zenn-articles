@@ -3,48 +3,55 @@
     "id": "ch17_001",
     "source": "books/lean4-formalization/ch17.md",
     "line": 11,
-    "end": 38,
-    "sha256": "5d5300959764f6680851b467411fe997ccf5f9b62b6d74c0b17b918fad7d8212",
+    "end": 26,
+    "sha256": "2aa1f85bb11929d84c6a03d254d8fdeab217cea43de762f736d931dc548cbe79",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.0 本章のゴール ──── ゴール逆算型アプローチ",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory Filter"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_001.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_001",
+      "source_sha256": "5d5300959764f6680851b467411fe997ccf5f9b62b6d74c0b17b918fad7d8212",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_002",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 84,
-    "end": 96,
-    "sha256": "d4eb6dd69e94ac425762d435c57c8cda902c242d4cd536318c0d9eda8bed5b6b",
+    "line": 72,
+    "end": 81,
+    "sha256": "2b03647360cb7160623bf5fe4dff5267282f680bfa783790fe8660c226fc8ffa",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.2 単調収束定理（MCT） ──── `lintegral_iSup` / ### Lean の実装：`lintegral_iSup`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -54,38 +61,49 @@
       {
         "block": "ch17_001",
         "line": "open MeasureTheory Filter"
+      },
+      {
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_002.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_002",
+      "source_sha256": "d4eb6dd69e94ac425762d435c57c8cda902c242d4cd536318c0d9eda8bed5b6b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_003",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 106,
-    "end": 121,
-    "sha256": "59c1b7669611b05a53e3b7644da87f92cd8aa4117c2a8ea3a2904e6d920fbc96",
+    "line": 91,
+    "end": 102,
+    "sha256": "3babc1377222f5894146a7b1e4e2391cbf5558e5f26472b7908f0651ad0ed1f2",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.2 単調収束定理（MCT） ──── `lintegral_iSup` / ### 実況中継：`lintegral_iSup` の直接適用",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -97,40 +115,47 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_003.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_003",
+      "source_sha256": "59c1b7669611b05a53e3b7644da87f92cd8aa4117c2a8ea3a2904e6d920fbc96",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_004",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 165,
-    "end": 174,
-    "sha256": "f698a57c53c05be54cac8fd3b0b87fceee8bcec28e4690f7ede44a605d2d976a",
+    "line": 146,
+    "end": 155,
+    "sha256": "2646f31bb4e78a023c6a1b2740fd59c2dc24187bba0b4349b3236fc2ad21344b",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.3 Fatouの補題 ──── `lintegral_liminf_le` / ### Lean の実装：`lintegral_liminf_le`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -142,40 +167,47 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory Filter"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_004.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_004",
+      "source_sha256": "f698a57c53c05be54cac8fd3b0b87fceee8bcec28e4690f7ede44a605d2d976a",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_005",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 196,
-    "end": 211,
-    "sha256": "6b70cf9e44d9e4ab96658ba1ebda1cb723eea71fec2d59920b4cff848c287fe5",
+    "line": 177,
+    "end": 188,
+    "sha256": "17cc4a2802de98f8e84437d4b36ce5ca34f9c211b6cbfb2d4179a029b7331037",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.3 Fatouの補題 ──── `lintegral_liminf_le` / ### 実況中継：`lintegral_liminf_le` の直接適用",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -187,13 +219,14 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory Filter"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_005.lean",
     "validation_mode": "compile_after_context_review",
@@ -203,26 +236,30 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_005",
+      "source_sha256": "6b70cf9e44d9e4ab96658ba1ebda1cb723eea71fec2d59920b4cff848c287fe5",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P1-05"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_006",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 259,
-    "end": 265,
-    "sha256": "c3138c4a4c5c4239ace8308ad225af9cc1827371c2b1a8e614614c6026e83d75",
+    "line": 236,
+    "end": 247,
+    "sha256": "9e831fc8a3424e789c5ce3d3822594cf41deefadebeeb681326317938a5020ac",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.4 優収束定理（DCT） ──── `tendsto_integral_of_dominated_convergence` / ### Lean の実装：`tendsto_integral_of_dominated_convergence`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -234,40 +271,47 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory Filter"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_006.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_006",
+      "source_sha256": "c3138c4a4c5c4239ace8308ad225af9cc1827371c2b1a8e614614c6026e83d75",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_007",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 286,
-    "end": 303,
-    "sha256": "4eed08c714dc4d62454e659f988927c95138cd620f20c592be314cdf4ac79a2d",
+    "line": 265,
+    "end": 278,
+    "sha256": "a51b2b6d3690abaf9b5cf47197555c6c2bc2955c18c27da076fb0984b51e3845",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.4 優収束定理（DCT） ──── `tendsto_integral_of_dominated_convergence` / ### 実況中継：`tendsto_integral_of_dominated_convergence` の直接適用",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -279,13 +323,14 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory Filter"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_007.lean",
     "validation_mode": "compile_after_context_review",
@@ -295,26 +340,30 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_007",
+      "source_sha256": "4eed08c714dc4d62454e659f988927c95138cd620f20c592be314cdf4ac79a2d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P1-05"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_008",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 388,
-    "end": 403,
-    "sha256": "a678112faf5f46a222c06ab1ab5b4eb51b3687c06d932ecce838895b18e7ec2c",
+    "line": 364,
+    "end": 374,
+    "sha256": "f93d2bde63e2e0d1b0a1e913807758dd47cc3763d8115e13d2849c46eb1e9472",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -326,40 +375,47 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory Filter"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_008.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_008",
+      "source_sha256": "a678112faf5f46a222c06ab1ab5b4eb51b3687c06d932ecce838895b18e7ec2c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_009",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 412,
-    "end": 420,
-    "sha256": "ca3d176e78e7013e44de495ce48bc7db0aca2bf5c4b69642cb50f5535fe4b828",
+    "line": 383,
+    "end": 396,
+    "sha256": "77b275ec3e00ff2951c3ebd86d34922a93e9d3a35f67c1f7bceb2b1f36a717c8",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -371,39 +427,47 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
-      "open MeasureTheory"
+      "import Mathlib",
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_009.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_009",
+      "source_sha256": "ca3d176e78e7013e44de495ce48bc7db0aca2bf5c4b69642cb50f5535fe4b828",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_010",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 439,
-    "end": 449,
-    "sha256": "daeac64cbe79d7454a6f0b6d7f296e92e99c083d9aff71eee6cdce60dcfdb7eb",
+    "line": 415,
+    "end": 429,
+    "sha256": "0a6ac657622e9f8e0835aabb1e71f744a703a971756c3932b4380dbb24b6416b",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -415,42 +479,50 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory Filter"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_010.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_010",
+      "source_sha256": "daeac64cbe79d7454a6f0b6d7f296e92e99c083d9aff71eee6cdce60dcfdb7eb",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
+      "P1-05",
       "P2-028"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_011",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 458,
-    "end": 465,
-    "sha256": "b533bbe602a419f2dfb20d6883d5151226f64d319761d713b1cba98974d5ef37",
+    "line": 438,
+    "end": 454,
+    "sha256": "5392a30b4446d65536fa25c7e3c156784f55326144ce050e095095202d1c3f07",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
-    "role": "🔄 別解を見る",
-    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
-    "contains_sorry": true,
+    "role": "解答の続き：各点収束と真の不等式",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
+    "contains_sorry": false,
     "context": {
-      "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "blocks": [
+        "ch17_010"
+      ],
+      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -462,39 +534,43 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
-    "own_setup": [
-      "open MeasureTheory Filter"
-    ],
+    "own_setup": [],
     "fixture": ".generated/raw/ch17_011.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_011",
+      "source_sha256": "b533bbe602a419f2dfb20d6883d5151226f64d319761d713b1cba98974d5ef37",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_012",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 484,
-    "end": 500,
-    "sha256": "4f134188f25f78e99d3b8aabdc38092a93fd225a0bbae1418872d1c396d7b67f",
+    "line": 473,
+    "end": 510,
+    "sha256": "78fdb1ab375048f78dd746aa031fd91dff1b4ebc0677579ec1a99d31c4e6791f",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -506,18 +582,19 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory Filter"
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
     ],
     "fixture": ".generated/raw/ch17_012.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
@@ -528,24 +605,28 @@
       "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
+      "P1-05",
       "P2-033"
     ],
-    "stage1a_status": "revised_not_certified"
+    "stage1a_status": "revised_not_certified",
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch17_013",
     "source": "books/lean4-formalization/ch17.md",
-    "line": 509,
-    "end": 518,
-    "sha256": "0be91e1e99f31942f36cc8030003f06b7aa46120b2e6fe51d0fac0fa524f9438",
+    "line": 519,
+    "end": 530,
+    "sha256": "04ff4fd7c95515b61da83be006f40f553ad14957aa1639a9d10a723155684bfd",
     "section": "# 第6章：収束定理・三部作 〜ゴール逆算型アプローチで頂点へ〜 / ## 6.6 まとめ ──── 第6章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
-    "contains_sorry": true,
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
+    "contains_sorry": false,
     "context": {
-      "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "blocks": [
+        "ch17_012"
+      ],
+      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -557,23 +638,28 @@
         "line": "open MeasureTheory Filter"
       },
       {
-        "block": "ch17_002",
-        "line": "open MeasureTheory"
+        "block": "ch17_001",
+        "line": "open scoped ENNReal Topology"
       }
     ],
-    "own_setup": [
-      "open MeasureTheory Filter"
-    ],
+    "own_setup": [],
     "fixture": ".generated/raw/ch17_013.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": true,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch17_013",
+      "source_sha256": "0be91e1e99f31942f36cc8030003f06b7aa46120b2e6fe51d0fac0fa524f9438",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-05",
+      "P2-033"
+    ],
+    "stage1d_status": "compiled_source"
   }
 ]

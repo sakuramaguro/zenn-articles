@@ -52,3 +52,36 @@ import LeanBook
 #print axioms LeanBook.Ch11.halfEll2_fixedPoint_zero
 #print axioms LeanBook.Ch11.halfEll2_iterates
 #print axioms LeanBook.Ch12.half_map_recap
+
+#print axioms LeanBook.Ch14.dirichlet_ae_zero
+#print axioms LeanBook.Ch16.constant_integrable
+#print axioms LeanBook.Ch16.sine_integrable_on_interval
+#print axioms LeanBook.Ch16.dirichlet
+#print axioms LeanBook.Ch16.rationals_volume_zero
+#print axioms LeanBook.Ch16.dirichlet_ae_zero
+#print axioms LeanBook.Ch16.dirichlet_integrable
+#print axioms LeanBook.Ch16.dirichlet_integral
+#print axioms LeanBook.Ch16.nonnegative_integral
+#print axioms LeanBook.Ch16.integral_of_not_integrable
+#print axioms LeanBook.Ch16.dirichlet_on_unit_interval
+#print axioms LeanBook.Ch17.monotone_convergence
+#print axioms LeanBook.Ch17.fatou_ae
+#print axioms LeanBook.Ch17.real_ae_strongly_measurable
+#print axioms LeanBook.Ch17.dominated_convergence
+#print axioms LeanBook.Ch17.monotone_sequence_iff
+#print axioms LeanBook.Ch17.increasing_constants
+#print axioms LeanBook.Ch17.movingIndicator
+#print axioms LeanBook.Ch17.movingIndicator_measurable
+#print axioms LeanBook.Ch17.movingIndicator_integral
+#print axioms LeanBook.Ch17.movingIndicator_tendsto
+#print axioms LeanBook.Ch17.fatou_strict
+#print axioms LeanBook.Ch17.sineSequence
+#print axioms LeanBook.Ch17.sineSequence_norm_le
+#print axioms LeanBook.Ch17.sineSequence_norm_le_one
+#print axioms LeanBook.Ch17.sineSequence_tendsto
+#print axioms LeanBook.Ch17.sineSequence_integral_tendsto
+#print axioms LeanBook.Ch17.sineSequence_integral_tendsto_direct
+
+#print axioms LeanBook.Ch16.exp_neg_integrable
+
+#print axioms LeanBook.Ch16.exp_neg_integrable_parts

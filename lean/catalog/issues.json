@@ -164,7 +164,7 @@
     "id": "P1-05",
     "priority": "P1",
     "stage": 1,
-    "status": "planned",
+    "status": "resolved",
     "description": "優収束定理とFatouの補題の型が実際と異なる",
     "locations": [
       {
@@ -184,17 +184,34 @@
       }
     ],
     "blocks": [
+      "ch12_002",
+      "ch17_001",
+      "ch17_002",
+      "ch17_003",
+      "ch17_004",
       "ch17_005",
-      "ch17_007"
+      "ch17_006",
+      "ch17_007",
+      "ch17_008",
+      "ch17_009",
+      "ch17_010",
+      "ch17_011",
+      "ch17_012",
+      "ch17_013"
     ],
     "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
-    "acceptance": "DCTとFatouの可測性仮定・引数順を採用版の型に合わせ、完成例・出力・Q&Aを照合する。"
+    "acceptance": "DCTとFatouの可測性仮定・引数順を採用版の型に合わせ、完成例・出力・Q&Aを照合する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
   },
   {
     "id": "P1-06",
     "priority": "P1",
     "stage": 1,
-    "status": "planned",
+    "status": "resolved",
     "description": "ディリクレ関数をルベーグ非可積分としている",
     "locations": [
       {
@@ -204,10 +221,20 @@
       }
     ],
     "blocks": [
+      "ch14_005",
+      "ch14_006",
+      "ch14_007",
+      "ch16_007",
+      "ch16_016",
       "ch16_017"
     ],
     "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
-    "acceptance": "実数値の指示関数についてa.e.で0、可積分、積分0を証明し、規約値による説明を訂正する。"
+    "acceptance": "実数値の指示関数についてa.e.で0、可積分、積分0を証明し、規約値による説明を訂正する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
   },
   {
     "id": "P1-07",
@@ -952,13 +979,14 @@
       "ch17_010"
     ],
     "scope": "ch15.md:435–440、ch16.md:69–94、ch17.md:439–447",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "progress": "段階1-Dで第17章の指示関数の非負積分を修正・検証。第15章・第16章の例は段階4に残る。"
   },
   {
     "id": "P2-029",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "正部分・負部分による分解は実数値関数の説明に限定する。一般のBanach空間に `max(f,0)` はない。`Integrable` の中身は `AEStronglyMeasurable` と有限なノルム積分で、原稿の `AEMeasurable` は一般形の正しい定義ではない。",
     "locations": [
       {
@@ -973,16 +1001,23 @@
       }
     ],
     "blocks": [
-      "ch16_005"
+      "ch16_005",
+      "ch16_014",
+      "ch16_015"
     ],
     "scope": "ch16.md:108、ch16.md:156–175",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
   },
   {
     "id": "P2-030",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "`continuous_sin` は `Real.continuous_sin` に合わせる。`Set.Countable.measure_zero` には測度引数が必要。`integral_eq_lintegral_of_nonneg` は検証版で不明。定理名と省略引数を実行出力に合わせて更新する。",
     "locations": [
       {
@@ -1002,13 +1037,18 @@
       "ch16_008"
     ],
     "scope": "ch16.md:178–195、ch16.md:212–242",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
   },
   {
     "id": "P2-031",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "`norm_integral_le_integral_norm` が仮定なしで成立する理由を「非可積分なら両辺0」とするのは不正確。符号が非可測でノルムが可積分な場合など、右辺が0とは限らない。非可積分の場合は左辺の規約値0と右辺の非負性、という説明にする。",
     "locations": [
       {
@@ -1017,15 +1057,22 @@
         "end": 326
       }
     ],
-    "blocks": [],
+    "blocks": [
+      "ch16_011"
+    ],
     "scope": "ch16.md:326",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
   },
   {
     "id": "P2-032",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "比較表の「非負値のみ」には可測性の共通前提を明示する。単調収束と優収束は異なる仮定を持ち、単純な強さの順位では比較できない。「優関数を見つけることが唯一の作業」も強すぎる。支配不等式・a.e.収束にも証明が必要。",
     "locations": [
       {
@@ -1046,13 +1093,18 @@
     ],
     "blocks": [],
     "scope": "ch17.md:60–64、ch17.md:329、ch17.md:339–342",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
   },
   {
     "id": "P2-033",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "`sin(nx)/n` の演習は `bound_tac` が不明で、支配条件の量化順なども定理と不一致。「No goals」と未完成注記が矛盾する。指数0の除算も含めて完成例を作るか、スケッチと明記する。",
     "locations": [
       {
@@ -1062,10 +1114,16 @@
       }
     ],
     "blocks": [
-      "ch17_012"
+      "ch17_012",
+      "ch17_013"
     ],
     "scope": "ch17.md:484–503",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
   },
   {
     "id": "P2-034",
@@ -1209,7 +1267,7 @@
     "blocks": [],
     "scope": "part2.md:10、part3.md:10、part4.md:13–14",
     "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
-    "progress": "段階1-CでPart 2の到達目標を既存不動点定理の適用と具体例の検証に合わせた。Part 3/4と序文の範囲、全体表示の確認は段階5に残る。"
+    "progress": "段階1-CでPart 2、段階1-DでPart 3の到達目標を本文の既存定理の適用と具体例の検証に合わせた。Part 4と序文の範囲、全体表示の確認は段階5に残る。"
   },
   {
     "id": "P2-040",
@@ -1318,7 +1376,8 @@
       "ch18_013"
     ],
     "scope": "ch17.md:238、ch18.md:490",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "progress": "段階1-Dで第17章のFatouの説明を訂正。第18章の表記は段階4・5に残る。"
   },
   {
     "id": "FINAL-01",

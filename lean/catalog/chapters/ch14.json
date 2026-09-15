@@ -166,16 +166,16 @@
     "id": "ch14_005",
     "source": "books/lean4-formalization/ch14.md",
     "line": 168,
-    "end": 203,
-    "sha256": "8beea5c683b678169485aaedc9dd8e62a1525637263398e0810fe54604c7da5f",
+    "end": 184,
+    "sha256": "45a5c20f7e3c209694d6249e89ad72a872704b3e484185591e78d48b7a40d801",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### Lean の実装：`∀ᵐ x ∂μ` と `f =ᵐ[μ] g`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -198,33 +198,38 @@
     "fixture": ".generated/raw/ch14_005.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_005",
+      "source_sha256": "8beea5c683b678169485aaedc9dd8e62a1525637263398e0810fe54604c7da5f",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
+      "P1-06",
       "P2-024"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch14_006",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 211,
-    "end": 216,
+    "line": 192,
+    "end": 197,
     "sha256": "5b5395685d727af9d8bb7f2db00fd26354c35786e40fdb5625ebb85cffe04749",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### 実況中継：`ae_restrict_of_ae` で制限測度に降ろす",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [
-        "ch14_001"
+        "ch14_005"
       ],
-      "instruction": "open MeasureTheory Filter を引き継ぐ。API の存在は別途確認する。"
+      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -244,7 +249,7 @@
     "fixture": ".generated/raw/ch14_006.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
@@ -252,25 +257,27 @@
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
     "issue_ids": [
+      "P1-06",
       "P2-024"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch14_007",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 220,
-    "end": 224,
+    "line": 201,
+    "end": 205,
     "sha256": "cea99adcc4e2e063feaa22ce628e40a5b8a9882b4e5c63466a113991c62baa79",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### 実況中継：`ae_restrict_of_ae` で制限測度に降ろす",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [
-        "ch14_001"
+        "ch14_005"
       ],
-      "instruction": "open MeasureTheory Filter を引き継ぐ。API の存在は別途確認する。"
+      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -290,7 +297,7 @@
     "fixture": ".generated/raw/ch14_007.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
@@ -298,14 +305,16 @@
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
     "issue_ids": [
+      "P1-06",
       "P2-024"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch14_008",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 262,
-    "end": 280,
+    "line": 243,
+    "end": 261,
     "sha256": "6141e3d82c49eed7b5048d4d0d48d4d6de325208bf6d7a381bccfccad0cff174",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.5 `AEMeasurable` と `Measurable` の違い / ### Lean の実装：`AEMeasurable`",
     "category": "complete",
@@ -349,8 +358,8 @@
   {
     "id": "ch14_009",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 323,
-    "end": 329,
+    "line": 304,
+    "end": 310,
     "sha256": "798d237b37eca11ac8146f29e7a0e122a7ee5b8c5a65a4f1b3252e16ec468e1d",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -393,8 +402,8 @@
   {
     "id": "ch14_010",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 338,
-    "end": 342,
+    "line": 319,
+    "end": 323,
     "sha256": "80fcbd21d45c9f63650962381d9f41a87a8ff444b7a3d187fe8c8fdf7982aee6",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -435,8 +444,8 @@
   {
     "id": "ch14_011",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 361,
-    "end": 367,
+    "line": 342,
+    "end": 348,
     "sha256": "1239c834e9c2791f8227c43d2527120a79a319d09f253641756d1ae267dc3c34",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -479,8 +488,8 @@
   {
     "id": "ch14_012",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 376,
-    "end": 383,
+    "line": 357,
+    "end": 364,
     "sha256": "1cf03aa662f030c3e28cff063d7b3323aad5a0079e688531d85b8d3917861ec2",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -521,8 +530,8 @@
   {
     "id": "ch14_013",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 402,
-    "end": 409,
+    "line": 383,
+    "end": 390,
     "sha256": "3854d09f989e326d1cfd1c05b822263e344bb2b5bbc395976f4e2aa1ca7c5b0c",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -565,8 +574,8 @@
   {
     "id": "ch14_014",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 418,
-    "end": 423,
+    "line": 399,
+    "end": 404,
     "sha256": "76196688a2d0b7e172e16e2de3a83ed6f9398d859d38c7df8ccbfba21f451e13",
     "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",

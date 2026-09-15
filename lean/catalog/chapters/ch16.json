@@ -165,16 +165,16 @@
     "id": "ch16_005",
     "source": "books/lean4-formalization/ch16.md",
     "line": 156,
-    "end": 171,
-    "sha256": "b42c1ea0d30c564a5c8e9a760014ac0f3f9e3ceec18a9ff16b1997396c109b66",
+    "end": 167,
+    "sha256": "bd89483cc5ba54e3d81d870945b51d50768f00e4a1d921019268c2f1b0a42039",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.3 `Integrable` の条件 ──── `HasFiniteIntegral` と可測性 / ### Lean の実装：`Integrable`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -192,7 +192,8 @@
     ],
     "own_setup": [
       "import Mathlib",
-      "open MeasureTheory"
+      "open MeasureTheory",
+      "open scoped ENNReal"
     ],
     "fixture": ".generated/raw/ch16_005.lean",
     "validation_mode": "compile_after_context_review",
@@ -202,26 +203,30 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch16_005",
+      "source_sha256": "b42c1ea0d30c564a5c8e9a760014ac0f3f9e3ceec18a9ff16b1997396c109b66",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P2-029"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch16_006",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 178,
-    "end": 192,
-    "sha256": "1490ea048d21c0d012297f63edda9d27dcae6a90b0f6946d17d3142d73600825",
+    "line": 174,
+    "end": 185,
+    "sha256": "425d9949875ae909e216409d7977f918ccedc3a6aa47f20ff7240c73ec055753",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.3 `Integrable` の条件 ──── `HasFiniteIntegral` と可測性 / ### Lean の実装：`Integrable`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -235,6 +240,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [
@@ -249,26 +258,30 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch16_006",
+      "source_sha256": "1490ea048d21c0d012297f63edda9d27dcae6a90b0f6946d17d3142d73600825",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P2-030"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch16_007",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 212,
-    "end": 222,
-    "sha256": "c3052860bd09aafa1cc28b1909c9fd3427874c9b8ef801bfa69d2bbfac36354f",
+    "line": 205,
+    "end": 227,
+    "sha256": "869ff994e17403f9efa83e5636fc9aa1fff29f5b8484c41eeff62bdd38158fc5",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.4 リーマン積分との比較 ──── ディリクレ関数の例",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -282,6 +295,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [
@@ -291,31 +308,36 @@
     "fixture": ".generated/raw/ch16_007.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch16_007",
+      "source_sha256": "c3052860bd09aafa1cc28b1909c9fd3427874c9b8ef801bfa69d2bbfac36354f",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
+      "P1-06",
       "P2-030"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch16_008",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 232,
-    "end": 241,
-    "sha256": "d997c106d35ca160e0552cc40e63ad7ec9bacaf3b68d748376d0bcd1ca94ad97",
+    "line": 237,
+    "end": 247,
+    "sha256": "c990fc50eef59f289b73966286093b776993279a404aadcd6044eaf27bbdbfca",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.5 `lintegral` と `integral` の関係 ──── 実況中継 / ### 関係の全体像",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -329,6 +351,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [
@@ -343,17 +369,21 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch16_008",
+      "source_sha256": "d997c106d35ca160e0552cc40e63ad7ec9bacaf3b68d748376d0bcd1ca94ad97",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P2-030"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch16_009",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 255,
-    "end": 262,
+    "line": 263,
+    "end": 270,
     "sha256": "3dd4b4b69750632bdf33ceeb9c642971d5409d9e7695321f88f1efd0bacf1845",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.5 `lintegral` と `integral` の関係 ──── 実況中継 / ### 実況中継①：`integral_add` で積分の加法性を確認する",
     "category": "complete",
@@ -378,6 +408,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [],
@@ -396,8 +430,8 @@
   {
     "id": "ch16_010",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 289,
-    "end": 296,
+    "line": 297,
+    "end": 304,
     "sha256": "c01927913e4b06a47f77ad633efed892648a168dfa33fe690b4b3cde05012b3b",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.5 `lintegral` と `integral` の関係 ──── 実況中継 / ### 実況中継②：`integral_smul` で積分のスカラー倍を確認する",
     "category": "complete",
@@ -422,6 +456,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [],
@@ -440,19 +478,19 @@
   {
     "id": "ch16_011",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 317,
-    "end": 324,
+    "line": 325,
+    "end": 332,
     "sha256": "c55676ca615b7e819e060bcc07e994ffb0971eaccf0cc7110aaa0f1cc1b5fed5",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.5 `lintegral` と `integral` の関係 ──── 実況中継 / ### `norm_integral_le_integral_norm` の確認",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch16_005"
       ],
-      "instruction": "open MeasureTheory を引き継ぐ。"
+      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -466,6 +504,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [],
@@ -479,13 +521,16 @@
       "sorry_warning": false,
       "method": "independent block with import Mathlib; not a manuscript validity verdict"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P2-031"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch16_012",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 364,
-    "end": 373,
+    "line": 372,
+    "end": 381,
     "sha256": "261527cf17ebfaf29849f9dc5b98960a0de07a17e2c6b03f399286618a20b1a5",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -508,6 +553,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [
@@ -529,8 +578,8 @@
   {
     "id": "ch16_013",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 382,
-    "end": 386,
+    "line": 390,
+    "end": 394,
     "sha256": "72f37d25d083c48ced691a5c2a6d363fa5a16c64ac2c8dad7cfe174af8cd5e7b",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -553,6 +602,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [
@@ -573,17 +626,17 @@
   {
     "id": "ch16_014",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 405,
-    "end": 416,
-    "sha256": "48b4824a0aaf597fe04e8b24b1dc175e25b493f7eefd74cc0d744b1df962493d",
+    "line": 413,
+    "end": 421,
+    "sha256": "2fad8152cb5e642bdab23f2bf543ea6dadb1a0d58d86cf312cad5286757bef73",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
-    "contains_sorry": true,
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
+    "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -597,6 +650,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [
@@ -616,23 +673,28 @@
       "source_sha256": "d8f17b3328a55af1dec50004ea1f48d9e4c4efefbd96e171ef53a385e188d45c",
       "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": [],
-    "stage1a_status": "revised_not_certified"
+    "issue_ids": [
+      "P2-029"
+    ],
+    "stage1a_status": "revised_not_certified",
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch16_015",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 425,
-    "end": 434,
-    "sha256": "8f38b74f262060974cff84d8447854df2bbed3f8db18ffa4bb87be76e954de81",
+    "line": 430,
+    "end": 440,
+    "sha256": "f61164bff6e41e4307881782df1654f6b289b983d1dd8f39ad860b9e896f57ee",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
-    "role": "🔄 別解を見る",
-    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
-    "contains_sorry": true,
+    "role": "補足：可積分性を2つの条件に分ける",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
+    "contains_sorry": false,
     "context": {
-      "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "blocks": [
+        "ch16_014"
+      ],
+      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -646,9 +708,14 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [
+      "import Mathlib",
       "open MeasureTheory"
     ],
     "fixture": ".generated/raw/ch16_015.lean",
@@ -659,24 +726,30 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch16_015",
+      "source_sha256": "8f38b74f262060974cff84d8447854df2bbed3f8db18ffa4bb87be76e954de81",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P2-029"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch16_016",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 453,
-    "end": 465,
-    "sha256": "3e1c21cf3742e984e622c5bc0df899e94b124f7fc74267b44b05e5e44e092e61",
+    "line": 459,
+    "end": 468,
+    "sha256": "215741ee52df0c8ef894e895a59ce905c4289d63e04b6e021b27b5d9f176f88e",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -690,6 +763,10 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
     "own_setup": [
@@ -699,29 +776,37 @@
     "fixture": ".generated/raw/ch16_016.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
-    "priority_one": false,
+    "priority_one": true,
     "stage0_status": "classified_not_certified",
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch16_016",
+      "source_sha256": "3e1c21cf3742e984e622c5bc0df899e94b124f7fc74267b44b05e5e44e092e61",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P1-06"
+    ],
+    "stage1d_status": "compiled_source"
   },
   {
     "id": "ch16_017",
     "source": "books/lean4-formalization/ch16.md",
-    "line": 474,
-    "end": 481,
-    "sha256": "12b444452ae5904f3ab0427a4d7deb82a12a4277557c71c4204ad1a725ca3441",
+    "line": 477,
+    "end": 491,
+    "sha256": "9606a7711338b178ac1e4f33fa5ca43c92ac73e85cb1ba02876d455e3097a604",
     "section": "# 第5章：Lebesgue積分の正体 〜`∫⁻`と`∫`の全貌〜 / ## 5.6 まとめ ──── 第5章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
-    "role": "🔄 別解を見る",
-    "reason": "解答として掲載されているが sorry が残る。未完成問題として除外せず、解答の修正対象にする。",
-    "contains_sorry": true,
+    "role": "対比：ディリクレ関数は可積分",
+    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
+    "contains_sorry": false,
     "context": {
-      "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "blocks": [
+        "ch16_007"
+      ],
+      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
     },
     "preceding_setup": [
       {
@@ -735,11 +820,13 @@
       {
         "block": "ch16_002",
         "line": "open MeasureTheory ENNReal"
+      },
+      {
+        "block": "ch16_005",
+        "line": "open scoped ENNReal"
       }
     ],
-    "own_setup": [
-      "open MeasureTheory"
-    ],
+    "own_setup": [],
     "fixture": ".generated/raw/ch16_017.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
@@ -748,10 +835,14 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch16_017",
+      "source_sha256": "12b444452ae5904f3ab0427a4d7deb82a12a4277557c71c4204ad1a725ca3441",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P1-06"
-    ]
+    ],
+    "stage1d_status": "compiled_source"
   }
 ]
