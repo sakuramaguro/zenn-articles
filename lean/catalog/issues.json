@@ -837,26 +837,101 @@
     "id": "P2-013",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "`⨅` を「最小元」としない。下限は「すべての候補以下にあるもののうち最大のもの」。フィルターでは順序が集合族の包含と逆なので、ここを誤ると近傍の説明が崩れる。",
     "locations": [
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 264,
+        "end": 283
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 287,
+        "end": 295
+      }
+    ],
+    "blocks": [
+      "ch08_008",
+      "ch08_009"
+    ],
+    "scope": "段階3-Bで第8・9章の本文・演習・Q&Aと実出力を照合。locationsは修正後の代表コード、before_stage3b_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3b_locations": [
       {
         "source": "books/lean4-formalization/ch08.md",
         "line": 262,
         "end": 262
       }
     ],
-    "blocks": [],
-    "scope": "ch08.md:262",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "resolution": {
+      "stage": "3-B",
+      "record": "STAGE3B.md",
+      "evidence": "catalog/stage3b-verification.json",
+      "independent_evidence": "catalog/stage3b-source-checks.json"
+    }
   },
   {
     "id": "P2-014",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "離散位相は離散距離で距離化できるため、距離を与えられない代表例には不向き。最大・最小値定理の数学文には非空性を加える。`IsOpen.union` は二つの集合の合併であり、任意合併の公理そのものではない。",
     "locations": [
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 17,
+        "end": 34
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 127,
+        "end": 138
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 623,
+        "end": 635
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 639,
+        "end": 646
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 656,
+        "end": 658
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 667,
+        "end": 669
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 679,
+        "end": 684
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 903,
+        "end": 919
+      }
+    ],
+    "blocks": [
+      "ch08_001",
+      "ch08_004",
+      "ch08_023",
+      "ch08_024",
+      "ch08_025",
+      "ch08_026",
+      "ch08_027",
+      "ch08_034"
+    ],
+    "scope": "段階3-Bで第8・9章の本文・演習・Q&Aと実出力を照合。locationsは修正後の代表コード、before_stage3b_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3b_locations": [
       {
         "source": "books/lean4-formalization/ch08.md",
         "line": 40,
@@ -873,17 +948,68 @@
         "end": 938
       }
     ],
-    "blocks": [],
-    "scope": "ch08.md:40–45、ch08.md:585、ch08.md:938",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "resolution": {
+      "stage": "3-B",
+      "record": "STAGE3B.md",
+      "evidence": "catalog/stage3b-verification.json",
+      "independent_evidence": "catalog/stage3b-source-checks.json"
+    }
   },
   {
     "id": "P2-015",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "Cauchy条件の `ℱ ≠ ∅` は `NeBot` ではない。フィルターは全体集合を含むので集合族としては常に非空。`∅ ∉ ℱ`、または `ℱ ≠ ⊥` とする。C2'は単なる積位相での「対角集合の近傍」ではなく、一様構造のentourageを使う。Lean名はrootの `Cauchy`。",
     "locations": [
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 100,
+        "end": 109
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 189,
+        "end": 201
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 207,
+        "end": 215
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 235,
+        "end": 243
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 443,
+        "end": 466
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 758,
+        "end": 766
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 776,
+        "end": 785
+      }
+    ],
+    "blocks": [
+      "ch09_004",
+      "ch09_007",
+      "ch09_008",
+      "ch09_009",
+      "ch09_018",
+      "ch09_027",
+      "ch09_028"
+    ],
+    "scope": "段階3-Bで第8・9章の本文・演習・Q&Aと実出力を照合。locationsは修正後の代表コード、before_stage3b_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3b_locations": [
       {
         "source": "books/lean4-formalization/ch09.md",
         "line": 159,
@@ -895,12 +1021,12 @@
         "end": 214
       }
     ],
-    "blocks": [
-      "ch09_007",
-      "ch09_008"
-    ],
-    "scope": "ch09.md:159–174、ch09.md:185–214",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "resolution": {
+      "stage": "3-B",
+      "record": "STAGE3B.md",
+      "evidence": "catalog/stage3b-verification.json",
+      "independent_evidence": "catalog/stage3b-source-checks.json"
+    }
   },
   {
     "id": "P2-016",
