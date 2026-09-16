@@ -11,6 +11,7 @@ import LeanBook.Chapters.Ch11
 import LeanBook.Chapters.Ch12
 import LeanBook.Chapters.Ch13
 import LeanBook.Chapters.Ch14
+import LeanBook.Chapters.Ch15
 import LeanBook.Chapters.Ch16
 import LeanBook.Chapters.Ch17
 import LeanBook.Chapters.Intro

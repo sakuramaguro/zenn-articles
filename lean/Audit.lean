@@ -19,16 +19,6 @@ import LeanBook
 #print axioms ManuscriptReview.expectation
 
 
-#print axioms LeanBook.Ch16.constant_integrable
-#print axioms LeanBook.Ch16.sine_integrable_on_interval
-#print axioms LeanBook.Ch16.dirichlet
-#print axioms LeanBook.Ch16.rationals_volume_zero
-#print axioms LeanBook.Ch16.dirichlet_ae_zero
-#print axioms LeanBook.Ch16.dirichlet_integrable
-#print axioms LeanBook.Ch16.dirichlet_integral
-#print axioms LeanBook.Ch16.nonnegative_integral
-#print axioms LeanBook.Ch16.integral_of_not_integrable
-#print axioms LeanBook.Ch16.dirichlet_on_unit_interval
 #print axioms LeanBook.Ch17.monotone_convergence
 #print axioms LeanBook.Ch17.fatou_ae
 #print axioms LeanBook.Ch17.real_ae_strongly_measurable
@@ -47,9 +37,7 @@ import LeanBook
 #print axioms LeanBook.Ch17.sineSequence_integral_tendsto
 #print axioms LeanBook.Ch17.sineSequence_integral_tendsto_direct
 
-#print axioms LeanBook.Ch16.exp_neg_integrable
 
-#print axioms LeanBook.Ch16.exp_neg_integrable_parts
 
 #print axioms LeanBook.Ch01.one_plus_one
 
@@ -287,3 +275,44 @@ import LeanBook
 #print axioms LeanBook.Ch14.pointChange_ae_zero
 #print axioms LeanBook.Ch14.pointChange_integral_volume
 #print axioms LeanBook.Ch14.pointChange_integral_dirac
+#print axioms LeanBook.Ch15.simple_const_unit_integral
+#print axioms LeanBook.Ch15.myConst
+#print axioms LeanBook.Ch15.myConst_at_zero
+#print axioms LeanBook.Ch15.simple_lintegral_definition
+#print axioms LeanBook.Ch15.simple_const_unit_integral_steps
+#print axioms LeanBook.Ch15.eapprox_sup_eq
+#print axioms LeanBook.Ch15.lintegral_eapprox_formula
+#print axioms LeanBook.Ch15.const_three_finite_range
+#print axioms LeanBook.Ch15.const_range_nonempty
+#print axioms LeanBook.Ch15.const_range_empty
+#print axioms LeanBook.Ch15.eapprox_id_zero
+#print axioms LeanBook.Ch15.eapprox_id_one_le_two
+#print axioms LeanBook.Ch15.eapprox_id_finite
+#print axioms LeanBook.Ch15.eapprox_id_sup
+#print axioms LeanBook.Ch15.simple_indicator_unit_integral
+#print axioms LeanBook.Ch15.indicator_unit_lintegral
+#print axioms LeanBook.Ch16.norm_integral_bound_intro
+#print axioms LeanBook.Ch16.lintegral_notation
+#print axioms LeanBook.Ch16.lintegral_definition
+#print axioms LeanBook.Ch16.constant_lintegral
+#print axioms LeanBook.Ch16.indicator_lintegral
+#print axioms LeanBook.Ch16.one_not_integrable
+#print axioms LeanBook.Ch16.one_integral_undef
+#print axioms LeanBook.Ch16.one_lintegral_infinite
+#print axioms LeanBook.Ch16.constant_integrable
+#print axioms LeanBook.Ch16.sine_integrable_on_interval
+#print axioms LeanBook.Ch16.dirichlet
+#print axioms LeanBook.Ch16.rationals_volume_zero
+#print axioms LeanBook.Ch16.dirichlet_ae_zero
+#print axioms LeanBook.Ch16.dirichlet_integrable
+#print axioms LeanBook.Ch16.dirichlet_integral
+#print axioms LeanBook.Ch16.nonnegative_integral
+#print axioms LeanBook.Ch16.integral_add_demo
+#print axioms LeanBook.Ch16.integral_smul_demo
+#print axioms LeanBook.Ch16.norm_integral_bound
+#print axioms LeanBook.Ch16.const_three_lintegral_top
+#print axioms LeanBook.Ch16.const_three_lintegral_top_alt
+#print axioms LeanBook.Ch16.exp_neg_integrable
+#print axioms LeanBook.Ch16.exp_neg_integrable_parts
+#print axioms LeanBook.Ch16.integral_of_not_integrable
+#print axioms LeanBook.Ch16.dirichlet_on_unit_interval

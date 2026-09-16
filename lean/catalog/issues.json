@@ -1329,7 +1329,7 @@
     "id": "P2-026",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "単関数の定数積分の補題は `SimpleFunc.const_lintegral`。原稿の `SimpleFunc.lintegral_const` では通らない。3を `[0,1]` 上で積分する修正例は確認済み。",
     "locations": [
       {
@@ -1345,16 +1345,23 @@
     ],
     "blocks": [
       "ch15_001",
+      "ch15_004",
       "ch15_005"
     ],
-    "scope": "ch15.md:28–35、ch15.md:188–215",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "scope": "段階4-Bで第15・16章の本文・演習・Q&Aと第17章の関連例を照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-B",
+      "record": "STAGE4B.md",
+      "evidence": "catalog/stage4b-verification.json",
+      "independent_evidence": "catalog/stage4b-source-checks.json"
+    }
   },
   {
     "id": "P2-027",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "`eapprox f n` は実装上、非負有理数の列挙による近似で、単純な「n等分刻み」ではない。`lintegral` の定義は下にある単関数の積分全体の上限。可測な `f` について特定の近似列の上限と等しくなる定理と、定義そのものを分ける。",
     "locations": [
       {
@@ -1368,15 +1375,26 @@
         "end": 460
       }
     ],
-    "blocks": [],
-    "scope": "ch15.md:277–282、ch15.md:454–460",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "blocks": [
+      "ch15_006",
+      "ch15_009",
+      "ch15_010",
+      "ch16_002"
+    ],
+    "scope": "段階4-Bで第15・16章の本文・演習・Q&Aと第17章の関連例を照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-B",
+      "record": "STAGE4B.md",
+      "evidence": "catalog/stage4b-verification.json",
+      "independent_evidence": "catalog/stage4b-source-checks.json"
+    }
   },
   {
     "id": "P2-028",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "指示関数の非負積分で `rw [lintegral_indicator _ hA]` の形は検証版に合わない。関数の値域も明示する。`rw [lintegral_indicator hA]` からの修正例を確認済み。",
     "locations": [
       {
@@ -1396,13 +1414,20 @@
       }
     ],
     "blocks": [
+      "ch15_011",
       "ch15_012",
       "ch16_002",
       "ch17_010"
     ],
-    "scope": "ch15.md:435–440、ch16.md:69–94、ch17.md:439–447",
+    "scope": "段階4-Bで第15・16章の本文・演習・Q&Aと第17章の関連例を照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
     "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
-    "progress": "段階1-Dで第17章の指示関数の非負積分を修正・検証。第15章・第16章の例は段階4に残る。"
+    "progress": "段階1-Dで第17章の指示関数の非負積分を修正・検証。第15章・第16章の例は段階4に残る。",
+    "resolution": {
+      "stage": "4-B",
+      "record": "STAGE4B.md",
+      "evidence": "catalog/stage4b-verification.json",
+      "independent_evidence": "catalog/stage4b-source-checks.json"
+    }
   },
   {
     "id": "P2-029",
