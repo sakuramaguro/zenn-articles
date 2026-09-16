@@ -1065,7 +1065,7 @@
     "id": "P2-017",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "`Memℓp` の説明は指数による場合分けと総和可能性に合わせる。実数値の無限和は非総和可能でもLean上で値を持つため、単に「実数の和が有限」と書くと意図を表せない。`0`・`∞` の場合も通常のべき和とは分ける。",
     "locations": [
       {
@@ -1075,16 +1075,26 @@
       }
     ],
     "blocks": [
-      "ch10_005"
+      "ch10_002",
+      "ch10_003",
+      "ch10_004",
+      "ch10_005",
+      "ch10_009"
     ],
-    "scope": "ch10.md:95–110",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "scope": "段階3-Cで第10章の所属条件・仮定・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "3-C",
+      "record": "STAGE3C.md",
+      "evidence": "catalog/stage3c-verification.json",
+      "independent_evidence": "catalog/stage3c-source-checks.json"
+    }
   },
   {
     "id": "P2-018",
     "priority": "P2",
     "stage": 3,
-    "status": "planned",
+    "status": "resolved",
     "description": "`sorry` なしを求める級数の演習に、検証版で不明な `memℓp_iff_summable`、`Real.summable_one_div_pow`、引数不一致の `Summable.of_norm_bounded` が残る。完成した解答と方針だけのスケッチを分ける。",
     "locations": [
       {
@@ -1094,11 +1104,18 @@
       }
     ],
     "blocks": [
+      "ch10_023",
       "ch10_024",
       "ch10_025"
     ],
-    "scope": "ch10.md:549–585",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "scope": "段階3-Cで第10章の所属条件・仮定・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "3-C",
+      "record": "STAGE3C.md",
+      "evidence": "catalog/stage3c-verification.json",
+      "independent_evidence": "catalog/stage3c-source-checks.json"
+    }
   },
   {
     "id": "P2-019",

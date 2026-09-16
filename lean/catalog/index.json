@@ -11,8 +11,8 @@
     "books/lean4-formalization/ch07.md": "96bb84a9aef26e372c35fb0370fc36d05a63897656727657ea3f559816f3e1d1",
     "books/lean4-formalization/ch08.md": "1fb7e6d63fbb42a0b3e9d57f99037914f939be59528b7dc539fd9a749b3d747e",
     "books/lean4-formalization/ch09.md": "34c5b331f7810105c875e8d6f3e1aae9aa516e5ef7032c76534e4a0800677935",
-    "books/lean4-formalization/ch10.md": "53f7bc9f94e77564f20412bb4efb0278d5d33b0f505e08ebac3394dadd181a1d",
-    "books/lean4-formalization/ch11.md": "2da343b8b4531f3f5543d924193a453e2ce23a034eacdff25f9a3241669f9b4b",
+    "books/lean4-formalization/ch10.md": "b86ca7013c5a90d3ae7ddc52c9ce5dabba0289226b5434411b098889cde8c0a7",
+    "books/lean4-formalization/ch11.md": "ff4b002ddee021262c52f051174e4cd4aef2eaf809164e651eb2be773561f375",
     "books/lean4-formalization/ch12.md": "5c848534c4d2b6842b16169c42a4742df2836ac78a7dec7eb5750cb17a594489",
     "books/lean4-formalization/ch13.md": "c63425557d9c0942df3308d2f2d05806840d98b7a0586eaea7e2fccfea16e9e3",
     "books/lean4-formalization/ch14.md": "2692d403f78f17fa6e52ad628c32bdd6a42cc4e8aa5d811a5e0bc8a57089c63f",
@@ -968,6 +968,18 @@
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
     {
+      "block": "ch10_002",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_003",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_004",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
       "block": "ch10_005",
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
@@ -977,6 +989,14 @@
     },
     {
       "block": "ch10_007",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_008",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_009",
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
     {
@@ -1004,6 +1024,10 @@
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
     {
+      "block": "ch10_016",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
       "block": "ch10_017",
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
@@ -1025,6 +1049,18 @@
     },
     {
       "block": "ch10_022",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_024",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_025",
+      "module_file": "LeanBook/Chapters/Ch10.lean"
+    },
+    {
+      "block": "ch10_026",
       "module_file": "LeanBook/Chapters/Ch10.lean"
     },
     {
@@ -1257,7 +1293,7 @@
     "chapters/ch18.json",
     "chapters/intro.json"
   ],
-  "verification_stage": "3-B",
+  "verification_stage": "3-C",
   "diagnostics": [
     {
       "id": "false_equality",
@@ -1600,6 +1636,15 @@
       "kind": "sorry",
       "declaration": "convergent_cauchy_exercise",
       "append": "\n#print axioms convergent_cauchy_exercise\n"
+    },
+    {
+      "id": "stage3c_ch10_023",
+      "blocks": [
+        "ch10_023"
+      ],
+      "kind": "sorry",
+      "declaration": "reciprocal_mem_two_exercise",
+      "append": "\n#print axioms reciprocal_mem_two_exercise\n"
     }
   ]
 }

@@ -57,6 +57,8 @@ theorem contracting_iff (k : ℝ≥0) (f : ℝ → ℝ) :
 #check @ContractingWith.fixedPoint_unique
 #check @ContractingWith.fixedPoint_unique'
 #check @ContractingWith.tendsto_iterate_fixedPoint
+#check @ContractingWith.efixedPoint
+#check @ContractingWith.exists_fixedPoint
 -- END SOURCE ch11_005
 
 -- BEGIN SOURCE ch11_006
@@ -195,7 +197,7 @@ theorem affine_iterates (x₀ : ℝ) :
 -- END SOURCE ch11_024
 
 -- BEGIN SOURCE ch11_025
--- 6.5節の ell2 の定義を引き継ぐ
+-- 11.5節の ell2 の定義を引き継ぐ
 noncomputable def halfEll2 (x : ell2) : ell2 := (1 / 2 : ℝ) • x
 
 theorem halfEll2_apply (x : ell2) (n : ℕ) : halfEll2 x n = x n / 2 := by

@@ -5,14 +5,14 @@
     "line": 13,
     "end": 30,
     "sha256": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.0 本章のゴール：不動点の存在・一意性・反復列の収束",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.0 本章のゴール：不動点の存在・一意性・反復列の収束",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "このブロックのimport/openを含めて独立したファイルで実行する。"
+      "instruction": "自身のimportから始める。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [],
     "own_setup": [
@@ -36,7 +36,18 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+      "line": 13,
+      "end": 30,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "このブロックのimport/openを含めて独立したファイルで実行する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_002",
@@ -44,16 +55,16 @@
     "line": 38,
     "end": 49,
     "sha256": "1b24cb1afdc9167d8bd2a4d77055d426f5d1bc9f98edc12a7244709fc5a651f7",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.0 本章のゴール：不動点の存在・一意性・反復列の収束",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.0 本章のゴール：不動点の存在・一意性・反復列の収束",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -86,7 +97,20 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "1b24cb1afdc9167d8bd2a4d77055d426f5d1bc9f98edc12a7244709fc5a651f7",
+      "line": 38,
+      "end": 49,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_003",
@@ -94,16 +118,16 @@
     "line": 65,
     "end": 70,
     "sha256": "4e8880e4eba3f742504bdfa4ddcbffe8d544a51c4818bac181541a6f3a618444",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.1 縮小写像の数学とLeanの対応",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.1 縮小写像の数学とLeanの対応",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -136,7 +160,20 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "4e8880e4eba3f742504bdfa4ddcbffe8d544a51c4818bac181541a6f3a618444",
+      "line": 65,
+      "end": 70,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_004",
@@ -144,16 +181,16 @@
     "line": 76,
     "end": 85,
     "sha256": "f318222fb5cccb76a09b5a250080000fe75ef8e911a551346e4eb850949c6ab1",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.1 縮小写像の数学とLeanの対応",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.1 縮小写像の数学とLeanの対応",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -186,24 +223,37 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "f318222fb5cccb76a09b5a250080000fe75ef8e911a551346e4eb850949c6ab1",
+      "line": 76,
+      "end": 85,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_005",
     "source": "books/lean4-formalization/ch11.md",
     "line": 101,
-    "end": 107,
-    "sha256": "b9220705dcdc27a5837e9744f51b53905a222c46fddad809df7130fec8e2043e",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.2 Banachの不動点定理：非空性・完備性・縮小性 / ### MathlibのAPIを読む",
+    "end": 109,
+    "sha256": "5bdfc9c576586301d383ed7f5a5042e6d4c15e018df23c26e65d6abaf0735cdf",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.2 Banachの不動点定理：非空性・完備性・縮小性 / ### MathlibのAPIを読む",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -236,30 +286,43 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "b9220705dcdc27a5837e9744f51b53905a222c46fddad809df7130fec8e2043e",
+      "line": 101,
+      "end": 107,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_006",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 127,
-    "end": 129,
+    "line": 129,
+    "end": 131,
     "sha256": "872b1d3d8f4ea95b65865ff8a3b0bfccdef5f08ac69acb51500841b48b1e4da2",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.3 $f(x)=x/2$ の一意存在を段階的に証明する",
-    "category": "fragment",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.3 $f(x)=x/2$ の一意存在を段階的に証明する",
+    "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001",
+        "ch11_006",
         "ch11_007",
         "ch11_008",
         "ch11_009",
         "ch11_010",
         "ch11_011"
       ],
-      "assembly_group": "ch11_half_fixed_point",
-      "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      "instruction": "前提として ch11_001 を先に置く。その後 ch11_006 → ch11_007 → ch11_008 → ch11_009 → ch11_010 → ch11_011 を順に連結する。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -292,30 +355,49 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "872b1d3d8f4ea95b65865ff8a3b0bfccdef5f08ac69acb51500841b48b1e4da2",
+      "line": 127,
+      "end": 129,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_007",
+          "ch11_008",
+          "ch11_009",
+          "ch11_010",
+          "ch11_011"
+        ],
+        "assembly_group": "ch11_half_fixed_point",
+        "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_007",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 139,
-    "end": 143,
+    "line": 141,
+    "end": 145,
     "sha256": "72e0f4c48570d6f31a2b26d7739ff606193bf162fc3d3e09d837937d5e102604",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.3 $f(x)=x/2$ の一意存在を段階的に証明する",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.3 $f(x)=x/2$ の一意存在を段階的に証明する",
     "category": "fragment",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "本文で連結順を示した証明の続き。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001",
         "ch11_006",
+        "ch11_007",
         "ch11_008",
         "ch11_009",
         "ch11_010",
         "ch11_011"
       ],
-      "assembly_group": "ch11_half_fixed_point",
-      "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      "instruction": "前提として ch11_001 を先に置く。その後 ch11_006 → ch11_007 → ch11_008 → ch11_009 → ch11_010 → ch11_011 を順に連結する。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -348,30 +430,49 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "72e0f4c48570d6f31a2b26d7739ff606193bf162fc3d3e09d837937d5e102604",
+      "line": 139,
+      "end": 143,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_006",
+          "ch11_008",
+          "ch11_009",
+          "ch11_010",
+          "ch11_011"
+        ],
+        "assembly_group": "ch11_half_fixed_point",
+        "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_008",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 147,
-    "end": 151,
+    "line": 149,
+    "end": 153,
     "sha256": "b5d33dd953978e5fa3c6c42c88d7288a5e074b00139f6b0dd70b9a9995d5eae4",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.3 $f(x)=x/2$ の一意存在を段階的に証明する",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.3 $f(x)=x/2$ の一意存在を段階的に証明する",
     "category": "fragment",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "本文で連結順を示した証明の続き。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001",
         "ch11_006",
         "ch11_007",
+        "ch11_008",
         "ch11_009",
         "ch11_010",
         "ch11_011"
       ],
-      "assembly_group": "ch11_half_fixed_point",
-      "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      "instruction": "前提として ch11_001 を先に置く。その後 ch11_006 → ch11_007 → ch11_008 → ch11_009 → ch11_010 → ch11_011 を順に連結する。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -404,18 +505,37 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "b5d33dd953978e5fa3c6c42c88d7288a5e074b00139f6b0dd70b9a9995d5eae4",
+      "line": 147,
+      "end": 151,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_006",
+          "ch11_007",
+          "ch11_009",
+          "ch11_010",
+          "ch11_011"
+        ],
+        "assembly_group": "ch11_half_fixed_point",
+        "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_009",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 160,
-    "end": 165,
+    "line": 162,
+    "end": 167,
     "sha256": "aef7fe5f9a18ec59491700d1e216dfc40dfe644b06b96ae17158f9127f2a108c",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.3 $f(x)=x/2$ の一意存在を段階的に証明する",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.3 $f(x)=x/2$ の一意存在を段階的に証明する",
     "category": "fragment",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "本文で連結順を示した証明の続き。",
     "contains_sorry": false,
     "context": {
       "blocks": [
@@ -423,11 +543,11 @@
         "ch11_006",
         "ch11_007",
         "ch11_008",
+        "ch11_009",
         "ch11_010",
         "ch11_011"
       ],
-      "assembly_group": "ch11_half_fixed_point",
-      "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      "instruction": "前提として ch11_001 を先に置く。その後 ch11_006 → ch11_007 → ch11_008 → ch11_009 → ch11_010 → ch11_011 を順に連結する。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -460,18 +580,37 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "aef7fe5f9a18ec59491700d1e216dfc40dfe644b06b96ae17158f9127f2a108c",
+      "line": 160,
+      "end": 165,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_006",
+          "ch11_007",
+          "ch11_008",
+          "ch11_010",
+          "ch11_011"
+        ],
+        "assembly_group": "ch11_half_fixed_point",
+        "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_010",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 171,
-    "end": 173,
+    "line": 173,
+    "end": 175,
     "sha256": "628c06011c8713af7c5838973939ce1a33121276c7436b9b0b2cdefc40d7b46b",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.3 $f(x)=x/2$ の一意存在を段階的に証明する",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.3 $f(x)=x/2$ の一意存在を段階的に証明する",
     "category": "fragment",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "本文で連結順を示した証明の続き。",
     "contains_sorry": false,
     "context": {
       "blocks": [
@@ -480,10 +619,10 @@
         "ch11_007",
         "ch11_008",
         "ch11_009",
+        "ch11_010",
         "ch11_011"
       ],
-      "assembly_group": "ch11_half_fixed_point",
-      "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      "instruction": "前提として ch11_001 を先に置く。その後 ch11_006 → ch11_007 → ch11_008 → ch11_009 → ch11_010 → ch11_011 を順に連結する。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -516,18 +655,37 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "628c06011c8713af7c5838973939ce1a33121276c7436b9b0b2cdefc40d7b46b",
+      "line": 171,
+      "end": 173,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_006",
+          "ch11_007",
+          "ch11_008",
+          "ch11_009",
+          "ch11_011"
+        ],
+        "assembly_group": "ch11_half_fixed_point",
+        "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_011",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 182,
-    "end": 185,
+    "line": 184,
+    "end": 187,
     "sha256": "e131fe3b3e4bba0636601ed20aa50e1ba438f2e2d4ea7f236c666a0665c92454",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.3 $f(x)=x/2$ の一意存在を段階的に証明する",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.3 $f(x)=x/2$ の一意存在を段階的に証明する",
     "category": "fragment",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "本文で連結順を示した証明の続き。",
     "contains_sorry": false,
     "context": {
       "blocks": [
@@ -536,10 +694,10 @@
         "ch11_007",
         "ch11_008",
         "ch11_009",
-        "ch11_010"
+        "ch11_010",
+        "ch11_011"
       ],
-      "assembly_group": "ch11_half_fixed_point",
-      "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      "instruction": "前提として ch11_001 を先に置く。その後 ch11_006 → ch11_007 → ch11_008 → ch11_009 → ch11_010 → ch11_011 を順に連結する。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -572,24 +730,43 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "e131fe3b3e4bba0636601ed20aa50e1ba438f2e2d4ea7f236c666a0665c92454",
+      "line": 182,
+      "end": 185,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_006",
+          "ch11_007",
+          "ch11_008",
+          "ch11_009",
+          "ch11_010"
+        ],
+        "assembly_group": "ch11_half_fixed_point",
+        "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_006, ch11_007, ch11_008, ch11_009, ch11_010, ch11_011を番号順に連結する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_012",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 193,
-    "end": 201,
+    "line": 195,
+    "end": 203,
     "sha256": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.3 $f(x)=x/2$ の一意存在を段階的に証明する / ### 一般の非空な完備距離空間へ",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.3 $f(x)=x/2$ の一意存在を段階的に証明する / ### 一般の非空な完備距離空間へ",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -622,25 +799,38 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679",
+      "line": 193,
+      "end": 201,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_013",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 207,
-    "end": 215,
+    "line": 209,
+    "end": 217,
     "sha256": "394a971137b85ee8feacb7cd56eb8506e01970cea1e0dfce189e41e157d214cd",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.3 $f(x)=x/2$ の一意存在を段階的に証明する / ### 一般の非空な完備距離空間へ",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.3 $f(x)=x/2$ の一意存在を段階的に証明する / ### 一般の非空な完備距離空間へ",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001",
         "ch11_012"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 → ch11_012 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -673,26 +863,40 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "394a971137b85ee8feacb7cd56eb8506e01970cea1e0dfce189e41e157d214cd",
+      "line": 207,
+      "end": 215,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_012"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_014",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 223,
-    "end": 226,
+    "line": 225,
+    "end": 228,
     "sha256": "00367e907573e02754a36295bd0fea9ac680cca42429556e62a58bad406ba35d",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.4 反復列が0に収束することを示す",
-    "category": "fragment",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.4 反復列が0に収束することを示す",
+    "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001",
+        "ch11_014",
         "ch11_015"
       ],
-      "assembly_group": "ch11_half_iterates",
-      "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_014, ch11_015を番号順に連結する。"
+      "instruction": "前提として ch11_001 を先に置く。その後 ch11_014 → ch11_015 を順に連結する。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -725,26 +929,41 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "00367e907573e02754a36295bd0fea9ac680cca42429556e62a58bad406ba35d",
+      "line": 223,
+      "end": 226,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_015"
+        ],
+        "assembly_group": "ch11_half_iterates",
+        "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_014, ch11_015を番号順に連結する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_015",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 230,
-    "end": 233,
+    "line": 232,
+    "end": 235,
     "sha256": "fd711cd8a16fb42930878ff8cb46ba645608a39c5591dd5e823d404e91839880",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.4 反復列が0に収束することを示す",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.4 反復列が0に収束することを示す",
     "category": "fragment",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "本文で連結順を示した証明の続き。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001",
-        "ch11_014"
+        "ch11_014",
+        "ch11_015"
       ],
-      "assembly_group": "ch11_half_iterates",
-      "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_014, ch11_015を番号順に連結する。"
+      "instruction": "前提として ch11_001 を先に置く。その後 ch11_014 → ch11_015 を順に連結する。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -777,25 +996,40 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "fd711cd8a16fb42930878ff8cb46ba645608a39c5591dd5e823d404e91839880",
+      "line": 230,
+      "end": 233,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_014"
+        ],
+        "assembly_group": "ch11_half_iterates",
+        "instruction": "ch11_001のimport/open・宣言を引き継ぎ、ch11_014, ch11_015を番号順に連結する。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_016",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 247,
-    "end": 257,
+    "line": 249,
+    "end": 259,
     "sha256": "52de5f2ea66ab16bb6c745922e6f1bbfd50ca27751bf5f550d39f6bafbaf405a",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.5 $\\ell^2$ でも使える一般定理",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.5 $\\ell^2$ でも使える一般定理",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001",
         "ch11_012"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 → ch11_012 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -830,42 +1064,43 @@
       "P2-016"
     ],
     "stage1b_status": "revised_not_certified",
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "52de5f2ea66ab16bb6c745922e6f1bbfd50ca27751bf5f550d39f6bafbaf405a",
+      "line": 247,
+      "end": 257,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_012"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_017",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 271,
-    "end": 278,
+    "line": 273,
+    "end": 280,
     "sha256": "1fbd40a332642cf532510bb13d50de4f1332e362e011fc0ba6178d81ebc89ee8",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.6 最初の予告コードを読み直す",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.6 最初の予告コードを読み直す",
     "category": "expected_error",
     "role": "本文",
-    "reason": "連続性の仮定がない主張に対するexact?の失敗を観察する例。",
+    "reason": "連続性の仮定が欠けた意図的な失敗例。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "完成例とは別ファイルで、原稿のimport/openも含めてそのまま実行する。"
+      "instruction": "自身のimportを含めて完成例と別ファイルで実行し、意図した失敗またはsorry警告・公理を照合する。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch11_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch11_001",
-        "line": "open Filter"
-      },
-      {
-        "block": "ch11_001",
-        "line": "open scoped Topology NNReal ENNReal"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
     "fixture": ".generated/raw/ch11_017.lean",
-    "validation_mode": "assert_expected_diagnostic",
+    "validation_mode": "assert_expected_failure",
     "repair_stage": 3,
     "priority_one": true,
     "stage0_status": "classified_not_certified",
@@ -880,24 +1115,35 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "diagnostic_case"
+    "stage1c_status": "diagnostic_case",
+    "before_stage3c": {
+      "sha256": "1fbd40a332642cf532510bb13d50de4f1332e362e011fc0ba6178d81ebc89ee8",
+      "line": 271,
+      "end": 278,
+      "category": "expected_error",
+      "context": {
+        "blocks": [],
+        "instruction": "完成例とは別ファイルで、原稿のimport/openも含めてそのまま実行する。"
+      }
+    },
+    "stage3c_status": "diagnostic_source"
   },
   {
     "id": "ch11_018",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 284,
-    "end": 296,
+    "line": 286,
+    "end": 298,
     "sha256": "523ee2979888a6a192852ee8bfb696417a3a8789b4ecf45197303a3f418e7dea",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 6.6 最初の予告コードを読み直す",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 11.6 最初の予告コードを読み直す",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -930,24 +1176,37 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "523ee2979888a6a192852ee8bfb696417a3a8789b4ecf45197303a3f418e7dea",
+      "line": 284,
+      "end": 296,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_019",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 344,
-    "end": 346,
+    "line": 346,
+    "end": 348,
     "sha256": "9de030d09faff90eeea013576bfb722a984a3a2b5857245a4172c332f911b0e5",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -980,43 +1239,43 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "9de030d09faff90eeea013576bfb722a984a3a2b5857245a4172c332f911b0e5",
+      "line": 344,
+      "end": 346,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_020",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 355,
-    "end": 365,
+    "line": 357,
+    "end": 367,
     "sha256": "eeb9d914d22dbc4332a6f1f4f817d47a893559acf7dc5450163357943e08e730",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
     "category": "unfinished",
     "role": "問題文",
-    "reason": "Lipschitz条件を埋める演習の骨格。sorry警告とsorryAxを別プロセスで検査する。",
+    "reason": "sorryを埋める演習の骨格。完成解答とは別に検証する。",
     "contains_sorry": true,
     "context": {
       "blocks": [],
-      "instruction": "完成例とは別ファイルで、原稿のimport/openも含めてそのまま実行する。"
+      "instruction": "自身のimportを含めて完成例と別ファイルで実行し、意図した失敗またはsorry警告・公理を照合する。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch11_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch11_001",
-        "line": "open Filter"
-      },
-      {
-        "block": "ch11_001",
-        "line": "open scoped Topology NNReal ENNReal"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib",
       "open scoped NNReal"
     ],
     "fixture": ".generated/raw/ch11_020.lean",
-    "validation_mode": "track_holes_separately",
+    "validation_mode": "assert_sorry_warning_and_axioms",
     "repair_stage": 3,
     "priority_one": true,
     "stage0_status": "classified_not_certified",
@@ -1031,24 +1290,35 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "diagnostic_case"
+    "stage1c_status": "diagnostic_case",
+    "before_stage3c": {
+      "sha256": "eeb9d914d22dbc4332a6f1f4f817d47a893559acf7dc5450163357943e08e730",
+      "line": 355,
+      "end": 365,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "完成例とは別ファイルで、原稿のimport/openも含めてそのまま実行する。"
+      }
+    },
+    "stage3c_status": "diagnostic_source"
   },
   {
     "id": "ch11_021",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 376,
-    "end": 385,
+    "line": 378,
+    "end": 387,
     "sha256": "9722fbf05c7a6aae2099d6ad34147240961c5035d69a75d3d6cb7f62ebefec3f",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -1062,10 +1332,6 @@
       {
         "block": "ch11_001",
         "line": "open scoped Topology NNReal ENNReal"
-      },
-      {
-        "block": "ch11_020",
-        "line": "open scoped NNReal"
       }
     ],
     "own_setup": [],
@@ -1085,24 +1351,37 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "9722fbf05c7a6aae2099d6ad34147240961c5035d69a75d3d6cb7f62ebefec3f",
+      "line": 376,
+      "end": 385,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_022",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 393,
-    "end": 404,
+    "line": 395,
+    "end": 406,
     "sha256": "a594baa6557c873970dccd56485173904056c795f7193675a63dab88ab3979f3",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
         "ch11_001"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -1116,10 +1395,6 @@
       {
         "block": "ch11_001",
         "line": "open scoped Topology NNReal ENNReal"
-      },
-      {
-        "block": "ch11_020",
-        "line": "open scoped NNReal"
       }
     ],
     "own_setup": [],
@@ -1139,18 +1414,31 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "a594baa6557c873970dccd56485173904056c795f7193675a63dab88ab3979f3",
+      "line": 393,
+      "end": 404,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_023",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 422,
-    "end": 430,
+    "line": 424,
+    "end": 432,
     "sha256": "f707979979137cfde8bfe296ae46aa7b4891a051bdfe1706e8bd448ab9feb6e9",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
@@ -1158,7 +1446,7 @@
         "ch11_012",
         "ch11_021"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 → ch11_012 → ch11_021 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -1172,10 +1460,6 @@
       {
         "block": "ch11_001",
         "line": "open scoped Topology NNReal ENNReal"
-      },
-      {
-        "block": "ch11_020",
-        "line": "open scoped NNReal"
       }
     ],
     "own_setup": [],
@@ -1196,18 +1480,33 @@
       "P1-04"
     ],
     "stage1a_status": "revised_not_certified",
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "f707979979137cfde8bfe296ae46aa7b4891a051bdfe1706e8bd448ab9feb6e9",
+      "line": 422,
+      "end": 430,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_012",
+          "ch11_021"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_024",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 438,
-    "end": 445,
+    "line": 440,
+    "end": 447,
     "sha256": "d8a3586880cdebc47b7593fd2fc202a11ccd6b63d5ba0e7ef0c8eaf47b8ff476",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
@@ -1216,7 +1515,7 @@
         "ch11_021",
         "ch11_023"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 → ch11_012 → ch11_021 → ch11_023 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -1230,10 +1529,6 @@
       {
         "block": "ch11_001",
         "line": "open scoped Topology NNReal ENNReal"
-      },
-      {
-        "block": "ch11_020",
-        "line": "open scoped NNReal"
       }
     ],
     "own_setup": [],
@@ -1253,18 +1548,34 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "d8a3586880cdebc47b7593fd2fc202a11ccd6b63d5ba0e7ef0c8eaf47b8ff476",
+      "line": 438,
+      "end": 445,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_012",
+          "ch11_021",
+          "ch11_023"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_025",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 461,
-    "end": 485,
-    "sha256": "af36e80bf4f50c3304fc5ffaf9d9c45f9d5f28d25e8b41e1bf8c19e4c7464cae",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
+    "line": 463,
+    "end": 487,
+    "sha256": "1c6fb37e7d93c8e475441a345944ffe6b62b788c9bdb0dbda52eab0f6314a85b",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
@@ -1272,7 +1583,7 @@
         "ch11_012",
         "ch11_016"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 → ch11_012 → ch11_016 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -1286,10 +1597,6 @@
       {
         "block": "ch11_001",
         "line": "open scoped Topology NNReal ENNReal"
-      },
-      {
-        "block": "ch11_020",
-        "line": "open scoped NNReal"
       }
     ],
     "own_setup": [],
@@ -1310,18 +1617,33 @@
       "P1-04",
       "P2-016"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "af36e80bf4f50c3304fc5ffaf9d9c45f9d5f28d25e8b41e1bf8c19e4c7464cae",
+      "line": 461,
+      "end": 485,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_012",
+          "ch11_016"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   },
   {
     "id": "ch11_026",
     "source": "books/lean4-formalization/ch11.md",
-    "line": 495,
-    "end": 503,
+    "line": 497,
+    "end": 505,
     "sha256": "20df88250069c91d50e7c3ea0fc12547df7c2605dedfcb552167bd1a5903c182",
-    "section": "# 第6章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
+    "section": "# 第11章：Banachの不動点定理 〜完備性が反復列の収束を保証する〜 / ## 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "段階1-Cで、原稿の前提・断片を掲載順に組み立てた章別モジュールをビルドする。",
+    "reason": "明示した原稿の前提と合わせて確認する完成証明・実行コマンド。",
     "contains_sorry": false,
     "context": {
       "blocks": [
@@ -1332,7 +1654,7 @@
         "ch11_016",
         "ch11_025"
       ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "instruction": "前提として ch11_001 → ch11_012 → ch11_014 → ch11_015 → ch11_016 → ch11_025 を先に置く。その後にこのブロックを置く。列挙した原稿コードだけを別ファイルで実行する。"
     },
     "preceding_setup": [
       {
@@ -1346,10 +1668,6 @@
       {
         "block": "ch11_001",
         "line": "open scoped Topology NNReal ENNReal"
-      },
-      {
-        "block": "ch11_020",
-        "line": "open scoped NNReal"
       }
     ],
     "own_setup": [],
@@ -1369,6 +1687,24 @@
     "issue_ids": [
       "P1-04"
     ],
-    "stage1c_status": "compiled_source"
+    "stage1c_status": "compiled_source",
+    "before_stage3c": {
+      "sha256": "20df88250069c91d50e7c3ea0fc12547df7c2605dedfcb552167bd1a5903c182",
+      "line": 495,
+      "end": 503,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch11_001",
+          "ch11_012",
+          "ch11_014",
+          "ch11_015",
+          "ch11_016",
+          "ch11_025"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3c_status": "compiled_source"
   }
 ]

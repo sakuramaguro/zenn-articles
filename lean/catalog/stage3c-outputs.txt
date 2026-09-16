@@ -1,0 +1,477 @@
+段階3-C：固定環境での掲載例とゴールの実出力
+前提は各ケースの setup に記録。setup と対象 blocks を原文のまま連結し、全ての名前付き宣言を公理検査した。
+繰り返し使う前提の出力を含む。下記は42組・49対象ブロックであり、前提の再利用を件数に加算しない。
+
+=== ch10_001 ===
+setup: 
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+
+=== ch10_002 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+@lp : {α : Type u_1} → (E : α → Type u_2) → [inst : (i : α) → NormedAddCommGroup (E i)] → ℝ≥0∞ → AddSubgroup (PreLp E)
+
+=== ch10_003 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+↥(lp (fun x => ℝ) 2) : Type
+↥(lp (fun x => ℝ) 2) : Type
+
+=== ch10_004 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+def lp.{u_3, u_5} : {α : Type u_3} →
+  (E : α → Type u_5) → [inst : (i : α) → NormedAddCommGroup (E i)] → ℝ≥0∞ → AddSubgroup (PreLp E) :=
+fun {α} E [(i : α) → NormedAddCommGroup (E i)] p =>
+  { carrier := {f | Memℓp f p}, add_mem' := ⋯, zero_mem' := ⋯, neg_mem' := ⋯ }
+def Memℓp.{u_3, u_4} : {α : Type u_3} →
+  {E : α → Type u_4} → [(i : α) → NormedAddCommGroup (E i)] → ((i : α) → E i) → ℝ≥0∞ → Prop :=
+fun {α} {E} [(i : α) → NormedAddCommGroup (E i)] f p =>
+  if p = 0 then {i | f i ≠ 0}.Finite
+  else if p = ∞ then BddAbove (Set.range fun i => ‖f i‖) else Summable fun i => ‖f i‖ ^ p.toReal
+memℓp_zero_iff.{u_3, u_4} {α : Type u_3} {E : α → Type u_4} [(i : α) → NormedAddCommGroup (E i)] {f : (i : α) → E i} :
+  Memℓp f 0 ↔ {i | f i ≠ 0}.Finite
+memℓp_infty_iff.{u_3, u_4} {α : Type u_3} {E : α → Type u_4} [(i : α) → NormedAddCommGroup (E i)] {f : (i : α) → E i} :
+  Memℓp f ∞ ↔ BddAbove (Set.range fun i => ‖f i‖)
+@memℓp_gen_iff : ∀ {α : Type u_1} {E : α → Type u_2} {p : ℝ≥0∞} [inst : (i : α) → NormedAddCommGroup (E i)],
+  0 < p.toReal → ∀ {f : (i : α) → E i}, Memℓp f p ↔ Summable fun i => ‖f i‖ ^ p.toReal
+'mem_two_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_005 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+
+=== ch10_006 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : NormedAddCommGroup ↥(lp (fun x => ℝ) 2)
+inferInstance : MetricSpace ↥(lp (fun x => ℝ) 2)
+
+=== ch10_007-ch10_008 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+
+=== ch10_009 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : CompleteSpace ↥(lp (fun x => ℝ) 2)
+@lp.completeSpace : ∀ {α : Type u_1} {E : α → Type u_2} {p : ℝ≥0∞} [inst : (i : α) → NormedAddCommGroup (E i)]
+  [_i : Fact (1 ≤ p)] [∀ (a : α), CompleteSpace (E a)], CompleteSpace ↥(lp E p)
+@lp.memℓp_of_tendsto : ∀ {α : Type u_1} {E : α → Type u_2} {p : ℝ≥0∞} [inst : (i : α) → NormedAddCommGroup (E i)]
+  {ι : Type u_3} {l : Filter ι} [l.NeBot] [_i : Fact (1 ≤ p)] {F : ι → ↥(lp E p)},
+  Bornology.IsBounded (Set.range F) → ∀ {f : (a : α) → E a}, Filter.Tendsto (id fun i => ↑(F i)) l (nhds f) → Memℓp f p
+@lp.tendsto_lp_of_tendsto_pi : ∀ {α : Type u_1} {E : α → Type u_2} {p : ℝ≥0∞}
+  [inst : (i : α) → NormedAddCommGroup (E i)] [_i : Fact (1 ≤ p)] {F : ℕ → ↥(lp E p)},
+  CauchySeq F →
+    ∀ {f : ↥(lp E p)},
+      Filter.Tendsto (id fun i => ↑(F i)) Filter.atTop (nhds ↑f) → Filter.Tendsto F Filter.atTop (nhds f)
+
+=== ch10_010 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+ProperSpace.{u} (α : Type u) [PseudoMetricSpace α] : Prop
+inferInstance : ProperSpace ℝ
+
+=== ch10_011 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+'e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_e' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_012 ===
+setup: ch10_001, ch10_011
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+'e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'basis_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_013 ===
+setup: ch10_001, ch10_011, ch10_012
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+'e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'basis_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'unitClosedBall_not_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell2_not_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_014 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : NormedAddCommGroup ↥ell2
+
+=== ch10_015 ===
+setup: ch10_001, ch10_011, ch10_012, ch10_013
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+ell2_not_proper : ¬ProperSpace ↥ell2
+'e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'basis_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'unitClosedBall_not_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell2_not_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell2_not_finiteDimensional' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_016 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : Inner ℝ ↥(lp (fun x => ℝ) 2)
+inferInstance : InnerProductSpace ℝ ↥(lp (fun x => ℝ) 2)
+
+=== ch10_017 ===
+setup: ch10_001, ch10_011, ch10_012, ch10_013
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+'e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'basis_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'unitClosedBall_not_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell2_not_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_018 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+ContractingWith.{u_1} {α : Type u_1} [EMetricSpace α] (K : NNReal) (f : α → α) : Prop
+@ContractingWith.fixedPoint : {α : Type u_1} →
+  [inst : MetricSpace α] → {K : NNReal} → (f : α → α) → ContractingWith K f → [Nonempty α] → [CompleteSpace α] → α
+@ContractingWith.fixedPoint_isFixedPt : ∀ {α : Type u_1} [inst : MetricSpace α] {K : NNReal} {f : α → α}
+  (hf : ContractingWith K f) [inst_1 : Nonempty α] [inst_2 : CompleteSpace α],
+  Function.IsFixedPt f (ContractingWith.fixedPoint f hf)
+@ContractingWith.fixedPoint_unique : ∀ {α : Type u_1} [inst : MetricSpace α] {K : NNReal} {f : α → α}
+  (hf : ContractingWith K f) [inst_1 : Nonempty α] [inst_2 : CompleteSpace α] {x : α},
+  Function.IsFixedPt f x → x = ContractingWith.fixedPoint f hf
+@ContractingWith.tendsto_iterate_fixedPoint : ∀ {α : Type u_1} [inst : MetricSpace α] {K : NNReal} {f : α → α}
+  (hf : ContractingWith K f) [inst_1 : Nonempty α] [inst_2 : CompleteSpace α] (x : α),
+  Filter.Tendsto (fun n => f^[n] x) Filter.atTop (nhds (ContractingWith.fixedPoint f hf))
+
+=== ch10_019 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : ProperSpace (EuclideanSpace ℝ (Fin 100))
+
+=== ch10_020 ===
+setup: ch10_001, ch10_011, ch10_012, ch10_013
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+'e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'norm_e' depends on axioms: [propext, Classical.choice, Quot.sound]
+'basis_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'unitClosedBall_not_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell2_not_proper' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_021 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+'notProperOfInfiniteDimensional' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_022 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+FiniteDimensional.proper.{u, v} (𝕜 : Type u) [NontriviallyNormedField 𝕜] (E : Type v) [NormedAddCommGroup E]
+  [NormedSpace 𝕜 E] [LocallyCompactSpace 𝕜] [FiniteDimensional 𝕜 E] : ProperSpace E
+FiniteDimensional.of_isCompact_closedBall.{u, v} (𝕜 : Type u) [NontriviallyNormedField 𝕜] {E : Type v}
+  [NormedAddCommGroup E] [NormedSpace 𝕜 E] [CompleteSpace 𝕜] {r : ℝ} (rpos : 0 < r) {c : E}
+  (h : IsCompact (Metric.closedBall c r)) : FiniteDimensional 𝕜 E
+
+=== ch10_024 ===
+setup: ch10_001, ch10_004
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+def lp.{u_3, u_5} : {α : Type u_3} →
+  (E : α → Type u_5) → [inst : (i : α) → NormedAddCommGroup (E i)] → ℝ≥0∞ → AddSubgroup (PreLp E) :=
+fun {α} E [(i : α) → NormedAddCommGroup (E i)] p =>
+  { carrier := {f | Memℓp f p}, add_mem' := ⋯, zero_mem' := ⋯, neg_mem' := ⋯ }
+def Memℓp.{u_3, u_4} : {α : Type u_3} →
+  {E : α → Type u_4} → [(i : α) → NormedAddCommGroup (E i)] → ((i : α) → E i) → ℝ≥0∞ → Prop :=
+fun {α} {E} [(i : α) → NormedAddCommGroup (E i)] f p =>
+  if p = 0 then {i | f i ≠ 0}.Finite
+  else if p = ∞ then BddAbove (Set.range fun i => ‖f i‖) else Summable fun i => ‖f i‖ ^ p.toReal
+memℓp_zero_iff.{u_3, u_4} {α : Type u_3} {E : α → Type u_4} [(i : α) → NormedAddCommGroup (E i)] {f : (i : α) → E i} :
+  Memℓp f 0 ↔ {i | f i ≠ 0}.Finite
+memℓp_infty_iff.{u_3, u_4} {α : Type u_3} {E : α → Type u_4} [(i : α) → NormedAddCommGroup (E i)] {f : (i : α) → E i} :
+  Memℓp f ∞ ↔ BddAbove (Set.range fun i => ‖f i‖)
+@memℓp_gen_iff : ∀ {α : Type u_1} {E : α → Type u_2} {p : ℝ≥0∞} [inst : (i : α) → NormedAddCommGroup (E i)],
+  0 < p.toReal → ∀ {f : (i : α) → E i}, Memℓp f p ↔ Summable fun i => ‖f i‖ ^ p.toReal
+'mem_two_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'reciprocal_mem_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_025 ===
+setup: ch10_001, ch10_004
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+def lp.{u_3, u_5} : {α : Type u_3} →
+  (E : α → Type u_5) → [inst : (i : α) → NormedAddCommGroup (E i)] → ℝ≥0∞ → AddSubgroup (PreLp E) :=
+fun {α} E [(i : α) → NormedAddCommGroup (E i)] p =>
+  { carrier := {f | Memℓp f p}, add_mem' := ⋯, zero_mem' := ⋯, neg_mem' := ⋯ }
+def Memℓp.{u_3, u_4} : {α : Type u_3} →
+  {E : α → Type u_4} → [(i : α) → NormedAddCommGroup (E i)] → ((i : α) → E i) → ℝ≥0∞ → Prop :=
+fun {α} {E} [(i : α) → NormedAddCommGroup (E i)] f p =>
+  if p = 0 then {i | f i ≠ 0}.Finite
+  else if p = ∞ then BddAbove (Set.range fun i => ‖f i‖) else Summable fun i => ‖f i‖ ^ p.toReal
+memℓp_zero_iff.{u_3, u_4} {α : Type u_3} {E : α → Type u_4} [(i : α) → NormedAddCommGroup (E i)] {f : (i : α) → E i} :
+  Memℓp f 0 ↔ {i | f i ≠ 0}.Finite
+memℓp_infty_iff.{u_3, u_4} {α : Type u_3} {E : α → Type u_4} [(i : α) → NormedAddCommGroup (E i)] {f : (i : α) → E i} :
+  Memℓp f ∞ ↔ BddAbove (Set.range fun i => ‖f i‖)
+@memℓp_gen_iff : ∀ {α : Type u_1} {E : α → Type u_2} {p : ℝ≥0∞} [inst : (i : α) → NormedAddCommGroup (E i)],
+  0 < p.toReal → ∀ {f : (i : α) → E i}, Memℓp f p ↔ Summable fun i => ‖f i‖ ^ p.toReal
+'mem_two_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'reciprocal_mem_two_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch10_026 ===
+setup: ch10_001
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+InnerProductSpace.toDual ℝ ↥ell2 : ↥ell2 ≃ₗᵢ⋆[ℝ] StrongDual ℝ ↥ell2
+@lp.inner_single_right : ∀ {ι : Type u_1} {𝕜 : Type u_2} [inst : RCLike 𝕜] {G : ι → Type u_3}
+  [inst_1 : (i : ι) → NormedAddCommGroup (G i)] [inst_2 : (i : ι) → InnerProductSpace 𝕜 (G i)] [inst_3 : DecidableEq ι]
+  (i : ι) (a : G i) (f : ↥(lp G 2)), inner 𝕜 f (lp.single 2 i a) = inner 𝕜 (↑f i) a
+
+=== ch11_001 ===
+setup: 
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_002 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'banach_fixed_point_and_convergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_003 ===
+setup: ch11_001
+@LipschitzWith : {α : Type u_1} →
+  {β : Type u_2} → [PseudoEMetricSpace α] → [PseudoEMetricSpace β] → ℝ≥0 → (α → β) → Prop
+@ContractingWith : {α : Type u_1} → [EMetricSpace α] → ℝ≥0 → (α → α) → Prop
+@ContractingWith.toLipschitzWith : ∀ {α : Type u_1} [inst : EMetricSpace α] {K : ℝ≥0} {f : α → α},
+  ContractingWith K f → LipschitzWith K f
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_004 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'contracting_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_005 ===
+setup: ch11_001
+@ContractingWith.fixedPoint : {α : Type u_1} →
+  [inst : MetricSpace α] → {K : ℝ≥0} → (f : α → α) → ContractingWith K f → [Nonempty α] → [CompleteSpace α] → α
+@ContractingWith.fixedPoint_isFixedPt : ∀ {α : Type u_1} [inst : MetricSpace α] {K : ℝ≥0} {f : α → α}
+  (hf : ContractingWith K f) [inst_1 : Nonempty α] [inst_2 : CompleteSpace α],
+  Function.IsFixedPt f (ContractingWith.fixedPoint f hf)
+@ContractingWith.fixedPoint_unique : ∀ {α : Type u_1} [inst : MetricSpace α] {K : ℝ≥0} {f : α → α}
+  (hf : ContractingWith K f) [inst_1 : Nonempty α] [inst_2 : CompleteSpace α] {x : α},
+  Function.IsFixedPt f x → x = ContractingWith.fixedPoint f hf
+@ContractingWith.fixedPoint_unique' : ∀ {α : Type u_1} [inst : MetricSpace α] {K : ℝ≥0} {f : α → α},
+  ContractingWith K f → ∀ {x y : α}, Function.IsFixedPt f x → Function.IsFixedPt f y → x = y
+@ContractingWith.tendsto_iterate_fixedPoint : ∀ {α : Type u_1} [inst : MetricSpace α] {K : ℝ≥0} {f : α → α}
+  (hf : ContractingWith K f) [inst_1 : Nonempty α] [inst_2 : CompleteSpace α] (x : α),
+  Tendsto (fun n => f^[n] x) atTop (𝓝 (ContractingWith.fixedPoint f hf))
+@ContractingWith.efixedPoint : {α : Type u_1} →
+  [inst : EMetricSpace α] →
+    {K : ℝ≥0} → (f : α → α) → [CompleteSpace α] → ContractingWith K f → (x : α) → edist x (f x) ≠ ∞ → α
+@ContractingWith.exists_fixedPoint : ∀ {α : Type u_1} [inst : EMetricSpace α] {K : ℝ≥0} {f : α → α} [CompleteSpace α],
+  ContractingWith K f →
+    ∀ (x : α),
+      edist x (f x) ≠ ∞ →
+        ∃ y,
+          Function.IsFixedPt f y ∧
+            Tendsto (fun n => f^[n] x) atTop (𝓝 y) ∧ ∀ (n : ℕ), edist (f^[n] x) y ≤ edist x (f x) * ↑K ^ n / (1 - ↑K)
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_006-ch11_007-ch11_008-ch11_009-ch11_010-ch11_011 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_map_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_012 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'banach_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_013 ===
+setup: ch11_001, ch11_012
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'banach_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'banach_fixed_point_from_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_014-ch11_015 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_iterates_to_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_016 ===
+setup: ch11_001, ch11_012
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : Nonempty ↥ell2
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'banach_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell2_banach' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_018 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'contracting_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'tendsto_at_fixedPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_019 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_021 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affineContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_022 ===
+setup: ch11_001
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affineContracting_calc' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_023 ===
+setup: ch11_001, ch11_012, ch11_021
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'banach_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affineContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affine_map_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affine_fixedPoint_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_024 ===
+setup: ch11_001, ch11_012, ch11_021, ch11_023
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'banach_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affineContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affine_map_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affine_fixedPoint_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'affine_iterates' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_025 ===
+setup: ch11_001, ch11_012, ch11_016
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : Nonempty ↥ell2
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'banach_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell2_banach' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2Contracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2_iterates' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch11_026 ===
+setup: ch11_001, ch11_012, ch11_014, ch11_015, ch11_016, ch11_025
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : Nonempty ↥ell2
+inferInstance : CompleteSpace ↥ell2
+inferInstance : Nonempty ↥ell2
+@ContractingWith.fixedPoint : {α : Type u_1} →
+  [inst : MetricSpace α] → {K : ℝ≥0} → (f : α → α) → ContractingWith K f → [Nonempty α] → [CompleteSpace α] → α
+@ContractingWith.tendsto_iterate_fixedPoint : ∀ {α : Type u_1} [inst : MetricSpace α] {K : ℝ≥0} {f : α → α}
+  (hf : ContractingWith K f) [inst_1 : Nonempty α] [inst_2 : CompleteSpace α] (x : α),
+  Tendsto (fun n => f^[n] x) atTop (𝓝 (ContractingWith.fixedPoint f hf))
+'banach_fixed_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_iterates_to_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2_iterates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfContracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ell2_banach' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2Contracting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'halfEll2_fixedPoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== 診断: stage3c_ch10_023 ===
+.generated/diagnostics/stage3c_ch10_023.lean:4:8: warning: declaration uses `sorry`
+'reciprocal_mem_two_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+=== 診断: continuity_without_hypothesis ===
+.generated/diagnostics/continuity_without_hypothesis.lean:6:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions.
+
+=== 診断: affine_contraction_exercise ===
+.generated/diagnostics/affine_contraction_exercise.lean:5:8: warning: declaration uses `sorry`
+'affine_contraction_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+=== trace_state: 10.2節・級数解答・11.3節・11.4節 ===
+原文の必要な前提と3つの連結列に trace_state を挿入。空行はゴールが閉じた後の出力。
+inferInstance : MetricSpace ↥ell2
+inferInstance : CompleteSpace ↥ell2
+⊢ MetricSpace ↥(lp (fun x => ℝ) 2)
+
+def lp.{u_3, u_5} : {α : Type u_3} →
+  (E : α → Type u_5) → [inst : (i : α) → NormedAddCommGroup (E i)] → ℝ≥0∞ → AddSubgroup (PreLp E) :=
+fun {α} E [(i : α) → NormedAddCommGroup (E i)] p =>
+  { carrier := {f | Memℓp f p}, add_mem' := ⋯, zero_mem' := ⋯, neg_mem' := ⋯ }
+def Memℓp.{u_3, u_4} : {α : Type u_3} →
+  {E : α → Type u_4} → [(i : α) → NormedAddCommGroup (E i)] → ((i : α) → E i) → ℝ≥0∞ → Prop :=
+fun {α} {E} [(i : α) → NormedAddCommGroup (E i)] f p =>
+  if p = 0 then {i | f i ≠ 0}.Finite
+  else if p = ∞ then BddAbove (Set.range fun i => ‖f i‖) else Summable fun i => ‖f i‖ ^ p.toReal
+memℓp_zero_iff.{u_3, u_4} {α : Type u_3} {E : α → Type u_4} [(i : α) → NormedAddCommGroup (E i)] {f : (i : α) → E i} :
+  Memℓp f 0 ↔ {i | f i ≠ 0}.Finite
+memℓp_infty_iff.{u_3, u_4} {α : Type u_3} {E : α → Type u_4} [(i : α) → NormedAddCommGroup (E i)] {f : (i : α) → E i} :
+  Memℓp f ∞ ↔ BddAbove (Set.range fun i => ‖f i‖)
+@memℓp_gen_iff : ∀ {α : Type u_1} {E : α → Type u_2} {p : ℝ≥0∞} [inst : (i : α) → NormedAddCommGroup (E i)],
+  0 < p.toReal → ∀ {f : (i : α) → E i}, Memℓp f p ↔ Summable fun i => ‖f i‖ ^ p.toReal
+⊢ Summable fun n => ‖1 / (↑n + 1)‖ ^ 2
+⊢ ∃! z, (fun x => x / 2) z = z
+case left
+⊢ 1 / 2 < 1
+
+case right
+⊢ LipschitzWith (1 / 2) fun x => x / 2
+case right.a
+x y : ℝ
+⊢ |x / 2 - y / 2| ≤ ↑(1 / 2) * |x - y|
+hf : ContractingWith (1 / 2) fun x => x / 2
+⊢ ∃! z, (fun x => x / 2) z = z
+hf : ContractingWith (1 / 2) fun x => x / 2
+⊢ ∀ (y : ℝ), (fun z => (fun x => x / 2) z = z) y → y = ContractingWith.fixedPoint (fun x => x / 2) hf
+
+x₀ : ℝ
+⊢ Tendsto (fun n => (fun x => x / 2)^[n] x₀) atTop (𝓝 0)
+
+
+=== 検査器のテスト ===
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.149s
+
+OK
