@@ -2,17 +2,17 @@
   {
     "id": "ch14_001",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 11,
-    "end": 39,
-    "sha256": "e3be498d7b9ce0faa916b8d62412dc62108bcfd80953e0bf666dcf8fe0d09ac1",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "line": 13,
+    "end": 25,
+    "sha256": "747a7c9c69ca9cea95d28ebe3394d946c24859dbe0a35376377ddaf46fc84ceb",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.0 本章のゴール ──── ゴール逆算型アプローチ",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
     "preceding_setup": [],
     "own_setup": [
@@ -27,35 +27,42 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_001",
+      "source_sha256": "e3be498d7b9ce0faa916b8d62412dc62108bcfd80953e0bf666dcf8fe0d09ac1",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [
+      "P2-024"
+    ],
+    "before_stage4a": {
+      "sha256": "e3be498d7b9ce0faa916b8d62412dc62108bcfd80953e0bf666dcf8fe0d09ac1",
+      "line": 11,
+      "end": 39,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_002",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 83,
-    "end": 94,
-    "sha256": "7ad21214661a5cee22605fc5805ccd41f65649fb4934faf172a88b8579d6447d",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable`",
+    "line": 69,
+    "end": 84,
+    "sha256": "1789f6be920d44b5dd7d69106f81e4308a5e0a64673193a599b7ff73faa02922",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib",
       "open MeasureTheory"
@@ -68,39 +75,40 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_002",
+      "source_sha256": "7ad21214661a5cee22605fc5805ccd41f65649fb4934faf172a88b8579d6447d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "7ad21214661a5cee22605fc5805ccd41f65649fb4934faf172a88b8579d6447d",
+      "line": 83,
+      "end": 94,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_003",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 98,
-    "end": 118,
-    "sha256": "2d0fff11b8befc0ff6c401809c683eac3cf0d47af25c469d38066a55aa5a00c0",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable`",
+    "line": 88,
+    "end": 108,
+    "sha256": "88e3d7413b456d18a01b360d39048f2ca30c5e361b1e04c75538af9b49f22952",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib",
       "open MeasureTheory"
@@ -113,39 +121,40 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_003",
+      "source_sha256": "2d0fff11b8befc0ff6c401809c683eac3cf0d47af25c469d38066a55aa5a00c0",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "2d0fff11b8befc0ff6c401809c683eac3cf0d47af25c469d38066a55aa5a00c0",
+      "line": 98,
+      "end": 118,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_004",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 122,
-    "end": 130,
-    "sha256": "33432f3ff1a667561475c2b91ea68d6194e12c39a6218eded27ad7f3f89f30af",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable` / #### 証明の実況中継：`Continuous f → Measurable f` を tactic で追う",
+    "line": 112,
+    "end": 120,
+    "sha256": "2afd1307554609cb48a9acbbb665fb8d17a69950d9ef19b6b08e651809d7149d",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.3 `Measurable` の解剖と `Continuous.measurable` / ### Lean の実装：`Measurable` / #### 証明の実況中継：`Continuous f → Measurable f` を tactic で追う",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib",
       "open MeasureTheory"
@@ -158,39 +167,40 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_004",
+      "source_sha256": "33432f3ff1a667561475c2b91ea68d6194e12c39a6218eded27ad7f3f89f30af",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "33432f3ff1a667561475c2b91ea68d6194e12c39a6218eded27ad7f3f89f30af",
+      "line": 122,
+      "end": 130,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_005",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 168,
-    "end": 184,
+    "line": 158,
+    "end": 174,
     "sha256": "45a5c20f7e3c209694d6249e89ad72a872704b3e484185591e78d48b7a40d801",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### Lean の実装：`∀ᵐ x ∂μ` と `f =ᵐ[μ] g`",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.4 AE（ほとんど至るところ）の哲学 ──── `MeasureTheory.ae` / ### Lean の実装：`∀ᵐ x ∂μ` と `f =ᵐ[μ] g`",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib",
       "open MeasureTheory"
@@ -212,40 +222,39 @@
       "P1-06",
       "P2-024"
     ],
-    "stage1d_status": "compiled_source"
+    "stage1d_status": "compiled_source",
+    "before_stage4a": {
+      "sha256": "45a5c20f7e3c209694d6249e89ad72a872704b3e484185591e78d48b7a40d801",
+      "line": 168,
+      "end": 184,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_006",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 192,
-    "end": 197,
-    "sha256": "5b5395685d727af9d8bb7f2db00fd26354c35786e40fdb5625ebb85cffe04749",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### 実況中継：`ae_restrict_of_ae` で制限測度に降ろす",
+    "line": 182,
+    "end": 189,
+    "sha256": "ee026bcab786bb42360a7b962fef066422aef05d132c432c70748629b651bbff",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.4 AE（ほとんど至るところ）の哲学 ──── `MeasureTheory.ae` / ### 実況中継：`ae_restrict_of_ae` で制限測度に降ろす",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
-      "blocks": [
-        "ch14_005"
-      ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch14_006.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
@@ -254,46 +263,50 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_006",
+      "source_sha256": "5b5395685d727af9d8bb7f2db00fd26354c35786e40fdb5625ebb85cffe04749",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P1-06",
       "P2-024"
     ],
-    "stage1d_status": "compiled_source"
+    "stage1d_status": "compiled_source",
+    "before_stage4a": {
+      "sha256": "5b5395685d727af9d8bb7f2db00fd26354c35786e40fdb5625ebb85cffe04749",
+      "line": 192,
+      "end": 197,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch14_005"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_007",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 201,
-    "end": 205,
-    "sha256": "cea99adcc4e2e063feaa22ce628e40a5b8a9882b4e5c63466a113991c62baa79",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.4 AE（ほとんど至るところ）の哲学 ──── `Filter.ae` / ### 実況中継：`ae_restrict_of_ae` で制限測度に降ろす",
+    "line": 193,
+    "end": 199,
+    "sha256": "9b41039e4838e34cc21544ebfc34a210dded4dc2cb1906bbd281e256fc581f54",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.4 AE（ほとんど至るところ）の哲学 ──── `MeasureTheory.ae` / ### 実況中継：`ae_restrict_of_ae` で制限測度に降ろす",
     "category": "complete",
     "role": "本文",
-    "reason": "段階1-Dで原稿と同じコードを章別モジュールに置き、可測性・可積分性・収束の仮定と証明を検証する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
-      "blocks": [
-        "ch14_005"
-      ],
-      "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch14_007.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
@@ -302,43 +315,46 @@
     "prior_probe": {
       "status": "error",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_007",
+      "source_sha256": "cea99adcc4e2e063feaa22ce628e40a5b8a9882b4e5c63466a113991c62baa79",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
     "issue_ids": [
       "P1-06",
       "P2-024"
     ],
-    "stage1d_status": "compiled_source"
+    "stage1d_status": "compiled_source",
+    "before_stage4a": {
+      "sha256": "cea99adcc4e2e063feaa22ce628e40a5b8a9882b4e5c63466a113991c62baa79",
+      "line": 201,
+      "end": 205,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch14_005"
+        ],
+        "instruction": "列挙した前提を番号順に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_008",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 243,
-    "end": 261,
-    "sha256": "6141e3d82c49eed7b5048d4d0d48d4d6de325208bf6d7a381bccfccad0cff174",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.5 `AEMeasurable` と `Measurable` の違い / ### Lean の実装：`AEMeasurable`",
+    "line": 239,
+    "end": 253,
+    "sha256": "9080ac86b9aa95fd2adcf68cf7ab2037e455f652a22ad023ead19e4d850f9590",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.5 `AEMeasurable` と `Measurable` の違い / ### Lean の実装：`AEMeasurable`",
     "category": "complete",
     "role": "本文",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib",
       "open MeasureTheory"
@@ -351,39 +367,40 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_008",
+      "source_sha256": "6141e3d82c49eed7b5048d4d0d48d4d6de325208bf6d7a381bccfccad0cff174",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "6141e3d82c49eed7b5048d4d0d48d4d6de325208bf6d7a381bccfccad0cff174",
+      "line": 243,
+      "end": 261,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_009",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 304,
-    "end": 310,
-    "sha256": "798d237b37eca11ac8146f29e7a0e122a7ee5b8c5a65a4f1b3252e16ec468e1d",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "line": 296,
+    "end": 302,
+    "sha256": "02b5238287fed518a13848911a5395dec7e114b1a9c3f7b58c068126723635c8",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.6 まとめ ──── 第14章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -395,40 +412,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_009",
+      "source_sha256": "798d237b37eca11ac8146f29e7a0e122a7ee5b8c5a65a4f1b3252e16ec468e1d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "798d237b37eca11ac8146f29e7a0e122a7ee5b8c5a65a4f1b3252e16ec468e1d",
+      "line": 304,
+      "end": 310,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_010",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 319,
-    "end": 323,
-    "sha256": "80fcbd21d45c9f63650962381d9f41a87a8ff444b7a3d187fe8c8fdf7982aee6",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "line": 311,
+    "end": 316,
+    "sha256": "855640ed501fa1def8182e1ae5cab4d3aa69cb1fcc86c7022f80d1184f4c212f",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.6 まとめ ──── 第14章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch14_010.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
@@ -437,39 +457,40 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_010",
+      "source_sha256": "80fcbd21d45c9f63650962381d9f41a87a8ff444b7a3d187fe8c8fdf7982aee6",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "80fcbd21d45c9f63650962381d9f41a87a8ff444b7a3d187fe8c8fdf7982aee6",
+      "line": 319,
+      "end": 323,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_011",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 342,
-    "end": 348,
-    "sha256": "1239c834e9c2791f8227c43d2527120a79a319d09f253641756d1ae267dc3c34",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "line": 335,
+    "end": 341,
+    "sha256": "e90f9062489172b2b4ffd208291f74ba3067c281dfd186fb36a6415d7aa938b7",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.6 まとめ ──── 第14章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -481,40 +502,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_011",
+      "source_sha256": "1239c834e9c2791f8227c43d2527120a79a319d09f253641756d1ae267dc3c34",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "1239c834e9c2791f8227c43d2527120a79a319d09f253641756d1ae267dc3c34",
+      "line": 342,
+      "end": 348,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_012",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 357,
-    "end": 364,
-    "sha256": "1cf03aa662f030c3e28cff063d7b3323aad5a0079e688531d85b8d3917861ec2",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "line": 350,
+    "end": 362,
+    "sha256": "693d131af0b8cd0824f057ca2634cdd97815214723529421630f03b072355528",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.6 まとめ ──── 第14章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch14_012.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
@@ -523,39 +547,40 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_012",
+      "source_sha256": "1cf03aa662f030c3e28cff063d7b3323aad5a0079e688531d85b8d3917861ec2",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "1cf03aa662f030c3e28cff063d7b3323aad5a0079e688531d85b8d3917861ec2",
+      "line": 357,
+      "end": 364,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_013",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 383,
-    "end": 390,
-    "sha256": "3854d09f989e326d1cfd1c05b822263e344bb2b5bbc395976f4e2aa1ca7c5b0c",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "line": 381,
+    "end": 392,
+    "sha256": "e4295697ebae9de5a063106b9ba11768c4a25b91577eabf48acd9885cc363d72",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.6 まとめ ──── 第14章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "✅ 解答を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
-    ],
+    "preceding_setup": [],
     "own_setup": [
       "import Mathlib"
     ],
@@ -567,40 +592,43 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_013",
+      "source_sha256": "3854d09f989e326d1cfd1c05b822263e344bb2b5bbc395976f4e2aa1ca7c5b0c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "3854d09f989e326d1cfd1c05b822263e344bb2b5bbc395976f4e2aa1ca7c5b0c",
+      "line": 383,
+      "end": 390,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
   },
   {
     "id": "ch14_014",
     "source": "books/lean4-formalization/ch14.md",
-    "line": 399,
-    "end": 404,
-    "sha256": "76196688a2d0b7e172e16e2de3a83ed6f9398d859d38c7df8ccbfba21f451e13",
-    "section": "# 第3章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 3.6 まとめ ──── 第3章の全対応表と練習問題 / ### 章末練習問題",
+    "line": 401,
+    "end": 411,
+    "sha256": "113aaa1bfa91d11a1ec43c35ce518fb482c69c5c334080fc03a58821cc3569d4",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.6 まとめ ──── 第14章の全対応表と練習問題 / ### 章末練習問題",
     "category": "complete",
     "role": "🔄 別解を見る",
-    "reason": "実行可能な例・宣言・解答として提示されている。動作不良や未証明部分があっても修正対象として保持する。",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
     "contains_sorry": false,
     "context": {
       "blocks": [],
-      "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
     },
-    "preceding_setup": [
-      {
-        "block": "ch14_001",
-        "line": "import Mathlib"
-      },
-      {
-        "block": "ch14_001",
-        "line": "open MeasureTheory Filter"
-      },
-      {
-        "block": "ch14_002",
-        "line": "open MeasureTheory"
-      }
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
     ],
-    "own_setup": [],
     "fixture": ".generated/raw/ch14_014.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
@@ -609,8 +637,57 @@
     "prior_probe": {
       "status": "pass",
       "sorry_warning": false,
-      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch14_014",
+      "source_sha256": "76196688a2d0b7e172e16e2de3a83ed6f9398d859d38c7df8ccbfba21f451e13",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
     },
-    "issue_ids": []
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "76196688a2d0b7e172e16e2de3a83ed6f9398d859d38c7df8ccbfba21f451e13",
+      "line": 399,
+      "end": 404,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch14_015",
+    "role": "Q&A：一点での変更と測度の比較",
+    "repair_stage": 4,
+    "fixture": ".generated/raw/ch14_015.lean",
+    "introduced_in_stage": "4-A",
+    "prior_probe": {
+      "status": "not_run",
+      "sorry_warning": false,
+      "method": "Added in stage 4-A; absent from the initial manuscript probe"
+    },
+    "source": "books/lean4-formalization/ch14.md",
+    "line": 430,
+    "end": 456,
+    "sha256": "ca8cea74356c6aa4d2829bc32394458d4fa5b49835708e60b4e27b06a82bc9f9",
+    "section": "# 第14章：可測関数 〜`AEMeasurable`と「ほとんど至るところ」の哲学〜 / ## 14.6 まとめ ──── 第14章の全対応表と練習問題 / ### 章末練習問題",
+    "issue_ids": [
+      "P2-025"
+    ],
+    "priority_one": false,
+    "contains_sorry": false,
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "category": "complete",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "validation_mode": "compile_after_context_review",
+    "stage4a_status": "compiled_source"
   }
 ]

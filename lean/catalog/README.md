@@ -10,7 +10,7 @@
 
 | 分類 | 数 |
 |---|---:|
-| 完成例・実行コマンド | 338 |
+| 完成例・実行コマンド | 339 |
 | 前後に続く断片 | 49 |
 | 意図的なエラー例 | 12 |
 | 練習問題・未完成の骨格 | 24 |
@@ -33,7 +33,7 @@
 | [ch11.md](../../books/lean4-formalization/ch11.md) | 26 | [対応表](chapters/ch11.md) | [JSON](chapters/ch11.json) |
 | [ch12.md](../../books/lean4-formalization/ch12.md) | 19 | [対応表](chapters/ch12.md) | [JSON](chapters/ch12.json) |
 | [ch13.md](../../books/lean4-formalization/ch13.md) | 17 | [対応表](chapters/ch13.md) | [JSON](chapters/ch13.json) |
-| [ch14.md](../../books/lean4-formalization/ch14.md) | 14 | [対応表](chapters/ch14.md) | [JSON](chapters/ch14.json) |
+| [ch14.md](../../books/lean4-formalization/ch14.md) | 15 | [対応表](chapters/ch14.md) | [JSON](chapters/ch14.json) |
 | [ch15.md](../../books/lean4-formalization/ch15.md) | 12 | [対応表](chapters/ch15.md) | [JSON](chapters/ch15.json) |
 | [ch16.md](../../books/lean4-formalization/ch16.md) | 17 | [対応表](chapters/ch16.md) | [JSON](chapters/ch16.json) |
 | [ch17.md](../../books/lean4-formalization/ch17.md) | 13 | [対応表](chapters/ch17.md) | [JSON](chapters/ch17.json) |

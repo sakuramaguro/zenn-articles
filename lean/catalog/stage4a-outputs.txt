@@ -1,0 +1,482 @@
+段階4-A：固定環境での掲載例とゴールの実出力
+第12〜14章の49完成ブロックを、それぞれ原稿自身のimportと宣言だけで独立実行した。
+他の例の前提を補わず、名前付き宣言の公理を確認した。未完成の演習2件は別途診断した。
+
+=== ch12_001 ===
+'half_map_recap' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_002 ===
+@lintegral_iSup : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), Measurable (f n)) → Monotone f → ∫⁻ (a : α), ⨆ n, f n a ∂μ = ⨆ n, ∫⁻ (a : α), f n a ∂μ
+@lintegral_liminf_le : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), Measurable (f n)) →
+    ∫⁻ (a : α), liminf (fun n => f n a) atTop ∂μ ≤ liminf (fun n => ∫⁻ (a : α), f n a ∂μ) atTop
+@lintegral_liminf_le' : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), AEMeasurable (f n) μ) →
+    ∫⁻ (a : α), liminf (fun n => f n a) atTop ∂μ ≤ liminf (fun n => ∫⁻ (a : α), f n a ∂μ) atTop
+@tendsto_integral_of_dominated_convergence : ∀ {α : Type u_1} {G : Type u_2} [inst : NormedAddCommGroup G]
+  [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : Measure α} {F : ℕ → α → G} {f : α → G} (bound : α → ℝ),
+  (∀ (n : ℕ), AEStronglyMeasurable (F n) μ) →
+    Integrable bound μ →
+      (∀ (n : ℕ), ∀ᵐ (a : α) ∂μ, ‖F n a‖ ≤ bound a) →
+        (∀ᵐ (a : α) ∂μ, Tendsto (fun n => F n a) atTop (𝓝 (f a))) →
+          Tendsto (fun n => ∫ (a : α), F n a ∂μ) atTop (𝓝 (∫ (a : α), f a ∂μ))
+
+=== ch12_003 ===
+∫ (ω : Ω), X ω ∂P : ℝ
+
+=== ch12_004 ===
+@MeasurableSpace.generateFrom : {α : Type u_1} → Set (Set α) → MeasurableSpace α
+borel : (α : Type u_1) → [TopologicalSpace α] → MeasurableSpace α
+inferInstance : BorelSpace ℝ
+inferInstance : OpensMeasurableSpace ℝ
+'univ_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'compl_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'countable_union_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'open_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_005 ===
+class MeasurableSpace.{u_7} (α : Type u_7) : Type u_7
+number of parameters: 1
+fields:
+  MeasurableSpace.MeasurableSet' : Set α → Prop
+  MeasurableSpace.measurableSet_empty : MeasurableSpace.MeasurableSet' self ∅
+  MeasurableSpace.measurableSet_compl : ∀ (s : Set α),
+      MeasurableSpace.MeasurableSet' self s → MeasurableSpace.MeasurableSet' self sᶜ
+  MeasurableSpace.measurableSet_iUnion : ∀ (f : ℕ → Set α),
+      (∀ (i : ℕ), MeasurableSpace.MeasurableSet' self (f i)) → MeasurableSpace.MeasurableSet' self (⋃ i, f i)
+constructor:
+  MeasurableSpace.mk.{u_7} {α : Type u_7} (MeasurableSet' : Set α → Prop) (measurableSet_empty : MeasurableSet' ∅)
+    (measurableSet_compl : ∀ (s : Set α), MeasurableSet' s → MeasurableSet' sᶜ)
+    (measurableSet_iUnion : ∀ (f : ℕ → Set α), (∀ (i : ℕ), MeasurableSet' (f i)) → MeasurableSet' (⋃ i, f i)) :
+    MeasurableSpace α
+'all_sets_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'zero_measure_on_powerset' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_006 ===
+'empty_measurable' does not depend on any axioms
+'inter_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'union_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_007 ===
+@MeasurableSpace.generateFrom : {α : Type u_1} → Set (Set α) → MeasurableSpace α
+@MeasurableSpace.generateFrom_le : ∀ {α : Type u_1} {s : Set (Set α)} {m : MeasurableSpace α},
+  (∀ t ∈ s, MeasurableSet t) → MeasurableSpace.generateFrom s ≤ m
+'borel_definition_demo' does not depend on any axioms
+
+=== ch12_008 ===
+@[implicit_reducible] def borel.{u} : (α : Type u) → [TopologicalSpace α] → MeasurableSpace α :=
+fun α [TopologicalSpace α] => MeasurableSpace.generateFrom {s | IsOpen s}
+
+=== ch12_009 ===
+borel : (α : Type u_1) → [TopologicalSpace α] → MeasurableSpace α
+
+=== ch12_010 ===
+BorelSpace : (α : Type u_1) → [TopologicalSpace α] → [MeasurableSpace α] → Prop
+OpensMeasurableSpace : (α : Type u_1) → [TopologicalSpace α] → [h : MeasurableSpace α] → Prop
+@IsOpen.measurableSet : ∀ {α : Type u_1} {s : Set α} [inst : TopologicalSpace α] [inst_1 : MeasurableSpace α]
+  [OpensMeasurableSpace α], IsOpen s → MeasurableSet s
+inferInstance : BorelSpace ℝ
+inferInstance : OpensMeasurableSpace ℝ
+
+=== ch12_011 ===
+'open_interval_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_012 ===
+'closed_interval_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'half_open_interval_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_014 ===
+'countable_inter_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_015 ===
+'countable_inter_measurable_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_016 ===
+@[implicit_reducible] def borel.{u} : (α : Type u) → [TopologicalSpace α] → MeasurableSpace α :=
+fun α [TopologicalSpace α] => MeasurableSpace.generateFrom {s | IsOpen s}
+'rationals_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_017 ===
+'rationals_measurable_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch12_018 ===
+theorem MeasurableSet.empty.{u_1} : ∀ {α : Type u_1} [inst : MeasurableSpace α], MeasurableSet ∅ :=
+fun {α} [inst : MeasurableSpace α] => MeasurableSpace.measurableSet_empty inst
+protected theorem MeasurableSet.univ.{u_1} : ∀ {α : Type u_1} {m : MeasurableSpace α}, MeasurableSet Set.univ :=
+fun {α} {m} =>
+  MeasurableSet.of_compl (of_eq_true (Eq.trans (congrArg MeasurableSet Set.compl_univ) MeasurableSet.empty._simp_1))
+'empty_measurable_from_field' does not depend on any axioms
+
+=== ch12_019 ===
+'empty_measurable_from_univ' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_001 ===
+@Real.volume_Icc : ∀ {a b : ℝ}, volume (Set.Icc a b) = ENNReal.ofReal (b - a)
+@Real.volume_Ioo : ∀ {a b : ℝ}, volume (Set.Ioo a b) = ENNReal.ofReal (b - a)
+@Real.volume_singleton : ∀ {a : ℝ}, volume {a} = 0
+@IsProbabilityMeasure : {α : Type u_1} → {m0 : MeasurableSpace α} → Measure α → Prop
+@prob_le_one : ∀ {α : Type u_1} {m0 : MeasurableSpace α} {μ : Measure α} [IsZeroOrProbabilityMeasure μ] {s : Set α},
+  μ s ≤ 1
+'volume_unit_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirac_is_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_002 ===
+Measure : (α : Type u_1) → [MeasurableSpace α] → Type u_1
+structure MeasureTheory.Measure.{u_6} (α : Type u_6) [MeasurableSpace α] : Type u_6
+number of parameters: 2
+parents:
+  MeasureTheory.Measure.toOuterMeasure : OuterMeasure α
+fields:
+  MeasureTheory.OuterMeasure.measureOf : Set α → ENNReal
+  MeasureTheory.OuterMeasure.empty : self.measureOf ∅ = 0
+  MeasureTheory.OuterMeasure.mono : ∀ {s₁ s₂ : Set α}, s₁ ⊆ s₂ → self.measureOf s₁ ≤ self.measureOf s₂
+  MeasureTheory.OuterMeasure.iUnion_nat : ∀ (s : ℕ → Set α),
+      Pairwise (Function.onFun Disjoint s) → self.measureOf (⋃ i, s i) ≤ ∑' (i : ℕ), self.measureOf (s i)
+  MeasureTheory.Measure.m_iUnion : ∀ ⦃f : ℕ → Set α⦄,
+      (∀ (i : ℕ), MeasurableSet (f i)) →
+        Pairwise (Function.onFun Disjoint f) → self.toOuterMeasure (⋃ i, f i) = ∑' (i : ℕ), self.toOuterMeasure (f i)
+  MeasureTheory.Measure.trim_le : self.trim ≤ self.toOuterMeasure
+constructor:
+  MeasureTheory.Measure.mk.{u_6} {α : Type u_6} [MeasurableSpace α] (toOuterMeasure : OuterMeasure α)
+    (m_iUnion :
+      ∀ ⦃f : ℕ → Set α⦄,
+        (∀ (i : ℕ), MeasurableSet (f i)) →
+          Pairwise (Function.onFun Disjoint f) → toOuterMeasure (⋃ i, f i) = ∑' (i : ℕ), toOuterMeasure (f i))
+    (trim_le : toOuterMeasure.trim ≤ toOuterMeasure) : Measure α
+field notation resolution order:
+  MeasureTheory.Measure, MeasureTheory.OuterMeasure
+@Measure.trimmed : ∀ {α : Type u_1} [inst : MeasurableSpace α] (μ : Measure α), μ.trim = μ.toOuterMeasure
+@measure_eq_iInf : ∀ {α : Type u_1} [inst : MeasurableSpace α] {μ : Measure α} (s : Set α),
+  μ s = ⨅ t, ⨅ (_ : s ⊆ t), ⨅ (_ : MeasurableSet t), μ t
+
+=== ch13_003 ===
+@Measure.toOuterMeasure : {α : Type u_1} → [inst : MeasurableSpace α] → Measure α → OuterMeasure α
+@measure_empty : ∀ {α : Type u_1} {F : Type u_2} [inst : FunLike F (Set α) ENNReal] [OuterMeasureClass F α] {μ : F},
+  μ ∅ = 0
+@measure_iUnion : ∀ {ι : Type u_1} {α : Type u_2} {m0 : MeasurableSpace α} {μ : Measure α} [Countable ι]
+  {f : ι → Set α},
+  Pairwise (Function.onFun Disjoint f) → (∀ (i : ι), MeasurableSet (f i)) → μ (⋃ i, f i) = ∑' (i : ι), μ (f i)
+@measure_mono : ∀ {α : Type u_1} {F : Type u_2} [inst : FunLike F (Set α) ENNReal] [OuterMeasureClass F α] {μ : F}
+  {s t : Set α}, s ⊆ t → μ s ≤ μ t
+@measure_union_le : ∀ {α : Type u_1} {F : Type u_2} [inst : FunLike F (Set α) ENNReal] [OuterMeasureClass F α] {μ : F}
+  (s t : Set α), μ (s ∪ t) ≤ μ s + μ t
+'countable_additivity_demo' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_004 ===
+volume : Measure ℝ
+
+=== ch13_005 ===
+'volume_zero_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_006 ===
+'volume_open_unit_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'volume_singleton_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_007 ===
+@Measure.count : {α : Type u_1} → [inst : MeasurableSpace α] → Measure α
+'count_singleton_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'count_empty_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_008 ===
+@Measure.dirac : {α : Type u_1} → [inst : MeasurableSpace α] → α → Measure α
+'dirac_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirac_away_from_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_009 ===
+class MeasureTheory.IsProbabilityMeasure.{u_1} {α : Type u_1} {m0 : MeasurableSpace α} (μ : Measure α) : Prop
+number of parameters: 3
+fields:
+  MeasureTheory.IsProbabilityMeasure.measure_univ : μ Set.univ = 1
+constructor:
+  MeasureTheory.IsProbabilityMeasure.mk.{u_1} {α : Type u_1} {m0 : MeasurableSpace α} {μ : Measure α}
+    (measure_univ : μ Set.univ = 1) : IsProbabilityMeasure μ
+'dirac_probability_demo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'probability_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_010 ===
+
+=== ch13_011 ===
+'volume_one_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_012 ===
+'volume_one_four_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_014 ===
+'interval_measure_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_015 ===
+'interval_measure_mono_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_016 ===
+'restricted_volume_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch13_017 ===
+'restricted_volume_probability_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_001 ===
+@Measurable : {α : Type u_1} → {β : Type u_2} → [MeasurableSpace α] → [MeasurableSpace β] → (α → β) → Prop
+@AEMeasurable : {α : Type u_1} →
+  {β : Type u_2} →
+    [MeasurableSpace β] → {_m : MeasurableSpace α} → (α → β) → autoParam (Measure α) AEMeasurable._auto_1 → Prop
+@ae_restrict_of_ae : ∀ {α : Type u_1} {m0 : MeasurableSpace α} {μ : Measure α} {s : Set α} {p : α → Prop},
+  (∀ᵐ (x : α) ∂μ, p x) → ∀ᵐ (x : α) ∂μ.restrict s, p x
+'ae_restrict_demo' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_002 ===
+def Measurable.{u_1, u_2} : {α : Type u_1} →
+  {β : Type u_2} → [MeasurableSpace α] → [MeasurableSpace β] → (α → β) → Prop :=
+fun {α} {β} [MeasurableSpace α] [MeasurableSpace β] f => ∀ ⦃t : Set β⦄, MeasurableSet t → MeasurableSet (f ⁻¹' t)
+@Continuous.measurable : ∀ {α : Type u_1} {γ : Type u_2} [inst : TopologicalSpace α] [inst_1 : MeasurableSpace α]
+  [OpensMeasurableSpace α] [inst_3 : TopologicalSpace γ] [inst_4 : MeasurableSpace γ] [BorelSpace γ] {f : α → γ},
+  Continuous f → Measurable f
+'measurable_iff_preimages' does not depend on any axioms
+
+=== ch14_003 ===
+'continuous_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'constant_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'identity_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'compose_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'add_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_004 ===
+'continuous_measurable_tactic' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_005 ===
+@ae : {α : Type u_1} → {F : Type u_2} → [inst : FunLike F (Set α) ENNReal] → [OuterMeasureClass F α] → F → Filter α
+@Filter.EventuallyEq : {α : Type u_1} → {β : Type u_2} → Filter α → (α → β) → (α → β) → Prop
+@ae_iff : ∀ {α : Type u_1} {F : Type u_2} [inst : FunLike F (Set α) ENNReal] [inst_1 : OuterMeasureClass F α] {μ : F}
+  {p : α → Prop}, (∀ᵐ (a : α) ∂μ, p a) ↔ μ {a | ¬p a} = 0
+'dirichlet_ae_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_006 ===
+@ae_restrict_of_ae : ∀ {α : Type u_1} {m0 : MeasurableSpace α} {μ : Measure α} {s : Set α} {p : α → Prop},
+  (∀ᵐ (x : α) ∂μ, p x) → ∀ᵐ (x : α) ∂μ.restrict s, p x
+@ae_restrict_le : ∀ {α : Type u_1} {m0 : MeasurableSpace α} {μ : Measure α} {s : Set α}, ae (μ.restrict s) ≤ ae μ
+
+=== ch14_007 ===
+'ae_restrict_tactic' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_008 ===
+def AEMeasurable.{u_1, u_2} : {α : Type u_1} →
+  {β : Type u_2} →
+    [MeasurableSpace β] → {_m : MeasurableSpace α} → (α → β) → autoParam (Measure α) AEMeasurable._auto_1 → Prop :=
+fun {α} {β} [MeasurableSpace β] {_m} f μ => ∃ g, Measurable g ∧ f =ᶠ[ae μ] g
+@AEMeasurable.congr : ∀ {α : Type u_1} {β : Type u_2} {m : MeasurableSpace α} [inst : MeasurableSpace β] {f g : α → β}
+  {μ : Measure α}, AEMeasurable f μ → f =ᶠ[ae μ] g → AEMeasurable g μ
+@Measurable.stronglyMeasurable : ∀ {α : Type u_1} {β : Type u_2} {f : α → β} {mα : MeasurableSpace α}
+  [inst : MeasurableSpace β] [inst_1 : TopologicalSpace β] [TopologicalSpace.PseudoMetrizableSpace β]
+  [SecondCountableTopology β] [OpensMeasurableSpace β], Measurable f → StronglyMeasurable f
+@StronglyMeasurable.measurable : ∀ {α : Type u_1} {β : Type u_2} {f : α → β} {x : MeasurableSpace α}
+  [inst : TopologicalSpace β] [TopologicalSpace.PseudoMetrizableSpace β] [inst_2 : MeasurableSpace β] [BorelSpace β],
+  StronglyMeasurable f → Measurable f
+'measurable_is_aemeasurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'continuous_is_aemeasurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_009 ===
+'square_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_010 ===
+'square_measurable_auto' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_011 ===
+'polynomial_measurable_auto' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_012 ===
+'polynomial_measurable_manual' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_013 ===
+'ae_change_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_014 ===
+'ae_change_measurable_from_def' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch14_015 ===
+@measurable_of_measurable_on_compl_singleton : ∀ {α : Type u_1} {β : Type u_2} {m : MeasurableSpace α}
+  {mβ : MeasurableSpace β} [MeasurableSingletonClass α] {f : α → β} (a : α),
+  Measurable ({x | x ≠ a}.restrict f) → Measurable f
+'pointChange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pointChange_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pointChange_ae_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pointChange_integral_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+'pointChange_integral_dirac' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== 診断: stage4a_ch12_013 ===
+.generated/diagnostics/stage4a_ch12_013.lean:4:8: warning: declaration uses `sorry`
+'countable_inter_exercise' depends on axioms: [sorryAx]
+
+=== 診断: stage4a_ch13_013 ===
+.generated/diagnostics/stage4a_ch13_013.lean:5:8: warning: declaration uses `sorry`
+'measure_mono_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+=== trace_stateの検証用コード ===
+完成例8件にtrace_stateだけを挿入。名前の衝突を避ける名前空間を追加した。
+import Mathlib
+
+#eval "ch12_011"
+namespace Trace_ch12_011
+
+-- 目標：MeasurableSet (Set.Ioo (0 : ℝ) 1)
+theorem open_interval_measurable : MeasurableSet (Set.Ioo (0 : ℝ) 1) := by
+  trace_state
+  apply IsOpen.measurableSet  -- ステップ②
+  trace_state
+  exact isOpen_Ioo             -- ステップ③
+  trace_state
+-- No goals ✓
+end Trace_ch12_011
+
+#eval "ch12_017"
+namespace Trace_ch12_017
+
+theorem rationals_measurable_alt : MeasurableSet (Set.range ((↑) : ℚ → ℝ)) := by
+  trace_state
+  rw [← Set.iUnion_singleton_eq_range]
+  trace_state
+  apply MeasurableSet.iUnion
+  trace_state
+  intro q
+  trace_state
+  exact measurableSet_singleton (q : ℝ)
+  trace_state
+end Trace_ch12_017
+
+#eval "ch13_005"
+namespace Trace_ch13_005
+open MeasureTheory
+
+-- 目標：volume (Set.Icc (0 : ℝ) 3) = 3
+theorem volume_zero_three : volume (Set.Icc (0 : ℝ) 3) = 3 := by
+  trace_state
+  rw [Real.volume_Icc]    -- ステップ②
+  trace_state
+  norm_num                 -- ステップ③
+  trace_state
+-- No goals ✓
+end Trace_ch13_005
+
+#eval "ch13_014"
+namespace Trace_ch13_014
+open MeasureTheory
+theorem interval_measure_mono : volume (Set.Icc (0 : ℝ) 1) ≤ volume (Set.Icc (0 : ℝ) 2) := by
+  trace_state
+  apply measure_mono
+  trace_state
+  exact Set.Icc_subset_Icc le_rfl (by norm_num)
+  trace_state
+  -- No goals ✓
+end Trace_ch13_014
+
+#eval "ch13_016"
+namespace Trace_ch13_016
+open MeasureTheory
+theorem restricted_volume_probability : IsProbabilityMeasure (volume.restrict (Set.Icc (0:ℝ) 1)) := by
+  trace_state
+  constructor
+  trace_state
+  rw [Measure.restrict_apply MeasurableSet.univ, Set.univ_inter]
+  trace_state
+  rw [Real.volume_Icc]
+  trace_state
+  norm_num
+  trace_state
+  -- No goals ✓
+end Trace_ch13_016
+
+#eval "ch14_004"
+namespace Trace_ch14_004
+open MeasureTheory
+
+-- 目標：Measurable f
+theorem continuous_measurable_tactic (f : ℝ → ℝ) (hf : Continuous f) : Measurable f := by
+  trace_state
+  exact hf.measurable   -- ステップ②
+  trace_state
+-- No goals ✓
+end Trace_ch14_004
+
+#eval "ch14_007"
+namespace Trace_ch14_007
+open MeasureTheory
+theorem ae_restrict_tactic (f g : ℝ → ℝ) (h : f =ᵐ[volume] g) :
+    f =ᵐ[volume.restrict (Set.Icc 0 1)] g := by
+  trace_state
+  exact ae_restrict_of_ae h
+  trace_state
+end Trace_ch14_007
+
+#eval "ch14_014"
+namespace Trace_ch14_014
+section Example14
+
+variable {α : Type*} [MeasurableSpace α] (μ : MeasureTheory.Measure α)
+theorem ae_change_measurable_from_def (f g : α → ℝ) (hf : Measurable f) (h : f =ᵐ[μ] g) :
+    AEMeasurable g μ := by
+  trace_state
+  exact ⟨f, hf, h.symm⟩
+  trace_state
+
+end Example14
+end Trace_ch14_014
+
+
+=== trace_stateの実出力 ===
+空行はゴールが閉じた後の出力。本文ではcaseラベルなどを省いた表示も使う。
+"ch12_011"
+⊢ MeasurableSet (Set.Ioo 0 1)
+case h
+⊢ IsOpen (Set.Ioo 0 1)
+
+"ch12_017"
+⊢ MeasurableSet (Set.range Rat.cast)
+⊢ MeasurableSet (⋃ x, {↑x})
+case h
+⊢ ∀ (b : ℚ), MeasurableSet {↑b}
+case h
+q : ℚ
+⊢ MeasurableSet {↑q}
+
+"ch13_005"
+⊢ volume (Set.Icc 0 3) = 3
+⊢ ENNReal.ofReal (3 - 0) = 3
+
+"ch13_014"
+⊢ volume (Set.Icc 0 1) ≤ volume (Set.Icc 0 2)
+case h
+⊢ Set.Icc 0 1 ⊆ Set.Icc 0 2
+
+"ch13_016"
+⊢ IsProbabilityMeasure (volume.restrict (Set.Icc 0 1))
+case measure_univ
+⊢ (volume.restrict (Set.Icc 0 1)) Set.univ = 1
+case measure_univ
+⊢ volume (Set.Icc 0 1) = 1
+case measure_univ
+⊢ ENNReal.ofReal (1 - 0) = 1
+
+"ch14_004"
+f : ℝ → ℝ
+hf : Continuous f
+⊢ Measurable f
+
+"ch14_007"
+f g : ℝ → ℝ
+h : f =ᶠ[ae volume] g
+⊢ f =ᶠ[ae (volume.restrict (Set.Icc 0 1))] g
+
+"ch14_014"
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : MeasureTheory.Measure α
+f g : α → ℝ
+hf : Measurable f
+h : f =ᵐ[μ] g
+⊢ AEMeasurable g μ
+
+
+=== 検査器のテスト ===
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.133s
+
+OK
