@@ -10,7 +10,7 @@ theorem continuous_search (f : ℝ → ℝ) (a : ℝ) (hf : ContinuousAt f a) :
 -- END SOURCE ch06_001
 
 -- BEGIN SOURCE ch06_002
--- 本章の最終ゴール：第1部の呪文が完全に理解できる
+-- 本章の最終ゴール：Part 1の予告コードの構造を理解する
 
 -- 【勝利の命題①】Filter.Tendsto と ContinuousAt の関係
 -- 数学：連続性の定義は「近傍フィルターが保たれること」と同値

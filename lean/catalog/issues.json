@@ -1702,7 +1702,7 @@
     "id": "P2-038",
     "priority": "P2",
     "stage": 5,
-    "status": "planned",
+    "status": "resolved",
     "description": "現在は一冊にPart 1〜4があるが、本文は独立した「全4巻シリーズの第1巻」のまま。第6章の本文見出しが「第1章」、第12章以降も番号が再開する。巻内番号を残すなら「Part 2・第1章（通算第6章）」などに統一し、参照先をリンクする。",
     "locations": [
       {
@@ -1713,13 +1713,19 @@
     ],
     "blocks": [],
     "scope": "intro.md:17、各章先頭、Part 1〜4",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
   },
   {
     "id": "P2-039",
     "priority": "P2",
     "stage": 5,
-    "status": "planned",
+    "status": "resolved",
     "description": "到達目標を実装内容と合わせる。Part 2は既存不動点定理の適用、Part 3は本文のBochner積分版との対応を明示。Part 4は執筆中と既に表示されているので、序文にも現在読める範囲と予定範囲をまとめる。",
     "locations": [
       {
@@ -1741,13 +1747,18 @@
     "blocks": [],
     "scope": "part2.md:10、part3.md:10、part4.md:13–14",
     "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
-    "progress": "段階1-CでPart 2、段階1-DでPart 3の到達目標を本文の既存定理の適用と具体例の検証に合わせた。Part 4と序文の範囲、全体表示の確認は段階5に残る。"
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    }
   },
   {
     "id": "P2-040",
     "priority": "P2",
     "stage": 5,
-    "status": "in_progress",
+    "status": "resolved",
     "description": "`../images/vol1/fig-01.png` は原稿位置から解決するとファイルが存在しない。`/images/vol1/fig-01.png` に直す。対象Markdown中のローカル画像参照で、この不存在を検出した。",
     "locations": [
       {
@@ -1759,13 +1770,18 @@
     "blocks": [],
     "scope": "intro.md:42",
     "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
-    "progress": "段階2で参照を /images/vol1/fig-01.png へ修正。全章の表示確認は段階5で実施する。"
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    }
   },
   {
     "id": "P2-041",
     "priority": "P2",
     "stage": 5,
-    "status": "planned",
+    "status": "resolved",
     "description": "altは「exact?が沈黙しているVS Codeのスクショ」だが、参照先の実画像はフィルターを望遠鏡に例えた概念図。画像を直接見て不一致を確認した。図番号・説明・参照先を対応させる。他の画像も公開前に照合する。",
     "locations": [
       {
@@ -1776,36 +1792,53 @@
     ],
     "blocks": [],
     "scope": "ch06.md:78",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
   },
   {
     "id": "P2-042",
     "priority": "P2",
     "stage": 5,
-    "status": "planned",
+    "status": "resolved",
     "description": "Zennの公式記法は `:::details タイトル`。公式レンダラーは通常のMarkdown設定で生HTMLを有効にしておらず、この書き方をGitHubと同じ折りたたみとして扱う前提にしない。公式記法へ置き換え、入れ子では外側のコロンを増やしてプレビュー確認する。",
     "locations": [],
     "blocks": [],
     "scope": "全章の `<details><summary>`",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
   },
   {
     "id": "P2-043",
     "priority": "P2",
     "stage": 5,
-    "status": "planned",
+    "status": "resolved",
     "description": "意図的な失敗例、未証明の練習問題、途中の断片、完成した解答を明示する。`API名は要確認`・`sorryで保留` のコードに「No goals ✓」を付けて完成品と読ませない。",
     "locations": [],
     "blocks": [],
     "scope": "全章の「No goals」「解答」「要確認」",
     "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
-    "progress": "段階1-AでNo goalsとsorry・未確認APIを併記した紛らわしい表示を訂正。全解答の完成・表示統一は各章の修正と段階5に残す。"
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    }
   },
   {
     "id": "P3-044",
     "priority": "P3",
     "stage": 5,
-    "status": "planned",
+    "status": "resolved",
     "description": "「初学者が100%挫折する」「アマチュアのやり方を捨てる」は断定と評価が強い。「初学者がつまずきやすい」「全体の構成を先に作り、段階的に証明する」にすると読者を萎縮させない。",
     "locations": [
       {
@@ -1816,18 +1849,30 @@
     ],
     "blocks": [],
     "scope": "intro.md:106–109",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
   },
   {
     "id": "P3-045",
     "priority": "P3",
     "stage": 5,
-    "status": "planned",
+    "status": "resolved",
     "description": "「最強」「凶悪」「完全」「絶望」などは強調箇所を絞る。「免許証」の比喩は残してよいが、演算データだけの `Add` と、公理も含む構造の違いを補足する。",
     "locations": [],
     "blocks": [],
     "scope": "各章の小見出し・Q&A",
-    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。"
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
   },
   {
     "id": "P3-046",
@@ -1870,6 +1915,7 @@
     "locations": [],
     "blocks": [],
     "scope": "books/lean4-formalization全体、対応するLeanコード、画像、目次、検証手順",
-    "acceptance": "P1・P2の解消記録、全完成例のビルド、主要定理の公理検査、意図したエラーの確認、全ページの表示確認と自動検査が揃う。"
+    "acceptance": "P1・P2の解消記録、全完成例のビルド、主要定理の公理検査、意図したエラーの確認、全ページの表示確認と自動検査が揃う。",
+    "progress": "段階5で全23ページの公式HTML生成とブラウザーの構造、31画像、代表的な解答開閉・数式を確認済み。新規環境からの再現、全箇所・狭い画面・遅延数式の最終確認、公開先での相対章リンク遷移、継続的な自動検査が残る。"
   }
 ]
