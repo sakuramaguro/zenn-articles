@@ -3,7 +3,7 @@ title: "Lean 4の型エラーをAIに相談する前に、そろえたい3つの
 emoji: "🔎"
 type: tech
 topics: ["lean4", "mathlib", "ai"]
-published: false
+published: true
 ---
 
 Leanで赤いエラーが出たとき、その文だけをAIに貼って「直してください」と頼みたくなります。ところが、エラーから分かるのは「Leanが何を受け付けなかったか」です。「何を実現したかったか」までは書かれていません。同じエラーでも、目的によって必要な修正は変わります。
