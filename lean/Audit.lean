@@ -19,23 +19,6 @@ import LeanBook
 #print axioms ManuscriptReview.expectation
 
 
-#print axioms LeanBook.Ch17.monotone_convergence
-#print axioms LeanBook.Ch17.fatou_ae
-#print axioms LeanBook.Ch17.real_ae_strongly_measurable
-#print axioms LeanBook.Ch17.dominated_convergence
-#print axioms LeanBook.Ch17.monotone_sequence_iff
-#print axioms LeanBook.Ch17.increasing_constants
-#print axioms LeanBook.Ch17.movingIndicator
-#print axioms LeanBook.Ch17.movingIndicator_measurable
-#print axioms LeanBook.Ch17.movingIndicator_integral
-#print axioms LeanBook.Ch17.movingIndicator_tendsto
-#print axioms LeanBook.Ch17.fatou_strict
-#print axioms LeanBook.Ch17.sineSequence
-#print axioms LeanBook.Ch17.sineSequence_norm_le
-#print axioms LeanBook.Ch17.sineSequence_norm_le_one
-#print axioms LeanBook.Ch17.sineSequence_tendsto
-#print axioms LeanBook.Ch17.sineSequence_integral_tendsto
-#print axioms LeanBook.Ch17.sineSequence_integral_tendsto_direct
 
 
 
@@ -316,3 +299,46 @@ import LeanBook
 #print axioms LeanBook.Ch16.exp_neg_integrable_parts
 #print axioms LeanBook.Ch16.integral_of_not_integrable
 #print axioms LeanBook.Ch16.dirichlet_on_unit_interval
+#print axioms LeanBook.Ch17.monotone_convergence
+#print axioms LeanBook.Ch17.fatou_ae
+#print axioms LeanBook.Ch17.real_ae_strongly_measurable
+#print axioms LeanBook.Ch17.dominated_convergence
+#print axioms LeanBook.Ch17.monotone_sequence_iff
+#print axioms LeanBook.Ch17.increasing_constants
+#print axioms LeanBook.Ch17.movingIndicator
+#print axioms LeanBook.Ch17.movingIndicator_measurable
+#print axioms LeanBook.Ch17.movingIndicator_integral
+#print axioms LeanBook.Ch17.movingIndicator_tendsto
+#print axioms LeanBook.Ch17.fatou_strict
+#print axioms LeanBook.Ch17.sineSequence
+#print axioms LeanBook.Ch17.sineSequence_zero
+#print axioms LeanBook.Ch17.sineSequence_norm_le
+#print axioms LeanBook.Ch17.sineSequence_norm_le_one
+#print axioms LeanBook.Ch17.sineSequence_tendsto
+#print axioms LeanBook.Ch17.sineSequence_integral_tendsto
+#print axioms LeanBook.Ch17.sineSequence_integral_tendsto_direct
+#print axioms LeanBook.Ch18.expectation
+#print axioms LeanBook.Ch18.expectation_const
+#print axioms LeanBook.Ch18.memLp_definition
+#print axioms LeanBook.Ch18.constant_memLp
+#print axioms LeanBook.Ch18.memLp_one_on
+#print axioms LeanBook.Ch18.eLpNorm_at_zero
+#print axioms LeanBook.Ch18.eLpNorm_at_finite
+#print axioms LeanBook.Ch18.eLpNorm_at_top
+#print axioms LeanBook.Ch18.probability_univ
+#print axioms LeanBook.Ch18.probability_le_one
+#print axioms LeanBook.Ch18.probability_of_univ_eq_one
+#print axioms LeanBook.Ch18.random_variable_preimage
+#print axioms LeanBook.Ch18.myExpectation
+#print axioms LeanBook.Ch18.expectation_add
+#print axioms LeanBook.Ch18.integral_const_probability
+#print axioms LeanBook.Ch18.condExp_const_probability
+#print axioms LeanBook.Ch18.martingale_condExp_property
+#print axioms LeanBook.Ch18.martingale_term_integrable
+#print axioms LeanBook.Ch18.probability_univ_from_instance
+#print axioms LeanBook.Ch18.expectation_one
+#print axioms LeanBook.Ch18.expectation_one_by_expansion
+#print axioms LeanBook.Ch18.real_l2_inner
+#print axioms LeanBook.Ch18.real_l2_norm_sq
+#print axioms LeanBook.Ch18.complex_l2_inner
+#print axioms LeanBook.Ch18.nat_martingale_condExp

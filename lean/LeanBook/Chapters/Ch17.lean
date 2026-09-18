@@ -152,6 +152,9 @@ open scoped ENNReal Topology
 noncomputable def sineSequence (n : ℕ) (x : ℝ) : ℝ :=
   Real.sin ((n : ℝ) * x) / (n : ℝ)
 
+theorem sineSequence_zero (x : ℝ) : sineSequence 0 x = 0 := by
+  simp [sineSequence]
+
 theorem sineSequence_norm_le (n : ℕ) (x : ℝ) :
     ‖sineSequence n x‖ ≤ 1 / (n : ℝ) := by
   simp only [sineSequence, Real.norm_eq_abs, abs_div, Nat.abs_cast]

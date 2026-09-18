@@ -1576,7 +1576,7 @@
     "id": "P2-034",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "検証版では `Memℒp`・`memℒp_const`・`memℒp_one_iff_integrable` ではなく `MemLp` 系の名前を使う。定義も `AEStronglyMeasurable f μ ∧ eLpNorm f p μ < ∞`。引数順は `f p μ`。`p=∞` は本質的上限、ノルム・Banach性の説明は通常 `1≤p≤∞` とし、表示したべき積分公式は有限の `p` に限定する。",
     "locations": [
       {
@@ -1597,16 +1597,23 @@
     ],
     "blocks": [
       "ch18_001",
+      "ch18_002",
       "ch18_003"
     ],
-    "scope": "ch18.md:24–27、ch18.md:124–146、ch18.md:521–525",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
   },
   {
     "id": "P2-035",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "`expectation` と `myExpectation` はBochner積分に依存するため `noncomputable def` にする。実行時にもこのエラーを確認。",
     "locations": [
       {
@@ -1622,16 +1629,23 @@
     ],
     "blocks": [
       "ch18_001",
-      "ch18_006"
+      "ch18_006",
+      "ch18_007"
     ],
-    "scope": "ch18.md:41、ch18.md:245",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
   },
   {
     "id": "P2-036",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "予告コードの `condexp`・`hf.condexp_ae_eq` は検証版では `condExp`・`hf.condExp_ae_eq`。大文字小文字の修正後、マルチンゲールの式が通ることを確認。",
     "locations": [
       {
@@ -1649,14 +1663,20 @@
       "ch18_008",
       "ch18_015"
     ],
-    "scope": "ch18.md:336–341、ch18.md:580–592",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
   },
   {
     "id": "P2-037",
     "priority": "P2",
     "stage": 4,
-    "status": "planned",
+    "status": "resolved",
     "description": "`Lp.inner_def`・`Lp.norm_rpow_eq_integral` は検証版で不明。内積を複素数まで説明するならMathlibは第1変数が共役線形で、式は `∫ conj(f(x)) * g(x)` の向き。実数値の本章では共役を省略するだけでも混乱を減らせる。",
     "locations": [
       {
@@ -1666,10 +1686,17 @@
       }
     ],
     "blocks": [
+      "ch18_013",
       "ch18_014"
     ],
-    "scope": "ch18.md:505–514",
-    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。"
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
   },
   {
     "id": "P2-038",
@@ -1806,7 +1833,7 @@
     "id": "P3-046",
     "priority": "P3",
     "stage": 5,
-    "status": "planned",
+    "status": "resolved",
     "description": "「liminfの積分の上界をliminfの積分で評価」は同語反復。「極限下限の積分を、積分列の極限下限で上から評価」とする。`Hibert` は `Hilbert`。可積分な数列は文脈に応じて「二乗総和可能」とする。",
     "locations": [
       {
@@ -1821,11 +1848,18 @@
       }
     ],
     "blocks": [
-      "ch18_013"
+      "ch17_005",
+      "ch18_013",
+      "ch18_014"
     ],
-    "scope": "ch17.md:238、ch18.md:490",
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
     "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
-    "progress": "段階1-Dで第17章のFatouの説明を訂正。第18章の表記は段階4・5に残る。"
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
   },
   {
     "id": "FINAL-01",
