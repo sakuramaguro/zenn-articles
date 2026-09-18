@@ -4,7 +4,7 @@
 
 ## 成果物と参照範囲
 
-- 完成原稿：[article01.md](../../articles/article01.md)
+- 完成原稿：[lean4-ai-type-error.md](../../articles/lean4-ai-type-error.md)
 - 採用タイトル：Lean 4の型エラーをAIに相談する前に、そろえたい3つの情報
 - 本文：約2,759字。front matter、コード・出力・質問テンプレートの囲み、空白を除く簡易集計。Markdownの見出し等の記号は含む。
 - 参照したもの：同梱の `PROMPT.md`、`BRIEF.md`、`references/chapter03.md`（主に3.2節）、`Ch03.lean`、`chapter03-catalog.md`、`sales-plan.md`、`book-config.yaml`、`lean-toolchain`、`lake-manifest.json`。
@@ -72,10 +72,16 @@ lean +leanprover/lean4:v4.29.0-rc6 Fixed.lean
 - リポジトリ配置後の失敗例・修正例をLean 4.29.0-rc6で再実行し、終了コードと出力が保存済みログに完全一致することを確認。
 - Node.js v24.14.1、既存環境の `zenn-markdown-html` 0.5.4で原稿をHTMLへ変換できることを確認。生成HTMLにコード例と無料序文リンクが含まれること、YAMLとして `published: false`、記事種別、topicsを読み取れることを確認。ブラウザでの見た目の確認は未実施。
 
+## slug修正時の確認
+
+- `article01` は9文字でZennの12〜50文字制約を満たさなかったため、記事を `articles/lean4-ai-type-error.md` へ改名。
+- 新slug `lean4-ai-type-error` は19文字。`articles/` 内の全Markdownファイルが `[a-z0-9_-]{12,50}` に一致することを確認。
+- 関連リンク・ハッシュ記録のパスを更新。記事本文のSHA-256が既存の検証記録と一致し、`published: false` が維持されていることを確認。
+
 ## 未実行の範囲と、残る公開前確認
 
 1. Zennの実プレビューで、front matter、表、4連バッククォート内の質問文、スマートフォンでの読みやすさを確認する。ローカルでMarkdown構造は点検済みだが、Zenn画面上の描画は未確認。
 2. 公開直前に無料序文のリンクをブラウザで開き、無料閲覧と現在の表示内容を確認する。今回のリンク確認はクロール済み情報を含むWeb取得であり、最新の改訂反映確認ではない。
 3. 記事の実行可能なLeanコードはすべて実行済み。空欄テンプレートは説明用で、実行対象ではない。別のLean版・OS・エディタ表示での再検証、文字列解析処理の実装、実際のAIへの質問送信は未実施。
 
-原稿作成時には自動公開、GitHubへの反映、他者への連絡は行っていない。その後のユーザーの依頼に従い、記事を `articles/article01.md`、検証資料を `docs/article01/` に配置してPRを作成する。`published: false` は維持し、公開・マージは行わない。ログ内の実行パスは、個人環境の絶対パスから再現可能な相対パス・版指定コマンドへ正規化した。
+原稿作成時には自動公開、GitHubへの反映、他者への連絡は行っていない。その後のユーザーの依頼に従い、記事を `articles/lean4-ai-type-error.md`、検証資料を `docs/article01/` に配置してPRを作成する。`published: false` は維持し、公開・マージは行わない。ログ内の実行パスは、個人環境の絶対パスから再現可能な相対パス・版指定コマンドへ正規化した。
