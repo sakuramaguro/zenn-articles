@@ -1,0 +1,4 @@
+add_five (n : Nat) : Nat
+12
+5
+105

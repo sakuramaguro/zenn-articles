@@ -1,0 +1,22 @@
+[
+  {
+    "file": "code/Failure.lean",
+    "command": [
+      "lean",
+      "+leanprover/lean4:v4.29.0-rc6",
+      "Failure.lean"
+    ],
+    "cwd": "docs/article01/code",
+    "exit_code": 1
+  },
+  {
+    "file": "code/Fixed.lean",
+    "command": [
+      "lean",
+      "+leanprover/lean4:v4.29.0-rc6",
+      "Fixed.lean"
+    ],
+    "cwd": "docs/article01/code",
+    "exit_code": 0
+  }
+]
