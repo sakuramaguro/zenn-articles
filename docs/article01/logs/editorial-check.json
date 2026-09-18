@@ -1,0 +1,12 @@
+{
+  "lean_blocks_match_saved_sources": true,
+  "error_full_text_matches_log": true,
+  "success_output_matches_log": true,
+  "handoff_files_match_zip": true,
+  "prose_character_count": 2759,
+  "sha256": {
+    "code/Failure.lean": "28ed8625c7e89f041a3cd9f6c94eb6e48acd6e1285b2c8de576a34c2fc70c6ec",
+    "code/Fixed.lean": "bafd651b9739dd9be6b9f0baa9f7d3e2181cb66ebb196eb5fa7e21b27cc743b8",
+    "../../articles/article01.md": "2f7c455769e6d4c5fe7ee3c86350e6db8edaed84981e8ebe2a7ffe53eec839e5"
+  }
+}

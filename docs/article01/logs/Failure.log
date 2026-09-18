@@ -1,0 +1,8 @@
+Failure.lean:3:15: error: Application type mismatch: The argument
+  "hello"
+has type
+  String
+but is expected to have type
+  Nat
+in the application
+  add_five "hello"
