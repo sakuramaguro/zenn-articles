@@ -1,0 +1,22 @@
+title: "AI駆動で学ぶ Lean 4 入門"
+summary: |
+  「Lean 4で始める数学の形式化」シリーズの第1巻。合本のPart 1と同じ内容です。
+  型・証明・AIを用いたエラー診断・Mathlibの探索を学び、既存の次元定理を適用します。
+  固定環境で確認したコード、意図的なエラー例、章末問題15問と解答を収録しています。
+  線形代数の基礎知識を前提とし、Lean 4の予備知識は不要です。
+topics:
+  - ai
+  - 数学
+  - lean4
+  - 形式証明
+  - mathlib
+published: true
+price: 500
+allow_override: true
+chapters:
+  - e8d7ab
+  - d579df
+  - 415c61
+  - 1d5709
+  - d4843b
+  - 19a342
