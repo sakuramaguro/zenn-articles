@@ -7,6 +7,7 @@ from pathlib import Path
 
 import catalog
 from verify import parse_axioms, validate_diagnostic_output
+from verify_all import check_coverage
 
 
 class CatalogChecks(unittest.TestCase):
@@ -155,6 +156,61 @@ class DiagnosticChecks(unittest.TestCase):
         case = {'id': 'lesson', 'kind': 'pass', 'declaration': 'a'}
         with self.assertRaisesRegex(ValueError, 'unexpected diagnostic'):
             validate_diagnostic_output(case, "warning: declaration uses `sorry`\n'a' depends on axioms: [sorryAx]")
+
+
+class FullCoverageChecks(unittest.TestCase):
+    def setUp(self):
+        self.data = {
+            'blocks': [{'id': 'c', 'category': 'complete'}, {'id': 'f', 'category': 'fragment'},
+                       {'id': 'e', 'category': 'expected_error'}, {'id': 's', 'category': 'unfinished'}],
+            'diagnostics': [{'id': 'error', 'kind': 'error', 'blocks': ['e']},
+                            {'id': 'hole', 'kind': 'sorry', 'blocks': ['s']}],
+        }
+        self.actual = {b: {'sha256': b * 64} for b in 'cfes'}
+        self.build = dict(status='passed', toolchain='pinned', compiled_source_blocks=['c', 'f'],
+                          diagnostics={c['id']: dict(c, expected_reason_confirmed=True,
+                                                     expected_warning_confirmed=True)
+                                       for c in self.data['diagnostics']})
+        self.reports = [dict(status='passed', toolchain='pinned', checks=[
+            dict(status='passed', exit_code=0, blocks=['c', 'f'], setup=[],
+                 source_sha256={b: b * 64 for b in 'cf'})])]
+
+    def check(self):
+        return check_coverage(self.data, self.actual, self.build, self.reports)
+
+    def test_complete_evidence_is_accepted(self):
+        self.assertEqual(self.check()['completed_blocks'], 2)
+
+    def test_missing_isolated_target_is_rejected(self):
+        self.reports[0]['checks'][0]['blocks'] = ['c']
+        del self.reports[0]['checks'][0]['source_sha256']['f']
+        with self.assertRaisesRegex(ValueError, 'Isolated source coverage'):
+            self.check()
+
+    def test_stale_isolated_source_is_rejected(self):
+        self.reports[0]['checks'][0]['source_sha256']['c'] = 'old'
+        with self.assertRaisesRegex(ValueError, 'Stale isolated source'):
+            self.check()
+
+    def test_failed_isolated_result_is_rejected(self):
+        self.reports[0]['checks'][0]['exit_code'] = 1
+        with self.assertRaisesRegex(ValueError, 'Unsuccessful isolated case'):
+            self.check()
+
+    def test_missing_diagnostic_is_rejected(self):
+        del self.build['diagnostics']['hole']
+        with self.assertRaisesRegex(ValueError, 'Diagnostic case coverage'):
+            self.check()
+
+    def test_unconfirmed_error_reason_is_rejected(self):
+        self.build['diagnostics']['error']['expected_reason_confirmed'] = False
+        with self.assertRaisesRegex(ValueError, 'Expected error reason'):
+            self.check()
+
+    def test_different_toolchain_is_rejected(self):
+        self.reports[0]['toolchain'] = 'different'
+        with self.assertRaisesRegex(ValueError, 'different toolchain'):
+            self.check()
 
 
 if __name__ == '__main__':

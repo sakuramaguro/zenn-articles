@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { readFile, readdir, mkdir, writeFile, access } from 'node:fs/promises';
+import { readFile, readdir, mkdir, writeFile, access, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import markdownToHtml from 'zenn-markdown-html';
 import { load } from 'cheerio';
+import katex from 'katex';
+import { renderMath } from './check-math.mjs';
 
 // Check the manuscript with the same official renderer version as Zenn CLI.
 // Image meaning and browser interactions still need human inspection.
@@ -14,6 +16,7 @@ const output = path.join(root, 'lean/.generated/book-display');
 const read = p => readFile(p, 'utf8');
 const digest = s => createHash('sha256').update(s).digest('hex');
 await mkdir(output, { recursive: true });
+await rm(path.join(output, 'report.json'), { force: true });
 const config = await read(path.join(book, 'config.yaml'));
 const chapters = [...config.split('\nchapters:\n')[1].matchAll(/^  - (\w+)$/gm)].map(m => m[1]);
 assert.equal(new Set(chapters).size, chapters.length, 'duplicate chapter');
@@ -68,6 +71,13 @@ for (const chapter of chapters) {
   const html = await markdownToHtml(body);
   await writeFile(path.join(output, chapter + '.html'), html);
   const $ = load(html);
+  for (const formula of $('embed-katex').toArray()) {
+    try {
+      renderMath($(formula).text(), $(formula).attr('display-mode') === '1');
+    } catch (error) {
+      check(false, `invalid math: ${$(formula).text().trim()} (${error.message})`);
+    }
+  }
   check($('details').length === details, 'rendered details count differs');
   check($('details > summary').length === details, 'missing summary');
   check($('.msg').length === messages, 'rendered message count differs');
@@ -104,11 +114,12 @@ const report = {
   renderer: JSON.parse(await read(path.join(root, 'node_modules/zenn-markdown-html/package.json'))).version,
   cli: JSON.parse(await read(path.join(root, 'node_modules/zenn-cli/package.json'))).version,
   node: process.version,
+  katex: katex.version,
   config_sha256: digest(config),
-  scope: 'Source structure and official HTML rendering. Browser display, remote image loading and deployed chapter navigation require separate checks.',
+  scope: 'Source structure, official HTML rendering, and every formula including closed details. Browser layout, remote image loading and deployed chapter navigation require separate checks.',
   chapters: results, errors,
 };
 await writeFile(path.join(output, 'report.json'), JSON.stringify(report, null, 2) + '\n');
 const total = key => results.reduce((sum, r) => sum + r[key], 0);
-console.log(JSON.stringify({ status: report.status, chapters: results.length, lean_blocks: total('lean_blocks'), details: total('details'), messages: total('messages'), images: results.reduce((s,r)=>s+r.images.length,0), chapter_links: results.reduce((s,r)=>s+r.chapter_links.length,0), errors }, null, 2));
+console.log(JSON.stringify({ status: report.status, chapters: results.length, lean_blocks: total('lean_blocks'), details: total('details'), messages: total('messages'), math_expressions: total('math_expressions'), images: results.reduce((s,r)=>s+r.images.length,0), chapter_links: results.reduce((s,r)=>s+r.chapter_links.length,0), errors }, null, 2));
 if (errors.length) process.exitCode = 1;

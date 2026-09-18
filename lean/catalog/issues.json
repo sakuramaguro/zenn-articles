@@ -1910,12 +1910,19 @@
     "id": "FINAL-01",
     "priority": "P2",
     "stage": 6,
-    "status": "planned",
+    "status": "resolved",
     "description": "公開用手順から全体を再現し、全完成例・主要定理・意図的エラー・全23ページを検査する。",
     "locations": [],
     "blocks": [],
     "scope": "books/lean4-formalization全体、対応するLeanコード、画像、目次、検証手順",
     "acceptance": "P1・P2の解消記録、全完成例のビルド、主要定理の公理検査、意図したエラーの確認、全ページの表示確認と自動検査が揃う。",
-    "progress": "段階5で全23ページの公式HTML生成とブラウザーの構造、31画像、代表的な解答開閉・数式を確認済み。新規環境からの再現、全箇所・狭い画面・遅延数式の最終確認、公開先での相対章リンク遷移、継続的な自動検査が残る。"
+    "progress": "段階6で独立した作業場所から全390完成・断片のビルド、309宣言の公理、37診断、342組の原稿実行を確認。全23ページの1221数式、176個の解答開閉、360px・390pxの本文を検査し、継続検査を追加。未公開との回答に基づき、公開先の章リンク遷移と実機表示はPUBLICATION_CHECKLIST.mdへ明記。",
+    "resolution": {
+      "stage": "6",
+      "record": "STAGE6.md",
+      "evidence": "catalog/stage6-verification.json",
+      "display_evidence": "catalog/stage6-display.json",
+      "publication_checklist": "PUBLICATION_CHECKLIST.md"
+    }
   }
 ]

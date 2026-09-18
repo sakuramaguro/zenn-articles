@@ -1,0 +1,655 @@
+{
+  "status": "passed",
+  "stage": "4-B",
+  "checked_at": "2026-09-18T02:33:45.400300+00:00",
+  "toolchain": "leanprover/lean4:v4.29.0-rc6",
+  "method": "Separate Lean processes; original imports and explicit setup blocks; warningAsError=true; autoImplicit=false; all named declarations audited",
+  "related_blocks": [
+    "ch17_010"
+  ],
+  "checks": [
+    {
+      "blocks": [
+        "ch15_001"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_001": "bd9ffa27f834f1941d9682fd64730b9162353204ddf8ae80bef2b89c1f8f7582"
+      },
+      "audited_declarations": {
+        "simple_const_unit_integral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_002"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_002": "301973dc37db2d34c2c8c82d42da5580ae9c8d44877e708841170d3297263f38"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch15_003"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_003": "00cb4fd85737d05d345b97df7176103170b876bde625e4d51309c5f01a2b43d2"
+      },
+      "audited_declarations": {
+        "myConst": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "myConst_at_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_004"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_004": "14ffc566a6206715fa64b36d98a967326a3ec79b63715c1f3211da20bf2526df"
+      },
+      "audited_declarations": {
+        "simple_lintegral_definition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_005"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_005": "caf3d8802844c5f3cccfa063a00e07c8dde6d3456009e0195eac7c772e2296cc"
+      },
+      "audited_declarations": {
+        "simple_const_unit_integral_steps": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_006"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_006": "abd89a7523362ad367c1375643b4b4a84dacd744c8333ff2f2d017571516fc54"
+      },
+      "audited_declarations": {
+        "eapprox_sup_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "lintegral_eapprox_formula": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_007"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_007": "f172f95626602098be2243e8552192f9cf023a118788f881e64c882658442ab0"
+      },
+      "audited_declarations": {
+        "const_three_finite_range": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_008"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_008": "ed1683e2ba469116c4cc0831d5841ba50d2e9e518f2f0c0f7bf851b10cfdf399"
+      },
+      "audited_declarations": {
+        "const_range_nonempty": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "const_range_empty": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_009"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_009": "ea83e6c958c79d070224cb8ec2a1ef09460030d52c7505b49bd7a1bb4016e584"
+      },
+      "audited_declarations": {
+        "eapprox_id_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "eapprox_id_one_le_two": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "eapprox_id_finite": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_010"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_010": "161a21e64edbc4a8fd912ad547fd8834133f84883cfcffcce7c1888361a5bb57"
+      },
+      "audited_declarations": {
+        "eapprox_id_sup": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_011"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_011": "1812e89bee963be7376a454c93074c6e43b15c30c143b0cca0e7d41a8f7fc0df"
+      },
+      "audited_declarations": {
+        "simple_indicator_unit_integral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch15_012"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch15_012": "4d612008e6abe0a7a6ea72a3c5dc9d38473ec8a19533db26c652636ab342eb09"
+      },
+      "audited_declarations": {
+        "indicator_unit_lintegral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_001"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_001": "441ab4ac521dc6ba091c7e53a903890c7df903eab51fcb0b4a74bd27fb03c5dd"
+      },
+      "audited_declarations": {
+        "norm_integral_bound_intro": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_002"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_002": "c0c39e2245792017087b02d1989d06ce55bb63c7c4c042ecd86e6bb86b89250d"
+      },
+      "audited_declarations": {
+        "lintegral_notation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "lintegral_definition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "constant_lintegral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "indicator_lintegral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_003"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_003": "4e2b3c29e5a0b2314b9d83ab60899605abb0fc2c5bbcfcb540b6c14521a1414d"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch16_004"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_004": "498552ef25c36317dab3e9da3668684ca4481a63fd22bb9b295c1b151ad623fa"
+      },
+      "audited_declarations": {
+        "one_not_integrable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "one_integral_undef": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "one_lintegral_infinite": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_005"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_005": "bd89483cc5ba54e3d81d870945b51d50768f00e4a1d921019268c2f1b0a42039"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch16_006"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_006": "425d9949875ae909e216409d7977f918ccedc3a6aa47f20ff7240c73ec055753"
+      },
+      "audited_declarations": {
+        "constant_integrable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sine_integrable_on_interval": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_007"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_007": "869ff994e17403f9efa83e5636fc9aa1fff29f5b8484c41eeff62bdd38158fc5"
+      },
+      "audited_declarations": {
+        "dirichlet": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "rationals_volume_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirichlet_ae_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirichlet_integrable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirichlet_integral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_008"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_008": "c990fc50eef59f289b73966286093b776993279a404aadcd6044eaf27bbdbfca"
+      },
+      "audited_declarations": {
+        "nonnegative_integral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_009"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_009": "530e6e248febff18417710469fe00f7601b095cadf78bed6db39eff316f4b0b6"
+      },
+      "audited_declarations": {
+        "integral_add_demo": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_010"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_010": "1c16db617066dbb2e6ae588104940423fffa7909ca038e6830853c4279e137de"
+      },
+      "audited_declarations": {
+        "integral_smul_demo": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_011"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_011": "bde09783850e3438de2d42d5988f72e8af7ab939c81cdfa8cf34c9d4d992a453"
+      },
+      "audited_declarations": {
+        "norm_integral_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_012"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_012": "a5367add52fd1c8c38348608bcf7a2171911f17dda28296d7c6cf41d9ea166db"
+      },
+      "audited_declarations": {
+        "const_three_lintegral_top": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_013"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_013": "ac85c3d97d8a128bd60226b7791f82b5698be867ca699f880bce5a5938f5c713"
+      },
+      "audited_declarations": {
+        "const_three_lintegral_top_alt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_014"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_014": "2fad8152cb5e642bdab23f2bf543ea6dadb1a0d58d86cf312cad5286757bef73"
+      },
+      "audited_declarations": {
+        "exp_neg_integrable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_015"
+      ],
+      "setup": [
+        "ch16_014"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_014": "2fad8152cb5e642bdab23f2bf543ea6dadb1a0d58d86cf312cad5286757bef73",
+        "ch16_015": "a8f85fb14114fb72e68cd3f5befc4c5dbcdecb1de9a36977dbd94ab86410fc39"
+      },
+      "audited_declarations": {
+        "exp_neg_integrable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "exp_neg_integrable_parts": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_016"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_016": "215741ee52df0c8ef894e895a59ce905c4289d63e04b6e021b27b5d9f176f88e"
+      },
+      "audited_declarations": {
+        "integral_of_not_integrable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch16_017"
+      ],
+      "setup": [
+        "ch16_007"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch16_007": "869ff994e17403f9efa83e5636fc9aa1fff29f5b8484c41eeff62bdd38158fc5",
+        "ch16_017": "f9b11366ca5f4ec7813effdd818d4ea4dbd416772bf9a7e56a496590df3d7984"
+      },
+      "audited_declarations": {
+        "dirichlet": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "rationals_volume_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirichlet_ae_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirichlet_integrable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirichlet_integral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirichlet_on_unit_interval": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_010"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_010": "0a6ac657622e9f8e0835aabb1e71f744a703a971756c3932b4380dbb24b6416b"
+      },
+      "audited_declarations": {
+        "movingIndicator": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "movingIndicator_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "movingIndicator_integral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ]
+}

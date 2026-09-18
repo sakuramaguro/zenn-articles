@@ -6,7 +6,7 @@
   "scripts": {
     "preview": "zenn preview",
     "check:book": "node scripts/check-book.mjs",
-    "test": "npm run check:book"
+    "test": "node --test scripts/check-math.test.mjs && npm run check:book"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
   "type": "commonjs",
   "devDependencies": {
     "cheerio": "1.2.0",
+    "katex": "0.18.7",
     "zenn-cli": "0.5.4",
     "zenn-markdown-html": "0.5.4"
   },

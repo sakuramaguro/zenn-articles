@@ -1,0 +1,877 @@
+{
+  "status": "passed",
+  "stage": "4-A",
+  "checked_at": "2026-09-18T02:32:37.256333+00:00",
+  "toolchain": "leanprover/lean4:v4.29.0-rc6",
+  "method": "Separate Lean processes for each example or explicit sequence; original imports; warningAsError=true; autoImplicit=false; named declarations audited",
+  "checks": [
+    {
+      "blocks": [
+        "ch12_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_001": "954745c108a50066717bedc13eb5ed5882fb2150489a784e9959ed53a46bc0e4"
+      },
+      "audited_declarations": {
+        "half_map_recap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_002"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_002": "85b5eae2800a7a7c2a3697015d5e9ff134c480d7c2a8d356d01058a8291fca23"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch12_003"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_003": "acc2b3087ab096be7a2990b31d4458a7656af9a61cf21789d4428e0e3197694e"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch12_004"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_004": "12709790f3d22f22ed7066eb5eb746f9c4f32a2477732457f355d1cf6a5781fa"
+      },
+      "audited_declarations": {
+        "univ_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "compl_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "countable_union_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "open_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_005"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_005": "d5f2cd74506147442197b7ae2b13f70cacc22fbd831eab4abda9430502860b89"
+      },
+      "audited_declarations": {
+        "all_sets_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "zero_measure_on_powerset": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_006"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_006": "bf4918499db320049e574dcd67e27ccaad2720f500d529439414d4f5a82d8226"
+      },
+      "audited_declarations": {
+        "empty_measurable": [],
+        "inter_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "union_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_007"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_007": "4c58ac21e53986d1ef94637ef810dcbfe72c674d5992b53b8aba7de8eb37836a"
+      },
+      "audited_declarations": {
+        "borel_definition_demo": []
+      }
+    },
+    {
+      "blocks": [
+        "ch12_008"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_008": "2fb9ce264c611ae99cd61675b1e58f85a6ba8f740d638617e34e5d78706ac8f0"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch12_009"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_009": "79b04b8970292f2d113faf7738c8d8375b144f5f9877c0e22ecb10e49f49f31a"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch12_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_010": "0a0b04f4203a748ff0cf2d41e840624693d88a86a0ac5864227c170da2d1b149"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch12_011"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_011": "5c412869cf3ca7e2ac4c9124edc9b8f10d9d1c371767ba221e2765aae6e5605d"
+      },
+      "audited_declarations": {
+        "open_interval_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_012": "d7bb6ce2d66c940018b554c7f373fcc1df2eec63690a34e70a342792a14ccdfd"
+      },
+      "audited_declarations": {
+        "closed_interval_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_open_interval_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_014"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_014": "1ceed72ca5d4dca47d240cfa222ea50b6a40285914f07fc5adeef24299d23f95"
+      },
+      "audited_declarations": {
+        "countable_inter_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_015"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_015": "4d1d4d9a8170536bd8215874dfa8054a7d345bfa6fd8131f86594674e7724574"
+      },
+      "audited_declarations": {
+        "countable_inter_measurable_alt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_016"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_016": "6eee57ca2a1efa3f59028ed73467ec48cfe6451dbb0b800a0e50077b38159f71"
+      },
+      "audited_declarations": {
+        "rationals_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_017"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_017": "e8210039ca2176ccbbc8a62382f6e4d30b18ca5b47e1328e9b0a848d4e2390f2"
+      },
+      "audited_declarations": {
+        "rationals_measurable_alt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch12_018"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_018": "2df897fc6824832ffd59cd85db427277cc3d5b5c80de02e83b01b7fc49c2593b"
+      },
+      "audited_declarations": {
+        "empty_measurable_from_field": []
+      }
+    },
+    {
+      "blocks": [
+        "ch12_019"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch12_019": "10adb71b290982ae818598d101bcf7872bca9f8c8ae9f1b91bbb6d8433984fac"
+      },
+      "audited_declarations": {
+        "empty_measurable_from_univ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_001": "95de179e7a4420ee08cadf0cdcf3c1090d1fdca8c49cd969d838126d5e645f52"
+      },
+      "audited_declarations": {
+        "volume_unit_interval": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirac_is_probability": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_002"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_002": "2f6a0a0aeb08703bda7e0298b613966d49d4429f2a71307f53c91a8f20d4d12f"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch13_003"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_003": "187978653ada7905374bc80c409a77524065536d15d296ef842dd0489f8ce542"
+      },
+      "audited_declarations": {
+        "countable_additivity_demo": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_004"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_004": "d3c61aa750b86238e66cc7b5713e98cbd36dfd3cf300876a9feca27b34677c92"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch13_005"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_005": "f0c850180a13ca44fd03a1981e9b0efc49bbc4d3001e627063f666c2e3cd854c"
+      },
+      "audited_declarations": {
+        "volume_zero_three": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_006"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_006": "6a6a3945325f5f50443d7a07a54b95e95f002fc135b2ad9bddb168b8e0efe99e"
+      },
+      "audited_declarations": {
+        "volume_open_unit_interval": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "volume_singleton_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_007"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_007": "46b7ddc127dcc8be13bbb924c4e23d672c0434816ef60f6ca1821c746ee67142"
+      },
+      "audited_declarations": {
+        "count_singleton_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "count_empty_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_008"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_008": "dd6354c5c924b841939f7cd8701801e4159a4804aea8178380ea30b65db1ed7b"
+      },
+      "audited_declarations": {
+        "dirac_at_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "dirac_away_from_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_009"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_009": "8bc2187effdd3bb846647639d8e788a91fb540246aadf62f9229fbdea85806b5"
+      },
+      "audited_declarations": {
+        "dirac_probability_demo": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "probability_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_010": "4d86eb7ead49a9aea027557b890cc82b3e32e3835508da71edf2cbd5256f26e7"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch13_011"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_011": "1488a3feb3697e6bdbef97280baae366234a62ad3964c9dfe2993ee98221d03f"
+      },
+      "audited_declarations": {
+        "volume_one_four": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_012": "1c1fdf2fc41d7c63e590889a2d157a67df64edccb41fe8f05dbea70b63a3a7e8"
+      },
+      "audited_declarations": {
+        "volume_one_four_alt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_014"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_014": "5ab99b2efdb8011bc75814c78cb680dc9da0eaa287d096a064af0de3a554503d"
+      },
+      "audited_declarations": {
+        "interval_measure_mono": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_015"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_015": "3ad64028c79987ac635f6ae08acd6d93913d0b383cd31ec71292f93e819e9f90"
+      },
+      "audited_declarations": {
+        "interval_measure_mono_alt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_016"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_016": "84efd192b0659d2843458bca04a365de7d043846c443ea4ff97b7df471750542"
+      },
+      "audited_declarations": {
+        "restricted_volume_probability": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch13_017"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch13_017": "f9200aa01e1ecf9928b31fcc8322dd6703783ac972f0d74b4dacae497e3f2482"
+      },
+      "audited_declarations": {
+        "restricted_volume_probability_alt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_001": "747a7c9c69ca9cea95d28ebe3394d946c24859dbe0a35376377ddaf46fc84ceb"
+      },
+      "audited_declarations": {
+        "ae_restrict_demo": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_002"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_002": "1789f6be920d44b5dd7d69106f81e4308a5e0a64673193a599b7ff73faa02922"
+      },
+      "audited_declarations": {
+        "measurable_iff_preimages": []
+      }
+    },
+    {
+      "blocks": [
+        "ch14_003"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_003": "88e3d7413b456d18a01b360d39048f2ca30c5e361b1e04c75538af9b49f22952"
+      },
+      "audited_declarations": {
+        "continuous_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "constant_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "identity_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "compose_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "add_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_004"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_004": "2afd1307554609cb48a9acbbb665fb8d17a69950d9ef19b6b08e651809d7149d"
+      },
+      "audited_declarations": {
+        "continuous_measurable_tactic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_005"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_005": "45a5c20f7e3c209694d6249e89ad72a872704b3e484185591e78d48b7a40d801"
+      },
+      "audited_declarations": {
+        "dirichlet_ae_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_006"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_006": "ee026bcab786bb42360a7b962fef066422aef05d132c432c70748629b651bbff"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch14_007"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_007": "9b41039e4838e34cc21544ebfc34a210dded4dc2cb1906bbd281e256fc581f54"
+      },
+      "audited_declarations": {
+        "ae_restrict_tactic": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_008"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_008": "9080ac86b9aa95fd2adcf68cf7ab2037e455f652a22ad023ead19e4d850f9590"
+      },
+      "audited_declarations": {
+        "measurable_is_aemeasurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "continuous_is_aemeasurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_009"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_009": "02b5238287fed518a13848911a5395dec7e114b1a9c3f7b58c068126723635c8"
+      },
+      "audited_declarations": {
+        "square_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_010": "855640ed501fa1def8182e1ae5cab4d3aa69cb1fcc86c7022f80d1184f4c212f"
+      },
+      "audited_declarations": {
+        "square_measurable_auto": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_011"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_011": "e90f9062489172b2b4ffd208291f74ba3067c281dfd186fb36a6415d7aa938b7"
+      },
+      "audited_declarations": {
+        "polynomial_measurable_auto": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_012": "693d131af0b8cd0824f057ca2634cdd97815214723529421630f03b072355528"
+      },
+      "audited_declarations": {
+        "polynomial_measurable_manual": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_013"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_013": "e4295697ebae9de5a063106b9ba11768c4a25b91577eabf48acd9885cc363d72"
+      },
+      "audited_declarations": {
+        "ae_change_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_014"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_014": "113aaa1bfa91d11a1ec43c35ce518fb482c69c5c334080fc03a58821cc3569d4"
+      },
+      "audited_declarations": {
+        "ae_change_measurable_from_def": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch14_015"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch14_015": "ca8cea74356c6aa4d2829bc32394458d4fa5b49835708e60b4e27b06a82bc9f9"
+      },
+      "audited_declarations": {
+        "pointChange": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "pointChange_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "pointChange_ae_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "pointChange_integral_volume": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "pointChange_integral_dirac": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ]
+}

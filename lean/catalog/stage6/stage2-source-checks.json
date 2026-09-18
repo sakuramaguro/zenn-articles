@@ -1,0 +1,1106 @@
+{
+  "status": "passed",
+  "stage": "2",
+  "checked_at": "2026-09-18T02:25:26.933490+00:00",
+  "toolchain": "leanprover/lean4:v4.29.0-rc6",
+  "method": "Separate Lean processes for each example or explicit sequence; original imports; warningAsError=true; autoImplicit=false; named declarations audited",
+  "checks": [
+    {
+      "blocks": [
+        "ch01_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_001": "87349f81d13e7ba75006d81667a6424f631a327de290e55426d6a695f9c8a851"
+      },
+      "audited_declarations": {
+        "first_theorem": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch01_002"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_002": "a86eabe83dbaef718b03f8ac3e8a3b140fcb8f55e4afefb0a470154b10f4da2b"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch01_003"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_003": "6c8a9a84ccfbc2b5b73c3d2dd2d986826dae63bd60763824747190b9d351cb1c"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch01_004"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_004": "e5f185f597292ea7048982b504c03430add83e011b1e02931c5983f9b09d517d"
+      },
+      "audited_declarations": {
+        "one_plus_one": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch01_005"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_005": "93d001d7da6845af7b06e3b599b1284a4ee5d40f0a7f748d18ba736d24abebb7"
+      },
+      "audited_declarations": {
+        "first_theorem_recap": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch01_007"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_007": "c9c9c664412e2a98a6db19189ec17492dd50f51cdb0e868b55db1c14179b4858"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch01_008"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_008": "bdcb1321bc60d8d8c94c0db8dd8fb5b6ab8764dacf372154c2ea95c1f20f4d17"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch01_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_010": "ecfb2ae12da18e2b818d867923f75b553658546124262876a37921c590c2a5ed"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch01_011"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_011": "4b5b2a69297a3ca7a11eedaffcee05ca2fd95629420cc8609046c3986a821fd9"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch01_013"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_013": "9417dea59509d53c7570884d197baba5d5db572e5f80799446d7080de2b04836"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch01_014"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch01_014": "045afcf435e95b625fda0bb7561e491f97f12baeb1a76c2a7f9a21708db951af"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_001": "510e9757f1c8bdfc2c9eb70173a82bd0e847f656c6c0334c46360fc87bde5eb4"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_002"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_002": "14fb6bd8e522188c945d2d246751d7f115c01c70bf598e47a04797454b378ac6"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_003"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_003": "86e793ed4b9cce688ec6cdcc621dc198a2cc09cf4d7f3956c59801fdb5abe734"
+      },
+      "audited_declarations": {
+        "proof_term_example": [],
+        "natAsInt": [],
+        "natAsInt_eq": []
+      }
+    },
+    {
+      "blocks": [
+        "ch02_004"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_004": "99f1e8654553dc7eee74eaf09ad28dc519393cb6a68bf8fc0afd77073837dd0d"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_005"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_005": "debc981056e5b85b0d0b52072fb5f46cc6857340a926072bf42326bce8090937"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_006"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_006": "ee73a64d880a6f9f3204715872b9c3d6eec0a8a6e96fa736bc95f5429199dc10"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_007"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_007": "a23446520ebe5f4cea8a5903b1e9fb140c6d70ed7eb6c3c8c384f1ba77c82869"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_008"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_008": "457da399e88377abbd39f734461e6da24556eece115bc2bfc6c27203f1806f05"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_009"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_009": "30743dccd27064494fff96a999a482f34fb415040806a9b9b1fc4f656f99c9f7"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_010": "38010e0e5018c84dd1f7b051ba19d801971f58ada7864bb20751697cb142ca4b"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_011"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_011": "2d9070117aa0535625370f89856d58f18d3e9b86d2939620ad2499556f650938"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_012": "a4c7a1eeee9af68eb0be5eca2203a597c79a86434b6b1a633cdf03591da89758"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_013"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_013": "f0ef22992493d629c3038435d82a3d07a7399f9560b0a966d1b68d7ef7c944a0"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_015"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_015": "5fcfb87ed0322743cadfbbcbc76efdad05d6d96e1813fe7842f7cf964df0f056"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_016"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_016": "c1f83285864bbcb54ec0f1746453c3022d7c997d4918bbcb151257b7ea050210"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_018"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_018": "0076288c27670818052a1473e5f8f4998b73cbf00605e3cac702af36cc3e03b5"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch02_019"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch02_019": "81484e6eaf5e6fadfa211d015f1f7350cf1cc7807d2e73e6f3f28bd879b0bbc9"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch03_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_001": "72af5a52ef00c6117b59d58ff31fc8e25198018e9edd40f4306eb6e634687782"
+      },
+      "audited_declarations": {
+        "skeleton": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch03_003"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_003": "4567e03730cfe878b3f4c6ccfff9c10858086b6f9468d68aa83b060503bc0053"
+      },
+      "audited_declarations": {
+        "add_comm_fixed": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch03_005"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_005": "aa43e75b59ca9b2c491a1c30eadfdb4fe6fd0f4208b17e125902823d25a60fb6"
+      },
+      "audited_declarations": {
+        "one_add_one_ne_three": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch03_007"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_007": "315a401df6d8b13ee26c3609a292f8b55acd72eb70d24ab71013ce79869f497c"
+      },
+      "audited_declarations": {
+        "add_five_fixed": []
+      }
+    },
+    {
+      "blocks": [
+        "ch03_009"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_009": "be0c95056975eb326492554c7dcd546c0f7dceef24e4af0acba78329c0acab45"
+      },
+      "audited_declarations": {
+        "test": []
+      }
+    },
+    {
+      "blocks": [
+        "ch03_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_010": "d7d139be74194144094db644966a5876503b6fec4b7af781a7b094c7092cc72a"
+      },
+      "audited_declarations": {
+        "add_comm_explicit": []
+      }
+    },
+    {
+      "blocks": [
+        "ch03_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_012": "1f3ca99d3cb598c45a40178012545ee2cac45a4fa5d84f6fab0b1338b2aad867"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch03_015"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_015": "1174019e386672eaa0b2f685a1443dfaa1c3a5f9198623caa8b7cbdd7890a3cc"
+      },
+      "audited_declarations": {
+        "hard_proof": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch03_017"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_017": "938191eedbff7104ed571aa9918e5ada4e109e56fa3537645646568603a021cb"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch03_018"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_018": "ac6dea847923b29a4181009a679989822960c927365e8e5a23e43bb2b09f3c63"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch03_020"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_020": "360b8dccd06f9d6ec214481db92621ed43aec427d9dacdd244e7d61f3135577c"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch03_021"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_021": "6b44876e51841f55cd74ac8ec2f97124e40d11dc757c5984b1756e0d58ab6b48"
+      },
+      "audited_declarations": {
+        "commMonoid_mul_comm": []
+      }
+    },
+    {
+      "blocks": [
+        "ch03_023"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_023": "d4c14e30c482bc4d93708282e96a4e2b795f7297cacc3299d08c4f1de254d732"
+      },
+      "audited_declarations": {
+        "even_square_plus_self": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch03_024"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch03_024": "d612c9be7cc17e67c0519eb7d582c0533f69e81d739d33bc3765dcf3e0ba863d"
+      },
+      "audited_declarations": {
+        "even_square_plus_self_calc": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch04_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_001": "b4b6bc4f1e21539416448df6d3319f20522f81c3357938d964ea867bdadd6c1b"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_002"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_002": "973b4aecb1c749df720a278742a68c2db261eeb21cbcc95a22211a9793c7706a"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_003"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_003": "47caadbc8afccca367acce99be686b5cfcb4da790e6ac9ee7daaa7882a00b2e8"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_004"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_004": "7878eb4f050328a023e0103eacc1d6c69df5293add83ff4443def4dd6db5a66f"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_005"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_005": "4ce9066f58e74a70edc38555428e48b44724a0c00ba3d40d58425d63bdb8a1ad"
+      },
+      "audited_declarations": {
+        "test": []
+      }
+    },
+    {
+      "blocks": [
+        "ch04_006"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_006": "d7d139be74194144094db644966a5876503b6fec4b7af781a7b094c7092cc72a"
+      },
+      "audited_declarations": {
+        "add_comm_explicit": []
+      }
+    },
+    {
+      "blocks": [
+        "ch04_007"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_007": "a5dc6c2a23524f3dcdb4335cba2029b0ec6a1746340b9d1bc29772ece40c51df"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_008"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_008": "2942895b8bc18a225928cc1e4aeab1801b9dc19cd8a2798ae756d50e1e175785"
+      },
+      "audited_declarations": {
+        "trans_explicit": []
+      }
+    },
+    {
+      "blocks": [
+        "ch04_009"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_009": "cdeebfb14383a5822047307da66a5ef04381bc204428557319c95cc4757604e2"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_010": "0033c84bc1d699757a6882db796cb6e25cfe3b3a2731d7ed349748900377a3fa"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_011"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_011": "018e19d257dca019378834599f5a88d646f5ac420adf4667d5edbfc0e04f366b"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_012": "769ee366c225e590c3cc44585f8aac6547fe78fab2d0fe4f96648501b945eeb1"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_013"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_013": "29ccad9b0e51a3eab1bbd748329c72bca32a9bcf9cdcb8747a09c71b26f8258a"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_014"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_014": "141f1ac3cadef9e6dc1bf676cf5f359387d62c3ea31625a32e0b6bf83ab8a12d"
+      },
+      "audited_declarations": {
+        "import_example": []
+      }
+    },
+    {
+      "blocks": [
+        "ch04_015"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_015": "2674e8569ac6f4c4bbc222ec49139634ce8b96f0fcbc4581384d4b43d0c1b254"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_016"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_016": "bd707c7bd9064feb22c36cb50d1af350e701a23f2f24d7596017ad4793feee3b"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_017"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_017": "a7405191dd2ea2f291b70fa013c30e3f75a54460b5c87dc0c699c949476ec0d8"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_019"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_019": "aeae702fcccbcb0d086f86865b62fd336dd92f5b54e74b05c738c37c079d8c1f"
+      },
+      "audited_declarations": {
+        "succ_bound": []
+      }
+    },
+    {
+      "blocks": [
+        "ch04_020"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_020": "ec281cf8456b1e567094abc7052ee39255064c2c65fe4e4aff82dd53aaab45a4"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_022"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_022": "a64e56a9860aa2e11527a168ea260b20e6f8354f15d07470c54b10644346db22"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch04_023"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch04_023": "3dcaafab40884007dc8dc59027187dde5e6b5189259d3d06b709d776977bf00c"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch05_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_001": "3cd0cdded3d8bcf0909994bfab8249d410185986c41055d412f8de081fd2c656"
+      },
+      "audited_declarations": {
+        "dimension_theorem_preview": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_002"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_002": "44b42f101f5da32d36601abd39040aaef140524092baba5469e34547c6053b3f"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch05_003"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_003": "e07b1980042843af677764f913a90bcd06e9ffb6328aa288e1fa5408b268ee6b"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch05_005"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_005": "3faab749c9b674575c5e9b1748da3793d6223ebcefad6a802eb3c9b245ca73f4"
+      },
+      "audited_declarations": {
+        "have_example": []
+      }
+    },
+    {
+      "blocks": [
+        "ch05_011"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_011": "6a556eafe65523ab6f1cbdc8ba9708f30c5e484743f2f7d2a0d2ebca1c74710d"
+      },
+      "audited_declarations": {
+        "kernel_finite_search": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_012": "e41a53f4e7746269b91a78af3b0cbfe5a703997f99ee381f36a7219d6974c0e5"
+      },
+      "audited_declarations": {
+        "kernel_finite": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_013"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_013": "2582b3fbb33ccc06849719cc32f0e4e4c8c40348ce268ec2844533634180b8ea"
+      },
+      "audited_declarations": {
+        "range_finite_search": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_014"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_014": "e17d8ff274bb9f6b4f5e115cb85fb8de3246203cb4e1e4082573eecfe118cf89"
+      },
+      "audited_declarations": {
+        "range_finite": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_015"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_015": "a78d9ee671ac7de29669155e7e370a8978a28c31fdde0fc9f69a65214cff4dd2"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch05_016"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_016": "d8c9b485da29cc2e534a7290ac85079057731492a49f5f0bd915129fe9883cff"
+      },
+      "audited_declarations": {
+        "kernel_finite_inferred": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_017"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_017": "3914bbf16941fe5bd8dc314339d425ed181e7fc423eba0a7c1483b29898c7b4c"
+      },
+      "audited_declarations": {
+        "range_finite_inferred": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_018"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_018": "6ebf07a9bd3a55c73b6313819cb55adcdb36b7c02636ff87267e7cba737bf1d0"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch05_024"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_024": "e8ac89d844e7d60f07fb7d540a52e5f8a45194dd6044ac780ed90cca72742d73"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch05_025"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_025": "2bab1120e253a1600ddf5bd5c1e98784f7b88852ee02eee66ac638d03731bfcf"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch05_027"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_027": "7a748d51294aceeb5fe1d95663da87d7267621a223f78a4887c9453dec53e48b"
+      },
+      "audited_declarations": {
+        "zero_kernel_finrank": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_028"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_028": "b3e47ba41d2756256620193f5419e80187e29d5fae454273d74f1d884fd12a8c"
+      },
+      "audited_declarations": {
+        "zero_kernel_finrank_rw": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_030"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_030": "028d4f2d352d925f6163a27f8fae4c6d2f2e6345a047b4e07ef0bd0da949ec4c"
+      },
+      "audited_declarations": {
+        "kernel_finite_exercise_answer": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_031"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_031": "9fdefe8630ff3c6f5ae2e0e01b1385bec2014bcd755747d1c6504a8ec3523ccd"
+      },
+      "audited_declarations": {
+        "kernel_finite_exercise_explicit": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "intro_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "intro_001": "02143511da6c656a0c4254e449084257d72ac93f69882f0c53a56db749edb3d9"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch05_007",
+        "ch05_008",
+        "ch05_009",
+        "ch05_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_007": "7d256b3c6c13d0a373683d977a4c43bfcf2b99aba8ad6847a73f4f0e3ff81573",
+        "ch05_008": "cde971d7dcdd4f3ef1666a814439eb7d44484d17abdc840d71681fcff1cce962",
+        "ch05_009": "253c5d5a368d52786d902d7921f08af00c1ddeea0a008493f69afe858dedcad2",
+        "ch05_010": "3be2d4ae7a10253f629231cea07a6e3278713b8b8d580528cce785e111582a69"
+      },
+      "audited_declarations": {
+        "range_from_assumptions": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_019",
+        "ch05_020"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_019": "33a5edce219652fe1780fc0412202659d2635147aa53cd88b9158360c8f8fbce",
+        "ch05_020": "9c1d4ee5310586334c5996511afa7761097ff00a8c7512bd58eafa4f14875511"
+      },
+      "audited_declarations": {
+        "dimension_in_steps": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch05_021",
+        "ch05_022"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch05_021": "9111e56b2832495c190663e5bcdef5b85c1488f2db5e037a06bdb8ed51c69fd6",
+        "ch05_022": "30034ba01fdf428f5b8d72e2b4e1809ca465e0e8353a3680b4da9707bb9c6cc3"
+      },
+      "audited_declarations": {
+        "dimension_theorem": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ]
+}

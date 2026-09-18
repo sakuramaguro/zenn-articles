@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-18T02:34:47.224543+00:00",
+  "source_files": {
+    "books/lean4-formalization/ch01.md": "4d5d44b440e1d8d9554dd0ea915bcf9699697b98bccc3618878434d2dab6f1e0",
+    "books/lean4-formalization/ch02.md": "d9256ff54d274e0515a4d44b234d7e06fb49f201f2afdfcf0019e19efd6e95bb",
+    "books/lean4-formalization/ch03.md": "f96e7396d13338a19b0092b20e88def67c6207a11c64a996a843f108ffcd8c8e",
+    "books/lean4-formalization/ch04.md": "445c04462c6a38e3e40b5c0deb3f830239a3830998123c88c4f648a47cbe2537",
+    "books/lean4-formalization/ch05.md": "17c270dfa58cf08f2fbe792abc23124df71314323fe59e65cf849b946aeea3cf",
+    "books/lean4-formalization/ch06.md": "1aa903978b2c97cfed2a2ae571b93fa681805d19f8527cdaf79e72f7c14fbde4",
+    "books/lean4-formalization/ch07.md": "e69b70730568dff542e5ef140407af2b3544a3bad7dc9a9ebbf78e7f3506c549",
+    "books/lean4-formalization/ch08.md": "5a568dbcb15754c42a3c08a558f459e879993381fb718e8417afbb8d7f8cc6c8",
+    "books/lean4-formalization/ch09.md": "df671c29574c0acb6ffdd259c3b9f4eecccade8ae6acff961572498e5862e16d",
+    "books/lean4-formalization/ch10.md": "d680bdec768676698db8ed0827aa1d3ed8feac27f9f0221b0574aefba160da65",
+    "books/lean4-formalization/ch11.md": "e386f5407059bc3e91f250d2a7bca77aad303ddd49a6f4c6cc9612dc2045e77c",
+    "books/lean4-formalization/ch12.md": "8a0f4b5a77509f9a82691dfef57556a8745967b18c1b4c58ad659a0767f2d8d1",
+    "books/lean4-formalization/ch13.md": "b38965d490ad25cb8faf6597c39537104e9505c935cdced8f60a105312f09914",
+    "books/lean4-formalization/ch14.md": "e11cb3ae757dccda7a173bd6b97ed136d7b89c4a73ac75c8da97993b0ed9bc18",
+    "books/lean4-formalization/ch15.md": "7bf3f9dc5490b62acdf4c39b6972fedc7e0cd9156a5385b8ee31f9b30e72a732",
+    "books/lean4-formalization/ch16.md": "17d9733179e3fcf648d1310a55a9aee8748b2a6835415fa5f68105ad5ab19cc4",
+    "books/lean4-formalization/ch17.md": "d029f99c931cb97b927c8064ff5347a291f392acc9c8cb4cd80ee5789146f7a5",
+    "books/lean4-formalization/ch18.md": "7c3b07223dde356b80ac76e4dfd6da8bb76924f3c468bbf9a005e720a26595d4",
+    "books/lean4-formalization/intro.md": "633824adc8cabca5888982575ee438ddbbc6404692d436d3b2df6214e89710e4",
+    "books/lean4-formalization/part1.md": "15f83784ef3e486ac9ac82c993dd242633de70a2ab9c6dc98249eb9c192cb323",
+    "books/lean4-formalization/part2.md": "dfa9e14d303ad6bf44ec03242ea75e6f4541436e5ba442fdde15cb521234ae34",
+    "books/lean4-formalization/part3.md": "4a10d5fabac9a9acd306ddfca32e78fac5867a284fd3ce20ca1ac2bc92f1824b",
+    "books/lean4-formalization/part4.md": "3e14877c6ef32ab1c0fa92fb9ad5d9699d8e09dc20755125bfeb17b266406301"
+  },
+  "toolchain": "leanprover/lean4:v4.29.0-rc6",
+  "dependencies": {
+    "mathlib": "5c8398df528176d9c87ccd9226ba8f7c8852d59c",
+    "plausible": "e84e3e16aea6b72cc5d311ca1bb25caad417e162",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "importGraph": "f207d9fcf0cef00ba79962a33ef156061914d9c7",
+    "proofwidgets": "2e58165a9dcdca9837b666528f974299ee1a51cc",
+    "aesop": "c3361708f266893de5d1769192b60d4b1831f2bb",
+    "Qq": "221e8088e3a066b8676dc471ff10638cf1c10835",
+    "batteries": "bd58e3506632241b59e406902d5e42b73cdeccce",
+    "Cli": "3de531c1135f5e3a01f3ac04830996fda476b28e"
+  },
+  "catalog_blocks": 425,
+  "audited_declarations": 309,
+  "diagnostic_cases": 37,
+  "reports": [
+    "stage6/verification.json",
+    "stage6/stage2-source-checks.json",
+    "stage6/stage3a-source-checks.json",
+    "stage6/stage3b-source-checks.json",
+    "stage6/stage3c-source-checks.json",
+    "stage6/stage4a-source-checks.json",
+    "stage6/stage4b-source-checks.json",
+    "stage6/stage4c-source-checks.json"
+  ],
+  "coverage": {
+    "completed_blocks": 390,
+    "diagnostic_blocks": 35,
+    "isolated_cases": 342,
+    "repeated_targets": {
+      "ch17_010": 2
+    }
+  },
+  "evidence_sha256": {
+    "stage6/verification.json": "7b5254248152d1dba00f2bb6a1d9e0ef6028b352950994776642195dca249fa9",
+    "stage6/stage2-source-checks.json": "c0759bc3f51319e07e4a8f4e89e1b4044aa1b93b4c4d9083c6211041cee706c9",
+    "stage6/stage3a-source-checks.json": "40697b896e205f8e2eac80304f038c24b4f82b166e51ff3e2856493f46cb3b14",
+    "stage6/stage3b-source-checks.json": "1e3b2d2f6957e428a9d94ccd6726b9bac2e909a015aeb9c4a6c3844518a4f27b",
+    "stage6/stage3c-source-checks.json": "7c2aed431b9b38857aad76def3dd56e919fc2a1154427814828246d7cad1bfaa",
+    "stage6/stage4a-source-checks.json": "bdd876d4afeff03fa31f44d6fc728debdea8efb0755c520765cc8e85882928d2",
+    "stage6/stage4b-source-checks.json": "6b82ba1286ba40a15e283d212fad63cfe3f2552d6914be5977e9e0908305e878",
+    "stage6/stage4c-source-checks.json": "2f367a34c2cbf7dbb6455b86793382da247fc1a847bbc6ae80cf464ca04966a2"
+  },
+  "stage": "6",
+  "reproduction": {
+    "base_local_commit": "3cd1758f0cff04b6a7b1548d141df1a2e805504a",
+    "base_tree": "c57acdabee28258f0e300c507f7ec39236483680",
+    "method": "Separate clone of the stage 5 source, with reviewed stage 6 source and checker changes copied in. No project build outputs or node_modules copied.",
+    "lean_toolchain_installation": "Existing elan toolchain reused; not an operating-system or elan installation test.",
+    "mathlib_cache": "Fresh project dependencies cloned at manifest revisions; 8115 cache files downloaded and unpacked.",
+    "node_dependencies": "npm ci from package-lock.json into an empty node_modules; local npm download cache may be reused.",
+    "platform": "Darwin arm64",
+    "python": "3.14.4",
+    "node": "v24.14.1",
+    "commands": [
+      "lake exe cache get",
+      "python3 scripts/verify_all.py",
+      "npm ci",
+      "npm test"
+    ],
+    "python_regression_tests": 30,
+    "node_regression_tests": 3
+  }
+}

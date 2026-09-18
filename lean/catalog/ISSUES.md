@@ -60,4 +60,4 @@
 | P3-044 | 5 | [intro.md:106](https://github.com/sakuramaguro/zenn-articles/blob/918e65ab659ad2750b50bef0f28891dbccf070e4/books/lean4-formalization/intro.md#L106-L109) | 「初学者が100%挫折する」「アマチュアのやり方を捨てる」は断定と評価が強い。「初学者がつまずきやすい」「全体の構成を先に作り、段階的に証明する」にすると読者を萎縮させない。 | resolved（[記録](../STAGE5.md)） |
 | P3-045 | 5 | 各章の小見出し・Q&A | 「最強」「凶悪」「完全」「絶望」などは強調箇所を絞る。「免許証」の比喩は残してよいが、演算データだけの `Add` と、公理も含む構造の違いを補足する。 | resolved（[記録](../STAGE5.md)） |
 | P3-046 | 5 | [ch17.md:238](https://github.com/sakuramaguro/zenn-articles/blob/918e65ab659ad2750b50bef0f28891dbccf070e4/books/lean4-formalization/ch17.md#L238-L238)、[ch18.md:490](https://github.com/sakuramaguro/zenn-articles/blob/918e65ab659ad2750b50bef0f28891dbccf070e4/books/lean4-formalization/ch18.md#L490-L490) | 「liminfの積分の上界をliminfの積分で評価」は同語反復。「極限下限の積分を、積分列の極限下限で上から評価」とする。`Hibert` は `Hilbert`。可積分な数列は文脈に応じて「二乗総和可能」とする。 | resolved（[記録](../STAGE4C.md)） |
-| FINAL-01 | 6 | books/lean4-formalization全体、対応するLeanコード、画像、目次、検証手順 | 公開用手順から全体を再現し、全完成例・主要定理・意図的エラー・全23ページを検査する。 | planned |
+| FINAL-01 | 6 | books/lean4-formalization全体、対応するLeanコード、画像、目次、検証手順 | 公開用手順から全体を再現し、全完成例・主要定理・意図的エラー・全23ページを検査する。 | resolved（[記録](../STAGE6.md)） |

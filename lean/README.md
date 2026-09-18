@@ -1,6 +1,6 @@
 # Lean 4形式化本の検証環境
 
-段階5までに、導入と第1〜18章の本文・掲載コード・演習・Q&A、および全体の文章・構成・Zenn表示を修正しました。新しい環境からの再現と最終確認は段階6で行います。検証環境と対応表の対象は `books/lean4-formalization` の全23本のMarkdownです。初回の421ブロックに説明用の例と確認コマンドを4個追加し、現在は425ブロックを記録しています。各段階の修正内容と検証範囲は、下記の実施記録に保存しています。
+導入と第1〜18章の本文・掲載コード・演習・Q&A、および全体の文章・構成・Zenn表示を修正しました。段階6では別の作業場所で全例を再検証し、同じ検査をGitHub Actionsで実行する手順を整えています。検証環境と対応表の対象は `books/lean4-formalization` の全23本のMarkdownです。初回の421ブロックに説明用の例と確認コマンドを4個追加し、現在は425ブロックを記録しています。最終結果と公開前に残る確認は [段階6の記録](STAGE6.md) を参照してください。
 
 ## 採用する版
 
@@ -20,11 +20,12 @@ Git、Python 3.10以降、elanを利用できる状態で、このリポジト�
 ```sh
 cd lean
 lake exe cache get
-python3 scripts/catalog.py extract
-python3 scripts/verify.py
+python3 scripts/verify_all.py
 ```
 
-elanは `lean-toolchain` に書かれた版を使用します。初回の依存関係とビルドキャッシュの取得にはネット接続とディスク容量が必要です。`lake exe cache get` はMathlibのビルド済みファイルを取得します。原稿の検証は続く `verify.py` が行います。通常の検証で `lake update` は実行しません。
+elanは `lean-toolchain` に書かれた版を使用します。初回の依存関係とビルドキャッシュの取得にはネット接続とディスク容量が必要です。`lake exe cache get` はMathlibのビルド済みファイルを取得します。原稿の検証は続く `verify_all.py` が行います。通常の検証で `lake update` は実行しません。
+
+`verify_all.py` は検査器のテスト、以下の `verify.py`、章ごとの7つの独立実行を順に実行します。完成例・断片390ブロックと、意図的エラー・演習の穴35ブロックを合わせて全425ブロックに検査があるか照合します。検査の欠落、古い原稿ハッシュ、異なるLeanの版、失敗結果は受け入れません。最後まで成功した場合だけ `.generated/full-verification.json` を作ります。
 
 `verify.py` は原稿との対応、取得済み依存リポジトリのコミットと追跡ファイルの変更、Leanの版を確認し、`lake build` と `Audit.lean` の公理検査を実行します。さらに、原稿から抽出した例のエラー・警告・公理一覧を照合します。記録は `.generated/verification.json` と `.generated/logs/` に保存されます。検査に失敗したときは成功記録を残しません。
 
@@ -36,7 +37,19 @@ python3 scripts/catalog.py check
 
 検査スクリプト自体の変更時は `python3 scripts/test_validation.py` も実行します。コードの欠落・変更や、文脈参照の欠落、未確認の公理を成功扱いしないことを確認します。
 
-## 現在の実行検証範囲（段階4-C）
+本文・数式の検査にはNode.js 22.12以降も必要です。リポジトリのルートで次を実行します。CIでは24.14.1を使い、Zenn CLI・公式レンダラー0.5.4とKaTeX 0.18.7は依存関係の記録で固定しています。
+
+```sh
+npm ci
+npm test
+npm run preview
+```
+
+`npm test` は全23ページの構造・コード分類・章参照・画像の参照と、折りたたみ内を含む全数式を検査します。KaTeXの警告も失敗として扱います。表示検査の結果は `lean/.generated/book-display/report.json` に保存します。ブラウザーでの配置や操作、外部画像の取得、公開先のURLは別途確認します。
+
+[GitHub Actionsの設定](../.github/workflows/lean-book.yml) は、対象原稿・検証コード・画像などが変わるPRとmainへの更新時に同じ検査を実行します。結果とログは `lean-book-verification` という成果物に14日間保存します。途中で失敗した場合も、その時点までのログを保存します。
+
+## 現在の実行検証範囲
 
 | ファイル | 内容 |
 |---|---|
@@ -89,6 +102,7 @@ python3 scripts/catalog.py check
 
 ## 原稿と修正計画の対応
 
+- [段階6の再現・表示・自動検査の記録](STAGE6.md)
 - [段階5の文章・図・表示の修正記録](STAGE5.md)（Zennの検査・プレビュー手順と確認の限界も記載）
 - [段階4-Cの修正・検証記録](STAGE4C.md)
 - [段階4-Bの修正・検証記録](STAGE4B.md)
@@ -126,4 +140,4 @@ python3 scripts/catalog.py check
 4. `catalog.py extract` で原文の抽出先と表を再生成し、`verify.py` で検証します。必要な主要宣言を `Audit.lean` に追加します。
 5. 指摘の完了条件を満たしたものだけ、解消した変更と検証記録を添えて状態を更新します。
 
-本文の変更やコードの取り違えを見逃さないよう、対応表はMarkdown全23本のハッシュとコードごとのハッシュを検査します。本文だけの変更でも確認が必要です。段階6では全完成例と意図的なエラーを含む最終検証、Zennの全ページ表示確認、継続的な自動検査を揃えます。
+本文の変更やコードの取り違えを見逃さないよう、対応表はMarkdown全23本のハッシュとコードごとのハッシュを検査します。本文だけの変更でも確認が必要です。変更後は `verify_all.py` とルートの `npm test` を実行します。公開先の章リンク・実機表示については [公開前の確認手順](PUBLICATION_CHECKLIST.md) に従ってください。
