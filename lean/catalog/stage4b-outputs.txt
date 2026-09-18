@@ -1,0 +1,408 @@
+段階4-B：固定環境での掲載例とゴールの実出力
+第15・16章の29ブロックと第17章の関連例1件を独立実行した。
+2つの補足はsetupに明示した原稿の前提を使い、再利用を対象ブロック数へ加算していない。
+
+=== ch15_001 ===
+setup: (none)
+@SimpleFunc.lintegral : {α : Type u_1} → {_m : MeasurableSpace α} → SimpleFunc α ℝ≥0∞ → Measure α → ℝ≥0∞
+SimpleFunc.const : (α : Type u_1) → {β : Type u_2} → [inst : MeasurableSpace α] → β → SimpleFunc α β
+@SimpleFunc.const_lintegral : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} (c : ℝ≥0∞),
+  (SimpleFunc.const α c).lintegral μ = c * μ Set.univ
+'simple_const_unit_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_002 ===
+setup: (none)
+structure MeasureTheory.SimpleFunc.{u, v} (α : Type u) [MeasurableSpace α] (β : Type v) : Type (max u v)
+number of parameters: 3
+fields:
+  MeasureTheory.SimpleFunc.toFun : α → β
+  MeasureTheory.SimpleFunc.measurableSet_fiber' : ∀ (x : β), MeasurableSet (self.toFun ⁻¹' {x})
+  MeasureTheory.SimpleFunc.finite_range' : (Set.range self.toFun).Finite
+constructor:
+  MeasureTheory.SimpleFunc.mk.{u, v} {α : Type u} [MeasurableSpace α] {β : Type v} (toFun : α → β)
+    (measurableSet_fiber' : ∀ (x : β), MeasurableSet (toFun ⁻¹' {x})) (finite_range' : (Set.range toFun).Finite) :
+    SimpleFunc α β
+@SimpleFunc.measurableSet_fiber : ∀ {α : Type u_1} {β : Type u_2} [inst : MeasurableSpace α] (f : SimpleFunc α β)
+  (x : β), MeasurableSet (⇑f ⁻¹' {x})
+@SimpleFunc.finite_range : ∀ {α : Type u_1} {β : Type u_2} [inst : MeasurableSpace α] (f : SimpleFunc α β),
+  (Set.range ⇑f).Finite
+@SimpleFunc.measurable : ∀ {α : Type u_1} {β : Type u_2} [inst : MeasurableSpace α] [inst_1 : MeasurableSpace β]
+  (f : SimpleFunc α β), Measurable ⇑f
+
+=== ch15_003 ===
+setup: (none)
+@SimpleFunc.piecewise : {α : Type u_1} →
+  {β : Type u_2} →
+    [inst : MeasurableSpace α] → (s : Set α) → MeasurableSet s → SimpleFunc α β → SimpleFunc α β → SimpleFunc α β
+@SimpleFunc.restrict : {α : Type u_1} →
+  {β : Type u_2} → [inst : MeasurableSpace α] → [Zero β] → SimpleFunc α β → Set α → SimpleFunc α β
+@SimpleFunc.coe_restrict : ∀ {α : Type u_1} {β : Type u_2} [inst : MeasurableSpace α] [inst_1 : Zero β]
+  (f : SimpleFunc α β) {s : Set α}, MeasurableSet s → ⇑(f.restrict s) = s.indicator ⇑f
+'myConst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'myConst_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_004 ===
+setup: (none)
+@SimpleFunc.lintegral : {α : Type u_1} → {_m : MeasurableSpace α} → SimpleFunc α ℝ≥0∞ → Measure α → ℝ≥0∞
+@SimpleFunc.const_lintegral : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} (c : ℝ≥0∞),
+  (SimpleFunc.const α c).lintegral μ = c * μ Set.univ
+'simple_lintegral_definition' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_005 ===
+setup: (none)
+'simple_const_unit_integral_steps' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_006 ===
+setup: (none)
+def MeasureTheory.SimpleFunc.eapprox.{u_1} : {α : Type u_1} →
+  [inst : MeasurableSpace α] → (α → ℝ≥0∞) → ℕ → SimpleFunc α ℝ≥0∞ :=
+fun {α} [MeasurableSpace α] => SimpleFunc.approx SimpleFunc.ennrealRatEmbed
+@SimpleFunc.approx_apply : ∀ {α : Type u_1} {β : Type u_2} [inst : MeasurableSpace α] [inst_1 : SemilatticeSup β]
+  [inst_2 : OrderBot β] [inst_3 : Zero β] [inst_4 : TopologicalSpace β] [OrderClosedTopology β]
+  [inst_6 : MeasurableSpace β] [OpensMeasurableSpace β] {i : ℕ → β} {f : α → β} {n : ℕ} (a : α),
+  Measurable f → (SimpleFunc.approx i f n) a = (Finset.range n).sup fun k => if i k ≤ f a then i k else 0
+@SimpleFunc.monotone_eapprox : ∀ {α : Type u_1} [inst : MeasurableSpace α] (f : α → ℝ≥0∞),
+  Monotone (SimpleFunc.eapprox f)
+@SimpleFunc.iSup_eapprox_apply : ∀ {α : Type u_1} [inst : MeasurableSpace α] {f : α → ℝ≥0∞},
+  Measurable f → ∀ (a : α), ⨆ n, (SimpleFunc.eapprox f n) a = f a
+@lintegral_eq_iSup_eapprox_lintegral : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : α → ℝ≥0∞},
+  Measurable f → ∫⁻ (a : α), f a ∂μ = ⨆ n, (SimpleFunc.eapprox f n).lintegral μ
+'eapprox_sup_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lintegral_eapprox_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_007 ===
+setup: (none)
+@SimpleFunc.finite_range : ∀ {α : Type u_1} {β : Type u_2} [inst : MeasurableSpace α] (f : SimpleFunc α β),
+  (Set.range ⇑f).Finite
+SimpleFunc.finite_range (SimpleFunc.const ℝ 3) : (Set.range ⇑(SimpleFunc.const ℝ 3)).Finite
+'const_three_finite_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_008 ===
+setup: (none)
+'const_range_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'const_range_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_009 ===
+setup: (none)
+'eapprox_id_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'eapprox_id_one_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'eapprox_id_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_010 ===
+setup: (none)
+'eapprox_id_sup' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_011 ===
+setup: (none)
+'simple_indicator_unit_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch15_012 ===
+setup: (none)
+'indicator_unit_lintegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_001 ===
+setup: (none)
+@lintegral : {α : Type u_1} → {m : MeasurableSpace α} → Measure α → (α → ℝ≥0∞) → ℝ≥0∞
+@integral : {α : Type u_1} →
+  {G : Type u_2} → [inst : NormedAddCommGroup G] → [NormedSpace ℝ G] → {x : MeasurableSpace α} → Measure α → (α → G) → G
+@integral_add : ∀ {α : Type u_1} {G : Type u_2} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G]
+  {m : MeasurableSpace α} {μ : Measure α} {f g : α → G},
+  Integrable f μ → Integrable g μ → ∫ (a : α), f a + g a ∂μ = ∫ (a : α), f a ∂μ + ∫ (a : α), g a ∂μ
+@integral_smul : ∀ {α : Type u_1} {𝕜 : Type u_2} [inst : NormedDivisionRing 𝕜] {G : Type u_3}
+  [inst_1 : NormedAddCommGroup G] [inst_2 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : Measure α}
+  [inst_3 : Module 𝕜 G] [NormSMulClass 𝕜 G] [SMulCommClass ℝ 𝕜 G] (c : 𝕜) (f : α → G),
+  ∫ (a : α), c • f a ∂μ = c • ∫ (a : α), f a ∂μ
+@norm_integral_le_integral_norm : ∀ {α : Type u_1} {G : Type u_2} [inst : NormedAddCommGroup G]
+  [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : Measure α} (f : α → G),
+  ‖∫ (a : α), f a ∂μ‖ ≤ ∫ (a : α), ‖f a‖ ∂μ
+'norm_integral_bound_intro' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_002 ===
+setup: (none)
+'lintegral_notation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lintegral_definition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'constant_lintegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'indicator_lintegral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_003 ===
+setup: (none)
+@[irreducible] def MeasureTheory.integral.{u_6, u_7} : {α : Type u_6} →
+  {G : Type u_7} →
+    [inst : NormedAddCommGroup G] → [NormedSpace ℝ G] → {x : MeasurableSpace α} → Measure α → (α → G) → G :=
+MeasureTheory.wrapped✝.1
+@integral_undef : ∀ {α : Type u_1} {G : Type u_2} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G]
+  {m : MeasurableSpace α} {μ : Measure α} {f : α → G}, ¬Integrable f μ → ∫ (a : α), f a ∂μ = 0
+
+=== ch16_004 ===
+setup: (none)
+'one_not_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'one_integral_undef' depends on axioms: [propext, Classical.choice, Quot.sound]
+'one_lintegral_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_005 ===
+setup: (none)
+def MeasureTheory.Integrable.{u_5, u_8} : {ε : Type u_5} →
+  [inst : TopologicalSpace ε] →
+    [ContinuousENorm ε] →
+      {α : Type u_8} → {x : MeasurableSpace α} → (α → ε) → autoParam (Measure α) Integrable._auto_1 → Prop :=
+fun {ε} [TopologicalSpace ε] [ContinuousENorm ε] {α} {x} f μ => AEStronglyMeasurable f μ ∧ HasFiniteIntegral f μ
+def MeasureTheory.HasFiniteIntegral.{u_1, u_4} : {α : Type u_1} →
+  {ε : Type u_4} →
+    [ENorm ε] → {x : MeasurableSpace α} → (α → ε) → autoParam (Measure α) HasFiniteIntegral._auto_1 → Prop :=
+fun {α} {ε} [ENorm ε] {x} f μ => ∫⁻ (a : α), ‖f a‖ₑ ∂μ < ∞
+
+=== ch16_006 ===
+setup: (none)
+'constant_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sine_integrable_on_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_007 ===
+setup: (none)
+'dirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rationals_volume_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirichlet_ae_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirichlet_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirichlet_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_008 ===
+setup: (none)
+@integral_eq_lintegral_of_nonneg_ae : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : α → ℝ},
+  0 ≤ᶠ[ae μ] f → AEStronglyMeasurable f μ → ∫ (a : α), f a ∂μ = (∫⁻ (a : α), ENNReal.ofReal (f a) ∂μ).toReal
+'nonnegative_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_009 ===
+setup: (none)
+'integral_add_demo' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_010 ===
+setup: (none)
+'integral_smul_demo' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_011 ===
+setup: (none)
+'norm_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_012 ===
+setup: (none)
+'const_three_lintegral_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_013 ===
+setup: (none)
+'const_three_lintegral_top_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_014 ===
+setup: (none)
+'exp_neg_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_015 ===
+setup: ch16_014
+'exp_neg_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'exp_neg_integrable_parts' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_016 ===
+setup: (none)
+@integral_undef : ∀ {α : Type u_1} {G : Type u_2} [inst : NormedAddCommGroup G] [inst_1 : NormedSpace ℝ G]
+  {m : MeasurableSpace α} {μ : Measure α} {f : α → G}, ¬Integrable f μ → ∫ (a : α), f a ∂μ = 0
+'integral_of_not_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch16_017 ===
+setup: ch16_007
+'dirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rationals_volume_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirichlet_ae_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirichlet_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirichlet_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dirichlet_on_unit_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_010 ===
+setup: (none)
+'movingIndicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'movingIndicator_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'movingIndicator_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== trace_stateの検証用コード ===
+完成ブロック7件と明示した前提を使用。名前空間とtrace_stateを追加した。
+import Mathlib
+
+#eval "ch15_005"
+namespace Trace_ch15_005
+open MeasureTheory
+open scoped ENNReal
+
+theorem simple_const_unit_integral_steps :
+    (SimpleFunc.const ℝ (3 : ℝ≥0∞)).lintegral (volume.restrict (Set.Icc 0 1)) = 3 := by
+  trace_state
+  rw [SimpleFunc.const_lintegral]
+  trace_state
+  rw [Measure.restrict_apply_univ]
+  trace_state
+  rw [Real.volume_Icc]
+  trace_state
+  norm_num
+  trace_state
+end Trace_ch15_005
+
+#eval "ch15_009"
+namespace Trace_ch15_009
+open MeasureTheory
+open scoped ENNReal
+
+theorem eapprox_id_zero (x : ℝ≥0∞) :
+    SimpleFunc.eapprox (id : ℝ≥0∞ → ℝ≥0∞) 0 x = 0 := by
+  trace_state
+  change (⊥ : SimpleFunc ℝ≥0∞ ℝ≥0∞) x = 0
+  trace_state
+  rfl
+  trace_state
+
+theorem eapprox_id_one_le_two (x : ℝ≥0∞) :
+    SimpleFunc.eapprox (id : ℝ≥0∞ → ℝ≥0∞) 1 x ≤ SimpleFunc.eapprox id 2 x :=
+  SimpleFunc.monotone_eapprox id (by decide : 1 ≤ 2) x
+
+theorem eapprox_id_finite (n : ℕ) (x : ℝ≥0∞) :
+    SimpleFunc.eapprox (id : ℝ≥0∞ → ℝ≥0∞) n x < ⊤ :=
+  SimpleFunc.eapprox_lt_top id n x
+end Trace_ch15_009
+
+#eval "ch15_011"
+namespace Trace_ch15_011
+open MeasureTheory
+open scoped ENNReal
+
+theorem simple_indicator_unit_integral :
+    (SimpleFunc.piecewise (Set.Icc (0 : ℝ) 1) measurableSet_Icc
+      (SimpleFunc.const ℝ (1 : ℝ≥0∞))
+      (SimpleFunc.const ℝ 0)).lintegral volume = 1 := by
+  trace_state
+  classical
+  trace_state
+  rw [← SimpleFunc.lintegral_eq_lintegral]
+  trace_state
+  simp only [SimpleFunc.coe_piecewise, SimpleFunc.coe_const]
+  trace_state
+  rw [lintegral_piecewise measurableSet_Icc]
+  trace_state
+  simp [Real.volume_Icc]
+  trace_state
+end Trace_ch15_011
+
+#eval "ch16_004"
+namespace Trace_ch16_004
+open MeasureTheory
+open scoped ENNReal
+
+-- Lebesgue測度で実数全体を考えると、定数1は可積分でない。
+theorem one_not_integrable : ¬ Integrable (fun _ : ℝ => (1 : ℝ)) volume := by
+  trace_state
+  simp [integrable_const_iff, isFiniteMeasure_iff]
+  trace_state
+
+theorem one_integral_undef : (∫ _x : ℝ, (1 : ℝ)) = 0 :=
+  integral_undef one_not_integrable
+
+-- 同じ定数をENNReal値で非負積分すると、値は無限大。
+theorem one_lintegral_infinite : (∫⁻ _x : ℝ, (1 : ℝ≥0∞)) = ⊤ := by
+  trace_state
+  simp
+  trace_state
+end Trace_ch16_004
+
+#eval "ch16_009"
+namespace Trace_ch16_009
+open MeasureTheory
+open scoped ENNReal
+
+theorem integral_add_demo (f g : ℝ → ℝ)
+    (hf : Integrable f volume) (hg : Integrable g volume) :
+    (∫ x, (f x + g x) ∂volume) = (∫ x, f x ∂volume) + ∫ x, g x ∂volume := by
+  trace_state
+  exact integral_add hf hg
+  trace_state
+end Trace_ch16_009
+
+#eval "ch16_010"
+namespace Trace_ch16_010
+open MeasureTheory
+open scoped ENNReal
+
+theorem integral_smul_demo (r : ℝ) (f : ℝ → ℝ) (μ : Measure ℝ) :
+    (∫ x, r • f x ∂μ) = r • ∫ x, f x ∂μ := by
+  trace_state
+  exact integral_smul r f
+  trace_state
+end Trace_ch16_010
+
+#eval "ch16_015"
+namespace Trace_ch16_015
+open MeasureTheory
+
+-- 開半直線での既存定理を、端点0を含む半直線へ移す。
+theorem exp_neg_integrable :
+    Integrable (fun x : ℝ => Real.exp (-x)) (volume.restrict (Set.Ici 0)) := by
+  exact Iff.mpr integrableOn_Ici_iff_integrableOn_Ioi (integrableOn_exp_neg_Ioi 0)
+
+
+-- 前の exp_neg_integrable を使い、Integrable の2条件を確認する。
+theorem exp_neg_integrable_parts :
+    Integrable (fun x : ℝ => Real.exp (-x)) (volume.restrict (Set.Ici 0)) := by
+  trace_state
+  refine ⟨?_, ?_⟩
+  trace_state
+  · exact (Real.continuous_exp.comp continuous_id.neg).aestronglyMeasurable
+  · exact exp_neg_integrable.hasFiniteIntegral
+end Trace_ch16_015
+
+
+=== trace_stateの実出力 ===
+ゴールが閉じた後のtrace_stateは空行を出力する。
+"ch15_005"
+⊢ (SimpleFunc.const ℝ 3).lintegral (volume.restrict (Set.Icc 0 1)) = 3
+⊢ 3 * (volume.restrict (Set.Icc 0 1)) Set.univ = 3
+⊢ 3 * volume (Set.Icc 0 1) = 3
+⊢ 3 * ENNReal.ofReal (1 - 0) = 3
+
+"ch15_009"
+x : ℝ≥0∞
+⊢ (SimpleFunc.eapprox id 0) x = 0
+x : ℝ≥0∞
+⊢ ⊥ x = 0
+
+"ch15_011"
+⊢ (SimpleFunc.piecewise (Set.Icc 0 1) ⋯ (SimpleFunc.const ℝ 1) (SimpleFunc.const ℝ 0)).lintegral volume = 1
+⊢ (SimpleFunc.piecewise (Set.Icc 0 1) ⋯ (SimpleFunc.const ℝ 1) (SimpleFunc.const ℝ 0)).lintegral volume = 1
+⊢ ∫⁻ (a : ℝ), (SimpleFunc.piecewise (Set.Icc 0 1) ⋯ (SimpleFunc.const ℝ 1) (SimpleFunc.const ℝ 0)) a ∂volume = 1
+⊢ ∫⁻ (a : ℝ), (Set.Icc 0 1).piecewise (Function.const ℝ 1) (Function.const ℝ 0) a ∂volume = 1
+⊢ ∫⁻ (a : ℝ) in Set.Icc 0 1, Function.const ℝ 1 a ∂volume + ∫⁻ (a : ℝ) in (Set.Icc 0 1)ᶜ, Function.const ℝ 0 a ∂volume =
+    1
+
+"ch16_004"
+⊢ ¬Integrable (fun x => 1) volume
+
+⊢ ∫⁻ (_x : ℝ), 1 = ∞
+
+"ch16_009"
+f g : ℝ → ℝ
+hf : Integrable f volume
+hg : Integrable g volume
+⊢ ∫ (x : ℝ), f x + g x = (∫ (x : ℝ), f x) + ∫ (x : ℝ), g x
+
+"ch16_010"
+r : ℝ
+f : ℝ → ℝ
+μ : Measure ℝ
+⊢ ∫ (x : ℝ), r • f x ∂μ = r • ∫ (x : ℝ), f x ∂μ
+
+"ch16_015"
+⊢ Integrable (fun x => Real.exp (-x)) (volume.restrict (Set.Ici 0))
+case refine_1
+⊢ AEStronglyMeasurable (fun x => Real.exp (-x)) (volume.restrict (Set.Ici 0))
+
+case refine_2
+⊢ HasFiniteIntegral (fun x => Real.exp (-x)) (volume.restrict (Set.Ici 0))
+
+=== 検査器のテスト ===
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.154s
+
+OK

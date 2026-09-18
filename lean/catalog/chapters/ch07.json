@@ -1,0 +1,2052 @@
+[
+  {
+    "id": "ch07_001",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 17,
+    "end": 31,
+    "sha256": "05681c1facb003f595d1e3026bfced729ff83585222e867523406f2db6b8ad17",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.0 本章のゴールを先に見せる ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_001",
+      "source_sha256": "f0f3aec0717425736a27ab3e3a518625cdd0ce7ff02d25c222758770fb4967e3",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "f0f3aec0717425736a27ab3e3a518625cdd0ce7ff02d25c222758770fb4967e3",
+      "line": 15,
+      "end": 29,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_002",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 64,
+    "end": 72,
+    "sha256": "d3e6b9bee31eaab2308480521c510369f99e16cb310eaee1b5638fa03314b3ef",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.1 距離の公理 ──── 数学の定義をLeanに翻訳する / ### Leanの実装：`MetricSpace` 型クラスの解剖",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_002",
+      "source_sha256": "1841d1ce91b9b8f14c6780bb2046ced9f7ba084a72dc10c9a4b692d397a73415",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "1841d1ce91b9b8f14c6780bb2046ced9f7ba084a72dc10c9a4b692d397a73415",
+      "line": 61,
+      "end": 76,
+      "category": "excerpt",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_003",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 86,
+    "end": 100,
+    "sha256": "9716eb7a93c4ff5791ee06abf587025ab495b9b67f5475d77709a86d2631fa50",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.1 距離の公理 ──── 数学の定義をLeanに翻訳する / ### Leanの実装：`MetricSpace` 型クラスの解剖",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_003",
+      "source_sha256": "b90f7ea117b5216581d6ae7465035f3b97b5a21119e5e45092776fc18e3a1c72",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "b90f7ea117b5216581d6ae7465035f3b97b5a21119e5e45092776fc18e3a1c72",
+      "line": 88,
+      "end": 100,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_004",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 114,
+    "end": 133,
+    "sha256": "cfa27312f23025d79959e460c7996da04de467ff7e0e42586f8abcfd17d30be8",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.1 距離の公理 ──── 数学の定義をLeanに翻訳する / ### 具体例：ℝ上の距離",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_004",
+      "source_sha256": "b08b7959e090fdf8e92d4262d2cbbb704e5fb252bedb21263d91b93c09513ad4",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-012"
+    ],
+    "before_stage3a": {
+      "sha256": "b08b7959e090fdf8e92d4262d2cbbb704e5fb252bedb21263d91b93c09513ad4",
+      "line": 114,
+      "end": 131,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_005",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 170,
+    "end": 183,
+    "sha256": "c9f3b9c949d8394791439e01f73238c312c195c46e4cda55f2f7d2a3528d7d03",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.2 `Metric.ball` の正体 ──── 開球という武器 / ### Leanの実装",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_005",
+      "source_sha256": "0c46cd821277a58df0fd18223a590520584a928a43588e4999466c2a6dc7beab",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "0c46cd821277a58df0fd18223a590520584a928a43588e4999466c2a6dc7beab",
+      "line": 167,
+      "end": 178,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_006",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 191,
+    "end": 204,
+    "sha256": "b9dc1c331099fbf43871919a0f7a8075cbfdcf489cf9a05a2df1f005a99ab30f",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.2 `Metric.ball` の正体 ──── 開球という武器 / ### Leanの実装",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_006",
+      "source_sha256": "69a36d4b50ace37e32e0523846eef0ecb07558277c5b2de44029fa71df2fbfa8",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "69a36d4b50ace37e32e0523846eef0ecb07558277c5b2de44029fa71df2fbfa8",
+      "line": 186,
+      "end": 197,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_007",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 210,
+    "end": 214,
+    "sha256": "a31d26a8a76e2fe6beb6ccfba2425f0c28911ba0b01f835bfdb57a519c082227",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.2 `Metric.ball` の正体 ──── 開球という武器 / ### Leanの実装",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_007",
+        "ch07_008",
+        "ch07_009"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_007 → ch07_008 → ch07_009。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_007",
+      "source_sha256": "2b2ae494ba2dfb27bd758c4c1bfd434939fe3bce8810d5ff2b1dda401f370921",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "2b2ae494ba2dfb27bd758c4c1bfd434939fe3bce8810d5ff2b1dda401f370921",
+      "line": 201,
+      "end": 203,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_008",
+          "ch07_009"
+        ],
+        "instruction": "ch07_007 の by 内へ順に配置する。完成例 ch07_006 と照合する。",
+        "assembly_group": "ch07_007"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_008",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 222,
+    "end": 224,
+    "sha256": "f92b52617d2d6bdef746ba6ff759b6a9172828fb123fafe5af956e450e24f11c",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.2 `Metric.ball` の正体 ──── 開球という武器 / ### Leanの実装",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_007",
+        "ch07_008",
+        "ch07_009"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_007 → ch07_008 → ch07_009。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_007",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "f92b52617d2d6bdef746ba6ff759b6a9172828fb123fafe5af956e450e24f11c",
+      "line": 211,
+      "end": 213,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_007",
+          "ch07_009"
+        ],
+        "instruction": "ch07_007 の by 内へ順に配置する。完成例 ch07_006 と照合する。",
+        "assembly_group": "ch07_007"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_009",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 234,
+    "end": 238,
+    "sha256": "16aed2489a889cf562f9e011172d681e9b3ec05ba65864bd69ac60691bcf7304",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.2 `Metric.ball` の正体 ──── 開球という武器 / ### Leanの実装",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_007",
+        "ch07_008",
+        "ch07_009"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_007 → ch07_008 → ch07_009。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_007",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "16aed2489a889cf562f9e011172d681e9b3ec05ba65864bd69ac60691bcf7304",
+      "line": 223,
+      "end": 227,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_007",
+          "ch07_008"
+        ],
+        "instruction": "ch07_007 の by 内へ順に配置する。完成例 ch07_006 と照合する。",
+        "assembly_group": "ch07_007"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_010",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 250,
+    "end": 256,
+    "sha256": "b83897fdec744104f97de544e5489e1eb6445d99d8d1ddf2ed4f08451955ff06",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.3 `nhds`と`Metric.ball`の接続 ──── 第6章の謎が解ける / ### `HasBasis` とは何か",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_010",
+      "source_sha256": "8d46bf41ce64bd98918d08be1684e2f5b7f6658e422d53e15dd338754687a204",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "8d46bf41ce64bd98918d08be1684e2f5b7f6658e422d53e15dd338754687a204",
+      "line": 239,
+      "end": 243,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_011",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 268,
+    "end": 274,
+    "sha256": "af95961271e2386be944c664f5504466e8c59fc1ec5f46b416c759083f83e866",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.3 `nhds`と`Metric.ball`の接続 ──── 第6章の謎が解ける / ### `Metric.nhds_basis_ball` の意味",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_011",
+      "source_sha256": "534f1803e93aff2fdd49e651d29306f7ff52a5f99958add95ea241a8095a041f",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "534f1803e93aff2fdd49e651d29306f7ff52a5f99958add95ea241a8095a041f",
+      "line": 255,
+      "end": 259,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_012",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 284,
+    "end": 292,
+    "sha256": "b50f2770f5b013847061dd13947e86f940a1be4f3f3753d33550dd25e00a9787",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.3 `nhds`と`Metric.ball`の接続 ──── 第6章の謎が解ける / ### `Metric.nhds_basis_ball` の意味",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_012",
+      "source_sha256": "db85890cf619062e426e04f8ce825750986959f98579dae8f9f949d10f38f0b5",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-012"
+    ],
+    "before_stage3a": {
+      "sha256": "db85890cf619062e426e04f8ce825750986959f98579dae8f9f949d10f38f0b5",
+      "line": 269,
+      "end": 278,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_013",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 298,
+    "end": 303,
+    "sha256": "e3f4a1365b1524eede116394cf96e96e8f02a3c956f36875a7a5917eb49cd8a7",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.3 `nhds`と`Metric.ball`の接続 ──── 第6章の謎が解ける / ### `Metric.nhds_basis_ball` の意味",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_013",
+        "ch07_014"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_013 → ch07_014。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_013.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_013",
+      "source_sha256": "d975bbf7c889f118be0f0c270140ccebef9309d6aaa28096259476b8fe0490e7",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-012"
+    ],
+    "before_stage3a": {
+      "sha256": "d975bbf7c889f118be0f0c270140ccebef9309d6aaa28096259476b8fe0490e7",
+      "line": 282,
+      "end": 285,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_014"
+        ],
+        "instruction": "ch07_013 の by 内へ ch07_014 を配置。完成例 ch07_012 の余分なタクティクも照合する。",
+        "assembly_group": "ch07_013"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_014",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 311,
+    "end": 313,
+    "sha256": "86bbd708ab690b089c6b0001031162eba76e2e3f9eda573c7f6fc4a9a74ed062",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.3 `nhds`と`Metric.ball`の接続 ──── 第6章の謎が解ける / ### `Metric.nhds_basis_ball` の意味",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_013",
+        "ch07_014"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_013 → ch07_014。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_013",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-012"
+    ],
+    "before_stage3a": {
+      "sha256": "86bbd708ab690b089c6b0001031162eba76e2e3f9eda573c7f6fc4a9a74ed062",
+      "line": 293,
+      "end": 295,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_013"
+        ],
+        "instruction": "ch07_013 の by 内へ ch07_014 を配置。完成例 ch07_012 の余分なタクティクも照合する。",
+        "assembly_group": "ch07_013"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_015",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 358,
+    "end": 369,
+    "sha256": "f1406a1b211af18a12e915b8de3b9916adccaa9d3068a9f7a27d30b58b46ac21",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.4 開集合の定義と`IsOpen` ──── 位相の骨格 / ### Leanの実装：`IsOpen` と `Metric.isOpen_iff`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_015",
+      "source_sha256": "a857e7d8c9bd70f7994df31ac2a238ed2993663e5e2c7ba9d4adc8c44b7a88dd",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "a857e7d8c9bd70f7994df31ac2a238ed2993663e5e2c7ba9d4adc8c44b7a88dd",
+      "line": 335,
+      "end": 344,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_016",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 398,
+    "end": 404,
+    "sha256": "826c23cb5c4ff1a59b8c171b53cb3e9aa66235a132b5ee53fe140ba707dfd153",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.5 本章の勝利命題①：開球は開集合 ──── InfoViewでのゴールの変化 / ### ゴールの変化：ステップバイステップ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_016",
+        "ch07_017",
+        "ch07_018",
+        "ch07_019",
+        "ch07_020",
+        "ch07_021",
+        "ch07_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_016 → ch07_017 → ch07_018 → ch07_019 → ch07_020 → ch07_021 → ch07_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_016",
+      "source_sha256": "5537690363efb06f2da317ceeac927e1fa86a51231f668e0c59245f0b8c5589c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "5537690363efb06f2da317ceeac927e1fa86a51231f668e0c59245f0b8c5589c",
+      "line": 371,
+      "end": 375,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_017",
+          "ch07_018",
+          "ch07_019",
+          "ch07_020",
+          "ch07_021",
+          "ch07_022"
+        ],
+        "instruction": "開球の開性の証明。ch07_016 の by 内へ順に配置し、y,hy,z,hz を引き継ぐ。",
+        "assembly_group": "ch07_016"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_017",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 420,
+    "end": 422,
+    "sha256": "6a1881c7ad1c5f0defc62273c79df90cdb47ebe1130d337301b4fc9560da6730",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.5 本章の勝利命題①：開球は開集合 ──── InfoViewでのゴールの変化 / ### ゴールの変化：ステップバイステップ",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_016",
+        "ch07_017",
+        "ch07_018",
+        "ch07_019",
+        "ch07_020",
+        "ch07_021",
+        "ch07_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_016 → ch07_017 → ch07_018 → ch07_019 → ch07_020 → ch07_021 → ch07_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_016",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "6a1881c7ad1c5f0defc62273c79df90cdb47ebe1130d337301b4fc9560da6730",
+      "line": 391,
+      "end": 393,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_016",
+          "ch07_018",
+          "ch07_019",
+          "ch07_020",
+          "ch07_021",
+          "ch07_022"
+        ],
+        "instruction": "開球の開性の証明。ch07_016 の by 内へ順に配置し、y,hy,z,hz を引き継ぐ。",
+        "assembly_group": "ch07_016"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_018",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 432,
+    "end": 434,
+    "sha256": "ddfcb4113f63c7802a8425386bd3cfa4b7054c126c319677febe713ebbc42c50",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.5 本章の勝利命題①：開球は開集合 ──── InfoViewでのゴールの変化 / ### ゴールの変化：ステップバイステップ",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_016",
+        "ch07_017",
+        "ch07_018",
+        "ch07_019",
+        "ch07_020",
+        "ch07_021",
+        "ch07_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_016 → ch07_017 → ch07_018 → ch07_019 → ch07_020 → ch07_021 → ch07_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_016",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "ddfcb4113f63c7802a8425386bd3cfa4b7054c126c319677febe713ebbc42c50",
+      "line": 403,
+      "end": 405,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_016",
+          "ch07_017",
+          "ch07_019",
+          "ch07_020",
+          "ch07_021",
+          "ch07_022"
+        ],
+        "instruction": "開球の開性の証明。ch07_016 の by 内へ順に配置し、y,hy,z,hz を引き継ぐ。",
+        "assembly_group": "ch07_016"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_019",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 446,
+    "end": 448,
+    "sha256": "e30b7daa66426d2a8e2c92f2581223adebd7beedcfee3cb9a94e29682d86f4b9",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.5 本章の勝利命題①：開球は開集合 ──── InfoViewでのゴールの変化 / ### ゴールの変化：ステップバイステップ",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_016",
+        "ch07_017",
+        "ch07_018",
+        "ch07_019",
+        "ch07_020",
+        "ch07_021",
+        "ch07_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_016 → ch07_017 → ch07_018 → ch07_019 → ch07_020 → ch07_021 → ch07_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_016",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "e30b7daa66426d2a8e2c92f2581223adebd7beedcfee3cb9a94e29682d86f4b9",
+      "line": 417,
+      "end": 419,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_016",
+          "ch07_017",
+          "ch07_018",
+          "ch07_020",
+          "ch07_021",
+          "ch07_022"
+        ],
+        "instruction": "開球の開性の証明。ch07_016 の by 内へ順に配置し、y,hy,z,hz を引き継ぐ。",
+        "assembly_group": "ch07_016"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_020",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 460,
+    "end": 462,
+    "sha256": "3fd0af8f4d542e6e9f378bd62a2e885a9aa48c99c2b7391940d96cf1c54b77da",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.5 本章の勝利命題①：開球は開集合 ──── InfoViewでのゴールの変化 / ### ゴールの変化：ステップバイステップ",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_016",
+        "ch07_017",
+        "ch07_018",
+        "ch07_019",
+        "ch07_020",
+        "ch07_021",
+        "ch07_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_016 → ch07_017 → ch07_018 → ch07_019 → ch07_020 → ch07_021 → ch07_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_016",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_020.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "3fd0af8f4d542e6e9f378bd62a2e885a9aa48c99c2b7391940d96cf1c54b77da",
+      "line": 431,
+      "end": 433,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_016",
+          "ch07_017",
+          "ch07_018",
+          "ch07_019",
+          "ch07_021",
+          "ch07_022"
+        ],
+        "instruction": "開球の開性の証明。ch07_016 の by 内へ順に配置し、y,hy,z,hz を引き継ぐ。",
+        "assembly_group": "ch07_016"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_021",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 474,
+    "end": 477,
+    "sha256": "68a545dc171e31f8d8ddbfe18e3d805ee92e3677cf7cf0770f029a756c8a66c3",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.5 本章の勝利命題①：開球は開集合 ──── InfoViewでのゴールの変化 / ### ゴールの変化：ステップバイステップ",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_016",
+        "ch07_017",
+        "ch07_018",
+        "ch07_019",
+        "ch07_020",
+        "ch07_021",
+        "ch07_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_016 → ch07_017 → ch07_018 → ch07_019 → ch07_020 → ch07_021 → ch07_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_016",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_021.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "68a545dc171e31f8d8ddbfe18e3d805ee92e3677cf7cf0770f029a756c8a66c3",
+      "line": 445,
+      "end": 448,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_016",
+          "ch07_017",
+          "ch07_018",
+          "ch07_019",
+          "ch07_020",
+          "ch07_022"
+        ],
+        "instruction": "開球の開性の証明。ch07_016 の by 内へ順に配置し、y,hy,z,hz を引き継ぐ。",
+        "assembly_group": "ch07_016"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_022",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 487,
+    "end": 492,
+    "sha256": "ca3f3558909986377fd5a7302d90248abe372c444f5467e3d35734789f24fd2b",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.5 本章の勝利命題①：開球は開集合 ──── InfoViewでのゴールの変化 / ### ゴールの変化：ステップバイステップ",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_016",
+        "ch07_017",
+        "ch07_018",
+        "ch07_019",
+        "ch07_020",
+        "ch07_021",
+        "ch07_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_016 → ch07_017 → ch07_018 → ch07_019 → ch07_020 → ch07_021 → ch07_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_016",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_022.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "ca3f3558909986377fd5a7302d90248abe372c444f5467e3d35734789f24fd2b",
+      "line": 458,
+      "end": 463,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_016",
+          "ch07_017",
+          "ch07_018",
+          "ch07_019",
+          "ch07_020",
+          "ch07_021"
+        ],
+        "instruction": "開球の開性の証明。ch07_016 の by 内へ順に配置し、y,hy,z,hz を引き継ぐ。",
+        "assembly_group": "ch07_016"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_023",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 510,
+    "end": 517,
+    "sha256": "79fa2aa2c9ab916fe20200a36ed733364fb8b726f7049c226cb2f11781ef376d",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.5 本章の勝利命題①：開球は開集合 ──── InfoViewでのゴールの変化 / ### Mathlib の一行バージョンと比較",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_023.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_023",
+      "source_sha256": "c133bea92bad0d82bc654751ff83bd69e8c7644f97f19534644e17d9f13e1dcd",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "c133bea92bad0d82bc654751ff83bd69e8c7644f97f19534644e17d9f13e1dcd",
+      "line": 481,
+      "end": 486,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_024",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 533,
+    "end": 540,
+    "sha256": "aaaa966ba38f301eeb1d0932906801066a046c6846f0eef8e83a4124a5cc916a",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.6 本章の目標②：極限の特徴付け ──── Tendstoとε-δの架け橋 / ### 定理の再確認",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_024.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_024",
+      "source_sha256": "7987c77440175578135522392e868fe000ca208c15555245ad28623117cddd89",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "7987c77440175578135522392e868fe000ca208c15555245ad28623117cddd89",
+      "line": 502,
+      "end": 507,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_025",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 546,
+    "end": 554,
+    "sha256": "fd7287e22b3ca409d5d38c382c58fe90558cfe0ea0573c2c1f70f6af012b0879",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.6 本章の目標②：極限の特徴付け ──── Tendstoとε-δの架け橋 / ### 証明の核心：`HasBasis.tendsto_iff`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_025.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_025",
+      "source_sha256": "2ee6ba9f8e72b3c74d7bd1b51e6c14d0f2c371ccd3be75430b58aca9ab8ee082",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "2ee6ba9f8e72b3c74d7bd1b51e6c14d0f2c371ccd3be75430b58aca9ab8ee082",
+      "line": 513,
+      "end": 519,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_026",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 576,
+    "end": 582,
+    "sha256": "9482226081928b364c68c5896813689f9814e93d2e8a5edf89c43a828c86ac93",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.6 本章の目標②：極限の特徴付け ──── Tendstoとε-δの架け橋 / ### 証明の核心：`HasBasis.tendsto_iff`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_026",
+        "ch07_027"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_026 → ch07_027。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_026.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_026",
+      "source_sha256": "3dea40142b052a0340f5a08cb7e4e6bd3b20905e1a5516fd66452bf786e0353b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "3dea40142b052a0340f5a08cb7e4e6bd3b20905e1a5516fd66452bf786e0353b",
+      "line": 539,
+      "end": 543,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_027"
+        ],
+        "instruction": "ch07_026 の by 内へ ch07_027 を配置する。",
+        "assembly_group": "ch07_026"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_027",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 593,
+    "end": 596,
+    "sha256": "41944adeeaa05a1f74edd242ca7fea392d3b0c194b6f054ec061d1ef9e230465",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.6 本章の目標②：極限の特徴付け ──── Tendstoとε-δの架け橋 / ### 証明の核心：`HasBasis.tendsto_iff`",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_026",
+        "ch07_027"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_026 → ch07_027。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_026",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_027.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "41944adeeaa05a1f74edd242ca7fea392d3b0c194b6f054ec061d1ef9e230465",
+      "line": 554,
+      "end": 557,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_026"
+        ],
+        "instruction": "ch07_026 の by 内へ ch07_027 を配置する。",
+        "assembly_group": "ch07_026"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_028",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 627,
+    "end": 635,
+    "sha256": "70e44dc28fc57444a3e203e38aaabe677596c90afbfa43ecc36abda50cdc7a3e",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.7 連続関数の形式化 ──── `ContinuousAt`とε-δの一本化 / ### Leanでの対応表",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_028.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_028",
+      "source_sha256": "a76e2336f408e70370d9eaeb49ad5f2d6181a854c4d79af8e356f913bc754ef1",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "a76e2336f408e70370d9eaeb49ad5f2d6181a854c4d79af8e356f913bc754ef1",
+      "line": 588,
+      "end": 594,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_029",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 641,
+    "end": 646,
+    "sha256": "194446a249441d182124349b872d4ae7f28d17daac57cea04d8b67328dce0b8b",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.7 連続関数の形式化 ──── `ContinuousAt`とε-δの一本化 / ### 具体例：$f(x) = x^2$ の連続性",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_029",
+        "ch07_030"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_029 → ch07_030。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_029.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_029",
+      "source_sha256": "44e11415893276e7ccc85733d1d3ebe30edd0017f3fa09a8c40106fdc2fc7f1c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "44e11415893276e7ccc85733d1d3ebe30edd0017f3fa09a8c40106fdc2fc7f1c",
+      "line": 598,
+      "end": 601,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_030"
+        ],
+        "instruction": "ch07_029 の by 内へ ch07_030 を配置する。",
+        "assembly_group": "ch07_029"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_030",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 656,
+    "end": 659,
+    "sha256": "5af50171a672b95058088092cade937a552ba064177c2a32204af87f34161de3",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.7 連続関数の形式化 ──── `ContinuousAt`とε-δの一本化 / ### 具体例：$f(x) = x^2$ の連続性",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_029",
+        "ch07_030"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_029 → ch07_030。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_029",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_030.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "5af50171a672b95058088092cade937a552ba064177c2a32204af87f34161de3",
+      "line": 611,
+      "end": 614,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch07_029"
+        ],
+        "instruction": "ch07_029 の by 内へ ch07_030 を配置する。",
+        "assembly_group": "ch07_029"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_031",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 663,
+    "end": 672,
+    "sha256": "96b68c96bece470301a88b8fe364e3f4ee5b2f61ae0c9b87e89e045a8d893b76",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.7 連続関数の形式化 ──── `ContinuousAt`とε-δの一本化 / ### 具体例：$f(x) = x^2$ の連続性",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_031.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_031",
+      "source_sha256": "8601cb8d5729544cf36e02611c5a1983eec237f96649c81d40b4e6f3b93df888",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "8601cb8d5729544cf36e02611c5a1983eec237f96649c81d40b4e6f3b93df888",
+      "line": 618,
+      "end": 625,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_032",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 711,
+    "end": 724,
+    "sha256": "b790fa4ea165c2ab0af503cec44b14a9159ba3716aa130a4d498e4c359bdc7ed",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 7.8 本章のまとめと勝利のカタルシス",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_032.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_032",
+      "source_sha256": "c78970a795d5221ab4f00389428999fdd0efb1791d7393bfe5bcd8af2b912dac",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "c78970a795d5221ab4f00389428999fdd0efb1791d7393bfe5bcd8af2b912dac",
+      "line": 664,
+      "end": 672,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_033",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 770,
+    "end": 789,
+    "sha256": "394f68ebdfdba478d14fd5370458e3fc8380f5f292d690b8cb867b692cfaa275",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_033.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_033",
+      "source_sha256": "c7a44e6daacbf3d6d37767a77ef5b5b8b1b4886d8bdf6388afff4a8c55620cf1",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "c7a44e6daacbf3d6d37767a77ef5b5b8b1b4886d8bdf6388afff4a8c55620cf1",
+      "line": 722,
+      "end": 739,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_034",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 798,
+    "end": 809,
+    "sha256": "9f2890fb5c8346b94bb12fa773c2ad6292aafb913640b7237943abbf9479f4ab",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_034.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_034",
+      "source_sha256": "8502f9a6d4014261382c7c04444ac897b4096a41bf211dc2bd1ddbb5178b3148",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "8502f9a6d4014261382c7c04444ac897b4096a41bf211dc2bd1ddbb5178b3148",
+      "line": 749,
+      "end": 752,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_035",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 818,
+    "end": 825,
+    "sha256": "73be5ca535f579fe7afd4ddb9a1b99e936047069c730005149308e96b49dfdd2",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "sorryを埋める演習の骨格。未完成であることを本文に明記し、完成解答とは別に検証する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "importを含むこのブロックを完成例とは別のLeanプロセスで実行し、意図したエラーまたはsorry警告・公理を照合する。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_035.lean",
+    "validation_mode": "assert_sorry_warning_and_axioms",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_035",
+      "source_sha256": "8c4ed72daa8e635382998f4c9804dda87d18feb44bec387f1f5f2c15f57015e5",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-012"
+    ],
+    "before_stage3a": {
+      "sha256": "8c4ed72daa8e635382998f4c9804dda87d18feb44bec387f1f5f2c15f57015e5",
+      "line": 761,
+      "end": 766,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "diagnostic_source"
+  },
+  {
+    "id": "ch07_036",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 836,
+    "end": 844,
+    "sha256": "031b61f0af7088b8a0c1f8b89bcc7f854634b36a332afe85bf83ed167a04880d",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_036.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_036",
+      "source_sha256": "5778979c3bf1bd90fab57b887882d45c687a8dc475f1dcc5c55b8368bbaa54b3",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-012"
+    ],
+    "before_stage3a": {
+      "sha256": "5778979c3bf1bd90fab57b887882d45c687a8dc475f1dcc5c55b8368bbaa54b3",
+      "line": 779,
+      "end": 785,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_037",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 851,
+    "end": 859,
+    "sha256": "7b7d084f1061be15e6df89c6a6eb283bc6b7dcac120ab22b5711bd2799937465",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_037.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_037",
+      "source_sha256": "433c44a6573dcca2194fc79bf5ee1641eba8a1cb6bd5a6ca25d407beb0b758d2",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-012"
+    ],
+    "before_stage3a": {
+      "sha256": "433c44a6573dcca2194fc79bf5ee1641eba8a1cb6bd5a6ca25d407beb0b758d2",
+      "line": 793,
+      "end": 802,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_038",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 885,
+    "end": 894,
+    "sha256": "38191d3e5feaf6f2649a5f9c0f17836c297cca2fd85d5e4586d65155ceb9a754",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_038.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_038",
+      "source_sha256": "b94a278f1735099a727e4e14a0e48970803f30cc2daed969ddbc65ea58e07733",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "b94a278f1735099a727e4e14a0e48970803f30cc2daed969ddbc65ea58e07733",
+      "line": 830,
+      "end": 837,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_039",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 901,
+    "end": 907,
+    "sha256": "99655b3768c1892905ba5a0caec37a38899a634bff04cf228cbc8b064f541b11",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_039.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_039",
+      "source_sha256": "dd909d118271601d0270fa5f0b350c9da0b0c88693cf0465166a1692bf1d53de",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "dd909d118271601d0270fa5f0b350c9da0b0c88693cf0465166a1692bf1d53de",
+      "line": 845,
+      "end": 849,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_040",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 925,
+    "end": 940,
+    "sha256": "18aa95c5445dd2a599d1f6f75a87f9acb25c4610f81b2db2e4ac5e5cc731666c",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_040",
+        "ch07_041"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_040 → ch07_041。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch07_040.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_040",
+      "source_sha256": "5a855d0676aa8024aec06509ad02f12e5bc4362222a8c92ef4362007b369b345",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P1-07",
+      "P2-012"
+    ],
+    "stage1b_status": "compiled_source",
+    "before_stage3a": {
+      "sha256": "18aa95c5445dd2a599d1f6f75a87f9acb25c4610f81b2db2e4ac5e5cc731666c",
+      "line": 869,
+      "end": 884,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "このブロックのimportを含めて独立したファイルで実行できる。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch07_041",
+    "source": "books/lean4-formalization/ch07.md",
+    "line": 949,
+    "end": 954,
+    "sha256": "af5894c58489f9539041fc37eafb6ee6ce27a4d495e849fbf113e9ebe555a9c4",
+    "section": "# 第7章：距離空間という抽象化 〜ℝを忘れて、`dist`だけで世界を作る〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "先行する型・擬距離・補題を使う完成した追加定理。本文で指定した先行ブロックと連結して検証する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch07_040",
+        "ch07_041"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch07_040 → ch07_041。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch07_040",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch07_041.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch07_041",
+      "source_sha256": "f330cc56e4ba8a79450dc02100f1d6705ce30032d1c6e6eeb0112a872edfd6ef",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P1-07",
+      "P2-012"
+    ],
+    "stage1b_status": "compiled_source",
+    "before_stage3a": {
+      "sha256": "af5894c58489f9539041fc37eafb6ee6ce27a4d495e849fbf113e9ebe555a9c4",
+      "line": 894,
+      "end": 899,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch07_040"
+        ],
+        "instruction": "列挙したブロックを順番に置き、その後にこのコードを置く。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  }
+]

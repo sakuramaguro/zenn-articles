@@ -1,0 +1,1444 @@
+[
+  {
+    "id": "ch05_001",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 15,
+    "end": 26,
+    "sha256": "3cd0cdded3d8bcf0909994bfab8249d410185986c41055d412f8de081fd2c656",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.0 本章のゴール",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_001",
+      "source_sha256": "ca93b666a240f657010a15ae46a6652900dca4e8aa5ec036be4b369dab377d35",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007",
+      "P2-008"
+    ],
+    "before_stage2": {
+      "sha256": "ca93b666a240f657010a15ae46a6652900dca4e8aa5ec036be4b369dab377d35",
+      "line": 15,
+      "end": 42,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_002",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 40,
+    "end": 45,
+    "sha256": "44b42f101f5da32d36601abd39040aaef140524092baba5469e34547c6053b3f",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.1 数学的準備：核・像・次元",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_003",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 49,
+    "end": 58,
+    "sha256": "e07b1980042843af677764f913a90bcd06e9ffb6328aa288e1fa5408b268ee6b",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.1 数学的準備：核・像・次元",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_003",
+      "source_sha256": "72ef4749c6d497038101180af0499e382fb33864f4881d16aa88a8019570daff",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "72ef4749c6d497038101180af0499e382fb33864f4881d16aa88a8019570daff",
+      "line": 107,
+      "end": 117,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_004",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 81,
+    "end": 93,
+    "sha256": "ec6afd01f80a59a67ea7acb05962724705d1836b7cb1b240a52f369aee0c467e",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.2 `sorry` で課題を明示する",
+    "category": "unfinished",
+    "role": "本文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_004.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_004",
+      "source_sha256": "584345d01c962025f8c13ffe3231abacfe97570156373b7093f14acc7b62bbcd",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P1-02",
+      "P2-007"
+    ],
+    "stage1a_status": "diagnostic_case",
+    "before_stage2": {
+      "sha256": "584345d01c962025f8c13ffe3231abacfe97570156373b7093f14acc7b62bbcd",
+      "line": 162,
+      "end": 180,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
+  },
+  {
+    "id": "ch05_005",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 101,
+    "end": 107,
+    "sha256": "3faab749c9b674575c5e9b1748da3793d6223ebcefad6a802eb3c9b245ca73f4",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.2 `sorry` で課題を明示する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_005",
+      "source_sha256": "ab8cd2b45847136c59b6d25ec381591d6f7075192c31c454438a1673fb4d2e7d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P1-02",
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "ab8cd2b45847136c59b6d25ec381591d6f7075192c31c454438a1673fb4d2e7d",
+      "line": 198,
+      "end": 206,
+      "category": "excerpt",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_006",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 115,
+    "end": 119,
+    "sha256": "055f71eaf65b0ead9386798aa23aa7c492caf62dc5a7df60db4f2fd14b10254b",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.3 型クラスの役割を確認する",
+    "category": "expected_error",
+    "role": "本文",
+    "reason": "エラーを観察・説明するために提示されたコード。実際の失敗理由は修正段階で照合する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "意図した失敗を確認するため、このブロックだけを別ファイルで実行する。エラーの理由と件数を diagnostics で照合する。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_006.lean",
+    "validation_mode": "assert_expected_diagnostic",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_006",
+      "source_sha256": "91a312fca5ed2f33de26c491608a3a94481f98369e40e903441bdfcf1bd8916d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "91a312fca5ed2f33de26c491608a3a94481f98369e40e903441bdfcf1bd8916d",
+      "line": 245,
+      "end": 252,
+      "category": "expected_error",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
+  },
+  {
+    "id": "ch05_007",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 125,
+    "end": 130,
+    "sha256": "7d256b3c6c13d0a373683d977a4c43bfcf2b99aba8ad6847a73f4f0e3ff81573",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.3 型クラスの役割を確認する",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で順序を指定した一つの宣言・証明の断片。全ブロックを連結して検証する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_008",
+        "ch05_009",
+        "ch05_010"
+      ],
+      "instruction": "本文の順で ch05_007, ch05_008, ch05_009, ch05_010 を連結する。未完成例や別の完成例は挿入しない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_007.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_007",
+      "source_sha256": "58b01cf7fe0214a9623184ea1a645dccff7ecce4f0fc428a937c1359802e9786",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007",
+      "P2-008"
+    ],
+    "before_stage2": {
+      "sha256": "58b01cf7fe0214a9623184ea1a645dccff7ecce4f0fc428a937c1359802e9786",
+      "line": 274,
+      "end": 276,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_006"
+        ],
+        "instruction": "型クラスの段階追加。f の引数より前に挿入し、直前段階の宣言を置き換える。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_008",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 134,
+    "end": 136,
+    "sha256": "cde971d7dcdd4f3ef1666a814439eb7d44484d17abdc840d71681fcff1cce962",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.3 型クラスの役割を確認する",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で順序を指定した一つの宣言・証明の断片。全ブロックを連結して検証する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_007",
+        "ch05_009",
+        "ch05_010"
+      ],
+      "instruction": "本文の順で ch05_007, ch05_008, ch05_009, ch05_010 を連結する。未完成例や別の完成例は挿入しない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_008.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_008",
+      "source_sha256": "389391aeb28266e6cfc8cf66838b912eb014eadc0f2201f12b35776b2df64d21",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007",
+      "P2-008"
+    ],
+    "before_stage2": {
+      "sha256": "389391aeb28266e6cfc8cf66838b912eb014eadc0f2201f12b35776b2df64d21",
+      "line": 289,
+      "end": 292,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_006"
+        ],
+        "instruction": "型クラスの段階追加。f の引数より前に挿入し、直前段階の宣言を置き換える。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_009",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 140,
+    "end": 142,
+    "sha256": "253c5d5a368d52786d902d7921f08af00c1ddeea0a008493f69afe858dedcad2",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.3 型クラスの役割を確認する",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で順序を指定した一つの宣言・証明の断片。全ブロックを連結して検証する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_007",
+        "ch05_008",
+        "ch05_010"
+      ],
+      "instruction": "本文の順で ch05_007, ch05_008, ch05_009, ch05_010 を連結する。未完成例や別の完成例は挿入しない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_009.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_009",
+      "source_sha256": "10370f0fb0307f72ea2d36e9e21dc3cfb112ca65aaa39178b44b6ea4b615dfdc",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007",
+      "P2-008"
+    ],
+    "before_stage2": {
+      "sha256": "10370f0fb0307f72ea2d36e9e21dc3cfb112ca65aaa39178b44b6ea4b615dfdc",
+      "line": 303,
+      "end": 306,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_006"
+        ],
+        "instruction": "型クラスの段階追加。f の引数より前に挿入し、直前段階の宣言を置き換える。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_010",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 146,
+    "end": 150,
+    "sha256": "3be2d4ae7a10253f629231cea07a6e3278713b8b8d580528cce785e111582a69",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.3 型クラスの役割を確認する",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で順序を指定した一つの宣言・証明の断片。全ブロックを連結して検証する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_007",
+        "ch05_008",
+        "ch05_009"
+      ],
+      "instruction": "本文の順で ch05_007, ch05_008, ch05_009, ch05_010 を連結する。未完成例や別の完成例は挿入しない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_010.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_010",
+      "source_sha256": "3a2ec93537d151513653c9d505308494af96c4b82aef8d18bb3fe2a8178dc240",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007",
+      "P2-008"
+    ],
+    "before_stage2": {
+      "sha256": "3a2ec93537d151513653c9d505308494af96c4b82aef8d18bb3fe2a8178dc240",
+      "line": 317,
+      "end": 320,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_006"
+        ],
+        "instruction": "型クラスの段階追加。f の引数より前に挿入し、直前段階の宣言を置き換える。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_011",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 158,
+    "end": 166,
+    "sha256": "6a556eafe65523ab6f1cbdc8ba9708f30c5e484743f2f7d2a0d2ebca1c74710d",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.4 既存の定理を探す",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_011",
+      "source_sha256": "84ddc7a49889e95ee797c2e6623671c2bf6a2d503c0830b0fd60a16fa8fd3140",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "84ddc7a49889e95ee797c2e6623671c2bf6a2d503c0830b0fd60a16fa8fd3140",
+      "line": 349,
+      "end": 352,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_004",
+          "ch05_021"
+        ],
+        "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_012",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 170,
+    "end": 178,
+    "sha256": "e41a53f4e7746269b91a78af3b0cbfe5a703997f99ee381f36a7219d6974c0e5",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.4 既存の定理を探す",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_012",
+      "source_sha256": "118edc4cb23b98795108c6b69229dbc873be80487109e5fb4f9b2da9fe068303",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "118edc4cb23b98795108c6b69229dbc873be80487109e5fb4f9b2da9fe068303",
+      "line": 365,
+      "end": 370,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_004",
+          "ch05_021"
+        ],
+        "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_013",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 182,
+    "end": 190,
+    "sha256": "2582b3fbb33ccc06849719cc32f0e4e4c8c40348ce268ec2844533634180b8ea",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.4 既存の定理を探す",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_013.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_013",
+      "source_sha256": "3c2d3712cce3c74cdd7e35e392a7d1a82c98f9635654adf3257df7ee73eb1ece",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "3c2d3712cce3c74cdd7e35e392a7d1a82c98f9635654adf3257df7ee73eb1ece",
+      "line": 390,
+      "end": 393,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_004",
+          "ch05_021"
+        ],
+        "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_014",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 194,
+    "end": 202,
+    "sha256": "e17d8ff274bb9f6b4f5e115cb85fb8de3246203cb4e1e4082573eecfe118cf89",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.4 既存の定理を探す",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_014",
+      "source_sha256": "7cf691943c04e8f69ae7502b087e73145ddbaf0b8075e9ea1a22476038f36604",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "7cf691943c04e8f69ae7502b087e73145ddbaf0b8075e9ea1a22476038f36604",
+      "line": 405,
+      "end": 410,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_004",
+          "ch05_021"
+        ],
+        "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_015",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 206,
+    "end": 210,
+    "sha256": "a78d9ee671ac7de29669155e7e370a8978a28c31fdde0fc9f69a65214cff4dd2",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.4 既存の定理を探す",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_015",
+      "source_sha256": "08c1aa19eec7b41a8caa6377a63a1180f0f15934e556c5282be93e66683e397b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "08c1aa19eec7b41a8caa6377a63a1180f0f15934e556c5282be93e66683e397b",
+      "line": 460,
+      "end": 463,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_016",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 223,
+    "end": 232,
+    "sha256": "d8c9b485da29cc2e534a7290ac85079057731492a49f5f0bd915129fe9883cff",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.5 仮定の確認と次元等式の証明を分ける",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_016",
+      "source_sha256": "19ab6ae454770f43b1788e781ce322f9eb29fe62d63014df6175476837c627ea",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "19ab6ae454770f43b1788e781ce322f9eb29fe62d63014df6175476837c627ea",
+      "line": 484,
+      "end": 489,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_004",
+          "ch05_021"
+        ],
+        "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_017",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 234,
+    "end": 243,
+    "sha256": "3914bbf16941fe5bd8dc314339d425ed181e7fc423eba0a7c1483b29898c7b4c",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.5 仮定の確認と次元等式の証明を分ける",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_017",
+      "source_sha256": "b7e3f770b8ad73bb07d8e05546bca4e219abf2d47736bc5b9fb03758f6492ff9",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "b7e3f770b8ad73bb07d8e05546bca4e219abf2d47736bc5b9fb03758f6492ff9",
+      "line": 505,
+      "end": 510,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_004",
+          "ch05_021"
+        ],
+        "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_018",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 247,
+    "end": 250,
+    "sha256": "6ebf07a9bd3a55c73b6313819cb55adcdb36b7c02636ff87267e7cba737bf1d0",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.5 仮定の確認と次元等式の証明を分ける",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_018",
+      "source_sha256": "d7df391b7ab92e78f1eca86834855f3cbf80a4f7eacc3fb380194690df679d2b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "d7df391b7ab92e78f1eca86834855f3cbf80a4f7eacc3fb380194690df679d2b",
+      "line": 526,
+      "end": 528,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_019",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 254,
+    "end": 264,
+    "sha256": "33a5edce219652fe1780fc0412202659d2635147aa53cd88b9158360c8f8fbce",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.5 仮定の確認と次元等式の証明を分ける",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で順序を指定した一つの宣言・証明の断片。全ブロックを連結して検証する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_020"
+      ],
+      "instruction": "本文の順で ch05_019, ch05_020 を連結する。未完成例や別の完成例は挿入しない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_019.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_019",
+      "source_sha256": "197e4b60c6a0acdb3fb76d8eee31239726bf39d3d32d27615c954f11e18c1043",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "before_stage2": {
+      "sha256": "197e4b60c6a0acdb3fb76d8eee31239726bf39d3d32d27615c954f11e18c1043",
+      "line": 545,
+      "end": 549,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch05_004",
+          "ch05_021"
+        ],
+        "instruction": "次元定理の by 内で対応する have／最終証明を置換。K,V,W,f と全型クラスを引き継ぐ。完成形は ch05_021。同名 have を重複連結しない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_020",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 275,
+    "end": 277,
+    "sha256": "9c1d4ee5310586334c5996511afa7761097ff00a8c7512bd58eafa4f14875511",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.5 仮定の確認と次元等式の証明を分ける",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で順序を指定した一つの宣言・証明の断片。全ブロックを連結して検証する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_019"
+      ],
+      "instruction": "本文の順で ch05_019, ch05_020 を連結する。未完成例や別の完成例は挿入しない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_020.lean",
+    "validation_mode": "assemble_then_compile",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-007"
+    ],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_021",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 292,
+    "end": 303,
+    "sha256": "9111e56b2832495c190663e5bcdef5b85c1488f2db5e037a06bdb8ed51c69fd6",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.6 完成例と公理依存",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_021.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": true,
+    "stage0_status": "compiled_source",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_021",
+      "source_sha256": "d4a149381dd500eb4f886312bf1b5238571794b901bd035724f06f3715334f0b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P1-02",
+      "P2-007",
+      "P2-008"
+    ],
+    "stage1a_status": "compiled_source",
+    "before_stage2": {
+      "sha256": "d4a149381dd500eb4f886312bf1b5238571794b901bd035724f06f3715334f0b",
+      "line": 594,
+      "end": 617,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_022",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 307,
+    "end": 309,
+    "sha256": "30034ba01fdf428f5b8d72e2b4e1809ca465e0e8353a3680b4da9707bb9c6cc3",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.6 完成例と公理依存",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch05_021"
+      ],
+      "instruction": "ch05_021 の完成宣言に続けて置く。import行はファイル先頭へ置き、同名の未完成宣言とは連結しない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch05_022.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": true,
+    "stage0_status": "not_present_in_stage0",
+    "prior_probe": {
+      "status": "not_run",
+      "sorry_warning": false,
+      "method": "Added in stage 1-A; no stage-0 probe"
+    },
+    "issue_ids": [
+      "P1-02",
+      "P2-007"
+    ],
+    "stage1a_status": "compiled_source",
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_023",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 330,
+    "end": 338,
+    "sha256": "aec22abf79d0cd99f138817605be87950b8aa16c5ae0697ab12f42fe5aa5269a",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.7 次のパートへの予告",
+    "category": "expected_error",
+    "role": "本文",
+    "reason": "エラーを観察・説明するために提示されたコード。実際の失敗理由は修正段階で照合する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "意図した失敗を確認するため、このブロックだけを別ファイルで実行する。エラーの理由と件数を diagnostics で照合する。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_023.lean",
+    "validation_mode": "assert_expected_diagnostic",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_022",
+      "source_sha256": "4e59ecd7af2d46745d11ba0f0d42e5d5f68098614f950a4e84368a08afd62551",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "stage2_status": "diagnostic_case"
+  },
+  {
+    "id": "ch05_024",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 348,
+    "end": 355,
+    "sha256": "e8ac89d844e7d60f07fb7d540a52e5f8a45194dd6044ac780ed90cca72742d73",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.8 練習問題 / ### 問1：核・像の型を読む",
+    "category": "complete",
+    "role": "問題文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_024.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_023",
+      "source_sha256": "e8ac89d844e7d60f07fb7d540a52e5f8a45194dd6044ac780ed90cca72742d73",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_025",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 361,
+    "end": 371,
+    "sha256": "2bab1120e253a1600ddf5bd5c1e98784f7b88852ee02eee66ac638d03731bfcf",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.8 練習問題 / ### 問1：核・像の型を読む",
+    "category": "complete",
+    "role": "別解を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_025.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_024",
+      "source_sha256": "74fc2d7665cdae0de4a66805f92839cd7ea5c3562f66c8b8e7c5844fe8667703",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "74fc2d7665cdae0de4a66805f92839cd7ea5c3562f66c8b8e7c5844fe8667703",
+      "line": 759,
+      "end": 771,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_026",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 377,
+    "end": 388,
+    "sha256": "03d5a6d74501261e5436f085bda26de2eff93cbac7df365723286802b3c0377f",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.8 練習問題 / ### 問2：零写像の核の次元",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_026.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_025",
+      "source_sha256": "6ea3766ed4e9b2e18bb728f1c4f4199260c08b5a839a6ffb4ff260fe40341446",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "6ea3766ed4e9b2e18bb728f1c4f4199260c08b5a839a6ffb4ff260fe40341446",
+      "line": 781,
+      "end": 792,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
+  },
+  {
+    "id": "ch05_027",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 397,
+    "end": 404,
+    "sha256": "7a748d51294aceeb5fe1d95663da87d7267621a223f78a4887c9453dec53e48b",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.8 練習問題 / ### 問2：零写像の核の次元",
+    "category": "complete",
+    "role": "解答を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_027.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_026",
+      "source_sha256": "56a1a1187deb77a6f89d2f04fb147ae4d34e22031db0ffa6bdfdde710d24bd55",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "56a1a1187deb77a6f89d2f04fb147ae4d34e22031db0ffa6bdfdde710d24bd55",
+      "line": 804,
+      "end": 811,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch05_026"
+        ],
+        "instruction": "問題の variable 宣言（K,V と型クラス）を先に置く。問題の sorry は解答に含めない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_028",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 409,
+    "end": 416,
+    "sha256": "b3e47ba41d2756256620193f5419e80187e29d5fae454273d74f1d884fd12a8c",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.8 練習問題 / ### 問2：零写像の核の次元",
+    "category": "complete",
+    "role": "別解を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_028.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_027",
+      "source_sha256": "b77f965168c7a80e1a83ef47036fe68ac152245e0eaf678b1b731205330ef063",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "b77f965168c7a80e1a83ef47036fe68ac152245e0eaf678b1b731205330ef063",
+      "line": 820,
+      "end": 826,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch05_026"
+        ],
+        "instruction": "問題の variable 宣言（K,V と型クラス）を先に置く。問題の sorry は解答に含めない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_029",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 425,
+    "end": 438,
+    "sha256": "f1afd4be712102b7cb97e2c0fb9fc32e8a8c0707a8dc72fd86741ffc95e7eae1",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.8 練習問題 / ### 問3：核の有限次元性を確認する",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_029.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_028",
+      "source_sha256": "bacdd8a2c955b1cf4da595344a72ceb7455c74555e2d855b4bc716809254ea28",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "bacdd8a2c955b1cf4da595344a72ceb7455c74555e2d855b4bc716809254ea28",
+      "line": 836,
+      "end": 849,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
+  },
+  {
+    "id": "ch05_030",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 442,
+    "end": 450,
+    "sha256": "028d4f2d352d925f6163a27f8fae4c6d2f2e6345a047b4e07ef0bd0da949ec4c",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.8 練習問題 / ### 問3：核の有限次元性を確認する",
+    "category": "complete",
+    "role": "解答を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_030.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_029",
+      "source_sha256": "ab51c7f2782663513b890b7417b91d39f4452f7f8daed2aa7674cd38c81b72d4",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "ab51c7f2782663513b890b7417b91d39f4452f7f8daed2aa7674cd38c81b72d4",
+      "line": 863,
+      "end": 869,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch05_029"
+        ],
+        "instruction": "問題の variable 宣言（K,V,W,f と型クラス）を先に置く。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch05_031",
+    "source": "books/lean4-formalization/ch05.md",
+    "line": 457,
+    "end": 466,
+    "sha256": "9fdefe8630ff3c6f5ae2e0e01b1385bec2014bcd755747d1c6504a8ec3523ccd",
+    "section": "# 第5章：次元定理を使う 〜仮定の確認から完成例まで〜 / ## 5.8 練習問題 / ### 問3：核の有限次元性を確認する",
+    "category": "complete",
+    "role": "別解を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch05_031.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch05_030",
+      "source_sha256": "7d2abd9abfbe070ddba24e8b7c0205c022c60d8cd90b91cd3f5e923d2918acd5",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "7d2abd9abfbe070ddba24e8b7c0205c022c60d8cd90b91cd3f5e923d2918acd5",
+      "line": 878,
+      "end": 882,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch05_029"
+        ],
+        "instruction": "問題の variable 宣言（K,V,W,f と型クラス）を先に置く。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  }
+]

@@ -1,0 +1,2340 @@
+[
+  {
+    "id": "ch06_001",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 15,
+    "end": 21,
+    "sha256": "6dcb7f40d945cf5c37ff3a9b04405f0f2bac827f04b1c1fa2d340217b9689a6f",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.0 本章のゴールを先に見せる ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_001",
+      "source_sha256": "9eee45ef3a35de58161f2ad6b51bb48b8e953c83ff2c3f1a1acc0144b25ba18d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-009"
+    ],
+    "before_stage3a": {
+      "sha256": "9eee45ef3a35de58161f2ad6b51bb48b8e953c83ff2c3f1a1acc0144b25ba18d",
+      "line": 13,
+      "end": 19,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_002",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 25,
+    "end": 48,
+    "sha256": "c857bd7338ce479058920e719ad858e943cacfc8298e81af78648b45676bd02e",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.0 本章のゴールを先に見せる ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_002",
+      "source_sha256": "d034c673fcf785be7a2bad2544f291975ecb2683b0fbaa5822b93f3f58ee8f02",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-009"
+    ],
+    "before_stage3a": {
+      "sha256": "d034c673fcf785be7a2bad2544f291975ecb2683b0fbaa5822b93f3f58ee8f02",
+      "line": 23,
+      "end": 46,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_003",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 58,
+    "end": 65,
+    "sha256": "048e53fb82a9d31b406726955ea751912f7b345ccc4d675a226cd8c3da380882",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.1 予告コードを読み直す ──── 予告コードへの挑戦",
+    "category": "expected_error",
+    "role": "本文",
+    "reason": "連続性の仮定が欠けた意図的な失敗例。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "importを含むこのブロックを完成例とは別のLeanプロセスで実行し、意図したエラーまたはsorry警告・公理を照合する。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_003.lean",
+    "validation_mode": "assert_expected_failure",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_003",
+      "source_sha256": "b092c0e7fb23a791edba14cbfe3681b6504630ea399f025038dcaf331ad156de",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-009"
+    ],
+    "stage3a_status": "diagnostic_source",
+    "before_stage3a": {
+      "sha256": "b092c0e7fb23a791edba14cbfe3681b6504630ea399f025038dcaf331ad156de",
+      "line": 56,
+      "end": 63,
+      "category": "expected_error",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    }
+  },
+  {
+    "id": "ch06_004",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 121,
+    "end": 134,
+    "sha256": "592c7a9787fd1909e1200911f59bf3b84806be2a1a12f4cf8446f55b9bc9dfbb",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.2 ε-δ論法と形式化の壁",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_004",
+      "source_sha256": "319719a02f113b61790746d86545e0ee63299fba76a32aa7ffab10b03c8bbfdd",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P1-03"
+    ],
+    "stage1b_status": "compiled_source",
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_005",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 186,
+    "end": 192,
+    "sha256": "9d5e64ce307f20682a2f03282fcce2df46622f4c81b8239b28a31056822ef864",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.3 Filterとは何者か ──── 「方向」を捕まえる道具 / ### 数学の定義：3つの条件",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_005",
+      "source_sha256": "e53591fe6cda9b3f03cae4f002e1796fb1dd1348e63c3987d159116c61768b5a",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "e53591fe6cda9b3f03cae4f002e1796fb1dd1348e63c3987d159116c61768b5a",
+      "line": 184,
+      "end": 193,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_006",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 201,
+    "end": 209,
+    "sha256": "0feba3531e3392483f086d05e17a863a21531198a33f1660495ca70f8bdbe6c2",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.3 Filterとは何者か ──── 「方向」を捕まえる道具 / ### Leanの実装：3条件が構造体のフィールドに1対1対応する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_006",
+      "source_sha256": "4c280a49aa01fec0032ac4cbb403b79ec0cf5fbfa55f3b25f70c4a8026e6daa3",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "4c280a49aa01fec0032ac4cbb403b79ec0cf5fbfa55f3b25f70c4a8026e6daa3",
+      "line": 202,
+      "end": 219,
+      "category": "excerpt",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_007",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 221,
+    "end": 227,
+    "sha256": "2b4d51539e64083b3d4041a2af57c69d42075c8175cc3bf81ce688079353a27c",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.3 Filterとは何者か ──── 「方向」を捕まえる道具 / ### Leanの実装：3条件が構造体のフィールドに1対1対応する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_007",
+      "source_sha256": "cd84eebf69b1035f247719d047affdc878492000d1acd276231ae3a615eef676",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "cd84eebf69b1035f247719d047affdc878492000d1acd276231ae3a615eef676",
+      "line": 231,
+      "end": 235,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_008",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 247,
+    "end": 254,
+    "sha256": "cefddc9ae499f4a4f30f5c180d87c3490cc62a19cf7638fab93ab211d4f57f13",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.3 Filterとは何者か ──── 「方向」を捕まえる道具 / ### 最重要例：`atTop` フィルター",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_008",
+      "source_sha256": "55179b7127214fc894734521faf86d5c6598bf0e089f183edf7d3a5a4897a781",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "55179b7127214fc894734521faf86d5c6598bf0e089f183edf7d3a5a4897a781",
+      "line": 255,
+      "end": 260,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_009",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 268,
+    "end": 272,
+    "sha256": "42af637198cd368e61357402ffac484f6093901a8fabb89fc558680b4ce6b89f",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.3 Filterとは何者か ──── 「方向」を捕まえる道具 / ### 最重要例：`atTop` フィルター",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_009",
+        "ch06_010",
+        "ch06_011"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_009 → ch06_010 → ch06_011。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_009",
+      "source_sha256": "6399ac4230a8e93540b3b1310b55916cfed9c87e95b64e6f4b2a3523a2c225a3",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "6399ac4230a8e93540b3b1310b55916cfed9c87e95b64e6f4b2a3523a2c225a3",
+      "line": 272,
+      "end": 274,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_010",
+          "ch06_011"
+        ],
+        "instruction": "ch06_009 の by 以下を段階的に構成する。simp が閉じた場合に後続 exact を重複追加しない。",
+        "assembly_group": "ch06_009"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_010",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 282,
+    "end": 284,
+    "sha256": "fc5e5f3046fa864cf753560b90f5bdcde83659fb2716cbc382281eab0c6a6a11",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.3 Filterとは何者か ──── 「方向」を捕まえる道具 / ### 最重要例：`atTop` フィルター",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_009",
+        "ch06_010",
+        "ch06_011"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_009 → ch06_010 → ch06_011。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_009",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_010",
+      "source_sha256": "c428c56bdcc49899d2caa7a7d9087dbdc7d7a3ed8eb39723e509517400f54e8b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "c428c56bdcc49899d2caa7a7d9087dbdc7d7a3ed8eb39723e509517400f54e8b",
+      "line": 284,
+      "end": 286,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_009",
+          "ch06_011"
+        ],
+        "instruction": "ch06_009 の by 以下を段階的に構成する。simp が閉じた場合に後続 exact を重複追加しない。",
+        "assembly_group": "ch06_009"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_011",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 296,
+    "end": 299,
+    "sha256": "ed24ef99f791fc9143a6c0644585db1e845a6e2f300c50c02399ac5e841fd335",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.3 Filterとは何者か ──── 「方向」を捕まえる道具 / ### 最重要例：`atTop` フィルター",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_009",
+        "ch06_010",
+        "ch06_011"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_009 → ch06_010 → ch06_011。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_009",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "ed24ef99f791fc9143a6c0644585db1e845a6e2f300c50c02399ac5e841fd335",
+      "line": 298,
+      "end": 301,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_009",
+          "ch06_010"
+        ],
+        "instruction": "ch06_009 の by 以下を段階的に構成する。simp が閉じた場合に後続 exact を重複追加しない。",
+        "assembly_group": "ch06_009"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_012",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 344,
+    "end": 354,
+    "sha256": "4ff2e3c5dc0f7e376496d1dd2cbd8091da72f1f7c5a4473e7c7080a527e72fff",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.4 `nhds`の正体 ──── 近傍フィルターというパッケージ / ### Leanの実装：型と基底",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_012",
+      "source_sha256": "b2f1fa4771cdaebf2ff954f22891252f4e32cc02c2c2862d1ddf124100e538ac",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "b2f1fa4771cdaebf2ff954f22891252f4e32cc02c2c2862d1ddf124100e538ac",
+      "line": 339,
+      "end": 347,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_013",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 377,
+    "end": 385,
+    "sha256": "7149669bf1021c7e41573a2dc49f4000c1f0ce861408c53f0d1a1ed4cf6ed3e5",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.4 `nhds`の正体 ──── 近傍フィルターというパッケージ / ### 数学の定義 → 距離空間での具体化 → Leanの `Metric.ball` へ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_013.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_013",
+      "source_sha256": "c47df57206c2a2f25339801433d29209f18fcaeac50da6e308fee35cf4b412bc",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "c47df57206c2a2f25339801433d29209f18fcaeac50da6e308fee35cf4b412bc",
+      "line": 370,
+      "end": 376,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_014",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 402,
+    "end": 415,
+    "sha256": "b5d0637dd06103720943b6ef1c60e422d02fb252465671ac1f4129c689b8216e",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.4 `nhds`の正体 ──── 近傍フィルターというパッケージ / ### 数学の定義 → 距離空間での具体化 → Leanの `Metric.ball` へ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_014",
+      "source_sha256": "ad949bc948a1b087bc8a25d43f9b6da79926934a48a28a38532196df90ee612e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-010"
+    ],
+    "before_stage3a": {
+      "sha256": "ad949bc948a1b087bc8a25d43f9b6da79926934a48a28a38532196df90ee612e",
+      "line": 393,
+      "end": 400,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_015",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 439,
+    "end": 445,
+    "sha256": "1f4054a961801640ae9d154d2ca10536b6af220b14e163381397ac4ebdfa8685",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.5 `Filter.Tendsto` を解剖する ──── 収束の普遍的な定義 / ### Leanの定義：`Filter.map` と順序関係",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_015",
+      "source_sha256": "c97c754ddeca24e06b2928ca86c4ddf148357756c1e02e49cde993eac6f61452",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "c97c754ddeca24e06b2928ca86c4ddf148357756c1e02e49cde993eac6f61452",
+      "line": 424,
+      "end": 428,
+      "category": "excerpt",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_016",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 459,
+    "end": 473,
+    "sha256": "aebc146a23097fedd5ff0ae91d07e7f623b9c5b9340f514e6c0d3e68a5b3221e",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.5 `Filter.Tendsto` を解剖する ──── 収束の普遍的な定義 / ### `Filter.map f l` の意味",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_016",
+      "source_sha256": "ea2344fc75841991e8079cde3aa4f1c2b10bc76a18fb231f6aa060bacda4f473",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "ea2344fc75841991e8079cde3aa4f1c2b10bc76a18fb231f6aa060bacda4f473",
+      "line": 442,
+      "end": 454,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_017",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 530,
+    "end": 540,
+    "sha256": "0d931a5320d62a610f1901aa1346d9cbb8d3c2f3b30976a35211452de4cfe2e2",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.5 `Filter.Tendsto` を解剖する ──── 収束の普遍的な定義 / ### 2つの定義が一致する理由",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_017",
+      "source_sha256": "5f49752080c8a30813676c4a2f59a4815fc257da10e62cdd88f672374936c08e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-010"
+    ],
+    "before_stage3a": {
+      "sha256": "5f49752080c8a30813676c4a2f59a4815fc257da10e62cdd88f672374936c08e",
+      "line": 511,
+      "end": 514,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_018",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 554,
+    "end": 563,
+    "sha256": "61badd30bf1f0e2b6399c4a1383e50475ac9d7a3bef775f2b9a5e9f3c4297da2",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.5 `Filter.Tendsto` を解剖する ──── 収束の普遍的な定義 / ### Mathlib の定理でε-δとの橋を架ける",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_018",
+      "source_sha256": "e4f42df19ce716a17c70bfbd760e0deced86c70be1d16a6566eaf440fb5eea5c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "e4f42df19ce716a17c70bfbd760e0deced86c70be1d16a6566eaf440fb5eea5c",
+      "line": 528,
+      "end": 535,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_019",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 571,
+    "end": 578,
+    "sha256": "aaacc61e7b4aba24df95dc23972c5d3486771a9382385b833f49c235a2c998f5",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.5 `Filter.Tendsto` を解剖する ──── 収束の普遍的な定義 / ### Mathlib の定理でε-δとの橋を架ける",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_019",
+        "ch06_020",
+        "ch06_021",
+        "ch06_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_019 → ch06_020 → ch06_021 → ch06_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_019",
+      "source_sha256": "cd7c58af9ff84ac4371b94b7fca5fa9f3a58c33e9c0694b70a9baeecd8e9d196",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "cd7c58af9ff84ac4371b94b7fca5fa9f3a58c33e9c0694b70a9baeecd8e9d196",
+      "line": 541,
+      "end": 546,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_020",
+          "ch06_021",
+          "ch06_022"
+        ],
+        "instruction": "ch06_019 の by 内へ順に配置し、h,ε,hε,δ,hδ,hδε の文脈を引き継ぐ。",
+        "assembly_group": "ch06_019"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_020",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 590,
+    "end": 592,
+    "sha256": "0264909b66e341860dd6045749af2ff7ef0143872f6a32f0acaee58346f6334b",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.5 `Filter.Tendsto` を解剖する ──── 収束の普遍的な定義 / ### Mathlib の定理でε-δとの橋を架ける",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_019",
+        "ch06_020",
+        "ch06_021",
+        "ch06_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_019 → ch06_020 → ch06_021 → ch06_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_019",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_020.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "0264909b66e341860dd6045749af2ff7ef0143872f6a32f0acaee58346f6334b",
+      "line": 558,
+      "end": 560,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_019",
+          "ch06_021",
+          "ch06_022"
+        ],
+        "instruction": "ch06_019 の by 内へ順に配置し、h,ε,hε,δ,hδ,hδε の文脈を引き継ぐ。",
+        "assembly_group": "ch06_019"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_021",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 604,
+    "end": 606,
+    "sha256": "d95924915e1c13a41f5f50fa4cf4d515904abfa0ca47358761e27cb60c14fc39",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.5 `Filter.Tendsto` を解剖する ──── 収束の普遍的な定義 / ### Mathlib の定理でε-δとの橋を架ける",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_019",
+        "ch06_020",
+        "ch06_021",
+        "ch06_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_019 → ch06_020 → ch06_021 → ch06_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_019",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_021.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "d95924915e1c13a41f5f50fa4cf4d515904abfa0ca47358761e27cb60c14fc39",
+      "line": 572,
+      "end": 574,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_019",
+          "ch06_020",
+          "ch06_022"
+        ],
+        "instruction": "ch06_019 の by 内へ順に配置し、h,ε,hε,δ,hδ,hδε の文脈を引き継ぐ。",
+        "assembly_group": "ch06_019"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_022",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 617,
+    "end": 621,
+    "sha256": "ccc5d39c6bf28f2f88ce42a3cc1fb5e5be5e8ea617cab650b0753acc5b4b72dd",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.5 `Filter.Tendsto` を解剖する ──── 収束の普遍的な定義 / ### Mathlib の定理でε-δとの橋を架ける",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_019",
+        "ch06_020",
+        "ch06_021",
+        "ch06_022"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_019 → ch06_020 → ch06_021 → ch06_022。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_019",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_022.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_022",
+      "source_sha256": "a47c6fc2d44054b9409be9a698b581fdc72540d0521f734c09fdee6abd2c6878",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "a47c6fc2d44054b9409be9a698b581fdc72540d0521f734c09fdee6abd2c6878",
+      "line": 585,
+      "end": 589,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_019",
+          "ch06_020",
+          "ch06_021"
+        ],
+        "instruction": "ch06_019 の by 内へ順に配置し、h,ε,hε,δ,hδ,hδε の文脈を引き継ぐ。",
+        "assembly_group": "ch06_019"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_023",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 631,
+    "end": 638,
+    "sha256": "400c8ad74312a9396bdb385473bfde3fc60b63d3948c40ac8c6dc84e5e18a17f",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.6 謎が解ける ──── 予告コードの「正しい姿」",
+    "category": "expected_error",
+    "role": "本文",
+    "reason": "連続性の仮定が欠けた意図的な失敗例。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "importを含むこのブロックを完成例とは別のLeanプロセスで実行し、意図したエラーまたはsorry警告・公理を照合する。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_023.lean",
+    "validation_mode": "assert_expected_failure",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_023",
+      "source_sha256": "230339b03f60880fe2cf9f508e33c8e2f37845ab8623a91763b30aa72ea48ccf",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-009"
+    ],
+    "before_stage3a": {
+      "sha256": "230339b03f60880fe2cf9f508e33c8e2f37845ab8623a91763b30aa72ea48ccf",
+      "line": 599,
+      "end": 604,
+      "category": "expected_error",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "diagnostic_source"
+  },
+  {
+    "id": "ch06_024",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 650,
+    "end": 656,
+    "sha256": "e5def8cd0d2ed2a91b5d98a001f7d982ac0d3f5e41e41bd1211d8b7f0561844a",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.6 謎が解ける ──── 予告コードの「正しい姿」 / ### 仮定を付けると一発で通る",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_024",
+        "ch06_025"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_024 → ch06_025。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_024.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_024",
+      "source_sha256": "745c192b9a79f2357a412f7d7cb0f42d5f7f1e3f9cbb4555a06acc114762570e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-009"
+    ],
+    "before_stage3a": {
+      "sha256": "745c192b9a79f2357a412f7d7cb0f42d5f7f1e3f9cbb4555a06acc114762570e",
+      "line": 614,
+      "end": 618,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_025"
+        ],
+        "instruction": "ch06_024 の by 内へ exact hf を挿入する。",
+        "assembly_group": "ch06_024"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_025",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 669,
+    "end": 672,
+    "sha256": "0d53e549775172329eae8a622d8f05c07d846c0cac36e2aeb2ac1fec88d47d05",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.6 謎が解ける ──── 予告コードの「正しい姿」 / ### 仮定を付けると一発で通る",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_024",
+        "ch06_025"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_024 → ch06_025。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_024",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_025.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-009"
+    ],
+    "before_stage3a": {
+      "sha256": "0d53e549775172329eae8a622d8f05c07d846c0cac36e2aeb2ac1fec88d47d05",
+      "line": 631,
+      "end": 634,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_024"
+        ],
+        "instruction": "ch06_024 の by 内へ exact hf を挿入する。",
+        "assembly_group": "ch06_024"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_026",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 680,
+    "end": 686,
+    "sha256": "1bea108331d45f974b95061ce6f3b419233727287525e5d86435b599cdbf0106",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.6 謎が解ける ──── 予告コードの「正しい姿」 / ### `ContinuousAt` の正体を覗く",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_026.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_026",
+      "source_sha256": "6c795c6b9ca34c965934497f27b49b897365c2b109182dc2a9bec9ed3dddf032",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "6c795c6b9ca34c965934497f27b49b897365c2b109182dc2a9bec9ed3dddf032",
+      "line": 642,
+      "end": 646,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_027",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 698,
+    "end": 705,
+    "sha256": "06576665fbc2f3b167745789464db14f6fa8cb22b8b1bc37ef7dc6fa0c6404e7",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.6 謎が解ける ──── 予告コードの「正しい姿」 / ### `ContinuousAt` の正体を覗く",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_027.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_027",
+      "source_sha256": "2d1e5db3256f3c9869b7515d805e2766cdf50669cb3fe677e74e24e1473ccc39",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-010"
+    ],
+    "before_stage3a": {
+      "sha256": "2d1e5db3256f3c9869b7515d805e2766cdf50669cb3fe677e74e24e1473ccc39",
+      "line": 658,
+      "end": 663,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_028",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 754,
+    "end": 761,
+    "sha256": "5d7f4c6095e4e5ebbfd6e29fc5219ca42c7d1f8fc4ee8262871887de4cab166e",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.7 フィルターの統一力 ──── 3種類の収束を並べてみる / ### 収束①：実数列の収束 $a_n \\to L$",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_028.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_028",
+      "source_sha256": "95bc56371273b6dfbbb66dcd9b3a1864542df5e79183e688dd3efb24cfb94b95",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "95bc56371273b6dfbbb66dcd9b3a1864542df5e79183e688dd3efb24cfb94b95",
+      "line": 711,
+      "end": 716,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_029",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 767,
+    "end": 773,
+    "sha256": "d9496e01d650a3426f16998bc6bb2159353adf3780147c887aa884cfd2cc1f48",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.7 フィルターの統一力 ──── 3種類の収束を並べてみる / ### 収束①：実数列の収束 $a_n \\to L$",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_029",
+        "ch06_030",
+        "ch06_031",
+        "ch06_032"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_029 → ch06_030 → ch06_031 → ch06_032。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_029.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_029",
+      "source_sha256": "8c8dae908b8edee874506d343e569a4186e1a34c0a9312db9dbf6ebd9178de58",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "8c8dae908b8edee874506d343e569a4186e1a34c0a9312db9dbf6ebd9178de58",
+      "line": 720,
+      "end": 724,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_030",
+          "ch06_031",
+          "ch06_032"
+        ],
+        "instruction": "ch06_029 の by 内へ順に配置し、a,L,h,ε,N,hN を引き継ぐ。",
+        "assembly_group": "ch06_029"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_030",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 782,
+    "end": 784,
+    "sha256": "8def6cb98bbe714b9a3b11bbfdb04447167d9101bec3b59c28d61915118d7aab",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.7 フィルターの統一力 ──── 3種類の収束を並べてみる / ### 収束①：実数列の収束 $a_n \\to L$",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_029",
+        "ch06_030",
+        "ch06_031",
+        "ch06_032"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_029 → ch06_030 → ch06_031 → ch06_032。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_029",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_030.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "8def6cb98bbe714b9a3b11bbfdb04447167d9101bec3b59c28d61915118d7aab",
+      "line": 733,
+      "end": 735,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_029",
+          "ch06_031",
+          "ch06_032"
+        ],
+        "instruction": "ch06_029 の by 内へ順に配置し、a,L,h,ε,N,hN を引き継ぐ。",
+        "assembly_group": "ch06_029"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_031",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 792,
+    "end": 795,
+    "sha256": "e860f5e7c973d95f726820c4b2e4c68231c92602f936538d4019e06538b006ad",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.7 フィルターの統一力 ──── 3種類の収束を並べてみる / ### 収束①：実数列の収束 $a_n \\to L$",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_029",
+        "ch06_030",
+        "ch06_031",
+        "ch06_032"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_029 → ch06_030 → ch06_031 → ch06_032。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_029",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_031.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "e860f5e7c973d95f726820c4b2e4c68231c92602f936538d4019e06538b006ad",
+      "line": 743,
+      "end": 746,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_029",
+          "ch06_030",
+          "ch06_032"
+        ],
+        "instruction": "ch06_029 の by 内へ順に配置し、a,L,h,ε,N,hN を引き継ぐ。",
+        "assembly_group": "ch06_029"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_032",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 805,
+    "end": 808,
+    "sha256": "a4cfe65cb488c3c1fc4066ef6cfe3f45f4f874a95e01afa6d32824ee4dcf2023",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.7 フィルターの統一力 ──── 3種類の収束を並べてみる / ### 収束①：実数列の収束 $a_n \\to L$",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_029",
+        "ch06_030",
+        "ch06_031",
+        "ch06_032"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_029 → ch06_030 → ch06_031 → ch06_032。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_029",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_032.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "a4cfe65cb488c3c1fc4066ef6cfe3f45f4f874a95e01afa6d32824ee4dcf2023",
+      "line": 756,
+      "end": 759,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_029",
+          "ch06_030",
+          "ch06_031"
+        ],
+        "instruction": "ch06_029 の by 内へ順に配置し、a,L,h,ε,N,hN を引き継ぐ。",
+        "assembly_group": "ch06_029"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_033",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 819,
+    "end": 823,
+    "sha256": "a12f76cab29f9b402984744d7eb2b0b9e0ad95d0a857f59935f7bf1859a3d101",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.7 フィルターの統一力 ──── 3種類の収束を並べてみる / ### 収束②：正の無限大への発散 $x^2 \\to +\\infty$",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_033",
+        "ch06_034"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_033 → ch06_034。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_033.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_033",
+      "source_sha256": "529a24c7260021248a660f277a047f46086f02ae0a66ca24a6664824ff2f9c58",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "529a24c7260021248a660f277a047f46086f02ae0a66ca24a6664824ff2f9c58",
+      "line": 768,
+      "end": 770,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_034"
+        ],
+        "instruction": "ch06_033 の by 内へ ch06_034 を挿入する。",
+        "assembly_group": "ch06_033"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_034",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 829,
+    "end": 834,
+    "sha256": "9f5e7620adc11d854d3eb904d11f694dece03c0ba8325f5e276f76d7ae7845ba",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.7 フィルターの統一力 ──── 3種類の収束を並べてみる / ### 収束②：正の無限大への発散 $x^2 \\to +\\infty$",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_033",
+        "ch06_034"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_033 → ch06_034。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_033",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_034.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_034",
+      "source_sha256": "c1a7b78dd7b523c7b0cff8fdc20b9636d6b6a96198fc6feaff6be30c04c9095f",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "c1a7b78dd7b523c7b0cff8fdc20b9636d6b6a96198fc6feaff6be30c04c9095f",
+      "line": 776,
+      "end": 783,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_033"
+        ],
+        "instruction": "ch06_033 の by 内へ ch06_034 を挿入する。",
+        "assembly_group": "ch06_033"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_035",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 846,
+    "end": 853,
+    "sha256": "e72b923c680062d4ef221a562ad7958b42e3297254badc82836e11c34a80c904",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.8 具体的な連続性を Lean で示す / ### 定数関数の連続性",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_035.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_035",
+      "source_sha256": "43b9f94a846b233e73c69365f65d299b15b2a0693f753b1c5c415b3f5976dfef",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "43b9f94a846b233e73c69365f65d299b15b2a0693f753b1c5c415b3f5976dfef",
+      "line": 795,
+      "end": 800,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_036",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 865,
+    "end": 871,
+    "sha256": "a1622aed37aa1f8e0acb344054c22109c1a2e92846c1ea0c6aa194722ec38ec0",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.8 具体的な連続性を Lean で示す / ### 積の連続性",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_036",
+        "ch06_037"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_036 → ch06_037。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_036.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_036",
+      "source_sha256": "a2725560cd6508af06858270f06b868208339b540c68d1202a1bf09527b6bd21",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "a2725560cd6508af06858270f06b868208339b540c68d1202a1bf09527b6bd21",
+      "line": 810,
+      "end": 814,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_037"
+        ],
+        "instruction": "ch06_036 の by 内へ ch06_037 を挿入する。",
+        "assembly_group": "ch06_036"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_037",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 881,
+    "end": 884,
+    "sha256": "0e9b10d890448c0444c971c986761d62cd118c997c9ad570f7ba999c7c027190",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.8 具体的な連続性を Lean で示す / ### 積の連続性",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_036",
+        "ch06_037"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_036 → ch06_037。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_036",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_037.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "0e9b10d890448c0444c971c986761d62cd118c997c9ad570f7ba999c7c027190",
+      "line": 824,
+      "end": 827,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_036"
+        ],
+        "instruction": "ch06_036 の by 内へ ch06_037 を挿入する。",
+        "assembly_group": "ch06_036"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_038",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 896,
+    "end": 903,
+    "sha256": "435a7f89f830e7e1fdb52368162daf5c0d8b87dd582f829d45799c1bc3f8f06c",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.8 具体的な連続性を Lean で示す / ### 合成の連続性",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_038",
+        "ch06_039"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_038 → ch06_039。他の例は混ぜない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_038.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_038",
+      "source_sha256": "693632f687d61c774af9d54f32897be16d1677e1a874ac798db79e15dc382eaf",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "693632f687d61c774af9d54f32897be16d1677e1a874ac798db79e15dc382eaf",
+      "line": 837,
+      "end": 842,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_039"
+        ],
+        "instruction": "ch06_038 の by 内へ ch06_039 を挿入する。",
+        "assembly_group": "ch06_038"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_039",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 911,
+    "end": 914,
+    "sha256": "618a9ff8e2bd6e9cc38f1b1e35299ff3ae220aab3b081a50a141eec0f8a4fb2d",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.8 具体的な連続性を Lean で示す / ### 合成の連続性",
+    "category": "fragment",
+    "role": "本文",
+    "reason": "本文で連結順を示した証明の続き。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch06_038",
+        "ch06_039"
+      ],
+      "instruction": "この列の順に連結して一つのファイルで実行する：ch06_038 → ch06_039。他の例は混ぜない。"
+    },
+    "preceding_setup": [
+      {
+        "block": "ch06_038",
+        "line": "import Mathlib"
+      }
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch06_039.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "618a9ff8e2bd6e9cc38f1b1e35299ff3ae220aab3b081a50a141eec0f8a4fb2d",
+      "line": 850,
+      "end": 853,
+      "category": "fragment",
+      "context": {
+        "blocks": [
+          "ch06_038"
+        ],
+        "instruction": "ch06_038 の by 内へ ch06_039 を挿入する。",
+        "assembly_group": "ch06_038"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_040",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 922,
+    "end": 945,
+    "sha256": "5debb85504b2ec436a7d0e42d8bae742a2e0ce87334a5e39bb6701a1304aa4cd",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 6.9 予告コードの「正しい形」を確定する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_040.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_040",
+      "source_sha256": "5d426930c877a61e52de0f47555431674cbc8128f8e654906bc770c044676749",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "5d426930c877a61e52de0f47555431674cbc8128f8e654906bc770c044676749",
+      "line": 861,
+      "end": 882,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_041",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 1006,
+    "end": 1011,
+    "sha256": "6853b926661c2cc40f10e053f47d229694b122cf1a6c5da4699dd7ebc99b653e",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_041.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_041",
+      "source_sha256": "c24f762d2c4a92e77ead502c5ad1cb12439566dc4f4a0bb19a0f051a555a625c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "c24f762d2c4a92e77ead502c5ad1cb12439566dc4f4a0bb19a0f051a555a625c",
+      "line": 946,
+      "end": 949,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_042",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 1020,
+    "end": 1029,
+    "sha256": "bb63765fc43cb427bb288bca37ea716c8857e4cc7850339afa0b200fa6e5abf0",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "sorryを埋める演習の骨格。未完成であることを本文に明記し、完成解答とは別に検証する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "importを含むこのブロックを完成例とは別のLeanプロセスで実行し、意図したエラーまたはsorry警告・公理を照合する。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_042.lean",
+    "validation_mode": "assert_sorry_warning_and_axioms",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_042",
+      "source_sha256": "bb898a554db37cd588dd2b6915176335fb2cf3a86ea75051280da82f5357ced8",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "bb898a554db37cd588dd2b6915176335fb2cf3a86ea75051280da82f5357ced8",
+      "line": 958,
+      "end": 965,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "diagnostic_source"
+  },
+  {
+    "id": "ch06_043",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 1040,
+    "end": 1050,
+    "sha256": "5ccf389cb7a70afe897ae96cf0bb6add6c12edd4f0c4a28089e72d2e77747ec2",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_043.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_043",
+      "source_sha256": "b77f23255c50a16b830a327e1e30beb656886967a2381b6b439c8fba7a775328",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "b77f23255c50a16b830a327e1e30beb656886967a2381b6b439c8fba7a775328",
+      "line": 978,
+      "end": 986,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_044",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 1057,
+    "end": 1066,
+    "sha256": "bb76a60188cda24afd9f16ecace504a7bcd6f456e82743e827515e987854b5f0",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_044.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_044",
+      "source_sha256": "ad00b1daff1c63ad6c8daa27e03c12109c3963a29e766f1e2919f8bf764b6082",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "ad00b1daff1c63ad6c8daa27e03c12109c3963a29e766f1e2919f8bf764b6082",
+      "line": 994,
+      "end": 1001,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_045",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 1086,
+    "end": 1107,
+    "sha256": "eace14c9e121d26c269d39c0e822258e4bbf2f5104c8a17edee7364300837c79",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open scoped Topology"
+    ],
+    "fixture": ".generated/raw/ch06_045.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_045",
+      "source_sha256": "8f34385d68cf537187babac473eb52f7443f989c83de327b61a622872b638bc3",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-011"
+    ],
+    "before_stage3a": {
+      "sha256": "8f34385d68cf537187babac473eb52f7443f989c83de327b61a622872b638bc3",
+      "line": 1023,
+      "end": 1037,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "#check に現れる f : ℝ → ℝ の宣言が不足。修正対象として明示し、他の example の局所変数を流用しない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_046",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 1116,
+    "end": 1140,
+    "sha256": "f98837698f6c0adc4a91b60e26a503f2d8a663bbbae5e787c8f0d7d5df189daa",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open scoped Topology"
+    ],
+    "fixture": ".generated/raw/ch06_046.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_046",
+      "source_sha256": "1c5cc7ce9196fbf88200e16a51b517628312305a5ae341fb1b4780be4bb32d7f",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-011"
+    ],
+    "before_stage3a": {
+      "sha256": "1c5cc7ce9196fbf88200e16a51b517628312305a5ae341fb1b4780be4bb32d7f",
+      "line": 1047,
+      "end": 1052,
+      "category": "excerpt",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_047",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 1160,
+    "end": 1167,
+    "sha256": "d89a934ca552734c3cbdc462a6ab67a43b6f66b12052a2c15d603f6af0299f9d",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_047.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_047",
+      "source_sha256": "fee6ac897c3db8af3a92363f7c8c762930227a23a063f2fa3935d8a24cd3d89f",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "fee6ac897c3db8af3a92363f7c8c762930227a23a063f2fa3935d8a24cd3d89f",
+      "line": 1070,
+      "end": 1075,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  },
+  {
+    "id": "ch06_048",
+    "source": "books/lean4-formalization/ch06.md",
+    "line": 1174,
+    "end": 1180,
+    "sha256": "015bd855702026b0176941bb3590fde3074296fe04e4242df24e1faadbbf8d0f",
+    "section": "# 第6章：あの呪文の正体 〜`Filter.Tendsto`と`nhds`がLeanに存在する理由〜 / ## 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと前提を備えた完成証明・確認コマンド。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "このブロックのimportと宣言を含む別ファイルで実行する。他の例の変数や定理は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch06_048.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 3,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch06_048",
+      "source_sha256": "00b5ba56d1722fcee5bc093f0a80cafc13ee017f14e44989ad56f69fd81e0964",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage3a": {
+      "sha256": "00b5ba56d1722fcee5bc093f0a80cafc13ee017f14e44989ad56f69fd81e0964",
+      "line": 1083,
+      "end": 1087,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage3a_status": "compiled_source"
+  }
+]

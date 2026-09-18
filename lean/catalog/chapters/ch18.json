@@ -1,0 +1,720 @@
+[
+  {
+    "id": "ch18_001",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 13,
+    "end": 38,
+    "sha256": "bc70597c92bab2865aa06c7009da1ffa29c25d536905a952f4e94c5fd11453c2",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.0 本章のゴール",
+    "category": "complete",
+    "role": "本文",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory",
+      "open scoped ENNReal"
+    ],
+    "fixture": ".generated/raw/ch18_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_001",
+      "source_sha256": "1c4253e02b799a6d47d841824fc97a19046cedb11b2db3bcb21c48d4d58d39df",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-034",
+      "P2-035"
+    ],
+    "before_stage4c": {
+      "sha256": "1c4253e02b799a6d47d841824fc97a19046cedb11b2db3bcb21c48d4d58d39df",
+      "line": 11,
+      "end": 54,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_002",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 84,
+    "end": 96,
+    "sha256": "ef8e333ed0b6c62a20a2694f270087dcbf85a8668cfc3e509ecd7dc5c3c3f72d",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.2 `Lp E p μ` と `MemLp f p μ` / ### $L^p$空間の構造を確認する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory",
+      "open scoped ENNReal"
+    ],
+    "fixture": ".generated/raw/ch18_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_002",
+      "source_sha256": "115d8b3faaeab14a7dfadeab79ef79600e339af15c0c615ef88c9865024dce7a",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-034"
+    ],
+    "before_stage4c": {
+      "sha256": "115d8b3faaeab14a7dfadeab79ef79600e339af15c0c615ef88c9865024dce7a",
+      "line": 88,
+      "end": 104,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_003",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 112,
+    "end": 148,
+    "sha256": "e8192dd095959acb77f6bff69dac56b5c13730b0001aa810bd416be8ba9af87a",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.2 `Lp E p μ` と `MemLp f p μ` / ### 関数が$L^p$に属する条件",
+    "category": "complete",
+    "role": "本文",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory",
+      "open scoped ENNReal"
+    ],
+    "fixture": ".generated/raw/ch18_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_003",
+      "source_sha256": "e2399d96bca24a6b18ca9691ad2158ddfe03711dcc07557a2a6a28d3cfd51ea1",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-034"
+    ],
+    "before_stage4c": {
+      "sha256": "e2399d96bca24a6b18ca9691ad2158ddfe03711dcc07557a2a6a28d3cfd51ea1",
+      "line": 120,
+      "end": 144,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_004",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 170,
+    "end": 188,
+    "sha256": "de9682759b666540d3df3de46f47255a0e413ff9eeddbaa6f3bb02b97fcc991d",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.3 確率空間",
+    "category": "complete",
+    "role": "本文",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_004",
+      "source_sha256": "eee2a5934bcb2468a9a83b72f16694a1cbd9552df2427f192da93419ccc85408",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4c": {
+      "sha256": "eee2a5934bcb2468a9a83b72f16694a1cbd9552df2427f192da93419ccc85408",
+      "line": 158,
+      "end": 177,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_005",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 217,
+    "end": 226,
+    "sha256": "58e26c0385662119118d0917085378aed1be4dc993438c4aba84598f77b7c8ef",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.4 確率変数",
+    "category": "complete",
+    "role": "本文",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_005",
+      "source_sha256": "7fdb8f8ef426944cd3e601a1cebb82c85048bad66d07be2b32d3b24a678357fb",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4c": {
+      "sha256": "7fdb8f8ef426944cd3e601a1cebb82c85048bad66d07be2b32d3b24a678357fb",
+      "line": 201,
+      "end": 214,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_006",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 245,
+    "end": 259,
+    "sha256": "1e7c14123c6664160696e2779915dbe30c9557dee2a539040dd920766f43bc5b",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.5 期待値",
+    "category": "complete",
+    "role": "本文",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_006",
+      "source_sha256": "1893b87e4b0f655dc340c9e05a3eeef9daa5d2b464e6874dd277cd1b52a72216",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-035"
+    ],
+    "before_stage4c": {
+      "sha256": "1893b87e4b0f655dc340c9e05a3eeef9daa5d2b464e6874dd277cd1b52a72216",
+      "line": 236,
+      "end": 253,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_007",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 269,
+    "end": 278,
+    "sha256": "7a36100dfd6a12cc7639fcd8e4e66cfbb84f7d67271883c710c16dc67fd33907",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.5 期待値 / ### 定数の期待値 $\\mathbb{E}[c]=c$",
+    "category": "complete",
+    "role": "本文",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_007",
+      "source_sha256": "57499189f710e2d34ef494cc243581775760696ce306e08f7a2edf8152f64b1c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-035"
+    ],
+    "before_stage4c": {
+      "sha256": "57499189f710e2d34ef494cc243581775760696ce306e08f7a2edf8152f64b1c",
+      "line": 259,
+      "end": 268,
+      "category": "complete",
+      "context": {
+        "blocks": [
+          "ch18_006"
+        ],
+        "instruction": "Ω,P と MeasurableSpace Ω・IsProbabilityMeasure P の variable 宣言を引き継ぐ。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_008",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 320,
+    "end": 350,
+    "sha256": "4024cf507c08479d7e324f4a429a2ee6feb557adc56c4e08ad439f24b94e019b",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.6 条件付き期待値とマルチンゲール",
+    "category": "complete",
+    "role": "定数の条件付き期待値とマルチンゲールの基本性質を確認する完成例",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_008",
+      "source_sha256": "0fdcbb922c4e3d761e809bd346fcd7473e3d62c0e74e1cb5c61811450dac3b90",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-036"
+    ],
+    "before_stage4c": {
+      "sha256": "0fdcbb922c4e3d761e809bd346fcd7473e3d62c0e74e1cb5c61811450dac3b90",
+      "line": 309,
+      "end": 347,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_009",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 385,
+    "end": 393,
+    "sha256": "45f882e99bb40d1b9d9c4b65905a4b676c5d30f9f57e07d878656ba9ed9e2294",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_009",
+      "source_sha256": "1737beb42cb804a8557113c15603f272d10d9a64a9a57bddf88bbc9236c6005e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4c": {
+      "sha256": "1737beb42cb804a8557113c15603f272d10d9a64a9a57bddf88bbc9236c6005e",
+      "line": 389,
+      "end": 404,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_010",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 400,
+    "end": 407,
+    "sha256": "4d2519241bf5530dc3d0dd9b12aedd60d21d7149ce0cc8156d9dfc158f19c939",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_010",
+      "source_sha256": "67e3b14596f9d4cdcc2428c5461d93bad4b2f83f4d52adac32fcdacef29a4c7e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4c": {
+      "sha256": "67e3b14596f9d4cdcc2428c5461d93bad4b2f83f4d52adac32fcdacef29a4c7e",
+      "line": 413,
+      "end": 420,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_011",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 421,
+    "end": 429,
+    "sha256": "c9644d99fa75e47957379cb1f39d471d2b24b80f328f9678ced61b003eca8176",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_011",
+      "source_sha256": "377aa0fb449d0845f347ac500ee2dfa616a3b09f7a016ddc478b2b0b16f43c64",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4c": {
+      "sha256": "377aa0fb449d0845f347ac500ee2dfa616a3b09f7a016ddc478b2b0b16f43c64",
+      "line": 439,
+      "end": 449,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_012",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 436,
+    "end": 444,
+    "sha256": "fff56e701942088721735811d8f571f7a96d843d61e3f52a6448071e6a34ffe1",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_012",
+      "source_sha256": "4d80dc4746921c39daf964045a248ef5e817e4f0ece488939d3777646ce5f8af",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4c": {
+      "sha256": "4d80dc4746921c39daf964045a248ef5e817e4f0ece488939d3777646ce5f8af",
+      "line": 458,
+      "end": 465,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_013",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 458,
+    "end": 468,
+    "sha256": "c36ef2b6751d70e10d76d715062954185f9620571b9b9c2d50427854b4ee7d2d",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory",
+      "open scoped ENNReal"
+    ],
+    "fixture": ".generated/raw/ch18_013.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_013",
+      "source_sha256": "9d9a0f95058c36c7cf40628d7548b9ea76d50c8b9e97b7ebcb17fe5998e46c44",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-037",
+      "P3-046"
+    ],
+    "before_stage4c": {
+      "sha256": "9d9a0f95058c36c7cf40628d7548b9ea76d50c8b9e97b7ebcb17fe5998e46c44",
+      "line": 484,
+      "end": 496,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_014",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 475,
+    "end": 500,
+    "sha256": "3eeb76e323071faa3bd48bd7753be4e257ef98faee1d8a693b219f569c6ac904",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "実数値・複素数値L²の内積と実数値L²のノルムの二乗を証明",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory",
+      "open scoped ENNReal"
+    ],
+    "fixture": ".generated/raw/ch18_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_014",
+      "source_sha256": "fa16768db99c96b4e2ee735d126658465c01a0404174059cd9204c7b56313a60",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-037",
+      "P3-046"
+    ],
+    "before_stage4c": {
+      "sha256": "fa16768db99c96b4e2ee735d126658465c01a0404174059cd9204c7b56313a60",
+      "line": 505,
+      "end": 512,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  },
+  {
+    "id": "ch18_015",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 570,
+    "end": 581,
+    "sha256": "5bd9b733e5769bb41d9a0a0c5aa37aacf043a588fcc759d8e0546d7d7c6e929e",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## Part 3の対応表",
+    "category": "complete",
+    "role": "本文",
+    "reason": "必要なimportと前提を備えた完成例。前の定理を使う補足2件は前提ブロックを明示している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の前提を補わない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch18_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch18_015",
+      "source_sha256": "7afdb0ca218cbb39c693cf21a83c448a06c0c378efdb24fa53eb999990677b10",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-036"
+    ],
+    "before_stage4c": {
+      "sha256": "7afdb0ca218cbb39c693cf21a83c448a06c0c378efdb24fa53eb999990677b10",
+      "line": 580,
+      "end": 593,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4c_status": "compiled_source"
+  }
+]

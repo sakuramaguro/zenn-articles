@@ -1,0 +1,1266 @@
+{
+  "status": "passed",
+  "stage": "3-C",
+  "checked_at": "2026-09-16T05:10:27.462232+00:00",
+  "toolchain": "leanprover/lean4:v4.29.0-rc6",
+  "method": "Separate Lean processes; explicit original setup blocks and joined sequences; warningAsError=true; autoImplicit=false; all named declarations audited",
+  "checks": [
+    {
+      "blocks": [
+        "ch10_001"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_002"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_002": "15bacfe504f924f39e978b5695411e0b78b9db0ecb4394e7a34b4ef6205b5d0c"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_003"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_003": "1061621b14a7353a6f0add14bed5a2946620a31258ee5e6fba4c5efbebde1262"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_004"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_004": "2d68a722497e8284ea7310fb698dd3de0733de79a5703f4d609103015b80c795"
+      },
+      "audited_declarations": {
+        "mem_two_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_005"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_005": "e33b2bc2e66c384106f6c4243071c217c79a05ad4713bdfa3726f7520e0764d5"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_006"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_006": "343f59f9aa9b4d787d41bc93787ac325e011d5c879bddad2bd6372767f24a9a3"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_007",
+        "ch10_008"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_007": "0d058d333f06aff6896200e93a18e951c5cfb922cb8d2a5ce237b4828e1edbbd",
+        "ch10_008": "95c73f2bbab7d5b86b81ac0defa9c3aa0e590689369b0effe823d0551c972c8c"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_009"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_009": "557133b6571e2087ab75149ea96c06ea3ad4ff6f22a2f1d9721c2b10f02ea127"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_010"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_010": "76590eb7473a684e9bb9dc250bc7d2a17675db974ea6f375e7c0f3a51802a7ee"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_011"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_011": "3ba081c177b23d98742ea998b7592d0b8f7a9a6b2df407c7a4db6840930556e7"
+      },
+      "audited_declarations": {
+        "e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "norm_e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_012"
+      ],
+      "setup": [
+        "ch10_001",
+        "ch10_011"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_011": "3ba081c177b23d98742ea998b7592d0b8f7a9a6b2df407c7a4db6840930556e7",
+        "ch10_012": "390abd139a3deaf8750516cb7936e924699b7871017d3ce203dc6b24d7fac118"
+      },
+      "audited_declarations": {
+        "e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "norm_e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "basis_separated": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_013"
+      ],
+      "setup": [
+        "ch10_001",
+        "ch10_011",
+        "ch10_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_011": "3ba081c177b23d98742ea998b7592d0b8f7a9a6b2df407c7a4db6840930556e7",
+        "ch10_012": "390abd139a3deaf8750516cb7936e924699b7871017d3ce203dc6b24d7fac118",
+        "ch10_013": "971e2ff8bbe96c0aba95648aec54b78b9e7b06479f11731f6748c82f745d62fa"
+      },
+      "audited_declarations": {
+        "e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "norm_e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "basis_separated": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "unitClosedBall_not_compact": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ell2_not_proper": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_014"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_014": "e334a5960cedb1d2037ff4a4eaaf57e79c31acbd4b07487840b5091b2d1953fd"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_015"
+      ],
+      "setup": [
+        "ch10_001",
+        "ch10_011",
+        "ch10_012",
+        "ch10_013"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_011": "3ba081c177b23d98742ea998b7592d0b8f7a9a6b2df407c7a4db6840930556e7",
+        "ch10_012": "390abd139a3deaf8750516cb7936e924699b7871017d3ce203dc6b24d7fac118",
+        "ch10_013": "971e2ff8bbe96c0aba95648aec54b78b9e7b06479f11731f6748c82f745d62fa",
+        "ch10_015": "752246c53038fb8f8a0c42ca437c502ccfc1cc45206b601d07074e62c7795c64"
+      },
+      "audited_declarations": {
+        "e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "norm_e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "basis_separated": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "unitClosedBall_not_compact": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ell2_not_proper": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ell2_not_finiteDimensional": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_016"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_016": "035e66da6b5ee4bd33a6138a9f405a91b4967cac77429215375dfc17e9a0983e"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_017"
+      ],
+      "setup": [
+        "ch10_001",
+        "ch10_011",
+        "ch10_012",
+        "ch10_013"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_011": "3ba081c177b23d98742ea998b7592d0b8f7a9a6b2df407c7a4db6840930556e7",
+        "ch10_012": "390abd139a3deaf8750516cb7936e924699b7871017d3ce203dc6b24d7fac118",
+        "ch10_013": "971e2ff8bbe96c0aba95648aec54b78b9e7b06479f11731f6748c82f745d62fa",
+        "ch10_017": "77c6dc85fbb46b601cad4ee0163b496d92d1e75deb8f090a9cc72bf094475ea3"
+      },
+      "audited_declarations": {
+        "e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "norm_e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "basis_separated": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "unitClosedBall_not_compact": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ell2_not_proper": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_018"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_018": "bc9279b3679530bbd791c2fbbf0f0fb473e67dc6be36da97090e19c8d515748d"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_019"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_019": "2d6557d7bc47a88382344213a2258cc80c46745fddb7327d598c7fa787701b4e"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_020"
+      ],
+      "setup": [
+        "ch10_001",
+        "ch10_011",
+        "ch10_012",
+        "ch10_013"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_011": "3ba081c177b23d98742ea998b7592d0b8f7a9a6b2df407c7a4db6840930556e7",
+        "ch10_012": "390abd139a3deaf8750516cb7936e924699b7871017d3ce203dc6b24d7fac118",
+        "ch10_013": "971e2ff8bbe96c0aba95648aec54b78b9e7b06479f11731f6748c82f745d62fa",
+        "ch10_020": "d9083ffa3e892f1d3a91f0498be2293bffc89528d17f0efd52112977a13d8eaf"
+      },
+      "audited_declarations": {
+        "e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "norm_e": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "basis_separated": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "unitClosedBall_not_compact": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ell2_not_proper": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_021"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_021": "ff0bc1884297dbfc00ae6998c0a2f8d4f6e1270122e957f973222aeb41e759ec"
+      },
+      "audited_declarations": {
+        "notProperOfInfiniteDimensional": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_022"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_022": "cfeb3b5428abbf7079e40d71ec4782e5ac67bdebece17563d1f488dcdbdc3712"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch10_024"
+      ],
+      "setup": [
+        "ch10_001",
+        "ch10_004"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_004": "2d68a722497e8284ea7310fb698dd3de0733de79a5703f4d609103015b80c795",
+        "ch10_024": "d3cd7b2100855b2c470a7c24c97428800f44bcec422ab41ef1796c07c8f2facf"
+      },
+      "audited_declarations": {
+        "mem_two_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "reciprocal_mem_two": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_025"
+      ],
+      "setup": [
+        "ch10_001",
+        "ch10_004"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_004": "2d68a722497e8284ea7310fb698dd3de0733de79a5703f4d609103015b80c795",
+        "ch10_025": "6069535228543dd7f8a21723c5e8dcaa707c7d11aa50d1519de813d84081f432"
+      },
+      "audited_declarations": {
+        "mem_two_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "reciprocal_mem_two_alt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch10_026"
+      ],
+      "setup": [
+        "ch10_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch10_001": "c922ad924aa0d040b0b2663459431b1a4ff3896b6735352c538c0c4007e849b1",
+        "ch10_026": "be6def5cde18500fe2dc4e9f980fbe9c521691b6bcd997b0f7a58671c7be6e23"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch11_001"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_002"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_002": "1b24cb1afdc9167d8bd2a4d77055d426f5d1bc9f98edc12a7244709fc5a651f7"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "banach_fixed_point_and_convergence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_003"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_003": "4e8880e4eba3f742504bdfa4ddcbffe8d544a51c4818bac181541a6f3a618444"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_004"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_004": "f318222fb5cccb76a09b5a250080000fe75ef8e911a551346e4eb850949c6ab1"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "contracting_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_005"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_005": "5bdfc9c576586301d383ed7f5a5042e6d4c15e018df23c26e65d6abaf0735cdf"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_006",
+        "ch11_007",
+        "ch11_008",
+        "ch11_009",
+        "ch11_010",
+        "ch11_011"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_006": "872b1d3d8f4ea95b65865ff8a3b0bfccdef5f08ac69acb51500841b48b1e4da2",
+        "ch11_007": "72e0f4c48570d6f31a2b26d7739ff606193bf162fc3d3e09d837937d5e102604",
+        "ch11_008": "b5d33dd953978e5fa3c6c42c88d7288a5e074b00139f6b0dd70b9a9995d5eae4",
+        "ch11_009": "aef7fe5f9a18ec59491700d1e216dfc40dfe644b06b96ae17158f9127f2a108c",
+        "ch11_010": "628c06011c8713af7c5838973939ce1a33121276c7436b9b0b2cdefc40d7b46b",
+        "ch11_011": "e131fe3b3e4bba0636601ed20aa50e1ba438f2e2d4ea7f236c666a0665c92454"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_map_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_012"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_012": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "banach_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_013"
+      ],
+      "setup": [
+        "ch11_001",
+        "ch11_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_012": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679",
+        "ch11_013": "394a971137b85ee8feacb7cd56eb8506e01970cea1e0dfce189e41e157d214cd"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "banach_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "banach_fixed_point_from_start": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_014",
+        "ch11_015"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_014": "00367e907573e02754a36295bd0fea9ac680cca42429556e62a58bad406ba35d",
+        "ch11_015": "fd711cd8a16fb42930878ff8cb46ba645608a39c5591dd5e823d404e91839880"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_iterates_to_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_016"
+      ],
+      "setup": [
+        "ch11_001",
+        "ch11_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_012": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679",
+        "ch11_016": "52de5f2ea66ab16bb6c745922e6f1bbfd50ca27751bf5f550d39f6bafbaf405a"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "banach_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ell2_banach": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_018"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_018": "523ee2979888a6a192852ee8bfb696417a3a8789b4ecf45197303a3f418e7dea"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "contracting_continuousAt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "tendsto_at_fixedPoint": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_019"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_019": "9de030d09faff90eeea013576bfb722a984a3a2b5857245a4172c332f911b0e5"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_021"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_021": "9722fbf05c7a6aae2099d6ad34147240961c5035d69a75d3d6cb7f62ebefec3f"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affineContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_022"
+      ],
+      "setup": [
+        "ch11_001"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_022": "a594baa6557c873970dccd56485173904056c795f7193675a63dab88ab3979f3"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affineContracting_calc": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_023"
+      ],
+      "setup": [
+        "ch11_001",
+        "ch11_012",
+        "ch11_021"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_012": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679",
+        "ch11_021": "9722fbf05c7a6aae2099d6ad34147240961c5035d69a75d3d6cb7f62ebefec3f",
+        "ch11_023": "f707979979137cfde8bfe296ae46aa7b4891a051bdfe1706e8bd448ab9feb6e9"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "banach_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affineContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affine_map_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affine_fixedPoint_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_024"
+      ],
+      "setup": [
+        "ch11_001",
+        "ch11_012",
+        "ch11_021",
+        "ch11_023"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_012": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679",
+        "ch11_021": "9722fbf05c7a6aae2099d6ad34147240961c5035d69a75d3d6cb7f62ebefec3f",
+        "ch11_023": "f707979979137cfde8bfe296ae46aa7b4891a051bdfe1706e8bd448ab9feb6e9",
+        "ch11_024": "d8a3586880cdebc47b7593fd2fc202a11ccd6b63d5ba0e7ef0c8eaf47b8ff476"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "banach_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affineContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affine_map_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affine_fixedPoint_value": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "affine_iterates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_025"
+      ],
+      "setup": [
+        "ch11_001",
+        "ch11_012",
+        "ch11_016"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_012": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679",
+        "ch11_016": "52de5f2ea66ab16bb6c745922e6f1bbfd50ca27751bf5f550d39f6bafbaf405a",
+        "ch11_025": "1c6fb37e7d93c8e475441a345944ffe6b62b788c9bdb0dbda52eab0f6314a85b"
+      },
+      "audited_declarations": {
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "banach_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ell2_banach": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2_apply": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2Contracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2_iterates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch11_026"
+      ],
+      "setup": [
+        "ch11_001",
+        "ch11_012",
+        "ch11_014",
+        "ch11_015",
+        "ch11_016",
+        "ch11_025"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch11_001": "79812013e655d45e9b863167aee716d9e331bcb9d8049f33c454aa47f1f1beb9",
+        "ch11_012": "4bcce67085622a2b1c13502aa2777a01a9e84d6c556a3473395b987ff1131679",
+        "ch11_014": "00367e907573e02754a36295bd0fea9ac680cca42429556e62a58bad406ba35d",
+        "ch11_015": "fd711cd8a16fb42930878ff8cb46ba645608a39c5591dd5e823d404e91839880",
+        "ch11_016": "52de5f2ea66ab16bb6c745922e6f1bbfd50ca27751bf5f550d39f6bafbaf405a",
+        "ch11_025": "1c6fb37e7d93c8e475441a345944ffe6b62b788c9bdb0dbda52eab0f6314a85b",
+        "ch11_026": "20df88250069c91d50e7c3ea0fc12547df7c2605dedfcb552167bd1a5903c182"
+      },
+      "audited_declarations": {
+        "banach_fixed_point": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_iterates_to_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2_iterates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfContracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "half_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "ell2_banach": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2_apply": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2Contracting": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2_unique": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "halfEll2_fixedPoint_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ]
+}

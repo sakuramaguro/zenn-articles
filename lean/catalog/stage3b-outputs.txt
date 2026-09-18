@@ -1,0 +1,344 @@
+Stage 3-B: output of the current manuscript examples and goal traces.
+leanprover/lean4:v4.29.0-rc6
+Mathlib 5c8398df528176d9c87ccd9226ba8f7c8852d59c
+
+=== ch08_001 ===
+'composition_goal' does not depend on any axioms
+'maximum_goal' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_002 ===
+class TopologicalSpace.{u} (X : Type u) : Type u
+number of parameters: 1
+fields:
+  TopologicalSpace.IsOpen : Set X → Prop
+  TopologicalSpace.isOpen_univ : TopologicalSpace.IsOpen Set.univ
+  TopologicalSpace.isOpen_inter : ∀ (s t : Set X),
+      TopologicalSpace.IsOpen s → TopologicalSpace.IsOpen t → TopologicalSpace.IsOpen (s ∩ t)
+  TopologicalSpace.isOpen_sUnion : ∀ (s : Set (Set X)),
+      (∀ t ∈ s, TopologicalSpace.IsOpen t) → TopologicalSpace.IsOpen (⋃₀ s)
+constructor:
+  TopologicalSpace.mk.{u} {X : Type u} (IsOpen : Set X → Prop) (isOpen_univ : IsOpen Set.univ)
+    (isOpen_inter : ∀ (s t : Set X), IsOpen s → IsOpen t → IsOpen (s ∩ t))
+    (isOpen_sUnion : ∀ (s : Set (Set X)), (∀ t ∈ s, IsOpen t) → IsOpen (⋃₀ s)) : TopologicalSpace X
+
+=== ch08_003 ===
+'empty_open_from_union' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_004 ===
+@isOpen_univ : ∀ {X : Type u_1} [inst : TopologicalSpace X], IsOpen Set.univ
+@isOpen_empty : ∀ {X : Type u_1} [inst : TopologicalSpace X], IsOpen ∅
+@IsOpen.inter : ∀ {X : Type u_1} [inst : TopologicalSpace X] {s t : Set X}, IsOpen s → IsOpen t → IsOpen (s ∩ t)
+@IsOpen.union : ∀ {X : Type u_1} {s₁ s₂ : Set X} [inst : TopologicalSpace X], IsOpen s₁ → IsOpen s₂ → IsOpen (s₁ ∪ s₂)
+@isOpen_iUnion : ∀ {X : Type u_1} {ι : Sort u_2} [inst : TopologicalSpace X] {f : ι → Set X},
+  (∀ (i : ι), IsOpen (f i)) → IsOpen (⋃ i, f i)
+@isOpen_sUnion : ∀ {X : Type u_1} [inst : TopologicalSpace X] {s : Set (Set X)}, (∀ t ∈ s, IsOpen t) → IsOpen (⋃₀ s)
+
+=== ch08_005 ===
+inferInstance : TopologicalSpace ℝ
+fun X [MetricSpace X] => inferInstance : (X : Type) → [MetricSpace X] → TopologicalSpace X
+
+=== ch08_006 ===
+@Continuous : {X : Type u_1} → {Y : Type u_2} → [TopologicalSpace X] → [TopologicalSpace Y] → (X → Y) → Prop
+@continuous_def : ∀ {X : Type u_1} {Y : Type u_2} {x : TopologicalSpace X} {x_1 : TopologicalSpace Y} {f : X → Y},
+  Continuous f ↔ ∀ (s : Set Y), IsOpen s → IsOpen (f ⁻¹' s)
+
+=== ch08_007 ===
+@Metric.continuousAt_iff : ∀ {α : Type u_1} {β : Type u_2} [inst : PseudoMetricSpace α] [inst_1 : PseudoMetricSpace β]
+  {f : α → β} {a : α}, ContinuousAt f a ↔ ∀ ε > 0, ∃ δ > 0, ∀ ⦃x : α⦄, dist x a < δ → dist (f x) (f a) < ε
+@continuous_iff_continuousAt : ∀ {X : Type u_1} {Y : Type u_2} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]
+  {f : X → Y}, Continuous f ↔ ∀ (x : X), ContinuousAt f x
+@continuous_def : ∀ {X : Type u_1} {Y : Type u_2} {x : TopologicalSpace X} {x_1 : TopologicalSpace Y} {f : X → Y},
+  Continuous f ↔ ∀ (s : Set Y), IsOpen s → IsOpen (f ⁻¹' s)
+'continuous_at_every_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_008 ===
+Filter.principal.{u_1} {α : Type u_1} (s : Set α) : Filter α
+nhds_def.{u_3} {X : Type u_3} [TopologicalSpace X] (x : X) : 𝓝 x = ⨅ s ∈ {s | x ∈ s ∧ IsOpen s}, 𝓟 s
+'nhds_le_open_principal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'le_nhds_from_open_principals' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_009 ===
+'neighborhood_infimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_015 ===
+Continuous.isOpen_preimage.{u, v} {X : Type u} {Y : Type v} [TopologicalSpace X] [TopologicalSpace Y] {f : X → Y}
+  (self : Continuous f) (s : Set Y) : IsOpen s → IsOpen (f ⁻¹' s)
+
+=== ch08_016 ===
+'composition_one_line' does not depend on any axioms
+
+=== ch08_017 ===
+def IsCompact.{u_1} : {X : Type u_1} → [TopologicalSpace X] → Set X → Prop :=
+fun {X} [TopologicalSpace X] s => ∀ ⦃f : Filter X⦄ [f.NeBot], f ≤ 𝓟 s → ∃ x ∈ s, ClusterPt x f
+IsCompact.elim_finite_subcover.{u, v} {X : Type u} [TopologicalSpace X] {s : Set X} {ι : Type v} (hs : IsCompact s)
+  (U : ι → Set X) (hUo : ∀ (i : ι), IsOpen (U i)) (hsU : s ⊆ ⋃ i, U i) : ∃ t, s ⊆ ⋃ i ∈ t, U i
+
+=== ch08_018 ===
+IsCompact.isSeqCompact.{u_1} {X : Type u_1} [TopologicalSpace X] [FirstCountableTopology X] {s : Set X}
+  (hs : IsCompact s) : IsSeqCompact s
+'compact_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'compactIffClosedBounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_019 ===
+ProperSpace.{u} (α : Type u) [PseudoMetricSpace α] : Prop
+inferInstance : ProperSpace ℝ
+inferInstance : ProperSpace (EuclideanSpace ℝ (Fin 3))
+@Metric.isCompact_iff_isClosed_bounded : ∀ {α : Type u_1} {s : Set α} [inst : PseudoMetricSpace α] [T2Space α]
+  [ProperSpace α], IsCompact s ↔ IsClosed s ∧ Bornology.IsBounded s
+
+=== ch08_020 ===
+@IsClosed : {X : Type u_1} → [TopologicalSpace X] → Set X → Prop
+@isOpen_compl_iff : ∀ {X : Type u_1} {s : Set X} [inst : TopologicalSpace X], IsOpen sᶜ ↔ IsClosed s
+@interior : {X : Type u_1} → [TopologicalSpace X] → Set X → Set X
+@mem_interior : ∀ {X : Type u_1} [inst : TopologicalSpace X] {x : X} {s : Set X},
+  x ∈ interior s ↔ ∃ t ⊆ s, IsOpen t ∧ x ∈ t
+@closure : {X : Type u_1} → [TopologicalSpace X] → Set X → Set X
+@mem_closure_iff : ∀ {X : Type u_1} [inst : TopologicalSpace X] {x : X} {s : Set X},
+  x ∈ closure s ↔ ∀ (o : Set X), IsOpen o → x ∈ o → (o ∩ s).Nonempty
+
+=== ch08_023 ===
+IsCompact.exists_isMaxOn.{u_2, u_3} {α : Type u_2} {β : Type u_3} [LinearOrder α] [TopologicalSpace α]
+  [TopologicalSpace β] [ClosedIciTopology α] {s : Set β} (hs : IsCompact s) (ne_s : s.Nonempty) {f : β → α}
+  (hf : ContinuousOn f s) : ∃ x ∈ s, IsMaxOn f s x
+'no_maximizer_in_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_028 ===
+isCompact_Icc : IsCompact (Set.Icc 0 1)
+'continuous_preimage_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'closure_by_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_029 ===
+@mem_closure_iff_nhds : ∀ {X : Type u_1} [inst : TopologicalSpace X] {x : X} {s : Set X},
+  x ∈ closure s ↔ ∀ t ∈ 𝓝 x, (t ∩ s).Nonempty
+@closure_eq_cluster_pts : ∀ {X : Type u_1} [inst : TopologicalSpace X] {s : Set X}, closure s = {a | ClusterPt a (𝓟 s)}
+
+=== ch08_031 ===
+'minimum_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_032 ===
+'minimum_interval_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_034 ===
+'allOpenTopology' does not depend on any axioms
+'singleton_open_discrete' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_035 ===
+'singleton_open_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_036 ===
+'singleton_open_simp' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_001 ===
+'complete_sequence_goal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'real_sequence_goal' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_002 ===
+inferInstance : MetricSpace ℚ
+Rat.isDenseEmbedding_coe_real : IsDenseEmbedding Rat.cast
+irrational_sqrt_two : Irrational √2
+
+=== ch09_003 ===
+inferInstance : CompleteSpace ℝ
+
+=== ch09_004 ===
+def CauchySeq.{u, v} : {α : Type u} → {β : Type v} → [uniformSpace : UniformSpace α] → [Preorder β] → (β → α) → Prop :=
+fun {α} {β} [UniformSpace α] [Preorder β] u => Cauchy (map u atTop)
+@Metric.cauchySeq_iff : ∀ {α : Type u_1} {β : Type u_2} [inst : PseudoMetricSpace α] [Nonempty β]
+  [inst_2 : SemilatticeSup β] {u : β → α}, CauchySeq u ↔ ∀ ε > 0, ∃ N, ∀ m ≥ N, ∀ n ≥ N, dist (u m) (u n) < ε
+
+=== ch09_007 ===
+def Cauchy.{u} : {α : Type u} → [uniformSpace : UniformSpace α] → Filter α → Prop :=
+fun {α} [UniformSpace α] f => f.NeBot ∧ f ×ˢ f ≤ 𝓤 α
+@Metric.cauchy_iff : ∀ {α : Type u_1} [inst : PseudoMetricSpace α] {f : Filter α},
+  Cauchy f ↔ f.NeBot ∧ ∀ ε > 0, ∃ t ∈ f, ∀ x ∈ t, ∀ y ∈ t, dist x y < ε
+'cauchy_filter_definition' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_008 ===
+'cauchy_sequence_definition' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_009 ===
+class CompleteSpace.{u} (α : Type u) [UniformSpace α] : Prop
+number of parameters: 2
+fields:
+  CompleteSpace.complete : ∀ {f : Filter α}, Cauchy f → ∃ x, f ≤ 𝓝 x
+constructor:
+  CompleteSpace.mk.{u} {α : Type u} [UniformSpace α] (complete : ∀ {f : Filter α}, Cauchy f → ∃ x, f ≤ 𝓝 x) :
+    CompleteSpace α
+@CompleteSpace.complete : ∀ {α : Type u_1} {inst : UniformSpace α} [self : CompleteSpace α] {f : Filter α},
+  Cauchy f → ∃ x, f ≤ 𝓝 x
+
+=== ch09_010 ===
+inferInstance : CompleteSpace ℝ
+inferInstance : CompleteSpace ℂ
+
+=== ch09_011 ===
+@cauchySeq_tendsto_of_complete : ∀ {α : Type u_1} {β : Type u_2} [uniformSpace : UniformSpace α] [inst : Preorder β]
+  [CompleteSpace α] {u : β → α}, CauchySeq u → ∃ x, Tendsto u atTop (𝓝 x)
+
+=== ch09_018 ===
+UniformSpace.Completion.{u_1} (α : Type u_1) [UniformSpace α] : Type u_1
+Rat.uniformContinuous_coe_real : UniformContinuous Rat.cast
+UniformSpace.Completion.extension.{u_1, u_2} {α : Type u_1} [UniformSpace α] {β : Type u_2} [UniformSpace β]
+  (f : α → β) : UniformSpace.Completion α → β
+UniformSpace.Completion.extension_coe.{u_1, u_2} {α : Type u_1} [UniformSpace α] {β : Type u_2} [UniformSpace β]
+  {f : α → β} [T0Space β] (hf : UniformContinuous f) (a : α) : UniformSpace.Completion.extension f ↑a = f a
+UniformSpace.Completion.extension_unique.{u_1, u_2} {α : Type u_1} [UniformSpace α] {β : Type u_2} [UniformSpace β]
+  {f : α → β} [T0Space β] [CompleteSpace β] (hf : UniformContinuous f) {g : UniformSpace.Completion α → β}
+  (hg : UniformContinuous g) (h : ∀ (a : α), f a = g ↑a) : UniformSpace.Completion.extension f = g
+CompareReals.compareEquiv : CompareReals.Bourbakiℝ ≃ᵤ ℝ
+'completion_extension_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_019 ===
+inferInstance : MetricSpace ℝ
+inferInstance : CompleteSpace ℝ
+inferInstance : TopologicalSpace ℝ
+inferInstance : NormedSpace ℝ ↥(lp (fun x => ℝ) 2)
+
+=== ch09_020 ===
+'reciprocal_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_022 ===
+'constant_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_023 ===
+'constant_cauchy_from_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_024 ===
+CauchySeq a : Prop
+Cauchy ℱ : Prop
+CompleteSpace X : Prop
+
+=== ch09_025 ===
+@cauchySeq_iff_le_tendsto_0 : ∀ {α : Type u_1} [inst : PseudoMetricSpace α] {s : ℕ → α},
+  CauchySeq s ↔
+    ∃ b, (∀ (n : ℕ), 0 ≤ b n) ∧ (∀ (n m N : ℕ), N ≤ n → N ≤ m → dist (s n) (s m) ≤ b N) ∧ Tendsto b atTop (𝓝 0)
+@Metric.cauchySeq_iff : ∀ {α : Type u_1} {β : Type u_2} [inst : PseudoMetricSpace α] [Nonempty β]
+  [inst_2 : SemilatticeSup β] {u : β → α}, CauchySeq u ↔ ∀ ε > 0, ∃ N, ∀ m ≥ N, ∀ n ≥ N, dist (u m) (u n) < ε
+
+=== ch09_027 ===
+'convergent_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_028 ===
+'convergent_cauchy_by_filter' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_010-ch08_011-ch08_012-ch08_013-ch08_014 ===
+'composition_by_preimages' depends on axioms: [propext]
+
+=== ch08_021-ch08_022 ===
+'closed_iff_open_complement' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch08_024-ch08_025-ch08_026-ch08_027 ===
+'square_maximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_005-ch09_006 ===
+'cauchy_epsilon_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_012-ch09_013 ===
+'complete_sequence_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch09_014-ch09_015-ch09_016-ch09_017 ===
+'geometric_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'geometric_has_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== Goal traces (temporary trace_state inserted between manuscript steps) ===
+X : Type u_1
+Y : Type u_2
+Z : Type u_3
+inst✝² : TopologicalSpace X
+inst✝¹ : TopologicalSpace Y
+inst✝ : TopologicalSpace Z
+f : X → Y
+g : Y → Z
+hf : Continuous f
+hg : Continuous g
+⊢ Continuous (g ∘ f)
+X : Type u_1
+Y : Type u_2
+Z : Type u_3
+inst✝² : TopologicalSpace X
+inst✝¹ : TopologicalSpace Y
+inst✝ : TopologicalSpace Z
+f : X → Y
+g : Y → Z
+hf : Continuous f
+hg : Continuous g
+⊢ ∀ (s : Set Z), IsOpen s → IsOpen (g ∘ f ⁻¹' s)
+X : Type u_1
+Y : Type u_2
+Z : Type u_3
+inst✝² : TopologicalSpace X
+inst✝¹ : TopologicalSpace Y
+inst✝ : TopologicalSpace Z
+f : X → Y
+g : Y → Z
+hf : Continuous f
+hg : Continuous g
+s : Set Z
+hs : IsOpen s
+⊢ IsOpen (g ∘ f ⁻¹' s)
+X : Type u_1
+Y : Type u_2
+Z : Type u_3
+inst✝² : TopologicalSpace X
+inst✝¹ : TopologicalSpace Y
+inst✝ : TopologicalSpace Z
+f : X → Y
+g : Y → Z
+hf : Continuous f
+hg : Continuous g
+s : Set Z
+hs : IsOpen s
+⊢ IsOpen (f ⁻¹' (g ⁻¹' s))
+s : Set ℝ
+⊢ IsClosed s ↔ IsOpen sᶜ
+⊢ ∃ x ∈ Set.Icc 0 1, ∀ y ∈ Set.Icc 0 1, y ^ 2 ≤ x ^ 2
+⊢ (Set.Icc 0 1).Nonempty
+hne : (Set.Icc 0 1).Nonempty
+⊢ ∃ x ∈ Set.Icc 0 1, ∀ y ∈ Set.Icc 0 1, y ^ 2 ≤ x ^ 2
+a : ℕ → ℝ
+ha : CauchySeq a
+ε : ℝ
+hε : 0 < ε
+⊢ ∃ N, ∀ m ≥ N, ∀ n ≥ N, dist (a m) (a n) < ε
+X : Type u_1
+inst✝¹ : MetricSpace X
+inst✝ : CompleteSpace X
+a : ℕ → X
+ha : CauchySeq a
+⊢ ∃ L, Tendsto a atTop (𝓝 L)
+⊢ CauchySeq fun n => (1 / 2) ^ n
+⊢ ∀ ε > 0, ∃ N, ∀ m ≥ N, ∀ n ≥ N, dist ((1 / 2) ^ m) ((1 / 2) ^ n) < ε
+ε : ℝ
+hε : ε > 0
+h_half : 0 < ε / 2
+N : ℕ
+hN : (1 / 2) ^ N < ε / 2
+⊢ ∃ N, ∀ m ≥ N, ∀ n ≥ N, dist ((1 / 2) ^ m) ((1 / 2) ^ n) < ε
+ε : ℝ
+hε : ε > 0
+h_half : 0 < ε / 2
+N : ℕ
+hN : (1 / 2) ^ N < ε / 2
+m : ℕ
+hm : m ≥ N
+n : ℕ
+hn : n ≥ N
+⊢ dist ((1 / 2) ^ m) ((1 / 2) ^ n) < ε
+
+=== Expected unfinished exercise: ch08_030 ===
+.generated/diagnostics/stage3b_ch08_030.lean:6:8: warning: declaration uses `sorry`
+'minimum_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+=== Expected unfinished exercise: ch08_033 ===
+inferInstance : TopologicalSpace ℕ
+inferInstance : DiscreteTopology ℕ
+.generated/diagnostics/stage3b_ch08_033.lean:8:8: warning: declaration uses `sorry`
+'discrete_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+=== Expected unfinished exercise: ch09_021 ===
+.generated/diagnostics/stage3b_ch09_021.lean:6:8: warning: declaration uses `sorry`
+'constant_cauchy_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+=== Expected unfinished exercise: ch09_026 ===
+.generated/diagnostics/stage3b_ch09_026.lean:6:8: warning: declaration uses `sorry`
+'convergent_cauchy_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

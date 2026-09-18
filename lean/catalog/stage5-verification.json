@@ -1,0 +1,2263 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-18T01:56:26.200106+00:00",
+  "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4",
+  "toolchain": "leanprover/lean4:v4.29.0-rc6",
+  "lean_version": "Lean (version 4.29.0-rc6, arm64-apple-darwin24.6.0, commit 00659f8e6071d7e46131ed643bf8003b99b044e9, Release)",
+  "dependencies": {
+    "mathlib": "5c8398df528176d9c87ccd9226ba8f7c8852d59c",
+    "plausible": "e84e3e16aea6b72cc5d311ca1bb25caad417e162",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "importGraph": "f207d9fcf0cef00ba79962a33ef156061914d9c7",
+    "proofwidgets": "2e58165a9dcdca9837b666528f974299ee1a51cc",
+    "aesop": "c3361708f266893de5d1769192b60d4b1831f2bb",
+    "Qq": "221e8088e3a066b8676dc471ff10638cf1c10835",
+    "batteries": "bd58e3506632241b59e406902d5e42b73cdeccce",
+    "Cli": "3de531c1135f5e3a01f3ac04830996fda476b28e"
+  },
+  "manuscript_files": 23,
+  "catalog_blocks": 425,
+  "compiled_source_blocks": [
+    "ch01_001",
+    "ch01_002",
+    "ch01_003",
+    "ch01_004",
+    "ch01_005",
+    "ch01_007",
+    "ch01_008",
+    "ch01_010",
+    "ch01_011",
+    "ch01_013",
+    "ch01_014",
+    "ch02_001",
+    "ch02_002",
+    "ch02_003",
+    "ch02_004",
+    "ch02_005",
+    "ch02_006",
+    "ch02_007",
+    "ch02_008",
+    "ch02_009",
+    "ch02_010",
+    "ch02_011",
+    "ch02_012",
+    "ch02_013",
+    "ch02_015",
+    "ch02_016",
+    "ch02_018",
+    "ch02_019",
+    "ch03_001",
+    "ch03_003",
+    "ch03_005",
+    "ch03_007",
+    "ch03_009",
+    "ch03_010",
+    "ch03_012",
+    "ch03_015",
+    "ch03_017",
+    "ch03_018",
+    "ch03_020",
+    "ch03_021",
+    "ch03_023",
+    "ch03_024",
+    "ch04_001",
+    "ch04_002",
+    "ch04_003",
+    "ch04_004",
+    "ch04_005",
+    "ch04_006",
+    "ch04_007",
+    "ch04_008",
+    "ch04_009",
+    "ch04_010",
+    "ch04_011",
+    "ch04_012",
+    "ch04_013",
+    "ch04_014",
+    "ch04_015",
+    "ch04_016",
+    "ch04_017",
+    "ch04_019",
+    "ch04_020",
+    "ch04_022",
+    "ch04_023",
+    "ch05_001",
+    "ch05_002",
+    "ch05_003",
+    "ch05_005",
+    "ch05_007",
+    "ch05_008",
+    "ch05_009",
+    "ch05_010",
+    "ch05_011",
+    "ch05_012",
+    "ch05_013",
+    "ch05_014",
+    "ch05_015",
+    "ch05_016",
+    "ch05_017",
+    "ch05_018",
+    "ch05_019",
+    "ch05_020",
+    "ch05_021",
+    "ch05_022",
+    "ch05_024",
+    "ch05_025",
+    "ch05_027",
+    "ch05_028",
+    "ch05_030",
+    "ch05_031",
+    "ch06_001",
+    "ch06_002",
+    "ch06_004",
+    "ch06_005",
+    "ch06_006",
+    "ch06_007",
+    "ch06_008",
+    "ch06_009",
+    "ch06_010",
+    "ch06_011",
+    "ch06_012",
+    "ch06_013",
+    "ch06_014",
+    "ch06_015",
+    "ch06_016",
+    "ch06_017",
+    "ch06_018",
+    "ch06_019",
+    "ch06_020",
+    "ch06_021",
+    "ch06_022",
+    "ch06_024",
+    "ch06_025",
+    "ch06_026",
+    "ch06_027",
+    "ch06_028",
+    "ch06_029",
+    "ch06_030",
+    "ch06_031",
+    "ch06_032",
+    "ch06_033",
+    "ch06_034",
+    "ch06_035",
+    "ch06_036",
+    "ch06_037",
+    "ch06_038",
+    "ch06_039",
+    "ch06_040",
+    "ch06_041",
+    "ch06_043",
+    "ch06_044",
+    "ch06_045",
+    "ch06_046",
+    "ch06_047",
+    "ch06_048",
+    "ch07_001",
+    "ch07_002",
+    "ch07_003",
+    "ch07_004",
+    "ch07_005",
+    "ch07_006",
+    "ch07_007",
+    "ch07_008",
+    "ch07_009",
+    "ch07_010",
+    "ch07_011",
+    "ch07_012",
+    "ch07_013",
+    "ch07_014",
+    "ch07_015",
+    "ch07_016",
+    "ch07_017",
+    "ch07_018",
+    "ch07_019",
+    "ch07_020",
+    "ch07_021",
+    "ch07_022",
+    "ch07_023",
+    "ch07_024",
+    "ch07_025",
+    "ch07_026",
+    "ch07_027",
+    "ch07_028",
+    "ch07_029",
+    "ch07_030",
+    "ch07_031",
+    "ch07_032",
+    "ch07_033",
+    "ch07_034",
+    "ch07_036",
+    "ch07_037",
+    "ch07_038",
+    "ch07_039",
+    "ch07_040",
+    "ch07_041",
+    "ch08_001",
+    "ch08_002",
+    "ch08_003",
+    "ch08_004",
+    "ch08_005",
+    "ch08_006",
+    "ch08_007",
+    "ch08_008",
+    "ch08_009",
+    "ch08_010",
+    "ch08_011",
+    "ch08_012",
+    "ch08_013",
+    "ch08_014",
+    "ch08_015",
+    "ch08_016",
+    "ch08_017",
+    "ch08_018",
+    "ch08_019",
+    "ch08_020",
+    "ch08_021",
+    "ch08_022",
+    "ch08_023",
+    "ch08_024",
+    "ch08_025",
+    "ch08_026",
+    "ch08_027",
+    "ch08_028",
+    "ch08_029",
+    "ch08_031",
+    "ch08_032",
+    "ch08_034",
+    "ch08_035",
+    "ch08_036",
+    "ch09_001",
+    "ch09_002",
+    "ch09_003",
+    "ch09_004",
+    "ch09_005",
+    "ch09_006",
+    "ch09_007",
+    "ch09_008",
+    "ch09_009",
+    "ch09_010",
+    "ch09_011",
+    "ch09_012",
+    "ch09_013",
+    "ch09_014",
+    "ch09_015",
+    "ch09_016",
+    "ch09_017",
+    "ch09_018",
+    "ch09_019",
+    "ch09_020",
+    "ch09_022",
+    "ch09_023",
+    "ch09_024",
+    "ch09_025",
+    "ch09_027",
+    "ch09_028",
+    "ch10_001",
+    "ch10_002",
+    "ch10_003",
+    "ch10_004",
+    "ch10_005",
+    "ch10_006",
+    "ch10_007",
+    "ch10_008",
+    "ch10_009",
+    "ch10_010",
+    "ch10_011",
+    "ch10_012",
+    "ch10_013",
+    "ch10_014",
+    "ch10_015",
+    "ch10_016",
+    "ch10_017",
+    "ch10_018",
+    "ch10_019",
+    "ch10_020",
+    "ch10_021",
+    "ch10_022",
+    "ch10_024",
+    "ch10_025",
+    "ch10_026",
+    "ch11_001",
+    "ch11_002",
+    "ch11_003",
+    "ch11_004",
+    "ch11_005",
+    "ch11_006",
+    "ch11_007",
+    "ch11_008",
+    "ch11_009",
+    "ch11_010",
+    "ch11_011",
+    "ch11_012",
+    "ch11_013",
+    "ch11_014",
+    "ch11_015",
+    "ch11_016",
+    "ch11_018",
+    "ch11_019",
+    "ch11_021",
+    "ch11_022",
+    "ch11_023",
+    "ch11_024",
+    "ch11_025",
+    "ch11_026",
+    "ch12_001",
+    "ch12_002",
+    "ch12_003",
+    "ch12_004",
+    "ch12_005",
+    "ch12_006",
+    "ch12_007",
+    "ch12_008",
+    "ch12_009",
+    "ch12_010",
+    "ch12_011",
+    "ch12_012",
+    "ch12_014",
+    "ch12_015",
+    "ch12_016",
+    "ch12_017",
+    "ch12_018",
+    "ch12_019",
+    "ch13_001",
+    "ch13_002",
+    "ch13_003",
+    "ch13_004",
+    "ch13_005",
+    "ch13_006",
+    "ch13_007",
+    "ch13_008",
+    "ch13_009",
+    "ch13_010",
+    "ch13_011",
+    "ch13_012",
+    "ch13_014",
+    "ch13_015",
+    "ch13_016",
+    "ch13_017",
+    "ch14_001",
+    "ch14_002",
+    "ch14_003",
+    "ch14_004",
+    "ch14_005",
+    "ch14_006",
+    "ch14_007",
+    "ch14_008",
+    "ch14_009",
+    "ch14_010",
+    "ch14_011",
+    "ch14_012",
+    "ch14_013",
+    "ch14_014",
+    "ch14_015",
+    "ch15_001",
+    "ch15_002",
+    "ch15_003",
+    "ch15_004",
+    "ch15_005",
+    "ch15_006",
+    "ch15_007",
+    "ch15_008",
+    "ch15_009",
+    "ch15_010",
+    "ch15_011",
+    "ch15_012",
+    "ch16_001",
+    "ch16_002",
+    "ch16_003",
+    "ch16_004",
+    "ch16_005",
+    "ch16_006",
+    "ch16_007",
+    "ch16_008",
+    "ch16_009",
+    "ch16_010",
+    "ch16_011",
+    "ch16_012",
+    "ch16_013",
+    "ch16_014",
+    "ch16_015",
+    "ch16_016",
+    "ch16_017",
+    "ch17_001",
+    "ch17_002",
+    "ch17_003",
+    "ch17_004",
+    "ch17_005",
+    "ch17_006",
+    "ch17_007",
+    "ch17_008",
+    "ch17_009",
+    "ch17_010",
+    "ch17_011",
+    "ch17_012",
+    "ch17_013",
+    "ch18_001",
+    "ch18_002",
+    "ch18_003",
+    "ch18_004",
+    "ch18_005",
+    "ch18_006",
+    "ch18_007",
+    "ch18_008",
+    "ch18_009",
+    "ch18_010",
+    "ch18_011",
+    "ch18_012",
+    "ch18_013",
+    "ch18_014",
+    "ch18_015",
+    "intro_001"
+  ],
+  "audited_declarations": {
+    "LeanBook.Ch01.first_theorem": [
+      "propext"
+    ],
+    "LeanBook.Ch03.skeleton": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch03.one_add_one_ne_three": [
+      "propext"
+    ],
+    "LeanBook.Ch03.hard_proof": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.dimension_theorem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.rankNullity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.continuousComposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.basisVector": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.banachFixedPoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.banachIteration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.halfContracting": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dirichlet": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dirichletAeZero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dirichletIntegrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dirichletIntegral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dominatedConvergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.expectation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch01.one_plus_one": [
+      "propext"
+    ],
+    "LeanBook.Ch01.first_theorem_recap": [
+      "propext"
+    ],
+    "LeanBook.Ch02.proof_term_example": [],
+    "LeanBook.Ch02.natAsInt": [],
+    "LeanBook.Ch02.natAsInt_eq": [],
+    "LeanBook.Ch03.add_comm_fixed": [
+      "propext"
+    ],
+    "LeanBook.Ch03.add_five_fixed": [],
+    "LeanBook.Ch03.test": [
+      "propext"
+    ],
+    "LeanBook.Ch03.add_comm_explicit": [],
+    "LeanBook.Ch03.commMonoid_mul_comm": [],
+    "LeanBook.Ch03.even_square_plus_self": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch03.even_square_plus_self_calc": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch04.test": [],
+    "LeanBook.Ch04.add_comm_explicit": [],
+    "LeanBook.Ch04.trans_explicit": [],
+    "LeanBook.Ch04.succ_bound": [],
+    "LeanBook.Ch05.dimension_theorem_preview": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.have_example": [],
+    "LeanBook.Ch05.range_from_assumptions": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.kernel_finite_search": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.range_finite_search": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.kernel_finite_inferred": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.range_finite_inferred": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.dimension_in_steps": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.zero_kernel_finrank": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.zero_kernel_finrank_rw": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.kernel_finite_exercise_answer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.kernel_finite_exercise_explicit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch04.import_example": [],
+    "LeanBook.Ch06.continuous_search": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.continuous_preview": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.tendsto_iff_continuousAt_preview": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.continuousCompositionEpsilonDelta": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.real_nhds_neBot": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.tail_mem_atTop": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.open_interval_mem_nhds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.closed_interval_mem_nhds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.continuousAt_iff_preimages": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.tendsto_to_epsilon_delta": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.continuous_to_tendsto_steps": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.continuousAt_def_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.sequence_epsilon_N": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.square_tendsto_atTop": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.constant_continuousAt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.product_continuousAt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.composition_continuousAt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.continuous_implies_tendsto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.tendsto_of_continuous": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.tendsto_iff_continuousAt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.composition_answer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.composition_answer_apply": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.spike": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.spike_punctured": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.spike_not_continuous": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.sine_continuousAt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.sine_continuousAt_explicit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.open_ball_preview": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.tendsto_epsilon_delta_preview": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.real_distance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.real_triangle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.two_mem_ball": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.two_mem_ball_steps": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.nhds_iff_ball": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.nhds_iff_ball_steps": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.open_ball_from_triangle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.open_ball_library": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.tendsto_to_epsilon_delta": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.square_continuous": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.square_continuous_from_id": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.euclidean_ball_open": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.euclidean_continuous_tendsto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.continuousAt_epsilon_delta": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.real_ball_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.closedBall_closed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.closedBall_closed_preimage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.square_difference_not_metric": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.square_difference_rational_counterexample": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.zeroDistanceDistinct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.zeroDistanceNotSeparating": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.composition_goal": [],
+    "LeanBook.Ch08.maximum_goal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.empty_open_from_union": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.continuous_at_every_point": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.nhds_le_open_principal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.le_nhds_from_open_principals": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.neighborhood_infimum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.composition_by_preimages": [
+      "propext"
+    ],
+    "LeanBook.Ch08.composition_one_line": [],
+    "LeanBook.Ch08.compact_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.compactIffClosedBounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.closed_iff_open_complement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.no_maximizer_in_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.square_maximum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.continuous_preimage_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.closure_by_distance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.minimum_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.minimum_interval_term": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.allOpenTopology": [],
+    "LeanBook.Ch08.singleton_open_discrete": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.singleton_open_apply": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.singleton_open_simp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.complete_sequence_goal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.real_sequence_goal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.cauchy_epsilon_tail": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.cauchy_filter_definition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.cauchy_sequence_definition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.complete_sequence_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.geometric_cauchy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.geometric_has_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.completion_extension_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.reciprocal_cauchy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.constant_cauchy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.constant_cauchy_from_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.convergent_cauchy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch09.convergent_cauchy_by_filter": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.mem_two_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.e": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.norm_e": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.basis_separated": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.unitClosedBall_not_compact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.ell2_not_proper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.ell2_not_finiteDimensional": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.notProperOfInfiniteDimensional": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.reciprocal_mem_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.reciprocal_mem_two_alt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.halfContracting": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.half_fixedPoint_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.banach_fixed_point_and_convergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.contracting_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.half_map_fixed_point": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.banach_fixed_point": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.banach_fixed_point_from_start": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.half_iterates_to_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.ell2_banach": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.contracting_continuousAt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.tendsto_at_fixedPoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.affineContracting": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.affineContracting_calc": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.affine_map_fixed_point": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.affine_fixedPoint_value": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.affine_iterates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.halfEll2": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.halfEll2_apply": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.halfEll2Contracting": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.halfEll2_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.halfEll2_fixedPoint_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch11.halfEll2_iterates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.half_map_recap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.univ_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.compl_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.countable_union_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.open_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.all_sets_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.zero_measure_on_powerset": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.empty_measurable": [],
+    "LeanBook.Ch12.inter_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.union_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.borel_definition_demo": [],
+    "LeanBook.Ch12.open_interval_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.closed_interval_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.half_open_interval_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.countable_inter_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.countable_inter_measurable_alt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.rationals_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.rationals_measurable_alt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch12.empty_measurable_from_field": [],
+    "LeanBook.Ch12.empty_measurable_from_univ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.volume_unit_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.dirac_is_probability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.countable_additivity_demo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.volume_zero_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.volume_open_unit_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.volume_singleton_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.count_singleton_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.count_empty_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.dirac_at_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.dirac_away_from_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.dirac_probability_demo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.probability_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.volume_one_four": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.volume_one_four_alt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.interval_measure_mono": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.interval_measure_mono_alt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.restricted_volume_probability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch13.restricted_volume_probability_alt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.ae_restrict_demo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.measurable_iff_preimages": [],
+    "LeanBook.Ch14.continuous_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.constant_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.identity_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.compose_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.add_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.continuous_measurable_tactic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.dirichlet_ae_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.ae_restrict_tactic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.measurable_is_aemeasurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.continuous_is_aemeasurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.square_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.square_measurable_auto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.polynomial_measurable_auto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.polynomial_measurable_manual": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.ae_change_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.ae_change_measurable_from_def": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.pointChange": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.pointChange_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.pointChange_ae_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.pointChange_integral_volume": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch14.pointChange_integral_dirac": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.simple_const_unit_integral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.myConst": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.myConst_at_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.simple_lintegral_definition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.simple_const_unit_integral_steps": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.eapprox_sup_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.lintegral_eapprox_formula": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.const_three_finite_range": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.const_range_nonempty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.const_range_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.eapprox_id_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.eapprox_id_one_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.eapprox_id_finite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.eapprox_id_sup": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.simple_indicator_unit_integral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch15.indicator_unit_lintegral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.norm_integral_bound_intro": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.lintegral_notation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.lintegral_definition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.constant_lintegral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.indicator_lintegral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.one_not_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.one_integral_undef": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.one_lintegral_infinite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.constant_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.sine_integrable_on_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.dirichlet": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.rationals_volume_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.dirichlet_ae_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.dirichlet_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.dirichlet_integral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.nonnegative_integral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.integral_add_demo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.integral_smul_demo": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.norm_integral_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.const_three_lintegral_top": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.const_three_lintegral_top_alt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.exp_neg_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.exp_neg_integrable_parts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.integral_of_not_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch16.dirichlet_on_unit_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.monotone_convergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.fatou_ae": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.real_ae_strongly_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.dominated_convergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.monotone_sequence_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.increasing_constants": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.movingIndicator": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.movingIndicator_measurable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.movingIndicator_integral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.movingIndicator_tendsto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.fatou_strict": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.sineSequence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.sineSequence_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.sineSequence_norm_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.sineSequence_norm_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.sineSequence_tendsto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.sineSequence_integral_tendsto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch17.sineSequence_integral_tendsto_direct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.expectation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.expectation_const": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.memLp_definition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.constant_memLp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.memLp_one_on": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.eLpNorm_at_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.eLpNorm_at_finite": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.eLpNorm_at_top": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.probability_univ": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.probability_le_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.probability_of_univ_eq_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.random_variable_preimage": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.myExpectation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.expectation_add": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.integral_const_probability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.condExp_const_probability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.martingale_condExp_property": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.martingale_term_integrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.probability_univ_from_instance": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.expectation_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.expectation_one_by_expansion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.real_l2_inner": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.real_l2_norm_sq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.complex_l2_inner": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch18.nat_martingale_condExp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "diagnostics": {
+    "false_equality": {
+      "kind": "error",
+      "errors": 2,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch03_004"
+      ]
+    },
+    "unfinished_false": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch03_014"
+      ]
+    },
+    "dimension_skeleton": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch05_004"
+      ]
+    },
+    "completed_hard_proof": {
+      "kind": "pass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "blocks": [
+        "ch03_015"
+      ]
+    },
+    "completed_dimension": {
+      "kind": "pass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "blocks": [
+        "ch05_021",
+        "ch05_022"
+      ]
+    },
+    "continuity_without_hypothesis": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch11_017"
+      ]
+    },
+    "affine_contraction_exercise": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch11_020"
+      ]
+    },
+    "stage2_ch01_006": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch01_006"
+      ]
+    },
+    "stage2_ch01_009": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch01_009"
+      ]
+    },
+    "stage2_ch01_012": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch01_012"
+      ]
+    },
+    "stage2_ch02_014": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch02_014"
+      ]
+    },
+    "stage2_ch02_017": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch02_017"
+      ]
+    },
+    "stage2_ch03_002": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch03_002"
+      ]
+    },
+    "stage2_ch03_006": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch03_006"
+      ]
+    },
+    "stage2_ch03_008": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch03_008"
+      ]
+    },
+    "stage2_ch03_011": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch03_011"
+      ]
+    },
+    "stage2_ch03_013": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch03_013"
+      ]
+    },
+    "stage2_ch03_016": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch03_016"
+      ]
+    },
+    "stage2_ch03_019": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch03_019"
+      ]
+    },
+    "stage2_ch03_022": {
+      "kind": "sorry",
+      "axioms": [
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch03_022"
+      ]
+    },
+    "stage2_ch04_018": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch04_018"
+      ]
+    },
+    "stage2_ch04_021": {
+      "kind": "sorry",
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch04_021"
+      ]
+    },
+    "stage2_ch05_006": {
+      "kind": "error",
+      "errors": 2,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch05_006"
+      ]
+    },
+    "stage2_ch05_023": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch05_023"
+      ]
+    },
+    "stage2_ch05_026": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch05_026"
+      ]
+    },
+    "stage2_ch05_029": {
+      "kind": "sorry",
+      "axioms": [
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch05_029"
+      ]
+    },
+    "stage3a_ch06_003": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch06_003"
+      ]
+    },
+    "stage3a_ch06_023": {
+      "kind": "error",
+      "errors": 1,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch06_023"
+      ]
+    },
+    "stage3a_ch06_042": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch06_042"
+      ]
+    },
+    "stage3a_ch07_035": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch07_035"
+      ]
+    },
+    "stage3b_ch08_030": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch08_030"
+      ]
+    },
+    "stage3b_ch08_033": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch08_033"
+      ]
+    },
+    "stage3b_ch09_021": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch09_021"
+      ]
+    },
+    "stage3b_ch09_026": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch09_026"
+      ]
+    },
+    "stage3c_ch10_023": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch10_023"
+      ]
+    },
+    "stage4a_ch12_013": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch12_013"
+      ]
+    },
+    "stage4a_ch13_013": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch13_013"
+      ]
+    }
+  },
+  "verification_stage": "5",
+  "scope": "Selected manuscript blocks and reference corrections; not the whole book"
+}

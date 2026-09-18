@@ -1,0 +1,20 @@
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : Measure α
+f : ℕ → α → ℝ≥0∞
+hf : ∀ (n : ℕ), Measurable (f n)
+hmono : Monotone f
+⊢ ∫⁻ (a : α), ⨆ n, f n a ∂μ = ⨆ n, ∫⁻ (a : α), f n a ∂μ
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : Measure α
+f : ℕ → α → ℝ≥0∞
+hf : ∀ (n : ℕ), AEMeasurable (f n) μ
+⊢ ∫⁻ (a : α), liminf (fun n => f n a) atTop ∂μ ≤ liminf (fun n => ∫⁻ (a : α), f n a ∂μ) atTop
+F : ℕ → ℝ → ℝ
+f bound : ℝ → ℝ
+hFm : ∀ (n : ℕ), AEStronglyMeasurable (F n) volume
+hbound : Integrable bound volume
+hle : ∀ (n : ℕ), ∀ᵐ (a : ℝ), ‖F n a‖ ≤ bound a
+htends : ∀ᵐ (a : ℝ), Tendsto (fun n => F n a) atTop (𝓝 (f a))
+⊢ Tendsto (fun n => ∫ (a : ℝ), F n a) atTop (𝓝 (∫ (a : ℝ), f a))

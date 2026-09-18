@@ -1,0 +1,244 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-14T13:02:38.322065+00:00",
+  "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4",
+  "toolchain": "leanprover/lean4:v4.29.0-rc6",
+  "lean_version": "Lean (version 4.29.0-rc6, arm64-apple-darwin24.6.0, commit 00659f8e6071d7e46131ed643bf8003b99b044e9, Release)",
+  "dependencies": {
+    "mathlib": "5c8398df528176d9c87ccd9226ba8f7c8852d59c",
+    "plausible": "e84e3e16aea6b72cc5d311ca1bb25caad417e162",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "importGraph": "f207d9fcf0cef00ba79962a33ef156061914d9c7",
+    "proofwidgets": "2e58165a9dcdca9837b666528f974299ee1a51cc",
+    "aesop": "c3361708f266893de5d1769192b60d4b1831f2bb",
+    "Qq": "221e8088e3a066b8676dc471ff10638cf1c10835",
+    "batteries": "bd58e3506632241b59e406902d5e42b73cdeccce",
+    "Cli": "3de531c1135f5e3a01f3ac04830996fda476b28e"
+  },
+  "manuscript_files": 23,
+  "catalog_blocks": 424,
+  "compiled_source_blocks": [
+    "ch01_001",
+    "ch05_021",
+    "ch03_001",
+    "ch03_005",
+    "ch03_015",
+    "ch05_022",
+    "ch06_004",
+    "ch07_040",
+    "ch07_041",
+    "ch08_018",
+    "ch08_019",
+    "ch10_001",
+    "ch10_005",
+    "ch10_006",
+    "ch10_007",
+    "ch10_010",
+    "ch10_011",
+    "ch10_012",
+    "ch10_013",
+    "ch10_014",
+    "ch10_015",
+    "ch10_017",
+    "ch10_019",
+    "ch10_020",
+    "ch10_021",
+    "ch10_022"
+  ],
+  "audited_declarations": {
+    "LeanBook.Ch01.first_theorem": [
+      "propext"
+    ],
+    "LeanBook.Ch03.skeleton": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch03.one_add_one_ne_three": [
+      "propext"
+    ],
+    "LeanBook.Ch03.hard_proof": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch05.dimension_theorem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.rankNullity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.continuousComposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.basisVector": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.banachFixedPoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.banachIteration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.halfContracting": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dirichlet": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dirichletAeZero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dirichletIntegrable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dirichletIntegral": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.dominatedConvergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "ManuscriptReview.expectation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch06.continuousCompositionEpsilonDelta": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.zeroDistanceDistinct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch07.zeroDistanceNotSeparating": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch08.compactIffClosedBounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.e": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.norm_e": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.basis_separated": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.unitClosedBall_not_compact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.ell2_not_proper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.ell2_not_finiteDimensional": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LeanBook.Ch10.notProperOfInfiniteDimensional": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "diagnostics": {
+    "false_equality": {
+      "kind": "error",
+      "errors": 2,
+      "expected_reason_confirmed": true,
+      "blocks": [
+        "ch03_004"
+      ]
+    },
+    "unfinished_false": {
+      "kind": "sorry",
+      "axioms": [
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch03_014"
+      ]
+    },
+    "dimension_skeleton": {
+      "kind": "sorry",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext",
+        "sorryAx"
+      ],
+      "expected_warning_confirmed": true,
+      "blocks": [
+        "ch05_004"
+      ]
+    },
+    "completed_hard_proof": {
+      "kind": "pass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "blocks": [
+        "ch03_015"
+      ]
+    },
+    "completed_dimension": {
+      "kind": "pass",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "blocks": [
+        "ch05_021",
+        "ch05_022"
+      ]
+    }
+  },
+  "verification_stage": "1-B",
+  "scope": "Selected manuscript blocks and reference corrections; not the whole book"
+}

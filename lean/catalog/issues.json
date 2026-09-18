@@ -1,0 +1,1928 @@
+[
+  {
+    "id": "P1-01",
+    "priority": "P1",
+    "stage": 1,
+    "status": "resolved",
+    "description": "偽の等式を `norm_num` で証明できるとしている",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch03.md",
+        "line": 118,
+        "end": 121
+      }
+    ],
+    "blocks": [
+      "ch03_004",
+      "ch03_005"
+    ],
+    "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
+    "acceptance": "偽の等式をタクティク変更で証明できるという記述を訂正し、否定の完成例をビルドする。",
+    "resolution": {
+      "stage": "1-A",
+      "record": "STAGE1A.md",
+      "evidence": "catalog/stage1a-verification.json"
+    }
+  },
+  {
+    "id": "P1-02",
+    "priority": "P1",
+    "stage": 1,
+    "status": "resolved",
+    "description": "`sorry` が通ることを論理的な骨格の正しさの保証としている",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch03.md",
+        "line": 432,
+        "end": 432
+      },
+      {
+        "source": "books/lean4-formalization/ch05.md",
+        "line": 192,
+        "end": 208
+      },
+      {
+        "source": "books/lean4-formalization/ch11.md",
+        "line": 424,
+        "end": 424
+      },
+      {
+        "source": "books/lean4-formalization/ch11.md",
+        "line": 718,
+        "end": 718
+      }
+    ],
+    "blocks": [
+      "ch03_001",
+      "ch03_013",
+      "ch03_014",
+      "ch03_015",
+      "ch05_004",
+      "ch05_005",
+      "ch05_021",
+      "ch05_022"
+    ],
+    "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
+    "acceptance": "sorry・No goals・型検査・公理依存が保証する範囲を本文、解答、Q&Aで揃える。完成した主要定理にsorryAx依存がない。",
+    "resolution": {
+      "stage": "1-A",
+      "record": "STAGE1A.md",
+      "evidence": "catalog/stage1a-verification.json"
+    }
+  },
+  {
+    "id": "P1-03",
+    "priority": "P1",
+    "stage": 1,
+    "status": "resolved",
+    "description": "合成の連続性の例に必要な仮定がない",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 119,
+        "end": 131
+      }
+    ],
+    "blocks": [
+      "ch06_004"
+    ],
+    "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
+    "acceptance": "外側の関数のf(a)での連続性を仮定し、本文の主張・証明・反例の説明を整合させる。",
+    "resolution": {
+      "stage": "1-B",
+      "record": "STAGE1B.md",
+      "evidence": "catalog/stage1b-verification.json"
+    }
+  },
+  {
+    "id": "P1-04",
+    "priority": "P1",
+    "stage": 1,
+    "status": "resolved",
+    "description": "Banach不動点定理の中心コードを組み直す必要がある",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch11.md",
+        "line": 13,
+        "end": 25
+      },
+      {
+        "source": "books/lean4-formalization/ch11.md",
+        "line": 127,
+        "end": 137
+      },
+      {
+        "source": "books/lean4-formalization/ch11.md",
+        "line": 252,
+        "end": 260
+      },
+      {
+        "source": "books/lean4-formalization/ch11.md",
+        "line": 315,
+        "end": 326
+      }
+    ],
+    "blocks": [
+      "ch10_018",
+      "ch11_001",
+      "ch11_002",
+      "ch11_003",
+      "ch11_004",
+      "ch11_005",
+      "ch11_006",
+      "ch11_007",
+      "ch11_008",
+      "ch11_009",
+      "ch11_010",
+      "ch11_011",
+      "ch11_012",
+      "ch11_013",
+      "ch11_014",
+      "ch11_015",
+      "ch11_016",
+      "ch11_017",
+      "ch11_018",
+      "ch11_019",
+      "ch11_020",
+      "ch11_021",
+      "ch11_022",
+      "ch11_023",
+      "ch11_024",
+      "ch11_025",
+      "ch11_026",
+      "ch12_001"
+    ],
+    "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
+    "acceptance": "非空性を加えた一意存在・反復収束・具体例をビルドし、第10〜12章の予告、再掲、出力も同じAPIに揃える。",
+    "resolution": {
+      "stage": "1-C",
+      "record": "STAGE1C.md",
+      "evidence": "catalog/stage1c-verification.json"
+    }
+  },
+  {
+    "id": "P1-05",
+    "priority": "P1",
+    "stage": 1,
+    "status": "resolved",
+    "description": "優収束定理とFatouの補題の型が実際と異なる",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 196,
+        "end": 209
+      },
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 286,
+        "end": 301
+      },
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 527,
+        "end": 534
+      }
+    ],
+    "blocks": [
+      "ch12_002",
+      "ch17_001",
+      "ch17_002",
+      "ch17_003",
+      "ch17_004",
+      "ch17_005",
+      "ch17_006",
+      "ch17_007",
+      "ch17_008",
+      "ch17_009",
+      "ch17_010",
+      "ch17_011",
+      "ch17_012",
+      "ch17_013"
+    ],
+    "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
+    "acceptance": "DCTとFatouの可測性仮定・引数順を採用版の型に合わせ、完成例・出力・Q&Aを照合する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
+  },
+  {
+    "id": "P1-06",
+    "priority": "P1",
+    "stage": 1,
+    "status": "resolved",
+    "description": "ディリクレ関数をルベーグ非可積分としている",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch16.md",
+        "line": 474,
+        "end": 483
+      }
+    ],
+    "blocks": [
+      "ch14_005",
+      "ch14_006",
+      "ch14_007",
+      "ch16_007",
+      "ch16_016",
+      "ch16_017"
+    ],
+    "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
+    "acceptance": "実数値の指示関数についてa.e.で0、可積分、積分0を証明し、規約値による説明を訂正する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
+  },
+  {
+    "id": "P1-07",
+    "priority": "P1",
+    "stage": 1,
+    "status": "resolved",
+    "description": "擬距離の例で商を取る前後が逆になっている",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 867,
+        "end": 882
+      }
+    ],
+    "blocks": [
+      "ch07_040",
+      "ch07_041"
+    ],
+    "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
+    "acceptance": "商の前の擬距離と商の後の距離を区別し、例・第18章のLpの説明と整合させる。",
+    "resolution": {
+      "stage": "1-B",
+      "record": "STAGE1B.md",
+      "evidence": "catalog/stage1b-verification.json"
+    }
+  },
+  {
+    "id": "P1-08",
+    "priority": "P1",
+    "stage": 1,
+    "status": "resolved",
+    "description": "Heine–Borel性の説明が実在しない型クラスを中心に組まれている",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 481,
+        "end": 502
+      },
+      {
+        "source": "books/lean4-formalization/ch10.md",
+        "line": 174,
+        "end": 185
+      },
+      {
+        "source": "books/lean4-formalization/ch10.md",
+        "line": 469,
+        "end": 505
+      }
+    ],
+    "blocks": [
+      "ch08_018",
+      "ch08_019",
+      "ch10_001",
+      "ch10_005",
+      "ch10_006",
+      "ch10_007",
+      "ch10_010",
+      "ch10_011",
+      "ch10_012",
+      "ch10_013",
+      "ch10_014",
+      "ch10_015",
+      "ch10_017",
+      "ch10_019",
+      "ch10_020",
+      "ch10_021",
+      "ch10_022"
+    ],
+    "scope": "位置は初回レビューの代表箇所。修正時は同じ主張・APIの章内外の再掲も検索して更新する。",
+    "acceptance": "ProperSpaceと実際の定理の仮定を確認し、インスタンス探索の失敗と数学的な非存在を区別する。",
+    "resolution": {
+      "stage": "1-B",
+      "record": "STAGE1B.md",
+      "evidence": "catalog/stage1b-verification.json"
+    }
+  },
+  {
+    "id": "P2-001",
+    "priority": "P2",
+    "stage": 2,
+    "status": "resolved",
+    "description": "「型＝証明」「命題と同じ型の値」は修正。「命題 `P : Prop` 自体を型として、その項 `h : P` を作るのが証明」とする。`Nat`→`Int` のcoercionは文脈により自動挿入されるので「自動的には変換されない」と一律に言わない。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/intro.md",
+        "line": 77,
+        "end": 83
+      },
+      {
+        "source": "books/lean4-formalization/ch02.md",
+        "line": 80,
+        "end": 80
+      }
+    ],
+    "blocks": [
+      "intro_001",
+      "ch02_002",
+      "ch02_003"
+    ],
+    "scope": "intro.md:77–83、ch02.md:80",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
+  },
+  {
+    "id": "P2-002",
+    "priority": "P2",
+    "stage": 2,
+    "status": "resolved",
+    "description": "ビルド失敗の原因をキャッシュ取得だけに限定しない。`lake build` と `npm install` も同じ処理ではない。プロジェクト・版・エラー本文を確認し、キャッシュ取得とビルドを区別する。無条件のclean→全ビルドは読者の待ち時間を増やす。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch01.md",
+        "line": 441,
+        "end": 455
+      },
+      {
+        "source": "books/lean4-formalization/ch04.md",
+        "line": 83,
+        "end": 83
+      }
+    ],
+    "blocks": [],
+    "scope": "ch01.md:441–455、ch04.md:83",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
+  },
+  {
+    "id": "P2-003",
+    "priority": "P2",
+    "stage": 2,
+    "status": "resolved",
+    "description": "`Monoid` の省略出力で結合律を担う構造を落とさない。`LinearOrderedField`・`OrderedCommRing` は検証版で不明。例を `Field ℝ`・`LinearOrder ℝ`・`IsStrictOrderedRing ℝ` などに合わせる。`#check (inferInstance : ...)` の出力もコンストラクタ名と取り違えない。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch02.md",
+        "line": 130,
+        "end": 141
+      },
+      {
+        "source": "books/lean4-formalization/ch02.md",
+        "line": 165,
+        "end": 167
+      },
+      {
+        "source": "books/lean4-formalization/ch02.md",
+        "line": 344,
+        "end": 344
+      }
+    ],
+    "blocks": [
+      "ch02_001",
+      "ch02_004",
+      "ch02_005",
+      "ch02_006",
+      "ch02_007",
+      "ch02_011",
+      "ch02_012",
+      "ch02_013"
+    ],
+    "scope": "ch02.md:130–141、ch02.md:165–167、ch02.md:344",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
+  },
+  {
+    "id": "P2-004",
+    "priority": "P2",
+    "stage": 2,
+    "status": "resolved",
+    "description": "`[CommMonoid α]` に `ring` が使えるという別解は失敗する。既存の `mul_comm` にする。非線形な `2 ∣ n²+n` も `omega` 一発では解けなかった。本文の `Nat.even_mul_succ_self` を使う解答は利用できる。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch03.md",
+        "line": 584,
+        "end": 592
+      },
+      {
+        "source": "books/lean4-formalization/ch03.md",
+        "line": 648,
+        "end": 656
+      }
+    ],
+    "blocks": [
+      "ch03_019",
+      "ch03_020",
+      "ch03_021",
+      "ch03_022",
+      "ch03_023",
+      "ch03_024"
+    ],
+    "scope": "ch03.md:584–592、ch03.md:648–656",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
+  },
+  {
+    "id": "P2-005",
+    "priority": "P2",
+    "stage": 2,
+    "status": "resolved",
+    "description": "`open Mathlib` が「Mathlibの何万もの名前を一度に展開する」とする説明はモジュールと名前空間の混同。Mathlibの定理はrootや `Nat`・`MeasureTheory` などに分かれている。検証版では `open Mathlib` 自体は受理されるため、これを「存在しない名前空間のエラー」と説明するのも避ける。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch04.md",
+        "line": 305,
+        "end": 318
+      }
+    ],
+    "blocks": [
+      "ch04_009",
+      "ch04_010",
+      "ch04_011"
+    ],
+    "scope": "ch04.md:305–318",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
+  },
+  {
+    "id": "P2-006",
+    "priority": "P2",
+    "stage": 2,
+    "status": "resolved",
+    "description": "`Mathlib.LinearAlgebra.FiniteDimensional` と `Mathlib.MeasureTheory.Integral.Bochner` の `.lean` ファイルが検証版にない。例えば各 `.Basic` など、目的の定理を含む実在するimport先を示す。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch04.md",
+        "line": 342,
+        "end": 347
+      }
+    ],
+    "blocks": [
+      "ch04_013",
+      "ch04_014"
+    ],
+    "scope": "ch04.md:342–347",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
+  },
+  {
+    "id": "P2-007",
+    "priority": "P2",
+    "stage": 2,
+    "status": "resolved",
+    "description": "第5章の完成例は動作するが、核・像の有限次元性を取り出したあと、既存の次元定理そのものを適用している。「Mathlibの次元定理を用いた形式化・適用」と明記すると到達目標が正確。`h_ker`・`h_range` は最終証明に使われておらず、必要な証明手順として説明しない。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/part1.md",
+        "line": 10,
+        "end": 10
+      },
+      {
+        "source": "books/lean4-formalization/ch05.md",
+        "line": 30,
+        "end": 40
+      },
+      {
+        "source": "books/lean4-formalization/ch05.md",
+        "line": 597,
+        "end": 615
+      }
+    ],
+    "blocks": [
+      "ch05_001",
+      "ch05_002",
+      "ch05_003",
+      "ch05_004",
+      "ch05_005",
+      "ch05_006",
+      "ch05_007",
+      "ch05_008",
+      "ch05_009",
+      "ch05_010",
+      "ch05_011",
+      "ch05_012",
+      "ch05_013",
+      "ch05_014",
+      "ch05_015",
+      "ch05_016",
+      "ch05_017",
+      "ch05_018",
+      "ch05_019",
+      "ch05_020",
+      "ch05_021",
+      "ch05_022"
+    ],
+    "scope": "part1.md:10、ch05.md:30–40、ch05.md:597–615",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
+  },
+  {
+    "id": "P2-008",
+    "priority": "P2",
+    "stage": 2,
+    "status": "resolved",
+    "description": "有限次元性は「次元を実行計算できる」こととは別。`finrank` の非計算的な定義にも触れる。「無限次元では次元定理が成立しない」は過大で、基数値の次元には一般化がある。「この自然数値の定式化で有限次元性を用いる」と限定する。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch05.md",
+        "line": 319,
+        "end": 329
+      },
+      {
+        "source": "books/lean4-formalization/ch05.md",
+        "line": 637,
+        "end": 637
+      }
+    ],
+    "blocks": [
+      "ch05_001",
+      "ch05_007",
+      "ch05_008",
+      "ch05_009",
+      "ch05_010",
+      "ch05_021"
+    ],
+    "scope": "ch05.md:319–329、ch05.md:637",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "2",
+      "record": "STAGE2.md",
+      "evidence": "catalog/stage2-verification.json"
+    }
+  },
+  {
+    "id": "P2-009",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "冒頭の「再掲」には hf : ContinuousAt f a が増えており、仮定付きの例は探索が成功する。後の仮定なしの失敗例と修正済み例を区別し、実際の探索結果と説明を合わせる。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 15,
+        "end": 21
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 25,
+        "end": 48
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 58,
+        "end": 65
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 623,
+        "end": 630
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 642,
+        "end": 648
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 661,
+        "end": 664
+      }
+    ],
+    "blocks": [
+      "ch06_001",
+      "ch06_002",
+      "ch06_003",
+      "ch06_023",
+      "ch06_024",
+      "ch06_025"
+    ],
+    "scope": "段階3-Aで本文・演習・Q&Aを照合。locationsは修正後の代表コード、before_stage3a_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3a_locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 13,
+        "end": 21
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 56,
+        "end": 65
+      }
+    ],
+    "resolution": {
+      "stage": "3-A",
+      "record": "STAGE3A.md",
+      "evidence": "catalog/stage3a-verification.json",
+      "independent_evidence": "catalog/stage3a-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-010",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "近傍の逆像の集合族の包含が逆。`V ∈ 𝓝(f a) → f ⁻¹' V ∈ 𝓝 a` と書くのが確実。`nhds 0` は開集合だけの族ではなく、0の開近傍を含む集合全体。例えば `[-1,1]` も所属する。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 394,
+        "end": 407
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 522,
+        "end": 532
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 690,
+        "end": 697
+      }
+    ],
+    "blocks": [
+      "ch06_014",
+      "ch06_017",
+      "ch06_027"
+    ],
+    "scope": "段階3-Aで本文・演習・Q&Aを照合。locationsは修正後の代表コード、before_stage3a_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3a_locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 648,
+        "end": 648
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 928,
+        "end": 928
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 1092,
+        "end": 1095
+      }
+    ],
+    "resolution": {
+      "stage": "3-A",
+      "record": "STAGE3A.md",
+      "evidence": "catalog/stage3a-verification.json",
+      "independent_evidence": "catalog/stage3a-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-011",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "点で値を変えた関数の極限は、点を除く極限と `Tendsto f (nhds a) ...` を区別する。`𝓝[≠] a` と `𝓝 a` の違いを短く補足すると、連続性との関係が正確になる。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 1086,
+        "end": 1107
+      },
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 1117,
+        "end": 1141
+      }
+    ],
+    "blocks": [
+      "ch06_045",
+      "ch06_046"
+    ],
+    "scope": "段階3-Aで本文・演習・Q&Aを照合。locationsは修正後の代表コード、before_stage3a_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3a_locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 94,
+        "end": 98
+      }
+    ],
+    "resolution": {
+      "stage": "3-A",
+      "record": "STAGE3A.md",
+      "evidence": "catalog/stage3a-verification.json",
+      "independent_evidence": "catalog/stage3a-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-012",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "完成例にも `No goals to be solved`、不明な `Metric.closedBall_eq_preimage_dist`・擬距離インスタンス名がある。途中でゴールが閉じた後のタクティクを削除し、閉球の閉性は利用可能な `Metric.isClosed_closedBall` などを用いて確認する。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 113,
+        "end": 132
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 282,
+        "end": 290
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 296,
+        "end": 301
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 309,
+        "end": 311
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 814,
+        "end": 821
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 834,
+        "end": 842
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 850,
+        "end": 858
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 929,
+        "end": 944
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 954,
+        "end": 959
+      }
+    ],
+    "blocks": [
+      "ch07_004",
+      "ch07_012",
+      "ch07_013",
+      "ch07_014",
+      "ch07_035",
+      "ch07_036",
+      "ch07_037",
+      "ch07_040",
+      "ch07_041"
+    ],
+    "scope": "段階3-Aで本文・演習・Q&Aを照合。locationsは修正後の代表コード、before_stage3a_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3a_locations": [
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 269,
+        "end": 279
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 793,
+        "end": 800
+      },
+      {
+        "source": "books/lean4-formalization/ch07.md",
+        "line": 869,
+        "end": 895
+      }
+    ],
+    "resolution": {
+      "stage": "3-A",
+      "record": "STAGE3A.md",
+      "evidence": "catalog/stage3a-verification.json",
+      "independent_evidence": "catalog/stage3a-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-013",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "`⨅` を「最小元」としない。下限は「すべての候補以下にあるもののうち最大のもの」。フィルターでは順序が集合族の包含と逆なので、ここを誤ると近傍の説明が崩れる。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 264,
+        "end": 283
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 287,
+        "end": 295
+      }
+    ],
+    "blocks": [
+      "ch08_008",
+      "ch08_009"
+    ],
+    "scope": "段階3-Bで第8・9章の本文・演習・Q&Aと実出力を照合。locationsは修正後の代表コード、before_stage3b_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3b_locations": [
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 262,
+        "end": 262
+      }
+    ],
+    "resolution": {
+      "stage": "3-B",
+      "record": "STAGE3B.md",
+      "evidence": "catalog/stage3b-verification.json",
+      "independent_evidence": "catalog/stage3b-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-014",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "離散位相は離散距離で距離化できるため、距離を与えられない代表例には不向き。最大・最小値定理の数学文には非空性を加える。`IsOpen.union` は二つの集合の合併であり、任意合併の公理そのものではない。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 17,
+        "end": 34
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 127,
+        "end": 138
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 623,
+        "end": 635
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 639,
+        "end": 646
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 656,
+        "end": 658
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 667,
+        "end": 669
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 679,
+        "end": 684
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 903,
+        "end": 919
+      }
+    ],
+    "blocks": [
+      "ch08_001",
+      "ch08_004",
+      "ch08_023",
+      "ch08_024",
+      "ch08_025",
+      "ch08_026",
+      "ch08_027",
+      "ch08_034"
+    ],
+    "scope": "段階3-Bで第8・9章の本文・演習・Q&Aと実出力を照合。locationsは修正後の代表コード、before_stage3b_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3b_locations": [
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 40,
+        "end": 45
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 585,
+        "end": 585
+      },
+      {
+        "source": "books/lean4-formalization/ch08.md",
+        "line": 938,
+        "end": 938
+      }
+    ],
+    "resolution": {
+      "stage": "3-B",
+      "record": "STAGE3B.md",
+      "evidence": "catalog/stage3b-verification.json",
+      "independent_evidence": "catalog/stage3b-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-015",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "Cauchy条件の `ℱ ≠ ∅` は `NeBot` ではない。フィルターは全体集合を含むので集合族としては常に非空。`∅ ∉ ℱ`、または `ℱ ≠ ⊥` とする。C2'は単なる積位相での「対角集合の近傍」ではなく、一様構造のentourageを使う。Lean名はrootの `Cauchy`。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 100,
+        "end": 109
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 189,
+        "end": 201
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 207,
+        "end": 215
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 235,
+        "end": 243
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 443,
+        "end": 466
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 758,
+        "end": 766
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 776,
+        "end": 785
+      }
+    ],
+    "blocks": [
+      "ch09_004",
+      "ch09_007",
+      "ch09_008",
+      "ch09_009",
+      "ch09_018",
+      "ch09_027",
+      "ch09_028"
+    ],
+    "scope": "段階3-Bで第8・9章の本文・演習・Q&Aと実出力を照合。locationsは修正後の代表コード、before_stage3b_locationsは修正前のレビュー位置。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "before_stage3b_locations": [
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 159,
+        "end": 174
+      },
+      {
+        "source": "books/lean4-formalization/ch09.md",
+        "line": 185,
+        "end": 214
+      }
+    ],
+    "resolution": {
+      "stage": "3-B",
+      "record": "STAGE3B.md",
+      "evidence": "catalog/stage3b-verification.json",
+      "independent_evidence": "catalog/stage3b-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-016",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "識別子 `ℓ²` は検証版で構文エラー。`ell2` などにするか `«ℓ²»` と引用する。`lp.single` は指数が明示引数なので、標準基底は `lp.single 2 n (1 : ℝ)` の形。修正例を添付。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch10.md",
+        "line": 11,
+        "end": 20
+      },
+      {
+        "source": "books/lean4-formalization/ch10.md",
+        "line": 215,
+        "end": 220
+      }
+    ],
+    "blocks": [
+      "ch10_001",
+      "ch10_011",
+      "ch11_016",
+      "ch11_025"
+    ],
+    "scope": "ch10.md:11–20、ch10.md:215–220",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "progress": "段階1-Bで第10章、段階1-Cで第11章の再掲・演習もell2と既存のlp演算へ修正。",
+    "resolution": {
+      "stage": "1-C",
+      "record": "STAGE1C.md",
+      "evidence": "catalog/stage1c-verification.json"
+    }
+  },
+  {
+    "id": "P2-017",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "`Memℓp` の説明は指数による場合分けと総和可能性に合わせる。実数値の無限和は非総和可能でもLean上で値を持つため、単に「実数の和が有限」と書くと意図を表せない。`0`・`∞` の場合も通常のべき和とは分ける。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch10.md",
+        "line": 95,
+        "end": 110
+      }
+    ],
+    "blocks": [
+      "ch10_002",
+      "ch10_003",
+      "ch10_004",
+      "ch10_005",
+      "ch10_009"
+    ],
+    "scope": "段階3-Cで第10章の所属条件・仮定・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "3-C",
+      "record": "STAGE3C.md",
+      "evidence": "catalog/stage3c-verification.json",
+      "independent_evidence": "catalog/stage3c-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-018",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "`sorry` なしを求める級数の演習に、検証版で不明な `memℓp_iff_summable`、`Real.summable_one_div_pow`、引数不一致の `Summable.of_norm_bounded` が残る。完成した解答と方針だけのスケッチを分ける。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch10.md",
+        "line": 549,
+        "end": 585
+      }
+    ],
+    "blocks": [
+      "ch10_023",
+      "ch10_024",
+      "ch10_025"
+    ],
+    "scope": "段階3-Cで第10章の所属条件・仮定・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "3-C",
+      "record": "STAGE3C.md",
+      "evidence": "catalog/stage3c-verification.json",
+      "independent_evidence": "catalog/stage3c-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-019",
+    "priority": "P2",
+    "stage": 3,
+    "status": "resolved",
+    "description": "`(x+1)/(x+2)` の定義域 `[0,∞)` は閉集合であり、像もその中に入る。`cos` が全実数上で縮小にならない理由は0近傍ではなく、`π/2` 近傍で差分比が1に近づくこと。`[a,b] ⊂ (0,π)` だけでは縮小性を保証できない。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch11.md",
+        "line": 478,
+        "end": 490
+      }
+    ],
+    "blocks": [],
+    "scope": "ch11.md:478–490",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-C",
+      "record": "STAGE1C.md",
+      "evidence": "catalog/stage1c-verification.json"
+    }
+  },
+  {
+    "id": "P2-020",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "冪集合には測度を定義できない、は誤り。零測度・数え上げ測度・Dirac測度は定義できる。ルベーグ測度を長さとの整合性・平行移動不変性・可算加法性を保って全ての部分集合へ拡張できない、と条件を付ける。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch12.md",
+        "line": 267,
+        "end": 270
+      },
+      {
+        "source": "books/lean4-formalization/ch12.md",
+        "line": 640,
+        "end": 640
+      }
+    ],
+    "blocks": [
+      "ch12_005"
+    ],
+    "scope": "段階4-Aで第12〜14章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-A",
+      "record": "STAGE4A.md",
+      "evidence": "catalog/stage4a-verification.json",
+      "independent_evidence": "catalog/stage4a-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-021",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`MeasurableSpace` のフィールドは `measurableSet_empty`。全体集合を基にする数学の公理化と区別し、構造体の表示と演習を修正。`MeasurableSpace.measurableSet_top` は冪集合の可測構造の補題として実在するが、構造体のフィールドではない。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch12.md",
+        "line": 287,
+        "end": 296
+      }
+    ],
+    "blocks": [
+      "ch12_005",
+      "ch12_018",
+      "ch12_019"
+    ],
+    "scope": "段階4-Aで第12〜14章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-A",
+      "record": "STAGE4A.md",
+      "evidence": "catalog/stage4a-verification.json",
+      "independent_evidence": "catalog/stage4a-source-checks.json"
+    },
+    "initial_description": "`#print MeasurableSpace` の簡略出力に架空の `measurableSet_top` を書いている。検証版のフィールドは `measurableSet_empty`。数学では全体集合から空集合を導く公理化も同値だが、実際の定義を示す欄では区別する。"
+  },
+  {
+    "id": "P2-022",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`measurableSet_iInter` は不明。`MeasurableSet.iInter` など実在する補題へ。`countable_range` は `Set.countable_range` と限定する。`Set.range` に直接 `MeasurableSet.iUnion` を適用する別解は、単点集合の合併への書き換えが必要。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch12.md",
+        "line": 529,
+        "end": 535
+      },
+      {
+        "source": "books/lean4-formalization/ch12.md",
+        "line": 554,
+        "end": 582
+      }
+    ],
+    "blocks": [
+      "ch12_014",
+      "ch12_015",
+      "ch12_016",
+      "ch12_017"
+    ],
+    "scope": "段階4-Aで第12〜14章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-A",
+      "record": "STAGE4A.md",
+      "evidence": "catalog/stage4a-verification.json",
+      "independent_evidence": "catalog/stage4a-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-023",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`Measure.empty`・`Measure.iUnion`・`Measure.mono` が不明。検証版では `measure_empty`・`measure_iUnion`・`measure_mono`。可算加法性の引数順も実際の型から写す。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch13.md",
+        "line": 149,
+        "end": 171
+      },
+      {
+        "source": "books/lean4-formalization/ch13.md",
+        "line": 411,
+        "end": 450
+      }
+    ],
+    "blocks": [
+      "ch13_002",
+      "ch13_003",
+      "ch13_013",
+      "ch13_014",
+      "ch13_015",
+      "ch13_016",
+      "ch13_017"
+    ],
+    "scope": "段階4-Aで第12〜14章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-A",
+      "record": "STAGE4A.md",
+      "evidence": "catalog/stage4a-verification.json",
+      "independent_evidence": "catalog/stage4a-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-024",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`Filter.ae` を `MeasureTheory.ae` に訂正し、指示関数は `Set.indicator` を使う。初回に不明とした `ae_restrict_of_ae` は固定版のMeasureTheory名前空間に実在する。原稿のopenと完全修飾名の両方で確認し、制限測度へのa.e.推論を検証。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch14.md",
+        "line": 168,
+        "end": 198
+      },
+      {
+        "source": "books/lean4-formalization/ch14.md",
+        "line": 211,
+        "end": 225
+      }
+    ],
+    "blocks": [
+      "ch14_001",
+      "ch14_005",
+      "ch14_006",
+      "ch14_007"
+    ],
+    "scope": "段階4-Aで第12〜14章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-A",
+      "record": "STAGE4A.md",
+      "evidence": "catalog/stage4a-verification.json",
+      "independent_evidence": "catalog/stage4a-source-checks.json"
+    },
+    "initial_description": "`Filter.ae` は不明で、`MeasureTheory.ae` を使う。`ae_restrict_of_ae` も当該環境で不明。指示関数を `if` で書く箇所には命題の決定可能性の不足もある。`Set.indicator` を使う修正例を参照。"
+  },
+  {
+    "id": "P2-025",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "一点での変更が可測性を保つ説明と、積分に影響しない説明を混同している。一点が零集合かどうかは測度に依存し、Dirac測度では一点の値が積分を変える。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch14.md",
+        "line": 435,
+        "end": 436
+      }
+    ],
+    "blocks": [
+      "ch14_015"
+    ],
+    "scope": "段階4-Aで第12〜14章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、修正後の検証対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-A",
+      "record": "STAGE4A.md",
+      "evidence": "catalog/stage4a-verification.json",
+      "independent_evidence": "catalog/stage4a-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-026",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "単関数の定数積分の補題は `SimpleFunc.const_lintegral`。原稿の `SimpleFunc.lintegral_const` では通らない。3を `[0,1]` 上で積分する修正例は確認済み。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch15.md",
+        "line": 28,
+        "end": 35
+      },
+      {
+        "source": "books/lean4-formalization/ch15.md",
+        "line": 188,
+        "end": 215
+      }
+    ],
+    "blocks": [
+      "ch15_001",
+      "ch15_004",
+      "ch15_005"
+    ],
+    "scope": "段階4-Bで第15・16章の本文・演習・Q&Aと第17章の関連例を照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-B",
+      "record": "STAGE4B.md",
+      "evidence": "catalog/stage4b-verification.json",
+      "independent_evidence": "catalog/stage4b-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-027",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`eapprox f n` は実装上、非負有理数の列挙による近似で、単純な「n等分刻み」ではない。`lintegral` の定義は下にある単関数の積分全体の上限。可測な `f` について特定の近似列の上限と等しくなる定理と、定義そのものを分ける。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch15.md",
+        "line": 277,
+        "end": 282
+      },
+      {
+        "source": "books/lean4-formalization/ch15.md",
+        "line": 454,
+        "end": 460
+      }
+    ],
+    "blocks": [
+      "ch15_006",
+      "ch15_009",
+      "ch15_010",
+      "ch16_002"
+    ],
+    "scope": "段階4-Bで第15・16章の本文・演習・Q&Aと第17章の関連例を照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-B",
+      "record": "STAGE4B.md",
+      "evidence": "catalog/stage4b-verification.json",
+      "independent_evidence": "catalog/stage4b-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-028",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "指示関数の非負積分で `rw [lintegral_indicator _ hA]` の形は検証版に合わない。関数の値域も明示する。`rw [lintegral_indicator hA]` からの修正例を確認済み。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch15.md",
+        "line": 435,
+        "end": 440
+      },
+      {
+        "source": "books/lean4-formalization/ch16.md",
+        "line": 69,
+        "end": 94
+      },
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 439,
+        "end": 447
+      }
+    ],
+    "blocks": [
+      "ch15_011",
+      "ch15_012",
+      "ch16_002",
+      "ch17_010"
+    ],
+    "scope": "段階4-Bで第15・16章の本文・演習・Q&Aと第17章の関連例を照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "progress": "段階1-Dで第17章の指示関数の非負積分を修正・検証。第15章・第16章の例は段階4に残る。",
+    "resolution": {
+      "stage": "4-B",
+      "record": "STAGE4B.md",
+      "evidence": "catalog/stage4b-verification.json",
+      "independent_evidence": "catalog/stage4b-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-029",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "正部分・負部分による分解は実数値関数の説明に限定する。一般のBanach空間に `max(f,0)` はない。`Integrable` の中身は `AEStronglyMeasurable` と有限なノルム積分で、原稿の `AEMeasurable` は一般形の正しい定義ではない。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch16.md",
+        "line": 108,
+        "end": 108
+      },
+      {
+        "source": "books/lean4-formalization/ch16.md",
+        "line": 156,
+        "end": 175
+      }
+    ],
+    "blocks": [
+      "ch16_005",
+      "ch16_014",
+      "ch16_015"
+    ],
+    "scope": "ch16.md:108、ch16.md:156–175",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
+  },
+  {
+    "id": "P2-030",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`continuous_sin` は `Real.continuous_sin` に合わせる。`Set.Countable.measure_zero` には測度引数が必要。`integral_eq_lintegral_of_nonneg` は検証版で不明。定理名と省略引数を実行出力に合わせて更新する。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch16.md",
+        "line": 178,
+        "end": 195
+      },
+      {
+        "source": "books/lean4-formalization/ch16.md",
+        "line": 212,
+        "end": 242
+      }
+    ],
+    "blocks": [
+      "ch16_006",
+      "ch16_007",
+      "ch16_008"
+    ],
+    "scope": "ch16.md:178–195、ch16.md:212–242",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
+  },
+  {
+    "id": "P2-031",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`norm_integral_le_integral_norm` が仮定なしで成立する理由を「非可積分なら両辺0」とするのは不正確。符号が非可測でノルムが可積分な場合など、右辺が0とは限らない。非可積分の場合は左辺の規約値0と右辺の非負性、という説明にする。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch16.md",
+        "line": 326,
+        "end": 326
+      }
+    ],
+    "blocks": [
+      "ch16_011"
+    ],
+    "scope": "ch16.md:326",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
+  },
+  {
+    "id": "P2-032",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "比較表の「非負値のみ」には可測性の共通前提を明示する。単調収束と優収束は異なる仮定を持ち、単純な強さの順位では比較できない。「優関数を見つけることが唯一の作業」も強すぎる。支配不等式・a.e.収束にも証明が必要。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 60,
+        "end": 64
+      },
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 329,
+        "end": 329
+      },
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 339,
+        "end": 342
+      }
+    ],
+    "blocks": [],
+    "scope": "ch17.md:60–64、ch17.md:329、ch17.md:339–342",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
+  },
+  {
+    "id": "P2-033",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`sin(nx)/n` の演習は `bound_tac` が不明で、支配条件の量化順なども定理と不一致。「No goals」と未完成注記が矛盾する。指数0の除算も含めて完成例を作るか、スケッチと明記する。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 484,
+        "end": 503
+      }
+    ],
+    "blocks": [
+      "ch17_012",
+      "ch17_013"
+    ],
+    "scope": "ch17.md:484–503",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "1-D",
+      "record": "STAGE1D.md",
+      "evidence": "catalog/stage1d-verification.json"
+    }
+  },
+  {
+    "id": "P2-034",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "検証版では `Memℒp`・`memℒp_const`・`memℒp_one_iff_integrable` ではなく `MemLp` 系の名前を使う。定義も `AEStronglyMeasurable f μ ∧ eLpNorm f p μ < ∞`。引数順は `f p μ`。`p=∞` は本質的上限、ノルム・Banach性の説明は通常 `1≤p≤∞` とし、表示したべき積分公式は有限の `p` に限定する。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 24,
+        "end": 27
+      },
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 124,
+        "end": 146
+      },
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 521,
+        "end": 525
+      }
+    ],
+    "blocks": [
+      "ch18_001",
+      "ch18_002",
+      "ch18_003"
+    ],
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-035",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`expectation` と `myExpectation` はBochner積分に依存するため `noncomputable def` にする。実行時にもこのエラーを確認。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 41,
+        "end": 41
+      },
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 245,
+        "end": 245
+      }
+    ],
+    "blocks": [
+      "ch18_001",
+      "ch18_006",
+      "ch18_007"
+    ],
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-036",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "予告コードの `condexp`・`hf.condexp_ae_eq` は検証版では `condExp`・`hf.condExp_ae_eq`。大文字小文字の修正後、マルチンゲールの式が通ることを確認。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 336,
+        "end": 341
+      },
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 580,
+        "end": 592
+      }
+    ],
+    "blocks": [
+      "ch18_008",
+      "ch18_015"
+    ],
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-037",
+    "priority": "P2",
+    "stage": 4,
+    "status": "resolved",
+    "description": "`Lp.inner_def`・`Lp.norm_rpow_eq_integral` は検証版で不明。内積を複素数まで説明するならMathlibは第1変数が共役線形で、式は `∫ conj(f(x)) * g(x)` の向き。実数値の本章では共役を省略するだけでも混乱を減らせる。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 505,
+        "end": 514
+      }
+    ],
+    "blocks": [
+      "ch18_013",
+      "ch18_014"
+    ],
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "本文・完成例・実際の出力を修正方針に合わせて照合する。完成例を固定環境で検証し、主要定理の公理依存を記録する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
+  },
+  {
+    "id": "P2-038",
+    "priority": "P2",
+    "stage": 5,
+    "status": "resolved",
+    "description": "現在は一冊にPart 1〜4があるが、本文は独立した「全4巻シリーズの第1巻」のまま。第6章の本文見出しが「第1章」、第12章以降も番号が再開する。巻内番号を残すなら「Part 2・第1章（通算第6章）」などに統一し、参照先をリンクする。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/intro.md",
+        "line": 17,
+        "end": 17
+      }
+    ],
+    "blocks": [],
+    "scope": "intro.md:17、各章先頭、Part 1〜4",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
+  },
+  {
+    "id": "P2-039",
+    "priority": "P2",
+    "stage": 5,
+    "status": "resolved",
+    "description": "到達目標を実装内容と合わせる。Part 2は既存不動点定理の適用、Part 3は本文のBochner積分版との対応を明示。Part 4は執筆中と既に表示されているので、序文にも現在読める範囲と予定範囲をまとめる。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/part2.md",
+        "line": 10,
+        "end": 10
+      },
+      {
+        "source": "books/lean4-formalization/part3.md",
+        "line": 10,
+        "end": 10
+      },
+      {
+        "source": "books/lean4-formalization/part4.md",
+        "line": 13,
+        "end": 14
+      }
+    ],
+    "blocks": [],
+    "scope": "part2.md:10、part3.md:10、part4.md:13–14",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    }
+  },
+  {
+    "id": "P2-040",
+    "priority": "P2",
+    "stage": 5,
+    "status": "resolved",
+    "description": "`../images/vol1/fig-01.png` は原稿位置から解決するとファイルが存在しない。`/images/vol1/fig-01.png` に直す。対象Markdown中のローカル画像参照で、この不存在を検出した。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/intro.md",
+        "line": 42,
+        "end": 42
+      }
+    ],
+    "blocks": [],
+    "scope": "intro.md:42",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    }
+  },
+  {
+    "id": "P2-041",
+    "priority": "P2",
+    "stage": 5,
+    "status": "resolved",
+    "description": "altは「exact?が沈黙しているVS Codeのスクショ」だが、参照先の実画像はフィルターを望遠鏡に例えた概念図。画像を直接見て不一致を確認した。図番号・説明・参照先を対応させる。他の画像も公開前に照合する。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch06.md",
+        "line": 78,
+        "end": 78
+      }
+    ],
+    "blocks": [],
+    "scope": "ch06.md:78",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
+  },
+  {
+    "id": "P2-042",
+    "priority": "P2",
+    "stage": 5,
+    "status": "resolved",
+    "description": "Zennの公式記法は `:::details タイトル`。公式レンダラーは通常のMarkdown設定で生HTMLを有効にしておらず、この書き方をGitHubと同じ折りたたみとして扱う前提にしない。公式記法へ置き換え、入れ子では外側のコロンを増やしてプレビュー確認する。",
+    "locations": [],
+    "blocks": [],
+    "scope": "全章の `<details><summary>`",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
+  },
+  {
+    "id": "P2-043",
+    "priority": "P2",
+    "stage": 5,
+    "status": "resolved",
+    "description": "意図的な失敗例、未証明の練習問題、途中の断片、完成した解答を明示する。`API名は要確認`・`sorryで保留` のコードに「No goals ✓」を付けて完成品と読ませない。",
+    "locations": [],
+    "blocks": [],
+    "scope": "全章の「No goals」「解答」「要確認」",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    }
+  },
+  {
+    "id": "P3-044",
+    "priority": "P3",
+    "stage": 5,
+    "status": "resolved",
+    "description": "「初学者が100%挫折する」「アマチュアのやり方を捨てる」は断定と評価が強い。「初学者がつまずきやすい」「全体の構成を先に作り、段階的に証明する」にすると読者を萎縮させない。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/intro.md",
+        "line": 106,
+        "end": 109
+      }
+    ],
+    "blocks": [],
+    "scope": "intro.md:106–109",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
+  },
+  {
+    "id": "P3-045",
+    "priority": "P3",
+    "stage": 5,
+    "status": "resolved",
+    "description": "「最強」「凶悪」「完全」「絶望」などは強調箇所を絞る。「免許証」の比喩は残してよいが、演算データだけの `Add` と、公理も含む構造の違いを補足する。",
+    "locations": [],
+    "blocks": [],
+    "scope": "各章の小見出し・Q&A",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "5",
+      "record": "STAGE5.md",
+      "evidence": "catalog/stage5-display.json"
+    },
+    "progress": "段階5で全23原稿を照合。範囲・参照・図・分類表示・折りたたみ・文体を修正。公開先でのリンク遷移と全箇所の最終表示確認はFINAL-01。"
+  },
+  {
+    "id": "P3-046",
+    "priority": "P3",
+    "stage": 5,
+    "status": "resolved",
+    "description": "「liminfの積分の上界をliminfの積分で評価」は同語反復。「極限下限の積分を、積分列の極限下限で上から評価」とする。`Hibert` は `Hilbert`。可積分な数列は文脈に応じて「二乗総和可能」とする。",
+    "locations": [
+      {
+        "source": "books/lean4-formalization/ch17.md",
+        "line": 238,
+        "end": 238
+      },
+      {
+        "source": "books/lean4-formalization/ch18.md",
+        "line": 490,
+        "end": 490
+      }
+    ],
+    "blocks": [
+      "ch17_005",
+      "ch18_013",
+      "ch18_014"
+    ],
+    "scope": "段階4-Cで第17・18章の本文・演習・Q&Aを照合。locationsは初回レビュー位置を保ち、現在の対象をblocksに記録。",
+    "acceptance": "対象箇所と同種の記述を全章で照合する。表示に関わる変更はZennプレビューで確認する。",
+    "resolution": {
+      "stage": "4-C",
+      "record": "STAGE4C.md",
+      "evidence": "catalog/stage4c-verification.json",
+      "independent_evidence": "catalog/stage4c-source-checks.json"
+    }
+  },
+  {
+    "id": "FINAL-01",
+    "priority": "P2",
+    "stage": 6,
+    "status": "resolved",
+    "description": "公開用手順から全体を再現し、全完成例・主要定理・意図的エラー・全23ページを検査する。",
+    "locations": [],
+    "blocks": [],
+    "scope": "books/lean4-formalization全体、対応するLeanコード、画像、目次、検証手順",
+    "acceptance": "P1・P2の解消記録、全完成例のビルド、主要定理の公理検査、意図したエラーの確認、全ページの表示確認と自動検査が揃う。",
+    "progress": "段階6で独立した作業場所から全390完成・断片のビルド、309宣言の公理、37診断、342組の原稿実行を確認。全23ページの1221数式、176個の解答開閉、360px・390pxの本文を検査し、継続検査を追加。未公開との回答に基づき、公開先の章リンク遷移と実機表示はPUBLICATION_CHECKLIST.mdへ明記。",
+    "resolution": {
+      "stage": "6",
+      "record": "STAGE6.md",
+      "evidence": "catalog/stage6-verification.json",
+      "display_evidence": "catalog/stage6-display.json",
+      "publication_checklist": "PUBLICATION_CHECKLIST.md"
+    }
+  }
+]

@@ -1,0 +1,882 @@
+[
+  {
+    "id": "ch12_001",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 21,
+    "end": 37,
+    "sha256": "954745c108a50066717bedc13eb5ed5882fb2150489a784e9959ed53a46bc0e4",
+    "section": "# 第12章：σ-代数と可測空間 / ## Part 3の導入：Banachの先へ / ### Part 2の到達点 ──── 完備性という魔法の鍵",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open scoped NNReal"
+    ],
+    "fixture": ".generated/raw/ch12_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_001",
+      "source_sha256": "70eecf551e078102be6ae998ac8a23468688fe7547b4e3cd6930bdc07eb26928",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P1-04"
+    ],
+    "stage1c_status": "compiled_source",
+    "before_stage4a": {
+      "sha256": "954745c108a50066717bedc13eb5ed5882fb2150489a784e9959ed53a46bc0e4",
+      "line": 17,
+      "end": 33,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "このブロックのimport/openを含めて独立したファイルで実行する。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_002",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 93,
+    "end": 108,
+    "sha256": "85b5eae2800a7a7c2a3697015d5e9ff134c480d7c2a8d356d01058a8291fca23",
+    "section": "# 第12章：σ-代数と可測空間 / ## Part 3の導入：Banachの先へ / ### 完備性では測れないもの ──── ディリクレ関数の挑戦",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory Filter",
+      "open scoped ENNReal Topology"
+    ],
+    "fixture": ".generated/raw/ch12_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": true,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_002",
+      "source_sha256": "5ff76bbd63d51266d90ce938949f9397faa45aabe83f37dde25b87d93878034b",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P1-05"
+    ],
+    "stage1d_status": "compiled_source",
+    "before_stage4a": {
+      "sha256": "3c1b166b0a48e54deeae684f8b3329eb3620df9581633a6e6d93d3d8963ac801",
+      "line": 89,
+      "end": 104,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックのimport/openを含めて独立したファイルで実行する。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_003",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 145,
+    "end": 163,
+    "sha256": "acc2b3087ab096be7a2990b31d4458a7656af9a61cf21789d4428e0e3197694e",
+    "section": "# 第12章：σ-代数と可測空間 / ## Part 3の導入：Banachの先へ / ### Part 3の地図 ──── これから登る山の全景",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/ch12_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_003",
+      "source_sha256": "58d1b583e88d1bc89fd9fdf301decd801e4ad2815d736c04ca156436ef0206f7",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "58d1b583e88d1bc89fd9fdf301decd801e4ad2815d736c04ca156436ef0206f7",
+      "line": 133,
+      "end": 147,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_004",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 178,
+    "end": 198,
+    "sha256": "12709790f3d22f22ed7066eb5eb746f9c4f32a2477732457f355d1cf6a5781fa",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_004",
+      "source_sha256": "77f625e373ff710a098591e5e067b8b99d0b2d4a2f8902de75669540292d7039",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "77f625e373ff710a098591e5e067b8b99d0b2d4a2f8902de75669540292d7039",
+      "line": 162,
+      "end": 194,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_005",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 279,
+    "end": 296,
+    "sha256": "d5f2cd74506147442197b7ae2b13f70cacc22fbd831eab4abda9430502860b89",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.3 `MeasurableSpace` の構造体を解剖します / ### Lean の実装：`MeasurableSpace`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_005",
+      "source_sha256": "7b509b06cd02ce2c171363ebe1e4ed8949e724fe81c47f51bbbf970d1c7442a0",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-020",
+      "P2-021"
+    ],
+    "before_stage4a": {
+      "sha256": "7b509b06cd02ce2c171363ebe1e4ed8949e724fe81c47f51bbbf970d1c7442a0",
+      "line": 272,
+      "end": 277,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_006",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 330,
+    "end": 349,
+    "sha256": "bf4918499db320049e574dcd67e27ccaad2720f500d529439414d4f5a82d8226",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.3 `MeasurableSpace` の構造体を解剖します / ### 基本的な可測集合の操作",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_006",
+      "source_sha256": "7d8c8c5a8e6ba6474043c3bd0f2ac543196dbf9f1baa02556623a4b25cbcb679",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "7d8c8c5a8e6ba6474043c3bd0f2ac543196dbf9f1baa02556623a4b25cbcb679",
+      "line": 311,
+      "end": 326,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_007",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 377,
+    "end": 385,
+    "sha256": "4c58ac21e53986d1ef94637ef810dcbfe72c674d5992b53b8aba7de8eb37836a",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### Lean の実装：`generateFrom` と `borel`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_007",
+      "source_sha256": "c30d3359d2dc96143574da071d150c9f5fa46451ba040971c0c317c03e2f6733",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "c30d3359d2dc96143574da071d150c9f5fa46451ba040971c0c317c03e2f6733",
+      "line": 354,
+      "end": 361,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_008",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 391,
+    "end": 395,
+    "sha256": "2fb9ce264c611ae99cd61675b1e58f85a6ba8f740d638617e34e5d78706ac8f0",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### Lean の実装：`generateFrom` と `borel`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_008",
+      "source_sha256": "cf8582df4a14fa5bc0dc376b906d0bb3b9e8bbdec667c355ee379f415cb13915",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "cf8582df4a14fa5bc0dc376b906d0bb3b9e8bbdec667c355ee379f415cb13915",
+      "line": 367,
+      "end": 370,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_009",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 404,
+    "end": 409,
+    "sha256": "79b04b8970292f2d113faf7738c8d8375b144f5f9877c0e22ecb10e49f49f31a",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### Lean の実装：`generateFrom` と `borel`",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_009",
+      "source_sha256": "02d4e644b13dca28cbde88e3abc0243fd5389ddc0eaf43ee646c6c146d612f14",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "02d4e644b13dca28cbde88e3abc0243fd5389ddc0eaf43ee646c6c146d612f14",
+      "line": 379,
+      "end": 383,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_010",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 415,
+    "end": 423,
+    "sha256": "0a0b04f4203a748ff0cf2d41e840624693d88a86a0ac5864227c170da2d1b149",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### Lean の実装：`BorelSpace` という免許証",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_010",
+      "source_sha256": "13983a540c716446a51504d9c5afde558cca2326220fcf8b1dc8ac251452eb35",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "13983a540c716446a51504d9c5afde558cca2326220fcf8b1dc8ac251452eb35",
+      "line": 389,
+      "end": 397,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_011",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 437,
+    "end": 445,
+    "sha256": "5c412869cf3ca7e2ac4c9124edc9b8f10d9d1c371767ba221e2765aae6e5605d",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### 証明の実況中継：開区間 $(0, 1)$ が可測集合であること",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_011",
+      "source_sha256": "238745aed8bac31db43279729d8b1748e12533f7b24504512bbf6587fe2d9a44",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "238745aed8bac31db43279729d8b1748e12533f7b24504512bbf6587fe2d9a44",
+      "line": 411,
+      "end": 419,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_012",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 475,
+    "end": 482,
+    "sha256": "d7bb6ce2d66c940018b554c7f373fcc1df2eec63690a34e70a342792a14ccdfd",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### 証明の実況中継：開区間 $(0, 1)$ が可測集合であること",
+    "category": "complete",
+    "role": "本文",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_012",
+      "source_sha256": "95a6eb7f5fa09227bc0135a6fa839af07eca4e64180ee84ef1d5b467afcb42b4",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "95a6eb7f5fa09227bc0135a6fa839af07eca4e64180ee84ef1d5b467afcb42b4",
+      "line": 447,
+      "end": 453,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_013",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 516,
+    "end": 524,
+    "sha256": "49a977aff47a3c88a839cdc929d013475f84f1417ea2879d4a494fc97807f738",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.5 まとめ ──── 第12章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "sorryを埋める未完成の演習。本文に明示し、完成解答とは別に警告・公理を確認する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_013.lean",
+    "validation_mode": "assert_sorry_warning_and_axioms",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_013",
+      "source_sha256": "763bc698ba544052beece4c414cbbe42bed949d8d7cd8813d13dd81e674fc95a",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage4a": {
+      "sha256": "763bc698ba544052beece4c414cbbe42bed949d8d7cd8813d13dd81e674fc95a",
+      "line": 487,
+      "end": 494,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "diagnostic_source"
+  },
+  {
+    "id": "ch12_014",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 534,
+    "end": 545,
+    "sha256": "1ceed72ca5d4dca47d240cfa222ea50b6a40285914f07fc5adeef24299d23f95",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.5 まとめ ──── 第12章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_014.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_014",
+      "source_sha256": "a84d6e9e95d25fca05221dce9814cc0f95a7181c44a4e47508d2dd5f601038e7",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-022"
+    ],
+    "before_stage4a": {
+      "sha256": "a84d6e9e95d25fca05221dce9814cc0f95a7181c44a4e47508d2dd5f601038e7",
+      "line": 507,
+      "end": 514,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_015",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 552,
+    "end": 561,
+    "sha256": "4d1d4d9a8170536bd8215874dfa8054a7d345bfa6fd8131f86594674e7724574",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.5 まとめ ──── 第12章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_015",
+      "source_sha256": "59a3aab8632de7ac451bbe24a174e1e5c9bf4f0a07b22f8febc393b6c45dafbb",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-022"
+    ],
+    "before_stage4a": {
+      "sha256": "59a3aab8632de7ac451bbe24a174e1e5c9bf4f0a07b22f8febc393b6c45dafbb",
+      "line": 523,
+      "end": 529,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_016",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 576,
+    "end": 583,
+    "sha256": "6eee57ca2a1efa3f59028ed73467ec48cfe6451dbb0b800a0e50077b38159f71",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.5 まとめ ──── 第12章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_016",
+      "source_sha256": "0271ca7335fdaf7201172999fe55cff6201203c5ee761a416f2b5fcf7c29a624",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-022"
+    ],
+    "before_stage4a": {
+      "sha256": "0271ca7335fdaf7201172999fe55cff6201203c5ee761a416f2b5fcf7c29a624",
+      "line": 548,
+      "end": 559,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_017",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 590,
+    "end": 598,
+    "sha256": "e8210039ca2176ccbbc8a62382f6e4d30b18ca5b47e1328e9b0a848d4e2390f2",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.5 まとめ ──── 第12章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_017",
+      "source_sha256": "01c8eb9ffe5c0d3e158d69374548849efde953f4b7432ecfc31d9750eefec535",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-022"
+    ],
+    "before_stage4a": {
+      "sha256": "01c8eb9ffe5c0d3e158d69374548849efde953f4b7432ecfc31d9750eefec535",
+      "line": 568,
+      "end": 574,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_018",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 613,
+    "end": 622,
+    "sha256": "2df897fc6824832ffd59cd85db427277cc3d5b5c80de02e83b01b7fc49c2593b",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.5 まとめ ──── 第12章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_018",
+      "source_sha256": "9e13096fef633db5c9a868f53e105c9a614244c3dc083e74fb412981393a8692",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-021"
+    ],
+    "before_stage4a": {
+      "sha256": "9e13096fef633db5c9a868f53e105c9a614244c3dc083e74fb412981393a8692",
+      "line": 593,
+      "end": 604,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  },
+  {
+    "id": "ch12_019",
+    "source": "books/lean4-formalization/ch12.md",
+    "line": 629,
+    "end": 641,
+    "sha256": "10adb71b290982ae818598d101bcf7872bca9f8c8ae9f1b91bbb6d8433984fac",
+    "section": "# 第12章：σ-代数と可測空間 / ## 12.5 まとめ ──── 第12章の全対応表と練習問題 / ### 章末練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "importと必要な前提を備えた完成証明・確認コマンド。原文のまま独立実行する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "自身のimportと宣言を含めて独立したLeanファイルで実行する。他の例の変数や宣言は持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch12_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch12_019",
+      "source_sha256": "fb821d9bb78ea5847fb9f0a12b08de3b2e603ab83d43a0c722ac77261ce66000",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-021"
+    ],
+    "before_stage4a": {
+      "sha256": "fb821d9bb78ea5847fb9f0a12b08de3b2e603ab83d43a0c722ac77261ce66000",
+      "line": 613,
+      "end": 618,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage4a_status": "compiled_source"
+  }
+]

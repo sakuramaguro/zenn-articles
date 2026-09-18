@@ -1,0 +1,37 @@
+[
+  {
+    "id": "intro_001",
+    "source": "books/lean4-formalization/intro.md",
+    "line": 27,
+    "end": 36,
+    "sha256": "02143511da6c656a0c4254e449084257d72ac93f69882f0c53a56db749edb3d9",
+    "section": "# はじめに / ## 現在の掲載範囲と今後の目標",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib",
+      "open MeasureTheory"
+    ],
+    "fixture": ".generated/raw/intro_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-001"
+    ],
+    "stage2_status": "compiled_source"
+  }
+]

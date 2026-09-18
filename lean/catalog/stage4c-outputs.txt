@@ -1,0 +1,521 @@
+段階4-C：固定環境での掲載例とゴールの実出力
+第17・18章の全28ブロックを、28の別々のLeanプロセスで実行した。
+第17章の2件はsetupに明示した原稿の前提を使い、再利用を対象ブロック数へ加算していない。
+
+=== ch17_001 ===
+setup: (none)
+@lintegral_iSup : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), Measurable (f n)) → Monotone f → ∫⁻ (a : α), ⨆ n, f n a ∂μ = ⨆ n, ∫⁻ (a : α), f n a ∂μ
+@lintegral_liminf_le : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), Measurable (f n)) →
+    ∫⁻ (a : α), liminf (fun n => f n a) atTop ∂μ ≤ liminf (fun n => ∫⁻ (a : α), f n a ∂μ) atTop
+@lintegral_liminf_le' : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), AEMeasurable (f n) μ) →
+    ∫⁻ (a : α), liminf (fun n => f n a) atTop ∂μ ≤ liminf (fun n => ∫⁻ (a : α), f n a ∂μ) atTop
+@tendsto_integral_of_dominated_convergence : ∀ {α : Type u_1} {G : Type u_2} [inst : NormedAddCommGroup G]
+  [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : Measure α} {F : ℕ → α → G} {f : α → G} (bound : α → ℝ),
+  (∀ (n : ℕ), AEStronglyMeasurable (F n) μ) →
+    Integrable bound μ →
+      (∀ (n : ℕ), ∀ᵐ (a : α) ∂μ, ‖F n a‖ ≤ bound a) →
+        (∀ᵐ (a : α) ∂μ, Tendsto (fun n => F n a) atTop (𝓝 (f a))) →
+          Tendsto (fun n => ∫ (a : α), F n a ∂μ) atTop (𝓝 (∫ (a : α), f a ∂μ))
+
+=== ch17_002 ===
+setup: (none)
+@lintegral_iSup : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), Measurable (f n)) → Monotone f → ∫⁻ (a : α), ⨆ n, f n a ∂μ = ⨆ n, ∫⁻ (a : α), f n a ∂μ
+@lintegral_iSup' : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), AEMeasurable (f n) μ) →
+    (∀ᵐ (x : α) ∂μ, Monotone fun n => f n x) → ∫⁻ (a : α), ⨆ n, f n a ∂μ = ⨆ n, ∫⁻ (a : α), f n a ∂μ
+
+=== ch17_003 ===
+setup: (none)
+'monotone_convergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_004 ===
+setup: (none)
+@lintegral_liminf_le : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), Measurable (f n)) →
+    ∫⁻ (a : α), liminf (fun n => f n a) atTop ∂μ ≤ liminf (fun n => ∫⁻ (a : α), f n a ∂μ) atTop
+@lintegral_liminf_le' : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), AEMeasurable (f n) μ) →
+    ∫⁻ (a : α), liminf (fun n => f n a) atTop ∂μ ≤ liminf (fun n => ∫⁻ (a : α), f n a ∂μ) atTop
+
+=== ch17_005 ===
+setup: (none)
+'fatou_ae' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_006 ===
+setup: (none)
+@tendsto_integral_of_dominated_convergence : ∀ {α : Type u_1} {G : Type u_2} [inst : NormedAddCommGroup G]
+  [inst_1 : NormedSpace ℝ G] {m : MeasurableSpace α} {μ : Measure α} {F : ℕ → α → G} {f : α → G} (bound : α → ℝ),
+  (∀ (n : ℕ), AEStronglyMeasurable (F n) μ) →
+    Integrable bound μ →
+      (∀ (n : ℕ), ∀ᵐ (a : α) ∂μ, ‖F n a‖ ≤ bound a) →
+        (∀ᵐ (a : α) ∂μ, Tendsto (fun n => F n a) atTop (𝓝 (f a))) →
+          Tendsto (fun n => ∫ (a : α), F n a ∂μ) atTop (𝓝 (∫ (a : α), f a ∂μ))
+'real_ae_strongly_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_007 ===
+setup: (none)
+'dominated_convergence' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_008 ===
+setup: (none)
+@lintegral_iSup : ∀ {α : Type u_1} {m : MeasurableSpace α} {μ : Measure α} {f : ℕ → α → ℝ≥0∞},
+  (∀ (n : ℕ), Measurable (f n)) → Monotone f → ∫⁻ (a : α), ⨆ n, f n a ∂μ = ⨆ n, ∫⁻ (a : α), f n a ∂μ
+'monotone_sequence_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_009 ===
+setup: (none)
+'increasing_constants' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_010 ===
+setup: (none)
+'movingIndicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'movingIndicator_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'movingIndicator_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_011 ===
+setup: ch17_010
+'movingIndicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'movingIndicator_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'movingIndicator_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'movingIndicator_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'fatou_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_012 ===
+setup: (none)
+'sineSequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_integral_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch17_013 ===
+setup: ch17_012
+'sineSequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_integral_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sineSequence_integral_tendsto_direct' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_001 ===
+setup: (none)
+@Lp : {α : Type u_2} →
+  (E : Type u_1) →
+    {m : MeasurableSpace α} →
+      [inst : NormedAddCommGroup E] → ℝ≥0∞ → (μ : autoParam (Measure α) Lp._auto_1) → AddSubgroup (α →ₘ[μ] E)
+@MemLp : {α : Type u_1} →
+  {ε : Type u_2} →
+    {m0 : MeasurableSpace α} →
+      [ENorm ε] → [TopologicalSpace ε] → (α → ε) → ℝ≥0∞ → autoParam (Measure α) MemLp._auto_1 → Prop
+@IsProbabilityMeasure : {α : Type u_1} → {m0 : MeasurableSpace α} → Measure α → Prop
+@expectation : {Ω : Type u_1} → [inst : MeasurableSpace Ω] → Measure Ω → (Ω → ℝ) → ℝ
+@Filtration : {Ω : Type u_1} → (ι : Type u_2) → [Preorder ι] → MeasurableSpace Ω → Type (max u_1 u_2)
+@Martingale : {Ω : Type u_1} →
+  {E : Type u_2} →
+    {ι : Type u_3} →
+      [inst : Preorder ι] →
+        {m0 : MeasurableSpace Ω} →
+          [inst_1 : NormedAddCommGroup E] →
+            [NormedSpace ℝ E] → [CompleteSpace E] → (ι → Ω → E) → Filtration ι m0 → Measure Ω → Prop
+'expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'expectation_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_002 ===
+setup: (none)
+@Lp : {α : Type u_2} →
+  (E : Type u_1) →
+    {m : MeasurableSpace α} →
+      [inst : NormedAddCommGroup E] → ℝ≥0∞ → (μ : autoParam (Measure α) Lp._auto_1) → AddSubgroup (α →ₘ[μ] E)
+inferInstance : NormedAddCommGroup ↥(Lp ℝ 2 volume)
+inferInstance : NormedSpace ℝ ↥(Lp ℝ 2 volume)
+inferInstance : InnerProductSpace ℝ ↥(Lp ℝ 2 volume)
+inferInstance : CompleteSpace ↥(Lp ℝ 2 volume)
+
+=== ch18_003 ===
+setup: (none)
+@MemLp : {α : Type u_1} →
+  {ε : Type u_2} →
+    {m0 : MeasurableSpace α} →
+      [ENorm ε] → [TopologicalSpace ε] → (α → ε) → ℝ≥0∞ → autoParam (Measure α) MemLp._auto_1 → Prop
+def MeasureTheory.MemLp.{u_1, u_2} : {α : Type u_1} →
+  {ε : Type u_2} →
+    {m0 : MeasurableSpace α} →
+      [ENorm ε] → [TopologicalSpace ε] → (α → ε) → ℝ≥0∞ → autoParam (Measure α) MemLp._auto_1 → Prop :=
+fun {α} {ε} {m0} [ENorm ε] [TopologicalSpace ε] f p μ => AEStronglyMeasurable f μ ∧ eLpNorm f p μ < ∞
+@memLp_const : ∀ {α : Type u_1} {E : Type u_2} {m0 : MeasurableSpace α} {p : ℝ≥0∞} {μ : Measure α}
+  [inst : NormedAddCommGroup E] (c : E) [IsFiniteMeasure μ], MemLp (fun x => c) p μ
+@memLp_one_iff_integrable : ∀ {α : Type u_1} {ε : Type u_2} {m : MeasurableSpace α} {μ : Measure α}
+  [inst : TopologicalSpace ε] [inst_1 : ContinuousENorm ε] {f : α → ε}, MemLp f 1 μ ↔ Integrable f μ
+@eLpNorm_eq_lintegral_rpow_enorm_toReal : ∀ {α : Type u_1} {ε : Type u_2} {m0 : MeasurableSpace α} {p : ℝ≥0∞}
+  [inst : ENorm ε] {μ : Measure α},
+  p ≠ 0 → p ≠ ∞ → ∀ {f : α → ε}, eLpNorm f p μ = (∫⁻ (x : α), ‖f x‖ₑ ^ p.toReal ∂μ) ^ (1 / p.toReal)
+'memLp_definition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'constant_memLp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'memLp_one_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+'eLpNorm_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'eLpNorm_at_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'eLpNorm_at_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_004 ===
+setup: (none)
+class MeasureTheory.IsProbabilityMeasure.{u_1} {α : Type u_1} {m0 : MeasurableSpace α} (μ : Measure α) : Prop
+number of parameters: 3
+fields:
+  MeasureTheory.IsProbabilityMeasure.measure_univ : μ Set.univ = 1
+constructor:
+  MeasureTheory.IsProbabilityMeasure.mk.{u_1} {α : Type u_1} {m0 : MeasurableSpace α} {μ : Measure α}
+    (measure_univ : μ Set.univ = 1) : IsProbabilityMeasure μ
+'probability_univ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'probability_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'probability_of_univ_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_005 ===
+setup: (none)
+'random_variable_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_006 ===
+setup: (none)
+'myExpectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'expectation_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_007 ===
+setup: (none)
+'integral_const_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_008 ===
+setup: (none)
+@Filtration : {Ω : Type u_1} → (ι : Type u_2) → [Preorder ι] → MeasurableSpace Ω → Type (max u_1 u_2)
+@Martingale : {Ω : Type u_1} →
+  {E : Type u_2} →
+    {ι : Type u_3} →
+      [inst : Preorder ι] →
+        {m0 : MeasurableSpace Ω} →
+          [inst_1 : NormedAddCommGroup E] →
+            [NormedSpace ℝ E] → [CompleteSpace E] → (ι → Ω → E) → Filtration ι m0 → Measure Ω → Prop
+@condExp : {α : Type u_1} →
+  {E : Type u_2} →
+    MeasurableSpace α →
+      {m₀ : MeasurableSpace α} →
+        [inst : NormedAddCommGroup E] → [CompleteSpace E] → [NormedSpace ℝ E] → Measure α → (α → E) → α → E
+@Martingale.condExp_ae_eq : ∀ {Ω : Type u_1} {E : Type u_2} {ι : Type u_3} [inst : Preorder ι] {m0 : MeasurableSpace Ω}
+  {μ : Measure Ω} [inst_1 : NormedAddCommGroup E] [inst_2 : NormedSpace ℝ E] [inst_3 : CompleteSpace E] {f : ι → Ω → E}
+  {ℱ : Filtration ι m0}, Martingale f ℱ μ → ∀ {i j : ι}, i ≤ j → μ[f j | ↑ℱ i] =ᶠ[ae μ] f i
+'condExp_const_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'martingale_condExp_property' depends on axioms: [propext, Classical.choice, Quot.sound]
+'martingale_term_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_009 ===
+setup: (none)
+class MeasureTheory.IsProbabilityMeasure.{u_1} {α : Type u_1} {m0 : MeasurableSpace α} (μ : Measure α) : Prop
+number of parameters: 3
+fields:
+  MeasureTheory.IsProbabilityMeasure.measure_univ : μ Set.univ = 1
+constructor:
+  MeasureTheory.IsProbabilityMeasure.mk.{u_1} {α : Type u_1} {m0 : MeasurableSpace α} {μ : Measure α}
+    (measure_univ : μ Set.univ = 1) : IsProbabilityMeasure μ
+@measure_univ : ∀ {α : Type u_1} {m0 : MeasurableSpace α} {μ : Measure α} [self : IsProbabilityMeasure μ],
+  μ Set.univ = 1
+
+=== ch18_010 ===
+setup: (none)
+'probability_univ_from_instance' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_011 ===
+setup: (none)
+'expectation_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_012 ===
+setup: (none)
+'expectation_one_by_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_013 ===
+setup: (none)
+inferInstance : InnerProductSpace ℝ ↥(Lp ℝ 2 volume)
+inferInstance : NormedAddCommGroup ↥(Lp ℝ 2 volume)
+inferInstance : CompleteSpace ↥(Lp ℝ 2 volume)
+
+=== ch18_014 ===
+setup: (none)
+@L2.inner_def : ∀ {α : Type u_1} {E : Type u_2} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : MeasurableSpace α]
+  {μ : Measure α} [inst_2 : NormedAddCommGroup E] [inst_3 : InnerProductSpace 𝕜 E] (f g : ↥(Lp E 2 μ)),
+  inner 𝕜 f g = ∫ (a : α), inner 𝕜 (↑↑f a) (↑↑g a) ∂μ
+@Lp.norm_def : ∀ {α : Type u_1} {E : Type u_2} {m : MeasurableSpace α} {p : ℝ≥0∞} {μ : Measure α}
+  [inst : NormedAddCommGroup E] (f : ↥(Lp E p μ)), ‖f‖ = (eLpNorm (↑↑f) p μ).toReal
+'real_l2_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'real_l2_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'complex_l2_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch18_015 ===
+setup: (none)
+'nat_martingale_condExp' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== trace_stateの検証用コード ===
+完成ブロック7件と明示した前提を使用。名前空間とtrace_stateを追加した。
+import Mathlib
+
+namespace Trace_ch17_003
+#eval "ch17_003"
+open MeasureTheory Filter
+open scoped ENNReal Topology
+
+-- 各点での上限と非負積分を交換する。
+theorem monotone_convergence {α : Type*} [MeasurableSpace α] (μ : Measure α)
+    (f : ℕ → α → ℝ≥0∞) (hf : ∀ n, Measurable (f n))
+    (hmono : Monotone f) :
+    (∫⁻ a, ⨆ n, f n a ∂μ) = ⨆ n, ∫⁻ a, f n a ∂μ := by
+  trace_state
+  exact lintegral_iSup hf hmono
+
+end Trace_ch17_003
+
+namespace Trace_ch17_005
+#eval "ch17_005"
+open MeasureTheory Filter
+open scoped ENNReal Topology
+
+-- AE 可測性を仮定するので、末尾に ' の付いた版を使う。
+theorem fatou_ae {α : Type*} [MeasurableSpace α] (μ : Measure α)
+    (f : ℕ → α → ℝ≥0∞) (hf : ∀ n, AEMeasurable (f n) μ) :
+    (∫⁻ a, liminf (fun n => f n a) atTop ∂μ) ≤
+      liminf (fun n => ∫⁻ a, f n a ∂μ) atTop := by
+  trace_state
+  exact lintegral_liminf_le' hf
+
+end Trace_ch17_005
+
+namespace Trace_ch17_007
+#eval "ch17_007"
+open MeasureTheory Filter
+open scoped ENNReal Topology
+
+-- bound の後に、定理が要求する順序で4つの証明を渡す。
+theorem dominated_convergence (F : ℕ → ℝ → ℝ) (f bound : ℝ → ℝ)
+    (hFm : ∀ n, AEStronglyMeasurable (F n) volume)
+    (hbound : Integrable bound volume)
+    (hle : ∀ n, ∀ᵐ a ∂volume, ‖F n a‖ ≤ bound a)
+    (htends : ∀ᵐ a ∂volume, Tendsto (fun n => F n a) atTop (𝓝 (f a))) :
+    Tendsto (fun n => ∫ a, F n a ∂volume) atTop (𝓝 (∫ a, f a ∂volume)) := by
+  trace_state
+  exact tendsto_integral_of_dominated_convergence bound hFm hbound hle htends
+
+end Trace_ch17_007
+
+namespace Trace_ch17_011
+#eval "ch17_011"
+open MeasureTheory Filter
+open scoped ENNReal Topology
+noncomputable def movingIndicator (n : ℕ) : ℝ → ℝ≥0∞ :=
+  (Set.Ico (n : ℝ) (n + 1)).indicator (fun _ => 1)
+
+theorem movingIndicator_measurable (n : ℕ) : Measurable (movingIndicator n) :=
+  measurable_const.indicator measurableSet_Ico
+
+theorem movingIndicator_integral (n : ℕ) :
+    (∫⁻ x : ℝ, movingIndicator n x) = 1 := by
+  rw [movingIndicator, lintegral_indicator measurableSet_Ico]
+  simp [Real.volume_Ico]
+
+-- 直前の movingIndicator と、その積分値の証明を引き継ぐ。
+theorem movingIndicator_tendsto (x : ℝ) :
+    Tendsto (fun n => movingIndicator n x) atTop (𝓝 0) := by
+  trace_state
+  have hn : ∀ᶠ n : ℕ in atTop, x < (n : ℝ) :=
+    tendsto_natCast_atTop_atTop.eventually (eventually_gt_atTop x)
+  apply tendsto_const_nhds.congr'
+  filter_upwards [hn] with n hn
+  symm
+  exact Set.indicator_of_notMem (fun hx => (not_le_of_gt hn) hx.1) _
+
+theorem fatou_strict :
+    (∫⁻ x : ℝ, liminf (fun n => movingIndicator n x) atTop) <
+      liminf (fun n => ∫⁻ x : ℝ, movingIndicator n x) atTop := by
+  trace_state
+  simp only [(movingIndicator_tendsto _).liminf_eq, movingIndicator_integral]
+  simp
+
+end Trace_ch17_011
+
+namespace Trace_ch17_012
+#eval "ch17_012"
+open MeasureTheory Filter
+open scoped ENNReal Topology
+noncomputable def sineSequence (n : ℕ) (x : ℝ) : ℝ :=
+  Real.sin ((n : ℝ) * x) / (n : ℝ)
+
+theorem sineSequence_zero (x : ℝ) : sineSequence 0 x = 0 := by
+  trace_state
+  simp [sineSequence]
+
+theorem sineSequence_norm_le (n : ℕ) (x : ℝ) :
+    ‖sineSequence n x‖ ≤ 1 / (n : ℝ) := by
+  trace_state
+  simp only [sineSequence, Real.norm_eq_abs, abs_div, Nat.abs_cast]
+  exact div_le_div_of_nonneg_right (Real.abs_sin_le_one _) (Nat.cast_nonneg n)
+
+theorem sineSequence_norm_le_one (n : ℕ) (x : ℝ) :
+    ‖sineSequence n x‖ ≤ 1 := by
+  trace_state
+  cases n with
+  | zero => norm_num [sineSequence]
+  | succ n =>
+    apply (sineSequence_norm_le (n + 1) x).trans
+    apply (div_le_one (by positivity : (0 : ℝ) < (↑(n + 1) : ℝ))).2
+    exact_mod_cast Nat.succ_le_succ (Nat.zero_le n)
+
+theorem sineSequence_tendsto (x : ℝ) :
+    Tendsto (fun n => sineSequence n x) atTop (𝓝 0) :=
+  squeeze_zero_norm (fun n => sineSequence_norm_le n x)
+    tendsto_one_div_atTop_nhds_zero_nat
+
+theorem sineSequence_integral_tendsto :
+    Tendsto (fun n => ∫ x, sineSequence n x ∂volume.restrict (Set.Icc 0 1))
+      atTop (𝓝 0) := by
+  trace_state
+  have hFm (n : ℕ) : AEStronglyMeasurable (sineSequence n)
+      (volume.restrict (Set.Icc 0 1)) :=
+    ((Real.continuous_sin.comp (continuous_const.mul continuous_id)).div_const _).aestronglyMeasurable
+  have h := tendsto_integral_of_dominated_convergence (μ := volume.restrict (Set.Icc 0 1))
+    (F := sineSequence) (f := fun _ => 0) (fun _ => 1) hFm (integrable_const 1)
+    (fun n => ae_of_all _ (sineSequence_norm_le_one n))
+    (ae_of_all _ sineSequence_tendsto)
+  simpa using h
+
+end Trace_ch17_012
+
+namespace Trace_ch18_007
+#eval "ch18_007"
+open MeasureTheory
+
+theorem integral_const_probability {Ω : Type*} [MeasurableSpace Ω]
+    (P : Measure Ω) [IsProbabilityMeasure P] (c : ℝ) :
+    (∫ _ω : Ω, c ∂P) = c := by
+  trace_state
+  rw [integral_const]
+  trace_state
+  simp
+
+end Trace_ch18_007
+
+namespace Trace_ch18_014
+#eval "ch18_014"
+open MeasureTheory
+open scoped ENNReal
+
+#check @MeasureTheory.L2.inner_def
+#check @MeasureTheory.Lp.norm_def
+
+theorem real_l2_inner {α : Type*} [MeasurableSpace α] (μ : Measure α)
+    (f g : Lp ℝ 2 μ) : inner ℝ f g = ∫ x, f x * g x ∂μ := by
+  trace_state
+  rw [L2.inner_def]
+  congr 1
+  funext x
+  exact mul_comm (g x) (f x)
+
+theorem real_l2_norm_sq {α : Type*} [MeasurableSpace α] (μ : Measure α)
+    (f : Lp ℝ 2 μ) : ‖f‖ ^ 2 = ∫ x, (f x) ^ 2 ∂μ := by
+  trace_state
+  rw [← real_inner_self_eq_norm_sq, real_l2_inner]
+  trace_state
+  simp only [pow_two]
+
+theorem complex_l2_inner {α : Type*} [MeasurableSpace α] (μ : Measure α)
+    (f g : Lp ℂ 2 μ) :
+    inner ℂ f g = ∫ x, star (f x) * g x ∂μ := by
+  trace_state
+  simpa only [RCLike.inner_apply, RCLike.star_def, mul_comm] using
+    (L2.inner_def (𝕜 := ℂ) f g)
+
+end Trace_ch18_014
+
+
+=== trace_stateの実出力 ===
+"ch17_003"
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : Measure α
+f : ℕ → α → ℝ≥0∞
+hf : ∀ (n : ℕ), Measurable (f n)
+hmono : Monotone f
+⊢ ∫⁻ (a : α), ⨆ n, f n a ∂μ = ⨆ n, ∫⁻ (a : α), f n a ∂μ
+"ch17_005"
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : Measure α
+f : ℕ → α → ℝ≥0∞
+hf : ∀ (n : ℕ), AEMeasurable (f n) μ
+⊢ ∫⁻ (a : α), liminf (fun n => f n a) atTop ∂μ ≤ liminf (fun n => ∫⁻ (a : α), f n a ∂μ) atTop
+"ch17_007"
+F : ℕ → ℝ → ℝ
+f bound : ℝ → ℝ
+hFm : ∀ (n : ℕ), AEStronglyMeasurable (F n) volume
+hbound : Integrable bound volume
+hle : ∀ (n : ℕ), ∀ᵐ (a : ℝ), ‖F n a‖ ≤ bound a
+htends : ∀ᵐ (a : ℝ), Tendsto (fun n => F n a) atTop (𝓝 (f a))
+⊢ Tendsto (fun n => ∫ (a : ℝ), F n a) atTop (𝓝 (∫ (a : ℝ), f a))
+"ch17_011"
+x : ℝ
+⊢ Tendsto (fun n => movingIndicator n x) atTop (𝓝 0)
+⊢ ∫⁻ (x : ℝ), liminf (fun n => movingIndicator n x) atTop < liminf (fun n => ∫⁻ (x : ℝ), movingIndicator n x) atTop
+"ch17_012"
+x : ℝ
+⊢ sineSequence 0 x = 0
+n : ℕ
+x : ℝ
+⊢ ‖sineSequence n x‖ ≤ 1 / ↑n
+n : ℕ
+x : ℝ
+⊢ ‖sineSequence n x‖ ≤ 1
+⊢ Tendsto (fun n => ∫ (x : ℝ) in Set.Icc 0 1, sineSequence n x) atTop (𝓝 0)
+"ch18_007"
+Ω : Type u_1
+inst✝¹ : MeasurableSpace Ω
+P : Measure Ω
+inst✝ : IsProbabilityMeasure P
+c : ℝ
+⊢ ∫ (_ω : Ω), c ∂P = c
+Ω : Type u_1
+inst✝¹ : MeasurableSpace Ω
+P : Measure Ω
+inst✝ : IsProbabilityMeasure P
+c : ℝ
+⊢ P.real Set.univ • c = c
+"ch18_014"
+@L2.inner_def : ∀ {α : Type u_1} {E : Type u_2} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : MeasurableSpace α]
+  {μ : Measure α} [inst_2 : NormedAddCommGroup E] [inst_3 : InnerProductSpace 𝕜 E] (f g : ↥(Lp E 2 μ)),
+  inner 𝕜 f g = ∫ (a : α), inner 𝕜 (↑↑f a) (↑↑g a) ∂μ
+@Lp.norm_def : ∀ {α : Type u_1} {E : Type u_2} {m : MeasurableSpace α} {p : ℝ≥0∞} {μ : Measure α}
+  [inst : NormedAddCommGroup E] (f : ↥(Lp E p μ)), ‖f‖ = (eLpNorm (↑↑f) p μ).toReal
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : Measure α
+f g : ↥(Lp ℝ 2 μ)
+⊢ inner ℝ f g = ∫ (x : α), ↑↑f x * ↑↑g x ∂μ
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : Measure α
+f : ↥(Lp ℝ 2 μ)
+⊢ ‖f‖ ^ 2 = ∫ (x : α), ↑↑f x ^ 2 ∂μ
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : Measure α
+f : ↥(Lp ℝ 2 μ)
+⊢ ∫ (x : α), ↑↑f x * ↑↑f x ∂μ = ∫ (x : α), ↑↑f x ^ 2 ∂μ
+α : Type u_1
+inst✝ : MeasurableSpace α
+μ : Measure α
+f g : ↥(Lp ℂ 2 μ)
+⊢ inner ℂ f g = ∫ (x : α), star (↑↑f x) * ↑↑g x ∂μ
+
+=== 検査器のテスト ===
+.......................
+----------------------------------------------------------------------
+Ran 23 tests in 0.141s
+
+OK

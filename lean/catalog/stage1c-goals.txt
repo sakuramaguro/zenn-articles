@@ -1,0 +1,5 @@
+case right.a
+x y : ℝ
+⊢ |x / 2 - y / 2| ≤ ↑(1 / 2) * |x - y|
+hf : ContractingWith (1 / 2) fun x => x / 2
+⊢ ∀ (y : ℝ), (fun z => (fun x => x / 2) z = z) y → y = ContractingWith.fixedPoint (fun x => x / 2) hf

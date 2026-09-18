@@ -1,0 +1,634 @@
+{
+  "status": "passed",
+  "stage": "4-C",
+  "checked_at": "2026-09-18T02:34:47.215464+00:00",
+  "toolchain": "leanprover/lean4:v4.29.0-rc6",
+  "method": "Separate Lean processes; original imports and explicit setup blocks; warningAsError=true; autoImplicit=false; all named declarations audited",
+  "related_blocks": [],
+  "checks": [
+    {
+      "blocks": [
+        "ch17_001"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_001": "2aa1f85bb11929d84c6a03d254d8fdeab217cea43de762f736d931dc548cbe79"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch17_002"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_002": "2b03647360cb7160623bf5fe4dff5267282f680bfa783790fe8660c226fc8ffa"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch17_003"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_003": "3babc1377222f5894146a7b1e4e2391cbf5558e5f26472b7908f0651ad0ed1f2"
+      },
+      "audited_declarations": {
+        "monotone_convergence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_004"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_004": "2646f31bb4e78a023c6a1b2740fd59c2dc24187bba0b4349b3236fc2ad21344b"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch17_005"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_005": "17cc4a2802de98f8e84437d4b36ce5ca34f9c211b6cbfb2d4179a029b7331037"
+      },
+      "audited_declarations": {
+        "fatou_ae": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_006"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_006": "9e831fc8a3424e789c5ce3d3822594cf41deefadebeeb681326317938a5020ac"
+      },
+      "audited_declarations": {
+        "real_ae_strongly_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_007"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_007": "a51b2b6d3690abaf9b5cf47197555c6c2bc2955c18c27da076fb0984b51e3845"
+      },
+      "audited_declarations": {
+        "dominated_convergence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_008"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_008": "f93d2bde63e2e0d1b0a1e913807758dd47cc3763d8115e13d2849c46eb1e9472"
+      },
+      "audited_declarations": {
+        "monotone_sequence_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_009"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_009": "77b275ec3e00ff2951c3ebd86d34922a93e9d3a35f67c1f7bceb2b1f36a717c8"
+      },
+      "audited_declarations": {
+        "increasing_constants": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_010"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_010": "0a6ac657622e9f8e0835aabb1e71f744a703a971756c3932b4380dbb24b6416b"
+      },
+      "audited_declarations": {
+        "movingIndicator": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "movingIndicator_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "movingIndicator_integral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_011"
+      ],
+      "setup": [
+        "ch17_010"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_010": "0a6ac657622e9f8e0835aabb1e71f744a703a971756c3932b4380dbb24b6416b",
+        "ch17_011": "5392a30b4446d65536fa25c7e3c156784f55326144ce050e095095202d1c3f07"
+      },
+      "audited_declarations": {
+        "movingIndicator": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "movingIndicator_measurable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "movingIndicator_integral": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "movingIndicator_tendsto": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "fatou_strict": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_012"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_012": "62e3c98e0a5908e9d33a5e6e5c8edbe79800d16b1e6026c124b74e556613de86"
+      },
+      "audited_declarations": {
+        "sineSequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_norm_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_norm_le_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_tendsto": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_integral_tendsto": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch17_013"
+      ],
+      "setup": [
+        "ch17_012"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch17_012": "62e3c98e0a5908e9d33a5e6e5c8edbe79800d16b1e6026c124b74e556613de86",
+        "ch17_013": "04ff4fd7c95515b61da83be006f40f553ad14957aa1639a9d10a723155684bfd"
+      },
+      "audited_declarations": {
+        "sineSequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_norm_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_norm_le_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_tendsto": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_integral_tendsto": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "sineSequence_integral_tendsto_direct": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_001"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_001": "bc70597c92bab2865aa06c7009da1ffa29c25d536905a952f4e94c5fd11453c2"
+      },
+      "audited_declarations": {
+        "expectation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "expectation_const": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_002"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_002": "ef8e333ed0b6c62a20a2694f270087dcbf85a8668cfc3e509ecd7dc5c3c3f72d"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch18_003"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_003": "e8192dd095959acb77f6bff69dac56b5c13730b0001aa810bd416be8ba9af87a"
+      },
+      "audited_declarations": {
+        "memLp_definition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "constant_memLp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "memLp_one_on": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "eLpNorm_at_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "eLpNorm_at_finite": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "eLpNorm_at_top": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_004"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_004": "de9682759b666540d3df3de46f47255a0e413ff9eeddbaa6f3bb02b97fcc991d"
+      },
+      "audited_declarations": {
+        "probability_univ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "probability_le_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "probability_of_univ_eq_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_005"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_005": "58e26c0385662119118d0917085378aed1be4dc993438c4aba84598f77b7c8ef"
+      },
+      "audited_declarations": {
+        "random_variable_preimage": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_006"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_006": "1e7c14123c6664160696e2779915dbe30c9557dee2a539040dd920766f43bc5b"
+      },
+      "audited_declarations": {
+        "myExpectation": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "expectation_add": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_007"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_007": "7a36100dfd6a12cc7639fcd8e4e66cfbb84f7d67271883c710c16dc67fd33907"
+      },
+      "audited_declarations": {
+        "integral_const_probability": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_008"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_008": "4024cf507c08479d7e324f4a429a2ee6feb557adc56c4e08ad439f24b94e019b"
+      },
+      "audited_declarations": {
+        "condExp_const_probability": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "martingale_condExp_property": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "martingale_term_integrable": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_009"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_009": "45f882e99bb40d1b9d9c4b65905a4b676c5d30f9f57e07d878656ba9ed9e2294"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch18_010"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_010": "4d2519241bf5530dc3d0dd9b12aedd60d21d7149ce0cc8156d9dfc158f19c939"
+      },
+      "audited_declarations": {
+        "probability_univ_from_instance": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_011"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_011": "c9644d99fa75e47957379cb1f39d471d2b24b80f328f9678ced61b003eca8176"
+      },
+      "audited_declarations": {
+        "expectation_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_012"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_012": "fff56e701942088721735811d8f571f7a96d843d61e3f52a6448071e6a34ffe1"
+      },
+      "audited_declarations": {
+        "expectation_one_by_expansion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_013"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_013": "c36ef2b6751d70e10d76d715062954185f9620571b9b9c2d50427854b4ee7d2d"
+      },
+      "audited_declarations": {}
+    },
+    {
+      "blocks": [
+        "ch18_014"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_014": "3eeb76e323071faa3bd48bd7753be4e257ef98faee1d8a693b219f569c6ac904"
+      },
+      "audited_declarations": {
+        "real_l2_inner": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "real_l2_norm_sq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "complex_l2_inner": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "blocks": [
+        "ch18_015"
+      ],
+      "setup": [],
+      "status": "passed",
+      "exit_code": 0,
+      "source_sha256": {
+        "ch18_015": "5bd9b733e5769bb41d9a0a0c5aa37aacf043a588fcc759d8e0546d7d7c6e929e"
+      },
+      "audited_declarations": {
+        "nat_martingale_condExp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ]
+}

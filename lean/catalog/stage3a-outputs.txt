@@ -1,0 +1,252 @@
+Stage 3-A output record
+Lean 4.29.0-rc6 / Mathlib 5c8398df528176d9c87ccd9226ba8f7c8852d59c
+
+Output below is unedited apart from section labels. Proof traces add trace_state between original source blocks; completed source is checked separately.
+
+=== ch06_001 ===
+Try this:
+  [apply] exact Filter.tendsto_ofReal_iff'.mp hf
+'continuous_search' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch06_005 ===
+Filter.NeBot.{u_1} {α : Type u_1} (f : Filter α) : Prop
+'real_nhds_neBot' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch06_006 ===
+structure Filter.{u_1} (α : Type u_1) : Type u_1
+number of parameters: 1
+fields:
+  Filter.sets : Set (Set α)
+  Filter.univ_sets : Set.univ ∈ self.sets
+  Filter.sets_of_superset : ∀ {x y : Set α}, x ∈ self.sets → x ⊆ y → y ∈ self.sets
+  Filter.inter_sets : ∀ {x y : Set α}, x ∈ self.sets → y ∈ self.sets → x ∩ y ∈ self.sets
+constructor:
+  Filter.mk.{u_1} {α : Type u_1} (sets : Set (Set α)) (univ_sets : Set.univ ∈ sets)
+    (sets_of_superset : ∀ {x y : Set α}, x ∈ sets → x ⊆ y → y ∈ sets)
+    (inter_sets : ∀ {x y : Set α}, x ∈ sets → y ∈ sets → x ∩ y ∈ sets) : Filter α
+@Filter.univ_sets : ∀ {α : Type u_1} (self : Filter α), Set.univ ∈ self.sets
+@Filter.sets_of_superset : ∀ {α : Type u_1} (self : Filter α) {x y : Set α}, x ∈ self.sets → x ⊆ y → y ∈ self.sets
+@Filter.inter_sets : ∀ {α : Type u_1} (self : Filter α) {x y : Set α}, x ∈ self.sets → y ∈ self.sets → x ∩ y ∈ self.sets
+
+=== ch06_013 ===
+Metric.nhds_basis_ball.{u} {α : Type u} [PseudoMetricSpace α] {x : α} :
+  (nhds x).HasBasis (fun x => 0 < x) (Metric.ball x)
+
+=== ch06_015 ===
+def Filter.Tendsto.{u_1, u_2} : {α : Type u_1} → {β : Type u_2} → (α → β) → Filter α → Filter β → Prop :=
+fun {α} {β} f l₁ l₂ => Filter.map f l₁ ≤ l₂
+
+=== ch06_017 ===
+Filter.Tendsto.{u_1, u_2} {α : Type u_1} {β : Type u_2} (f : α → β) (l₁ : Filter α) (l₂ : Filter β) : Prop
+'continuousAt_iff_preimages' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch06_018 ===
+Metric.tendsto_nhds_nhds.{u, v} {α : Type u} {β : Type v} [PseudoMetricSpace α] [PseudoMetricSpace β] {f : α → β}
+  {a : α} {b : β} : Filter.Tendsto f (nhds a) (nhds b) ↔ ∀ ε > 0, ∃ δ > 0, ∀ ⦃x : α⦄, dist x a < δ → dist (f x) b < ε
+
+=== ch06_026 ===
+def ContinuousAt.{u_1, u_2} : {X : Type u_1} →
+  {Y : Type u_2} → [TopologicalSpace X] → [TopologicalSpace Y] → (X → Y) → X → Prop :=
+fun {X} {Y} [TopologicalSpace X] [TopologicalSpace Y] f x => Filter.Tendsto f (nhds x) (nhds (f x))
+
+=== ch06_028 ===
+Metric.tendsto_atTop.{u, v} {α : Type u} {β : Type v} [PseudoMetricSpace α] [Nonempty β] [SemilatticeSup β] {u : β → α}
+  {a : α} : Filter.Tendsto u Filter.atTop (nhds a) ↔ ∀ ε > 0, ∃ N, ∀ n ≥ N, dist (u n) a < ε
+
+=== ch06_046 ===
+𝓝[≠] 0 : Filter ℝ
+𝓝[>] 0 : Filter ℝ
+𝓝[<] 0 : Filter ℝ
+'spike' depends on axioms: [propext, Classical.choice, Quot.sound]
+'spike_punctured' depends on axioms: [propext, Classical.choice, Quot.sound]
+'spike_not_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch07_002 ===
+class PseudoMetricSpace.{u} (α : Type u) : Type u
+number of parameters: 1
+parents:
+  PseudoMetricSpace.toDist : Dist α
+fields:
+  Dist.dist : α → α → ℝ
+  PseudoMetricSpace.dist_self : ∀ (x : α), dist x x = 0
+  PseudoMetricSpace.dist_comm : ∀ (x y : α), dist x y = dist y x
+  PseudoMetricSpace.dist_triangle : ∀ (x y z : α), dist x z ≤ dist x y + dist y z
+  PseudoMetricSpace.edist : α → α → ENNReal :=
+    fun x y => ↑⟨dist x y, ⋯⟩
+  PseudoMetricSpace.edist_dist : ∀ (x y : α), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by
+    intro x y; exact ENNReal.coe_nnreal_eq _
+  PseudoMetricSpace.toUniformSpace : UniformSpace α :=
+    UniformSpace.ofDist dist ⋯ ⋯ ⋯
+  PseudoMetricSpace.uniformity_dist : uniformity α = ⨅ ε, ⨅ (_ : ε > 0), Filter.principal {p | dist p.1 p.2 < ε} := by
+    intros; rfl
+  PseudoMetricSpace.toBornology : Bornology α :=
+    Bornology.ofDist dist ⋯ ⋯
+  PseudoMetricSpace.cobounded_sets : (Bornology.cobounded α).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by
+    intros; rfl
+constructor:
+  PseudoMetricSpace.mk.{u} {α : Type u} [toDist : Dist α] (dist_self : ∀ (x : α), dist x x = 0)
+    (dist_comm : ∀ (x y : α), dist x y = dist y x) (dist_triangle : ∀ (x y z : α), dist x z ≤ dist x y + dist y z)
+    (edist : α → α → ENNReal)
+    (edist_dist : ∀ (x y : α), edist x y = ENNReal.ofReal (dist x y) := by intro x y; exact ENNReal.coe_nnreal_eq _)
+    (toUniformSpace : UniformSpace α)
+    (uniformity_dist : uniformity α = ⨅ ε, ⨅ (_ : ε > 0), Filter.principal {p | dist p.1 p.2 < ε} := by intros; rfl)
+    (toBornology : Bornology α)
+    (cobounded_sets : (Bornology.cobounded α).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by intros; rfl) :
+    PseudoMetricSpace α
+field notation resolution order:
+  PseudoMetricSpace, Dist
+class MetricSpace.{u} (α : Type u) : Type u
+number of parameters: 1
+parents:
+  MetricSpace.toPseudoMetricSpace : PseudoMetricSpace α
+fields:
+  Dist.dist : α → α → ℝ
+  PseudoMetricSpace.dist_self : ∀ (x : α), dist x x = 0
+  PseudoMetricSpace.dist_comm : ∀ (x y : α), dist x y = dist y x
+  PseudoMetricSpace.dist_triangle : ∀ (x y z : α), dist x z ≤ dist x y + dist y z
+  PseudoMetricSpace.edist : α → α → ENNReal :=
+    fun x y => ↑⟨dist x y, ⋯⟩
+  PseudoMetricSpace.edist_dist : ∀ (x y : α), PseudoMetricSpace.edist x y = ENNReal.ofReal (dist x y) := by
+    intro x y; exact ENNReal.coe_nnreal_eq _
+  PseudoMetricSpace.toUniformSpace : UniformSpace α :=
+    UniformSpace.ofDist dist ⋯ ⋯ ⋯
+  PseudoMetricSpace.uniformity_dist : uniformity α = ⨅ ε, ⨅ (_ : ε > 0), Filter.principal {p | dist p.1 p.2 < ε} := by
+    intros; rfl
+  PseudoMetricSpace.toBornology : Bornology α :=
+    Bornology.ofDist dist ⋯ ⋯
+  PseudoMetricSpace.cobounded_sets : (Bornology.cobounded α).sets = {s | ∃ C, ∀ x ∈ sᶜ, ∀ y ∈ sᶜ, dist x y ≤ C} := by
+    intros; rfl
+  MetricSpace.eq_of_dist_eq_zero : ∀ {x y : α}, dist x y = 0 → x = y
+constructor:
+  MetricSpace.mk.{u} {α : Type u} [toPseudoMetricSpace : PseudoMetricSpace α]
+    (eq_of_dist_eq_zero : ∀ {x y : α}, dist x y = 0 → x = y) : MetricSpace α
+field notation resolution order:
+  MetricSpace, PseudoMetricSpace, Dist
+@dist_self : ∀ {α : Type u_1} [inst : PseudoMetricSpace α] (x : α), dist x x = 0
+@eq_of_dist_eq_zero : ∀ {γ : Type u_1} [inst : MetricSpace γ] {x y : γ}, dist x y = 0 → x = y
+
+=== ch07_003 ===
+@dist_nonneg : ∀ {α : Type u_1} [inst : PseudoMetricSpace α] {x y : α}, 0 ≤ dist x y
+@dist_comm : ∀ {α : Type u_1} [inst : PseudoMetricSpace α] (x y : α), dist x y = dist y x
+@dist_triangle : ∀ {α : Type u_1} [inst : PseudoMetricSpace α] (x y z : α), dist x z ≤ dist x y + dist y z
+
+=== ch07_011 ===
+@Metric.nhds_basis_ball : ∀ {α : Type u_1} [inst : PseudoMetricSpace α] {x : α},
+  (nhds x).HasBasis (fun x => 0 < x) (Metric.ball x)
+
+=== ch07_012 ===
+'nhds_iff_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ch07_025 ===
+Filter.HasBasis.tendsto_iff.{u_1, u_2, u_4, u_5} {α : Type u_1} {β : Type u_2} {ι : Sort u_4} {ι' : Sort u_5}
+  {la : Filter α} {pa : ι → Prop} {sa : ι → Set α} {lb : Filter β} {pb : ι' → Prop} {sb : ι' → Set β} {f : α → β}
+  (hla : la.HasBasis pa sa) (hlb : lb.HasBasis pb sb) :
+  Filter.Tendsto f la lb ↔ ∀ (ib : ι'), pb ib → ∃ ia, pa ia ∧ ∀ x ∈ sa ia, f x ∈ sb ib
+
+=== ch07_028 ===
+@Metric.continuousAt_iff : ∀ {α : Type u_1} {β : Type u_2} [inst : PseudoMetricSpace α] [inst_1 : PseudoMetricSpace β]
+  {f : α → β} {a : α}, ContinuousAt f a ↔ ∀ ε > 0, ∃ δ > 0, ∀ ⦃x : α⦄, dist x a < δ → dist (f x) (f a) < ε
+
+=== ch07_037 ===
+'closedBall_closed_preimage' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== Proof-state traces: ch06_009-011, ch06_019-022, ch06_029-032, ch07_013-014, ch07_016-022, ch07_004 ===
+⊢ {n | n ≥ 5} ∈ Filter.atTop
+⊢ ∃ a, ∀ b ≥ a, b ∈ {n | n ≥ 5}
+f : ℝ → ℝ
+a b : ℝ
+h : Filter.Tendsto f (nhds a) (nhds b)
+ε : ℝ
+hε : ε > 0
+⊢ ∃ δ > 0, ∀ (x : ℝ), |x - a| < δ → |f x - b| < ε
+f : ℝ → ℝ
+a b : ℝ
+h : ∀ ε > 0, ∃ δ > 0, ∀ ⦃x : ℝ⦄, dist x a < δ → dist (f x) b < ε
+ε : ℝ
+hε : ε > 0
+⊢ ∃ δ > 0, ∀ (x : ℝ), |x - a| < δ → |f x - b| < ε
+f : ℝ → ℝ
+a b : ℝ
+h : ∀ ε > 0, ∃ δ > 0, ∀ ⦃x : ℝ⦄, dist x a < δ → dist (f x) b < ε
+ε : ℝ
+hε : ε > 0
+δ : ℝ
+hδ : δ > 0
+hδε : ∀ ⦃x : ℝ⦄, dist x a < δ → dist (f x) b < ε
+⊢ ∃ δ > 0, ∀ (x : ℝ), |x - a| < δ → |f x - b| < ε
+a : ℕ → ℝ
+L : ℝ
+h : Filter.Tendsto a Filter.atTop (nhds L)
+⊢ ∀ ε > 0, ∃ N, ∀ n ≥ N, |a n - L| < ε
+a : ℕ → ℝ
+L : ℝ
+h : ∀ ε > 0, ∃ N, ∀ n ≥ N, dist (a n) L < ε
+⊢ ∀ ε > 0, ∃ N, ∀ n ≥ N, |a n - L| < ε
+a : ℕ → ℝ
+L : ℝ
+h : ∀ ε > 0, ∃ N, ∀ n ≥ N, dist (a n) L < ε
+ε : ℝ
+hε : ε > 0
+N : ℕ
+hN : ∀ n ≥ N, dist (a n) L < ε
+⊢ ∃ N, ∀ n ≥ N, |a n - L| < ε
+a : ℝ
+U : Set ℝ
+⊢ U ∈ nhds a ↔ ∃ ε > 0, Metric.ball a ε ⊆ U
+X : Type u_1
+inst✝ : MetricSpace X
+x : X
+r : ℝ
+⊢ IsOpen (Metric.ball x r)
+X : Type u_1
+inst✝ : MetricSpace X
+x : X
+r : ℝ
+⊢ ∀ x_1 ∈ Metric.ball x r, ∃ ε > 0, Metric.ball x_1 ε ⊆ Metric.ball x r
+X : Type u_1
+inst✝ : MetricSpace X
+x : X
+r : ℝ
+y : X
+hy : y ∈ Metric.ball x r
+⊢ ∃ ε > 0, Metric.ball y ε ⊆ Metric.ball x r
+X : Type u_1
+inst✝ : MetricSpace X
+x : X
+r : ℝ
+y : X
+hy : dist y x < r
+⊢ ∃ ε > 0, Metric.ball y ε ⊆ Metric.ball x r
+X : Type u_1
+inst✝ : MetricSpace X
+x : X
+r : ℝ
+y : X
+hy : dist y x < r
+⊢ Metric.ball y (r - dist y x) ⊆ Metric.ball x r
+X : Type u_1
+inst✝ : MetricSpace X
+x : X
+r : ℝ
+y : X
+hy : dist y x < r
+z : X
+hz : dist z y < r - dist y x
+⊢ dist z x < r
+inferInstance : MetricSpace ℝ
+Real.dist_eq (x y : ℝ) : dist x y = |x - y|
+⊢ |3 - 5| = 2
+
+=== Expected diagnostic: ch06_003 ===
+.generated/diagnostics/stage3a_ch06_003.lean:6:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions.
+
+=== Expected diagnostic: ch06_023 ===
+.generated/diagnostics/stage3a_ch06_023.lean:6:2: error: `exact?` could not close the goal. Try `apply?` to see partial suggestions.
+
+=== Expected diagnostic: ch06_042 ===
+.generated/diagnostics/stage3a_ch06_042.lean:4:8: warning: declaration uses `sorry`
+'composition_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+=== Expected diagnostic: ch07_035 ===
+.generated/diagnostics/stage3a_ch07_035.lean:4:8: warning: declaration uses `sorry`
+'closedBall_exercise' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

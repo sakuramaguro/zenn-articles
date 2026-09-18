@@ -1,0 +1,786 @@
+[
+  {
+    "id": "ch02_001",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 20,
+    "end": 41,
+    "sha256": "510e9757f1c8bdfc2c9eb70173a82bd0e847f656c6c0334c46360fc87bde5eb4",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.0 本章のゴール ──── ゴール逆算型アプローチ",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_001.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_001",
+      "source_sha256": "69f15a32bf5416263ad3ef1f99a6cb496d3a2279fec148cfc5df3db68202fc5e",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-003"
+    ],
+    "before_stage2": {
+      "sha256": "69f15a32bf5416263ad3ef1f99a6cb496d3a2279fec148cfc5df3db68202fc5e",
+      "line": 17,
+      "end": 38,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_002",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 57,
+    "end": 62,
+    "sha256": "14fb6bd8e522188c945d2d246751d7f115c01c70bf598e47a04797454b378ac6",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.1 型の階層 ──── `Prop` と `Type` は何が違うか",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_002.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_002",
+      "source_sha256": "8bd072edfce88ad5ac252fcd8c24e6019a848d4fb87a246b1eb1b9ec9bdd32d9",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-001"
+    ],
+    "before_stage2": {
+      "sha256": "8bd072edfce88ad5ac252fcd8c24e6019a848d4fb87a246b1eb1b9ec9bdd32d9",
+      "line": 54,
+      "end": 58,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_003",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 66,
+    "end": 77,
+    "sha256": "86e793ed4b9cce688ec6cdcc621dc198a2cc09cf4d7f3956c59801fdb5abe734",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.1 型の階層 ──── `Prop` と `Type` は何が違うか",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_003.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_003",
+      "source_sha256": "91326d6ccca632f419be0d6ddb3181a7711cbfcea2f1996ea3b0fbd6a0446e08",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-001"
+    ],
+    "before_stage2": {
+      "sha256": "91326d6ccca632f419be0d6ddb3181a7711cbfcea2f1996ea3b0fbd6a0446e08",
+      "line": 62,
+      "end": 66,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_004",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 113,
+    "end": 121,
+    "sha256": "99f1e8654553dc7eee74eaf09ad28dc519393cb6a68bf8fc0afd77073837dd0d",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.2 型クラスという「免許証」 ──── Lean の最も重要な抽象化",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_004.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_004",
+      "source_sha256": "40f658cef15f0ca5a28aecd87aaaf4b60134a563fae1b931b89414fdd275fc87",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-003"
+    ],
+    "before_stage2": {
+      "sha256": "40f658cef15f0ca5a28aecd87aaaf4b60134a563fae1b931b89414fdd275fc87",
+      "line": 102,
+      "end": 107,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_005",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 129,
+    "end": 134,
+    "sha256": "debc981056e5b85b0d0b52072fb5f46cc6857340a926072bf42326bce8090937",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.2 型クラスという「免許証」 ──── Lean の最も重要な抽象化 / ### `#print` で免許証の構造を解剖します",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_005.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_005",
+      "source_sha256": "a3944d8ef72d66ca7e7e908944a5887feef79c305216faf41f225b8071a26612",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-003"
+    ],
+    "before_stage2": {
+      "sha256": "a3944d8ef72d66ca7e7e908944a5887feef79c305216faf41f225b8071a26612",
+      "line": 115,
+      "end": 119,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_006",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 143,
+    "end": 152,
+    "sha256": "ee73a64d880a6f9f3204715872b9c3d6eec0a8a6e96fa736bc95f5429199dc10",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.2 型クラスという「免許証」 ──── Lean の最も重要な抽象化 / ### `#print` で免許証の構造を解剖します",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_006.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_006",
+      "source_sha256": "4873a5961c56c45b913b254db28357250e5169034841b732c8959e4e039c1d8c",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-003"
+    ],
+    "before_stage2": {
+      "sha256": "4873a5961c56c45b913b254db28357250e5169034841b732c8959e4e039c1d8c",
+      "line": 128,
+      "end": 134,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_007",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 175,
+    "end": 183,
+    "sha256": "a23446520ebe5f4cea8a5903b1e9fb140c6d70ed7eb6c3c8c384f1ba77c82869",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.3 `inferInstance` と `#check` ──── 免許証を手で確認する",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_007.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_007",
+      "source_sha256": "2870969e6e5d239af22a25b55e52d6c4e3ab28549ae6205cacdff86db619fcab",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-003"
+    ],
+    "before_stage2": {
+      "sha256": "2870969e6e5d239af22a25b55e52d6c4e3ab28549ae6205cacdff86db619fcab",
+      "line": 157,
+      "end": 168,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_008",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 204,
+    "end": 212,
+    "sha256": "457da399e88377abbd39f734461e6da24556eece115bc2bfc6c27203f1806f05",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.4 `simp` タクティク ──── 自動整理の魔法と罠",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_008.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_009",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 234,
+    "end": 240,
+    "sha256": "30743dccd27064494fff96a999a482f34fb415040806a9b9b1fc4f656f99c9f7",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.4 `simp` タクティク ──── 自動整理の魔法と罠",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_009.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_009",
+      "source_sha256": "dc76d4cd0e884407c57a13ca6233c6d54628bd7571858959412d67461f971d5d",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "dc76d4cd0e884407c57a13ca6233c6d54628bd7571858959412d67461f971d5d",
+      "line": 219,
+      "end": 224,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_010",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 251,
+    "end": 262,
+    "sha256": "38010e0e5018c84dd1f7b051ba19d801971f58ada7864bb20751697cb142ca4b",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.5 `have` によるサブゴール分割 ──── 証明の設計図を作る",
+    "category": "complete",
+    "role": "本文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_010.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_011",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 317,
+    "end": 323,
+    "sha256": "2d9070117aa0535625370f89856d58f18d3e9b86d2939620ad2499556f650938",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "問題文",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_011.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [
+      "P2-003"
+    ],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_012",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 332,
+    "end": 343,
+    "sha256": "a4c7a1eeee9af68eb0be5eca2203a597c79a86434b6b1a633cdf03591da89758",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_012.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_012",
+      "source_sha256": "220b31de76d0c911da7fea4f1fbb39f153a292142c94c538c53155b5828b0dd4",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-003"
+    ],
+    "before_stage2": {
+      "sha256": "220b31de76d0c911da7fea4f1fbb39f153a292142c94c538c53155b5828b0dd4",
+      "line": 319,
+      "end": 330,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_013",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 350,
+    "end": 356,
+    "sha256": "f0ef22992493d629c3038435d82a3d07a7399f9560b0a966d1b68d7ef7c944a0",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_013.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "error",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_013",
+      "source_sha256": "4dec234f2d003ec74882cb9fe53fd174fded672ea66c5c6898fe5ba8962275e1",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [
+      "P2-003"
+    ],
+    "before_stage2": {
+      "sha256": "4dec234f2d003ec74882cb9fe53fd174fded672ea66c5c6898fe5ba8962275e1",
+      "line": 339,
+      "end": 346,
+      "category": "complete",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_014",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 365,
+    "end": 370,
+    "sha256": "7ad334c32d16da062d86a87c6fcdafe3987598d45de86675a5f4f9a38173716f",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_014.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_014",
+      "source_sha256": "6d329e094d2a0039c1c5a80b53ec887406b7d8b4d1847fb996e6ca8a91399f94",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "6d329e094d2a0039c1c5a80b53ec887406b7d8b4d1847fb996e6ca8a91399f94",
+      "line": 356,
+      "end": 361,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
+  },
+  {
+    "id": "ch02_015",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 379,
+    "end": 384,
+    "sha256": "5fcfb87ed0322743cadfbbcbc76efdad05d6d96e1813fe7842f7cf964df0f056",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_016",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 391,
+    "end": 401,
+    "sha256": "c1f83285864bbcb54ec0f1746453c3022d7c997d4918bbcb151257b7ea050210",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_017",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 410,
+    "end": 415,
+    "sha256": "83cfb5a5313c55f75a27050962878da46a60a487c7acde404030b92e1c07ec34",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "unfinished",
+    "role": "問題文",
+    "reason": "練習問題または意図的な未完成の証明骨格。完成解答と分けて管理する。",
+    "contains_sorry": true,
+    "context": {
+      "blocks": [],
+      "instruction": "未完成の演習としてこのブロックを別ファイルで実行し、sorry警告と当該宣言のsorryAx依存を確認する。完成例には取り込まない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_017.lean",
+    "validation_mode": "track_holes_separately",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": true,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict",
+      "source_block": "ch02_017",
+      "source_sha256": "5ea3fa3808537a254c7f9ac9ff17bb197005630ca5471e80ffd2b8dee13c9406",
+      "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4"
+    },
+    "issue_ids": [],
+    "before_stage2": {
+      "sha256": "5ea3fa3808537a254c7f9ac9ff17bb197005630ca5471e80ffd2b8dee13c9406",
+      "line": 407,
+      "end": 412,
+      "category": "unfinished",
+      "context": {
+        "blocks": [],
+        "instruction": "当該ブロックの宣言と所属章の先行 import/open を使用。各 example の局所変数は持ち越さない。"
+      }
+    },
+    "stage2_status": "diagnostic_case"
+  },
+  {
+    "id": "ch02_018",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 424,
+    "end": 432,
+    "sha256": "0076288c27670818052a1473e5f8f4998b73cbf00605e3cac702af36cc3e03b5",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "✅ 解答を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
+  },
+  {
+    "id": "ch02_019",
+    "source": "books/lean4-formalization/ch02.md",
+    "line": 439,
+    "end": 449,
+    "sha256": "81484e6eaf5e6fadfa211d015f1f7350cf1cc7807d2e73e6f3f28bd879b0bbc9",
+    "section": "# 第2章：「型」という名の番人 〜型クラスという「免許証」の正体〜 / ## 2.6 まとめ ──── 第2章の全対応表と練習問題 / ### 練習問題",
+    "category": "complete",
+    "role": "🔄 別解を見る",
+    "reason": "前提とimportを備えた完成例・実行コマンド。元の断片や抜粋を改稿した場合も、実行する内容を本文に記載している。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [],
+      "instruction": "記載したimportと宣言を含むこのブロックを別ファイルで実行する。ほかの例の局所変数や定理を持ち越さない。"
+    },
+    "preceding_setup": [],
+    "own_setup": [
+      "import Mathlib"
+    ],
+    "fixture": ".generated/raw/ch02_019.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 2,
+    "priority_one": false,
+    "stage0_status": "classified_not_certified",
+    "prior_probe": {
+      "status": "pass",
+      "sorry_warning": false,
+      "method": "independent block with import Mathlib; not a manuscript validity verdict"
+    },
+    "issue_ids": [],
+    "stage2_status": "compiled_source"
+  }
+]

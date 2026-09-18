@@ -1,0 +1,1324 @@
+{
+  "status": "passed",
+  "renderer": "0.5.4",
+  "cli": "0.5.4",
+  "node": "v24.14.1",
+  "katex": "0.18.7",
+  "config_sha256": "475a04a73822700c8018e5f73e8973c000e6183b597b1f6f76debd0cc68efe64",
+  "scope": "Source structure, official HTML rendering, and every formula including closed details. Browser layout, remote image loading and deployed chapter navigation require separate checks.",
+  "chapters": [
+    {
+      "source": "books/lean4-formalization/intro.md",
+      "sha256": "633824adc8cabca5888982575ee438ddbbc6404692d436d3b2df6214e89710e4",
+      "lean_blocks": 1,
+      "details": 0,
+      "messages": 3,
+      "math_expressions": 1,
+      "images": [],
+      "chapter_links": [
+        "part1",
+        "part2",
+        "part3",
+        "part4",
+        "ch02",
+        "ch02"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/part1.md",
+      "sha256": "15f83784ef3e486ac9ac82c993dd242633de70a2ab9c6dc98249eb9c192cb323",
+      "lean_blocks": 0,
+      "details": 0,
+      "messages": 0,
+      "math_expressions": 0,
+      "images": [],
+      "chapter_links": []
+    },
+    {
+      "source": "books/lean4-formalization/ch01.md",
+      "sha256": "4d5d44b440e1d8d9554dd0ea915bcf9699697b98bccc3618878434d2dab6f1e0",
+      "lean_blocks": 14,
+      "details": 9,
+      "messages": 7,
+      "math_expressions": 9,
+      "images": [
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/f90c9b22fefc-20260324.png",
+          "alt": "#eval \"Hello, Lean!\" の実行結果",
+          "caption": "図1-1：#evalで文字列を評価した撮影時の画面です。定理の証明完了を示す画面ではありません。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/9a07ccebff91-20260324.png",
+          "alt": "1 + 1 = 2 の証明後のInfoView",
+          "caption": "図1-2：画像では定理名がtestですが、命題と証明は本文のfirst_theoremと同じです。No goalsと警告の有無を併せて確認します。"
+        },
+        {
+          "src": "/images/vol1/fig-03.png",
+          "alt": "ゴール確認、タクティク適用、新しいゴール確認を繰り返す模式図",
+          "caption": "図1-3：InfoViewを使う手順の模式図です。実画面ではありません。ゴールが閉じた後は、ファイル全体のエラー・警告も確認します。"
+        }
+      ],
+      "chapter_links": [
+        "ch02",
+        "ch02",
+        "ch03",
+        "ch02",
+        "ch03",
+        "ch02",
+        "ch02",
+        "ch02",
+        "ch03",
+        "ch02",
+        "ch02"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch02.md",
+      "sha256": "d9256ff54d274e0515a4d44b234d7e06fb49f201f2afdfcf0019e19efd6e95bb",
+      "lean_blocks": 19,
+      "details": 9,
+      "messages": 10,
+      "math_expressions": 7,
+      "images": [],
+      "chapter_links": [
+        "ch01",
+        "ch03",
+        "ch03",
+        "ch03",
+        "ch03",
+        "ch03",
+        "ch03",
+        "ch05",
+        "ch03",
+        "ch03"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch03.md",
+      "sha256": "f96e7396d13338a19b0092b20e88def67c6207a11c64a996a843f108ffcd8c8e",
+      "lean_blocks": 24,
+      "details": 9,
+      "messages": 12,
+      "math_expressions": 11,
+      "images": [
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/571065a5753e-20260324.png",
+          "alt": "rfl失敗のエラー画面",
+          "caption": "図3-1：自然数の加法の交換法則にrflを使い、失敗した画面です。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/b2bc302415eb-20260324.png",
+          "alt": "型不一致エラー画面",
+          "caption": "図3-2：自然数を受け取るadd_fiveに文字列を渡した型不一致です。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/3cd8c0c572b6-20260324.png",
+          "alt": "3点セット質問の送信画面",
+          "caption": "図3-3：コード・エラー・数学的意図を伝えた質問の記録です。再現時はLeanとMathlibの版も添えます。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/7a8c90c5b798-20260324.png",
+          "alt": "Claudeの回答画面",
+          "caption": "図3-4：引数の型が異なることを説明する回答の記録です。回答の正しさは別途Leanで確認します。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/9d1a6ed3a7ed-20260324.png",
+          "alt": "修正後の動作確認画面",
+          "caption": "図3-5：自然数3・0・100を渡した評価結果です。カーソル位置のNo info foundはエラーを意味しません。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/d0e20bd999d0-20260324.png",
+          "alt": "Unknown constantエラー画面",
+          "caption": "図3-6：存在しない名前Nat.add_comm_wrongに対するエラーです。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/6034ff2cab45-20260324.png",
+          "alt": "exact?成功画面",
+          "caption": "図3-7：exact?がexact Nat.add_comm a bを提案した画面です。提案の表示は版や文脈によって変わります。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/bbe6380ae5b9-20260324.png",
+          "alt": "failed to synthesize instanceエラー画面",
+          "caption": "図3-8：加法のインスタンスが見つからない画面です。メタ変数の番号は固定ではありません。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/3093b01750b5-20260324.png",
+          "alt": "型クラス追加後・エラー消滅画面",
+          "caption": "図3-9：[Add α]を加え、a + bの型を確認した画面です。加法の交換律を証明した画面ではありません。"
+        },
+        {
+          "src": "https://storage.googleapis.com/zenn-user-upload/69cbbf323933-20260324.png",
+          "alt": "sorry黄色波線警告画面",
+          "caption": "図3-10：sorryによってNo goalsになっていても、未証明であることを示す警告が残っています。"
+        }
+      ],
+      "chapter_links": [
+        "ch04",
+        "ch04",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch04",
+        "ch05"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch04.md",
+      "sha256": "445c04462c6a38e3e40b5c0deb3f830239a3830998123c88c4f648a47cbe2537",
+      "lean_blocks": 23,
+      "details": 9,
+      "messages": 11,
+      "math_expressions": 3,
+      "images": [
+        {
+          "src": "/images/vol1/fig-04.png",
+          "alt": "rfl、ring、simpなどの代表的な用途を並べた表",
+          "caption": "図4-1：用途の概略です。ringは可換半環・可換環の多項式等式を扱い、applyの後には補題の仮定が新しいゴールとして残る場合があります。"
+        }
+      ],
+      "chapter_links": [
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch01",
+        "ch03",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch05",
+        "ch03",
+        "ch05",
+        "ch05"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch05.md",
+      "sha256": "17c270dfa58cf08f2fbe792abc23124df71314323fe59e65cf849b946aeea3cf",
+      "lean_blocks": 31,
+      "details": 5,
+      "messages": 0,
+      "math_expressions": 18,
+      "images": [
+        {
+          "src": "/images/vol1/fig-07.png",
+          "alt": "線形写像、核、像、有限次元の数学とLeanの記法の対応",
+          "caption": "図5-1：有限次元の場合の対応です。最下段のMathlib定理は像の次元＋核の次元の順なので、本文では加算の順番を揃えています。"
+        }
+      ],
+      "chapter_links": [
+        "ch06"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/part2.md",
+      "sha256": "dfa9e14d303ad6bf44ec03242ea75e6f4541436e5ba442fdde15cb521234ae34",
+      "lean_blocks": 0,
+      "details": 0,
+      "messages": 0,
+      "math_expressions": 0,
+      "images": [],
+      "chapter_links": []
+    },
+    {
+      "source": "books/lean4-formalization/ch06.md",
+      "sha256": "1aa903978b2c97cfed2a2ae571b93fa681805d19f8527cdaf79e72f7c14fbde4",
+      "lean_blocks": 48,
+      "details": 12,
+      "messages": 14,
+      "math_expressions": 250,
+      "images": [
+        {
+          "src": "/images/vol2/fig-01.png",
+          "alt": "1/nが0に近づく様子をフィルターの望遠鏡に例えた図",
+          "caption": "図6-1：収束を捉えるための比喩です。フィルターが数値や極限を計算するという意味ではありません。"
+        }
+      ],
+      "chapter_links": [
+        "ch05",
+        "ch05",
+        "ch09",
+        "ch08",
+        "ch05",
+        "ch07"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch07.md",
+      "sha256": "e69b70730568dff542e5ef140407af2b3544a3bad7dc9a9ebbf78e7f3506c549",
+      "lean_blocks": 41,
+      "details": 12,
+      "messages": 10,
+      "math_expressions": 109,
+      "images": [
+        {
+          "src": "/images/vol2/fig-04.png",
+          "alt": "3点x、y、zを結ぶ距離の三角不等式",
+          "caption": "図7-1：直接の距離は、別の点を経由した距離の和以下です。"
+        },
+        {
+          "src": "/images/vol2/fig-05.png",
+          "alt": "中心xから距離ε未満の点を集めたユークリッド平面の開球",
+          "caption": "図7-2：平面の開球を描いた模式図です。円周上の点は含みません。閉球では距離が半径以下の点を含めます。"
+        }
+      ],
+      "chapter_links": [
+        "ch06",
+        "ch10",
+        "ch06",
+        "ch06",
+        "ch06",
+        "ch10",
+        "ch08",
+        "ch09",
+        "ch10",
+        "ch08",
+        "ch08"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch08.md",
+      "sha256": "5a568dbcb15754c42a3c08a558f459e879993381fb718e8417afbb8d7f8cc6c8",
+      "lean_blocks": 36,
+      "details": 12,
+      "messages": 13,
+      "math_expressions": 133,
+      "images": [
+        {
+          "src": "/images/vol2/fig-08.png",
+          "alt": "点xを含む開集合を使って近傍フィルターを構成する模式図",
+          "caption": "図8-1：図中の「開集合のみ」は構成に使う開近傍を指します。nhds xの要素には、それらを含む開でない集合も含まれます。円や入れ子は模式的で、距離や全開近傍の入れ子関係を仮定しません。"
+        }
+      ],
+      "chapter_links": [
+        "ch07",
+        "ch07",
+        "ch10",
+        "ch07",
+        "ch06",
+        "ch07",
+        "ch07",
+        "ch06",
+        "ch10",
+        "ch10",
+        "ch10",
+        "ch11",
+        "ch09",
+        "ch07",
+        "ch10"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch09.md",
+      "sha256": "df671c29574c0acb6ffdd259c3b9f4eecccade8ae6acff961572498e5862e16d",
+      "lean_blocks": 28,
+      "details": 12,
+      "messages": 8,
+      "math_expressions": 85,
+      "images": [
+        {
+          "src": "/images/vol2/fig-11.png",
+          "alt": "実数の完備性と、平方根2へ近づく有理数列の対比",
+          "caption": "図9-1：実数ではCauchy列が実数へ収束します。有理数では、実数としての極限が有理数に属さないCauchy列が存在します。"
+        }
+      ],
+      "chapter_links": [
+        "ch08",
+        "ch06",
+        "ch06",
+        "ch06",
+        "ch07",
+        "ch08",
+        "ch10",
+        "ch10",
+        "ch10",
+        "ch10"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch10.md",
+      "sha256": "d680bdec768676698db8ed0827aa1d3ed8feac27f9f0221b0574aefba160da65",
+      "lean_blocks": 26,
+      "details": 12,
+      "messages": 10,
+      "math_expressions": 149,
+      "images": [],
+      "chapter_links": [
+        "ch07",
+        "ch09",
+        "ch11",
+        "ch11",
+        "ch11",
+        "ch11"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch11.md",
+      "sha256": "e386f5407059bc3e91f250d2a7bca77aad303ddd49a6f4c6cc9612dc2045e77c",
+      "lean_blocks": 26,
+      "details": 12,
+      "messages": 1,
+      "math_expressions": 58,
+      "images": [
+        {
+          "src": "/images/vol2/fig-15.png",
+          "alt": "縮小写像の反復列が不動点へ近づく模式図",
+          "caption": "図11-1：非空な完備距離空間上の縮小写像の反復を表します。図は実数直線で描いていますが、一般の反復列が単調に動くとは限りません。"
+        }
+      ],
+      "chapter_links": [
+        "ch05"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/part3.md",
+      "sha256": "4a10d5fabac9a9acd306ddfca32e78fac5867a284fd3ce20ca1ac2bc92f1824b",
+      "lean_blocks": 0,
+      "details": 0,
+      "messages": 0,
+      "math_expressions": 0,
+      "images": [],
+      "chapter_links": []
+    },
+    {
+      "source": "books/lean4-formalization/ch12.md",
+      "sha256": "8a0f4b5a77509f9a82691dfef57556a8745967b18c1b4c58ad659a0767f2d8d1",
+      "lean_blocks": 19,
+      "details": 9,
+      "messages": 9,
+      "math_expressions": 71,
+      "images": [
+        {
+          "src": "/images/vol3/fig-03.png",
+          "alt": "べき集合の中のσ-代数と、その外にある非可測集合の模式図",
+          "caption": "図12-1：各点はXの部分集合を表します。選んだσ-代数に属さない集合を非可測と呼びます。σ-代数がべき集合全体に一致する場合もあります。"
+        }
+      ],
+      "chapter_links": [
+        "ch06",
+        "ch11",
+        "ch13",
+        "ch14",
+        "ch15",
+        "ch16",
+        "ch17",
+        "ch18",
+        "ch13",
+        "ch14",
+        "ch15",
+        "ch16",
+        "ch17",
+        "ch18",
+        "ch18",
+        "ch13"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch13.md",
+      "sha256": "b38965d490ad25cb8faf6597c39537104e9505c935cdced8f60a105312f09914",
+      "lean_blocks": 17,
+      "details": 9,
+      "messages": 6,
+      "math_expressions": 53,
+      "images": [
+        {
+          "src": "/images/vol3/fig-04.png",
+          "alt": "可測集合に非負拡張実数の値を割り当てる測度の模式図",
+          "caption": "図13-1：数学での可測集合上の測度を表します。MathlibのMeasureは可測でない集合にも値を持ち、可算加法性などには可測性の仮定が使われます。"
+        }
+      ],
+      "chapter_links": [
+        "ch12",
+        "ch16",
+        "ch16"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch14.md",
+      "sha256": "e11cb3ae757dccda7a173bd6b97ed136d7b89c4a73ac75c8da97993b0ed9bc18",
+      "lean_blocks": 15,
+      "details": 9,
+      "messages": 4,
+      "math_expressions": 46,
+      "images": [
+        {
+          "src": "/images/vol3/fig-06.png",
+          "alt": "実数値可測関数とBorel集合の逆像を示す図",
+          "caption": "図14-1：値域が実数の例です。点線の逆像は集合に対する操作で、逆関数の存在を意味しません。"
+        }
+      ],
+      "chapter_links": [
+        "ch16",
+        "ch16"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch15.md",
+      "sha256": "7bf3f9dc5490b62acdf4c39b6972fedc7e0cd9156a5385b8ee31f9b30e72a732",
+      "lean_blocks": 12,
+      "details": 9,
+      "messages": 3,
+      "math_expressions": 34,
+      "images": [
+        {
+          "src": "/images/vol3/fig-07.png",
+          "alt": "平方根関数を分割数1、2、4の中点の値で近似する階段関数",
+          "caption": "図15-1：中点の値を使った単関数近似です。この図の近似列は下から単調増加する列ではありません。上の単調近似の主張とは区別してください。"
+        },
+        {
+          "src": "/images/vol3/fig-08.png",
+          "alt": "各値とその逆像の測度を掛け、有限和を取る単関数積分の図",
+          "caption": "図15-2：値域の各値cについて、cとその逆像の測度を掛けて足します。定数単関数の計算は本文の別の例で確認します。"
+        }
+      ],
+      "chapter_links": [
+        "ch16"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch16.md",
+      "sha256": "17d9733179e3fcf648d1310a55a9aee8748b2a6835415fa5f68105ad5ab19cc4",
+      "lean_blocks": 17,
+      "details": 9,
+      "messages": 4,
+      "math_expressions": 39,
+      "images": [],
+      "chapter_links": [
+        "ch15",
+        "ch17"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch17.md",
+      "sha256": "d029f99c931cb97b927c8064ff5347a291f392acc9c8cb4cd80ee5789146f7a5",
+      "lean_blocks": 13,
+      "details": 9,
+      "messages": 6,
+      "math_expressions": 76,
+      "images": [
+        {
+          "src": "/images/vol3/fig-11.png",
+          "alt": "区間0から1でn/(n+1)倍のxがxへ単調増加する関数列",
+          "caption": "図17-1：非負可測関数の単調増加の具体的な模式例です。区間[0,1]のLebesgue測度で積分も1/2へ増加します。本文の一般定理は非負拡張実数値で述べています。"
+        },
+        {
+          "src": "/images/vol3/fig-12.png",
+          "alt": "区間nからn+1の指示関数が右へ移動し、各点で0に収束する図",
+          "caption": "図17-2：実数全体のLebesgue測度で各積分は1ですが、点ごとの極限は0です。Fatouの補題で真の不等式になる例です。"
+        },
+        {
+          "src": "/images/vol3/fig-13.png",
+          "alt": "正弦関数列の点ごとの収束、定数1による支配、積分値の収束を示す3枚のグラフ",
+          "caption": "図17-3：区間[0,1]上のsin(nπx)/n（n≥1）の例です。左・中央の横軸はx、右はnです。有限区間なので優関数1は可積分です。章末演習のsin(nx)/nとは周波数が異なります。"
+        }
+      ],
+      "chapter_links": [
+        "ch12",
+        "ch13",
+        "ch14",
+        "ch12"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/ch18.md",
+      "sha256": "7c3b07223dde356b80ac76e4dfd6da8bb76924f3c468bbf9a005e720a26595d4",
+      "lean_blocks": 15,
+      "details": 9,
+      "messages": 3,
+      "math_expressions": 68,
+      "images": [
+        {
+          "src": "/images/vol3/fig-14.png",
+          "alt": "有限測度上のL∞、L2、L1の包含関係を示す入れ子図",
+          "caption": "図18-1：包含は真の包含とは限りません。a.e.同値類を自然に対応させた包含です。無限測度上では一般に成り立ちません。"
+        },
+        {
+          "src": "/images/vol3/fig-16.png",
+          "alt": "実数値確率変数と、Borel集合の逆像が事象になる関係を示す図",
+          "caption": "図18-2：Borel集合Bの逆像が事象になります。確率はP(X⁻¹(B))で表します。逆像は逆関数を意味しません。"
+        }
+      ],
+      "chapter_links": [
+        "ch10",
+        "ch16",
+        "ch16",
+        "ch10",
+        "ch12",
+        "ch12",
+        "ch12",
+        "ch13",
+        "ch13",
+        "ch13",
+        "ch14",
+        "ch14",
+        "ch14",
+        "ch15",
+        "ch15",
+        "ch16",
+        "ch16",
+        "ch16",
+        "ch17",
+        "ch17",
+        "ch17"
+      ]
+    },
+    {
+      "source": "books/lean4-formalization/part4.md",
+      "sha256": "3e14877c6ef32ab1c0fa92fb9ad5d9699d8e09dc20755125bfeb17b266406301",
+      "lean_blocks": 0,
+      "details": 0,
+      "messages": 1,
+      "math_expressions": 1,
+      "images": [],
+      "chapter_links": [
+        "ch18"
+      ]
+    }
+  ],
+  "errors": [],
+  "checked_at": "2026-09-18T02:38:08.540660+00:00",
+  "browser": {
+    "method": "Zenn CLI pages; waited for the expected KaTeX count, then clicked every summary.",
+    "pages": [
+      {
+        "slug": "intro",
+        "title": "はじめに",
+        "formulas": 1,
+        "details": 0,
+        "after": {
+          "errors": [],
+          "images": [],
+          "open": 0,
+          "rendered": 1
+        }
+      },
+      {
+        "slug": "part1",
+        "title": "Part 1：Lean 4 入門と次元定理",
+        "formulas": 0,
+        "details": 0,
+        "after": {
+          "errors": [],
+          "images": [],
+          "open": 0,
+          "rendered": 0
+        }
+      },
+      {
+        "slug": "ch01",
+        "title": "第1章：なぜ Lean 4 を始めたのか",
+        "formulas": 9,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 9
+        }
+      },
+      {
+        "slug": "ch02",
+        "title": "第2章：「型」という名の番人",
+        "formulas": 7,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 7
+        }
+      },
+      {
+        "slug": "ch03",
+        "title": "第3章：Claude を使った型エラー突破術",
+        "formulas": 11,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 11
+        }
+      },
+      {
+        "slug": "ch04",
+        "title": "第4章：Mathlib の歩き方",
+        "formulas": 3,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 3
+        }
+      },
+      {
+        "slug": "ch05",
+        "title": "第5章：次元定理を使う──仮定の確認から完成例まで",
+        "formulas": 18,
+        "details": 5,
+        "after": {
+          "errors": [],
+          "open": 5,
+          "rendered": 18
+        }
+      },
+      {
+        "slug": "part2",
+        "title": "Part 2：位相空間・関数解析・Banach の不動点定理",
+        "formulas": 0,
+        "details": 0,
+        "after": {
+          "errors": [],
+          "open": 0,
+          "rendered": 0
+        }
+      },
+      {
+        "slug": "ch06",
+        "title": "第6章：Filter.Tendsto と nhds の正体",
+        "formulas": 250,
+        "details": 12,
+        "after": {
+          "errors": [],
+          "open": 12,
+          "rendered": 250
+        }
+      },
+      {
+        "slug": "ch07",
+        "title": "第7章：距離空間という抽象化",
+        "formulas": 109,
+        "details": 12,
+        "after": {
+          "errors": [],
+          "open": 12,
+          "rendered": 109
+        }
+      },
+      {
+        "slug": "ch08",
+        "title": "第8章：位相空間という骨格",
+        "formulas": 133,
+        "details": 12,
+        "after": {
+          "errors": [],
+          "open": 12,
+          "rendered": 133
+        }
+      },
+      {
+        "slug": "ch09",
+        "title": "第9章：完備性と Cauchy 列",
+        "formulas": 85,
+        "details": 12,
+        "after": {
+          "errors": [],
+          "open": 12,
+          "rendered": 85
+        }
+      },
+      {
+        "slug": "ch10",
+        "title": "第10章：有限次元の直感が崩壊する日",
+        "formulas": 149,
+        "details": 12,
+        "after": {
+          "errors": [],
+          "open": 12,
+          "rendered": 149
+        }
+      },
+      {
+        "slug": "ch11",
+        "title": "第11章：Banach の不動点定理",
+        "formulas": 58,
+        "details": 12,
+        "after": {
+          "errors": [],
+          "open": 12,
+          "rendered": 58
+        }
+      },
+      {
+        "slug": "part3",
+        "title": "Part 3：Lebesgue 積分と測度論",
+        "formulas": 0,
+        "details": 0,
+        "after": {
+          "errors": [],
+          "open": 0,
+          "rendered": 0
+        }
+      },
+      {
+        "slug": "ch12",
+        "title": "第12章：σ-代数──測度論の骨格",
+        "formulas": 71,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 71
+        }
+      },
+      {
+        "slug": "ch13",
+        "title": "第13章：測度──長さ・面積の一般化",
+        "formulas": 53,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 53
+        }
+      },
+      {
+        "slug": "ch14",
+        "title": "第14章：可測関数とa.e.",
+        "formulas": 46,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 46
+        }
+      },
+      {
+        "slug": "ch15",
+        "title": "第15章：単関数──積分の最小単位",
+        "formulas": 34,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 34
+        }
+      },
+      {
+        "slug": "ch16",
+        "title": "第16章：Lebesgue積分──lintegralとintegral",
+        "formulas": 39,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 39
+        }
+      },
+      {
+        "slug": "ch17",
+        "title": "第17章：収束定理──積分と極限の交換",
+        "formulas": 76,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 76
+        }
+      },
+      {
+        "slug": "ch18",
+        "title": "第18章：Lᵖ空間と確率空間",
+        "formulas": 68,
+        "details": 9,
+        "after": {
+          "errors": [],
+          "open": 9,
+          "rendered": 68
+        }
+      },
+      {
+        "slug": "part4",
+        "title": "Part 4：確率微分方程式（執筆予定）",
+        "formulas": 1,
+        "details": 0,
+        "after": {
+          "errors": [],
+          "open": 0,
+          "rendered": 1
+        }
+      }
+    ]
+  },
+  "narrow": {
+    "method": "Same official rendered HTML and CLI 0.5.4 content CSS, KaTeX 0.18.7, in 360px/390px iframes with 24px body-content padding. All answers open and images loaded. This checks content layout, not the deployed Zenn shell or a physical phone.",
+    "cases": [
+      {
+        "slug": "intro",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 1,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 1
+      },
+      {
+        "slug": "part1",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 0,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 0
+      },
+      {
+        "slug": "ch01",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 9,
+        "open_details": 9,
+        "loaded_images": 3,
+        "overflowing_blocks": [],
+        "long_content_regions": 12
+      },
+      {
+        "slug": "ch02",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 7,
+        "open_details": 9,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 17
+      },
+      {
+        "slug": "ch03",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 11,
+        "open_details": 9,
+        "loaded_images": 10,
+        "overflowing_blocks": [],
+        "long_content_regions": 27
+      },
+      {
+        "slug": "ch04",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 3,
+        "open_details": 9,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 23
+      },
+      {
+        "slug": "ch05",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 18,
+        "open_details": 5,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 29
+      },
+      {
+        "slug": "part2",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 0,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 0
+      },
+      {
+        "slug": "ch06",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 250,
+        "open_details": 12,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 52
+      },
+      {
+        "slug": "ch07",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 109,
+        "open_details": 12,
+        "loaded_images": 2,
+        "overflowing_blocks": [],
+        "long_content_regions": 46
+      },
+      {
+        "slug": "ch08",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 133,
+        "open_details": 12,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 40
+      },
+      {
+        "slug": "ch09",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 85,
+        "open_details": 12,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 36
+      },
+      {
+        "slug": "ch10",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 149,
+        "open_details": 12,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 30
+      },
+      {
+        "slug": "ch11",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 58,
+        "open_details": 12,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 26
+      },
+      {
+        "slug": "part3",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 0,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 0
+      },
+      {
+        "slug": "ch12",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 71,
+        "open_details": 9,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 23
+      },
+      {
+        "slug": "ch13",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 53,
+        "open_details": 9,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 17
+      },
+      {
+        "slug": "ch14",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 46,
+        "open_details": 9,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 17
+      },
+      {
+        "slug": "ch15",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 34,
+        "open_details": 9,
+        "loaded_images": 2,
+        "overflowing_blocks": [],
+        "long_content_regions": 15
+      },
+      {
+        "slug": "ch16",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 39,
+        "open_details": 9,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 20
+      },
+      {
+        "slug": "ch17",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 76,
+        "open_details": 9,
+        "loaded_images": 3,
+        "overflowing_blocks": [],
+        "long_content_regions": 17
+      },
+      {
+        "slug": "ch18",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 68,
+        "open_details": 9,
+        "loaded_images": 2,
+        "overflowing_blocks": [],
+        "long_content_regions": 16
+      },
+      {
+        "slug": "part4",
+        "width": 390,
+        "document_scroll_width": 390,
+        "formulas": 1,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 0
+      },
+      {
+        "slug": "intro",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 1,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 1
+      },
+      {
+        "slug": "part1",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 0,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 0
+      },
+      {
+        "slug": "ch01",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 9,
+        "open_details": 9,
+        "loaded_images": 3,
+        "overflowing_blocks": [],
+        "long_content_regions": 12
+      },
+      {
+        "slug": "ch02",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 7,
+        "open_details": 9,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 18
+      },
+      {
+        "slug": "ch03",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 11,
+        "open_details": 9,
+        "loaded_images": 10,
+        "overflowing_blocks": [],
+        "long_content_regions": 29
+      },
+      {
+        "slug": "ch04",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 3,
+        "open_details": 9,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 24
+      },
+      {
+        "slug": "ch05",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 18,
+        "open_details": 5,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 30
+      },
+      {
+        "slug": "part2",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 0,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 0
+      },
+      {
+        "slug": "ch06",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 250,
+        "open_details": 12,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 60
+      },
+      {
+        "slug": "ch07",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 109,
+        "open_details": 12,
+        "loaded_images": 2,
+        "overflowing_blocks": [],
+        "long_content_regions": 48
+      },
+      {
+        "slug": "ch08",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 133,
+        "open_details": 12,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 43
+      },
+      {
+        "slug": "ch09",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 85,
+        "open_details": 12,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 37
+      },
+      {
+        "slug": "ch10",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 149,
+        "open_details": 12,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 33
+      },
+      {
+        "slug": "ch11",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 58,
+        "open_details": 12,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 29
+      },
+      {
+        "slug": "part3",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 0,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 0
+      },
+      {
+        "slug": "ch12",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 71,
+        "open_details": 9,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 23
+      },
+      {
+        "slug": "ch13",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 53,
+        "open_details": 9,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 17
+      },
+      {
+        "slug": "ch14",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 46,
+        "open_details": 9,
+        "loaded_images": 1,
+        "overflowing_blocks": [],
+        "long_content_regions": 17
+      },
+      {
+        "slug": "ch15",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 34,
+        "open_details": 9,
+        "loaded_images": 2,
+        "overflowing_blocks": [],
+        "long_content_regions": 17
+      },
+      {
+        "slug": "ch16",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 39,
+        "open_details": 9,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 21
+      },
+      {
+        "slug": "ch17",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 76,
+        "open_details": 9,
+        "loaded_images": 3,
+        "overflowing_blocks": [],
+        "long_content_regions": 17
+      },
+      {
+        "slug": "ch18",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 68,
+        "open_details": 9,
+        "loaded_images": 2,
+        "overflowing_blocks": [],
+        "long_content_regions": 16
+      },
+      {
+        "slug": "part4",
+        "width": 360,
+        "document_scroll_width": 360,
+        "formulas": 1,
+        "open_details": 0,
+        "loaded_images": 0,
+        "overflowing_blocks": [],
+        "long_content_regions": 0
+      }
+    ],
+    "visual_spot_checks": [
+      "Chapter 12 sigma-algebra conditions at 360px",
+      "Chapter 12 long formula: horizontal scroll reaches right edge (clientWidth 312, scrollWidth 459, scrollLeft 147)"
+    ]
+  },
+  "publication": {
+    "status": "unpublished",
+    "source": "Author response on 2026-09-18",
+    "deployed_navigation": "not tested; see PUBLICATION_CHECKLIST.md"
+  }
+}
