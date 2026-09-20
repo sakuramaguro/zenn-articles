@@ -3,7 +3,7 @@ title: "Lean 4でrflが失敗したら？「証明できない」と「命題が
 emoji: "🔎"
 type: "tech"
 topics: ["lean4", "数学", "形式証明"]
-published: false
+published: true
 ---
 
 自然数の足し算では、順序を入れ替えても答えは変わりません。それなのに、Leanで次のように書くとエラーになります。
