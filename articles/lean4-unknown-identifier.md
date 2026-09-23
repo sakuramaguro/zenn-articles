@@ -3,7 +3,7 @@ title: "Lean 4でAIが提案した定理名が見つからないときの確認�
 emoji: "🔍"
 type: "tech"
 topics: ["lean4", "mathlib", "ai"]
-published: false
+published: true
 ---
 
 AIに証明を相談すると、それらしい定理名が返ってくることがあります。ところが、コードに貼り付けると `Unknown identifier` や `Unknown constant`。別の名前を聞き直しても、また同じエラーになる。
