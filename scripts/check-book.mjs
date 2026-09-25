@@ -11,8 +11,11 @@ import { renderMath } from './check-math.mjs';
 // Check the manuscript with the same official renderer version as Zenn CLI.
 // Image meaning and browser interactions still need human inspection.
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const book = path.join(root, 'books/lean4-formalization');
-const output = path.join(root, 'lean/.generated/book-display');
+const slug = process.argv[2] ?? 'lean4-formalization';
+assert.ok(['lean4-formalization', 'lean4-formalization-vol3'].includes(slug), 'unsupported book');
+const standalone = slug === 'lean4-formalization-vol3';
+const book = path.join(root, 'books', slug);
+const output = path.join(root, 'lean/.generated', standalone ? 'volume3-display' : 'book-display');
 const read = p => readFile(p, 'utf8');
 const digest = s => createHash('sha256').update(s).digest('hex');
 await mkdir(output, { recursive: true });
@@ -27,10 +30,11 @@ const labels = { complete: '完成例・確認コマンド', fragment: '断片',
 const results = [];
 const errors = [];
 for (const chapter of chapters) {
-  const source = `books/lean4-formalization/${chapter}.md`;
+  const source = `books/${slug}/${chapter}.md`;
   const text = await read(path.join(root, source));
   const check = (condition, message) => { if (!condition) errors.push(`${chapter}: ${message}`); };
-  const chapterRows = rows.filter(r => r.source === source);
+  const chapterRows = standalone && chapter === 'intro' ? [] :
+    rows.filter(r => r.source === `books/lean4-formalization/${chapter}.md`);
   const body = text.replace(/^---\n[\s\S]*?\n---\n/, '');
   let fence = null;
   let number = 0;
@@ -68,6 +72,18 @@ for (const chapter of chapters) {
   }
   check(!fence && !containers.length, 'unclosed fence or container');
   check(number === chapterRows.length, 'Lean block count differs');
+  if (standalone) {
+    const blocks = [...body.matchAll(/^```lean[^\n]*\n([\s\S]*?)^```\s*$/gm)];
+    check(blocks.length === chapterRows.length, 'standalone code extraction differs');
+    for (const [i, block] of blocks.entries()) {
+      const row = chapterRows[i];
+      // This one existing comment names the volume rather than the collected part.
+      const code = row?.id === 'ch12_002' ? block[1].replace(
+        '-- 第3巻の到達点：既存の収束定理を、仮定を確認して適用する。',
+        '-- Part 3の到達点：既存の収束定理を、仮定を確認して適用する。') : block[1];
+      check(row && digest(code) === row.sha256, `standalone code differs from checked source: ${i + 1}`);
+    }
+  }
   const html = await markdownToHtml(body);
   await writeFile(path.join(output, chapter + '.html'), html);
   const $ = load(html);

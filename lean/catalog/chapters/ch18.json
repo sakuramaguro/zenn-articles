@@ -150,8 +150,8 @@
   {
     "id": "ch18_004",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 170,
-    "end": 188,
+    "line": 184,
+    "end": 202,
     "sha256": "de9682759b666540d3df3de46f47255a0e413ff9eeddbaa6f3bb02b97fcc991d",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.3 確率空間",
     "category": "complete",
@@ -196,8 +196,8 @@
   {
     "id": "ch18_005",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 217,
-    "end": 226,
+    "line": 233,
+    "end": 242,
     "sha256": "58e26c0385662119118d0917085378aed1be4dc993438c4aba84598f77b7c8ef",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.4 確率変数",
     "category": "complete",
@@ -242,8 +242,8 @@
   {
     "id": "ch18_006",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 245,
-    "end": 259,
+    "line": 261,
+    "end": 275,
     "sha256": "1e7c14123c6664160696e2779915dbe30c9557dee2a539040dd920766f43bc5b",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.5 期待値",
     "category": "complete",
@@ -290,8 +290,8 @@
   {
     "id": "ch18_007",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 269,
-    "end": 278,
+    "line": 285,
+    "end": 294,
     "sha256": "7a36100dfd6a12cc7639fcd8e4e66cfbb84f7d67271883c710c16dc67fd33907",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.5 期待値 / ### 定数の期待値 $\\mathbb{E}[c]=c$",
     "category": "complete",
@@ -340,8 +340,8 @@
   {
     "id": "ch18_008",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 320,
-    "end": 350,
+    "line": 349,
+    "end": 379,
     "sha256": "4024cf507c08479d7e324f4a429a2ee6feb557adc56c4e08ad439f24b94e019b",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.6 条件付き期待値とマルチンゲール",
     "category": "complete",
@@ -388,8 +388,8 @@
   {
     "id": "ch18_009",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 385,
-    "end": 393,
+    "line": 414,
+    "end": 422,
     "sha256": "45f882e99bb40d1b9d9c4b65905a4b676c5d30f9f57e07d878656ba9ed9e2294",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -434,8 +434,8 @@
   {
     "id": "ch18_010",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 400,
-    "end": 407,
+    "line": 429,
+    "end": 436,
     "sha256": "4d2519241bf5530dc3d0dd9b12aedd60d21d7149ce0cc8156d9dfc158f19c939",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -480,8 +480,8 @@
   {
     "id": "ch18_011",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 421,
-    "end": 429,
+    "line": 450,
+    "end": 458,
     "sha256": "c9644d99fa75e47957379cb1f39d471d2b24b80f328f9678ced61b003eca8176",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -526,8 +526,8 @@
   {
     "id": "ch18_012",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 436,
-    "end": 444,
+    "line": 465,
+    "end": 473,
     "sha256": "fff56e701942088721735811d8f571f7a96d843d61e3f52a6448071e6a34ffe1",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -572,8 +572,8 @@
   {
     "id": "ch18_013",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 458,
-    "end": 468,
+    "line": 487,
+    "end": 497,
     "sha256": "c36ef2b6751d70e10d76d715062954185f9620571b9b9c2d50427854b4ee7d2d",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -622,8 +622,8 @@
   {
     "id": "ch18_014",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 475,
-    "end": 500,
+    "line": 504,
+    "end": 529,
     "sha256": "3eeb76e323071faa3bd48bd7753be4e257ef98faee1d8a693b219f569c6ac904",
     "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 章末練習問題",
     "category": "complete",
@@ -672,8 +672,152 @@
   {
     "id": "ch18_015",
     "source": "books/lean4-formalization/ch18.md",
-    "line": 570,
-    "end": 581,
+    "line": 547,
+    "end": 557,
+    "sha256": "0c6bc7be10f6cb765f96debf5c7c693ee9a2e9cbf5466da458fc3b68db75a225",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 総合演習：一様分布からL²の元へ",
+    "category": "complete",
+    "role": "総合演習",
+    "reason": "追加した総合演習の共通準備と完成解答。文中に掲載順と先行宣言を明示する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch18_014"
+      ],
+      "instruction": "問題18.3の「追加確認」を先に置き、総合演習の共通準備と先行する解答を掲載順に同じファイルへ置く。"
+    },
+    "preceding_setup": [
+      "ch18_014"
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch18_015.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "added_after_initial_review",
+    "prior_probe": {
+      "status": "not_run_at_initial_review",
+      "sorry_warning": false,
+      "method": "New exercise; verification is recorded with the volume 3 revision."
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch18_016",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 586,
+    "end": 596,
+    "sha256": "1f43181ebf1e65ba1ebbc94078df524160b252a20ab9b1ba6129ca13b50cf95a",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 総合演習：一様分布からL²の元へ",
+    "category": "complete",
+    "role": "総合演習",
+    "reason": "追加した総合演習の共通準備と完成解答。文中に掲載順と先行宣言を明示する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch18_014",
+        "ch18_015"
+      ],
+      "instruction": "問題18.3の「追加確認」を先に置き、総合演習の共通準備と先行する解答を掲載順に同じファイルへ置く。"
+    },
+    "preceding_setup": [
+      "ch18_014",
+      "ch18_015"
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch18_016.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "added_after_initial_review",
+    "prior_probe": {
+      "status": "not_run_at_initial_review",
+      "sorry_warning": false,
+      "method": "New exercise; verification is recorded with the volume 3 revision."
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch18_017",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 605,
+    "end": 622,
+    "sha256": "c1e9c6ee0cbaccfa3f0d2b3eccb5f0ae13957b65159df8667e56d42689339bc5",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 総合演習：一様分布からL²の元へ",
+    "category": "complete",
+    "role": "総合演習",
+    "reason": "追加した総合演習の共通準備と完成解答。文中に掲載順と先行宣言を明示する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch18_014",
+        "ch18_015",
+        "ch18_016"
+      ],
+      "instruction": "問題18.3の「追加確認」を先に置き、総合演習の共通準備と先行する解答を掲載順に同じファイルへ置く。"
+    },
+    "preceding_setup": [
+      "ch18_014",
+      "ch18_015",
+      "ch18_016"
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch18_017.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "added_after_initial_review",
+    "prior_probe": {
+      "status": "not_run_at_initial_review",
+      "sorry_warning": false,
+      "method": "New exercise; verification is recorded with the volume 3 revision."
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch18_018",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 650,
+    "end": 672,
+    "sha256": "afc60e8eb674db3747428d8936e7edb3afb89f7c1f3dcb4d02ab7194e54e52e5",
+    "section": "# 第18章：$L^p$空間と確率空間 / ## 18.7 まとめと練習問題 / ### 総合演習：一様分布からL²の元へ",
+    "category": "complete",
+    "role": "総合演習",
+    "reason": "追加した総合演習の共通準備と完成解答。文中に掲載順と先行宣言を明示する。",
+    "contains_sorry": false,
+    "context": {
+      "blocks": [
+        "ch18_014",
+        "ch18_015",
+        "ch18_016",
+        "ch18_017"
+      ],
+      "instruction": "問題18.3の「追加確認」を先に置き、総合演習の共通準備と先行する解答を掲載順に同じファイルへ置く。"
+    },
+    "preceding_setup": [
+      "ch18_014",
+      "ch18_015",
+      "ch18_016",
+      "ch18_017"
+    ],
+    "own_setup": [],
+    "fixture": ".generated/raw/ch18_018.lean",
+    "validation_mode": "compile_after_context_review",
+    "repair_stage": 4,
+    "priority_one": false,
+    "stage0_status": "added_after_initial_review",
+    "prior_probe": {
+      "status": "not_run_at_initial_review",
+      "sorry_warning": false,
+      "method": "New exercise; verification is recorded with the volume 3 revision."
+    },
+    "issue_ids": []
+  },
+  {
+    "id": "ch18_019",
+    "source": "books/lean4-formalization/ch18.md",
+    "line": 740,
+    "end": 751,
     "sha256": "5bd9b733e5769bb41d9a0a0c5aa37aacf043a588fcc759d8e0546d7d7c6e929e",
     "section": "# 第18章：$L^p$空間と確率空間 / ## Part 3の対応表",
     "category": "complete",
@@ -689,7 +833,7 @@
       "import Mathlib",
       "open MeasureTheory"
     ],
-    "fixture": ".generated/raw/ch18_015.lean",
+    "fixture": ".generated/raw/ch18_019.lean",
     "validation_mode": "compile_after_context_review",
     "repair_stage": 4,
     "priority_one": false,

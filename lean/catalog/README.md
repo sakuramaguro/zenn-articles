@@ -10,7 +10,7 @@
 
 | 分類 | 数 |
 |---|---:|
-| 完成例・実行コマンド | 341 |
+| 完成例・実行コマンド | 345 |
 | 前後に続く断片 | 49 |
 | 意図的なエラー例 | 12 |
 | 練習問題・未完成の骨格 | 23 |
@@ -37,7 +37,7 @@
 | [ch15.md](../../books/lean4-formalization/ch15.md) | 12 | [対応表](chapters/ch15.md) | [JSON](chapters/ch15.json) |
 | [ch16.md](../../books/lean4-formalization/ch16.md) | 17 | [対応表](chapters/ch16.md) | [JSON](chapters/ch16.json) |
 | [ch17.md](../../books/lean4-formalization/ch17.md) | 13 | [対応表](chapters/ch17.md) | [JSON](chapters/ch17.json) |
-| [ch18.md](../../books/lean4-formalization/ch18.md) | 15 | [対応表](chapters/ch18.md) | [JSON](chapters/ch18.json) |
+| [ch18.md](../../books/lean4-formalization/ch18.md) | 19 | [対応表](chapters/ch18.md) | [JSON](chapters/ch18.json) |
 | [intro.md](../../books/lean4-formalization/intro.md) | 1 | [対応表](chapters/intro.md) | [JSON](chapters/intro.json) |
 | [part1.md](../../books/lean4-formalization/part1.md) | 0 | Leanコードなし | — |
 | [part2.md](../../books/lean4-formalization/part2.md) | 0 | Leanコードなし | — |

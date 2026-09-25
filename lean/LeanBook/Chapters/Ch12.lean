@@ -155,7 +155,7 @@ theorem open_interval_measurable : MeasurableSet (Set.Ioo (0 : ℝ) 1) := by
 -- 閉区間 [0, 1] も可測（IsClosed.measurableSet の恩恵）
 theorem closed_interval_measurable : MeasurableSet (Set.Icc (0 : ℝ) 1) := measurableSet_Icc
 
--- 左開右閉区間 (0, 1] も可測（開集合と閉集合の差として表現できる）
+-- 左開右閉区間 (0, 1] も可測（開集合 (0,∞) と閉集合 (-∞,1] の交わりとして表せる）
 theorem half_open_interval_measurable : MeasurableSet (Set.Ioc (0 : ℝ) 1) := measurableSet_Ioc
 -- END SOURCE ch12_012
 

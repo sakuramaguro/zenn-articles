@@ -13,17 +13,17 @@
     "books/lean4-formalization/ch09.md": "df671c29574c0acb6ffdd259c3b9f4eecccade8ae6acff961572498e5862e16d",
     "books/lean4-formalization/ch10.md": "d680bdec768676698db8ed0827aa1d3ed8feac27f9f0221b0574aefba160da65",
     "books/lean4-formalization/ch11.md": "0bdf375618e40972a450e41f49e3cb298d16fc43c1cabe96a0a429e2c74d6cc7",
-    "books/lean4-formalization/ch12.md": "d8e775bf5ccabf4e2b8ca0c27f1e05a2662d7f9ba7a0222d9832e380f891a758",
-    "books/lean4-formalization/ch13.md": "b38965d490ad25cb8faf6597c39537104e9505c935cdced8f60a105312f09914",
-    "books/lean4-formalization/ch14.md": "e11cb3ae757dccda7a173bd6b97ed136d7b89c4a73ac75c8da97993b0ed9bc18",
-    "books/lean4-formalization/ch15.md": "7bf3f9dc5490b62acdf4c39b6972fedc7e0cd9156a5385b8ee31f9b30e72a732",
-    "books/lean4-formalization/ch16.md": "17d9733179e3fcf648d1310a55a9aee8748b2a6835415fa5f68105ad5ab19cc4",
-    "books/lean4-formalization/ch17.md": "d029f99c931cb97b927c8064ff5347a291f392acc9c8cb4cd80ee5789146f7a5",
-    "books/lean4-formalization/ch18.md": "7c3b07223dde356b80ac76e4dfd6da8bb76924f3c468bbf9a005e720a26595d4",
+    "books/lean4-formalization/ch12.md": "089f2acd1fc73bbe5c79186622ea934a53ca131dfc6cbc41cb673d61836bc6d9",
+    "books/lean4-formalization/ch13.md": "d4acb65082539c8447962822d3dfb56438eeb3fb9ee8ca05b01a89a5e50d5d2c",
+    "books/lean4-formalization/ch14.md": "722c1dadfc873eee9decfff82a1ab9297d52c97c69f19b0e735098709574e533",
+    "books/lean4-formalization/ch15.md": "b5df9f0f568b605d7069e4bd93227e3eb23282fc12489b11b70b6dbf79d4d53d",
+    "books/lean4-formalization/ch16.md": "5ba8819f8c88da3c5727a268722068991325866325f5007877ae10d590098dd9",
+    "books/lean4-formalization/ch17.md": "c595ccf2d20701e93bc7b5cfb0b317ceacee2fda3e9e239c5cc5f3799dc61db1",
+    "books/lean4-formalization/ch18.md": "834c768aa6056edcdcd527ba366d1face12dccd900f485fa31a2cf5b54405b4d",
     "books/lean4-formalization/intro.md": "633824adc8cabca5888982575ee438ddbbc6404692d436d3b2df6214e89710e4",
     "books/lean4-formalization/part1.md": "15f83784ef3e486ac9ac82c993dd242633de70a2ab9c6dc98249eb9c192cb323",
     "books/lean4-formalization/part2.md": "dfa9e14d303ad6bf44ec03242ea75e6f4541436e5ba442fdde15cb521234ae34",
-    "books/lean4-formalization/part3.md": "4a10d5fabac9a9acd306ddfca32e78fac5867a284fd3ce20ca1ac2bc92f1824b",
+    "books/lean4-formalization/part3.md": "6f336730d71321215bcdb7e0ea012642ee594e1c327b51629041133b2f310782",
     "books/lean4-formalization/part4.md": "3e14877c6ef32ab1c0fa92fb9ad5d9699d8e09dc20755125bfeb17b266406301"
   },
   "compiled_mappings": [
@@ -1584,6 +1584,22 @@
       "module_file": "LeanBook/Chapters/Ch18.lean"
     },
     {
+      "block": "ch18_016",
+      "module_file": "LeanBook/Chapters/Ch18.lean"
+    },
+    {
+      "block": "ch18_017",
+      "module_file": "LeanBook/Chapters/Ch18.lean"
+    },
+    {
+      "block": "ch18_018",
+      "module_file": "LeanBook/Chapters/Ch18.lean"
+    },
+    {
+      "block": "ch18_019",
+      "module_file": "LeanBook/Chapters/Ch18.lean"
+    },
+    {
       "block": "intro_001",
       "module_file": "LeanBook/Chapters/Intro.lean"
     }
@@ -1609,7 +1625,7 @@
     "chapters/ch18.json",
     "chapters/intro.json"
   ],
-  "verification_stage": "5",
+  "verification_stage": "volume3-exercises",
   "diagnostics": [
     {
       "id": "false_equality",
