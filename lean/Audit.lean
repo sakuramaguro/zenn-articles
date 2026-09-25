@@ -342,3 +342,16 @@ import LeanBook
 #print axioms LeanBook.Ch18.real_l2_norm_sq
 #print axioms LeanBook.Ch18.complex_l2_inner
 #print axioms LeanBook.Ch18.nat_martingale_condExp
+
+#print axioms LeanBook.Ch18.unitIntervalMeasure
+#print axioms LeanBook.Ch18.unitInterval_probability
+#print axioms LeanBook.Ch18.unitCoordinate
+#print axioms LeanBook.Ch18.unitCoordinate_measurable
+#print axioms LeanBook.Ch18.unitCoordinate_integrable
+#print axioms LeanBook.Ch18.unitCoordinate_sq_integrable
+#print axioms LeanBook.Ch18.unitCoordinate_expectation
+#print axioms LeanBook.Ch18.unitCoordinate_second_moment
+#print axioms LeanBook.Ch18.unitCoordinate_memLp
+#print axioms LeanBook.Ch18.unitCoordinateL2
+#print axioms LeanBook.Ch18.unitCoordinateL2_ae
+#print axioms LeanBook.Ch18.unitCoordinateL2_norm_sq

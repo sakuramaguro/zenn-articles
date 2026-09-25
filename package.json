@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preview": "zenn preview",
-    "check:book": "node scripts/check-book.mjs",
+    "check:book": "node scripts/check-book.mjs && node scripts/check-book.mjs lean4-formalization-vol3",
     "test": "node --test scripts/check-math.test.mjs && npm run check:book"
   },
   "keywords": [],

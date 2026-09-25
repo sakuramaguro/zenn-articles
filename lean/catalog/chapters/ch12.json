@@ -512,7 +512,7 @@
     "source": "books/lean4-formalization/ch12.md",
     "line": 475,
     "end": 482,
-    "sha256": "d7bb6ce2d66c940018b554c7f373fcc1df2eec63690a34e70a342792a14ccdfd",
+    "sha256": "b452ba00e45252cc9f6f78face9b828ded75179d368a0a761c78a13f880ecbf6",
     "section": "# 第12章：σ-代数と可測空間 / ## 12.4 ボレル集合族 ──── 位相から σ-代数を生成する / ### 証明の実況中継：開区間 $(0, 1)$ が可測集合であること",
     "category": "complete",
     "role": "本文",

@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'books/lean4-formalization/**'
+      - 'books/lean4-formalization-vol3/**'
       - 'images/**'
       - 'lean/**'
       - 'scripts/**'
@@ -13,6 +14,7 @@ on:
     branches: [main]
     paths:
       - 'books/lean4-formalization/**'
+      - 'books/lean4-formalization-vol3/**'
       - 'images/**'
       - 'lean/**'
       - 'scripts/**'
@@ -69,3 +71,4 @@ jobs:
             lean/.generated/*.json
             lean/.generated/logs/
             lean/.generated/book-display/report.json
+            lean/.generated/volume3-display/report.json

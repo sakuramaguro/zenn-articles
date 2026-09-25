@@ -12,8 +12,13 @@ import catalog
 from verify import DIAGNOSTIC_PATTERN, LOGS, parse_axioms, run
 
 ROOT = catalog.ROOT
-SETUP = {'ch17_011': ['ch17_010'], 'ch17_013': ['ch17_012']}
+SETUP = {'ch17_011': ['ch17_010'], 'ch17_013': ['ch17_012'],
+         'ch18_015': ['ch18_014'],
+         'ch18_016': ['ch18_014', 'ch18_015'],
+         'ch18_017': ['ch18_014', 'ch18_015', 'ch18_016'],
+         'ch18_018': ['ch18_014', 'ch18_015', 'ch18_016', 'ch18_017']}
 RELATED = []
+READER_BLOCKS = [f'ch18_{n:03}' for n in range(14, 19)]
 
 
 def main() -> None:
@@ -48,8 +53,13 @@ def main() -> None:
         for name in names:
             if not re.search(r'^#print axioms ' + re.escape(name) + r'\s*$', code, re.M):
                 code += '\n#print axioms ' + name + '\n'
-        path = directory / (identity + '.lean')
-        path.write_text(code)
+        if 'file' in case:
+            path = ROOT / case['file']
+            if path.read_text() != code:
+                raise ValueError(f'Reader example differs from manuscript: {path}')
+        else:
+            path = directory / (identity + '.lean')
+            path.write_text(code)
         output = run(['lake', 'env', 'lean', '-DwarningAsError=true', '-DautoImplicit=false',
                       str(path.relative_to(ROOT))], 'source-stage4c-' + identity + '.log')
         if re.search(DIAGNOSTIC_PATTERN, output) or 'sorryAx' in output:
@@ -62,11 +72,14 @@ def main() -> None:
 
     with ThreadPoolExecutor(max_workers=2) as pool:
         results = list(pool.map(check, cases))
+    reader_file = 'examples/Volume3Exercises.lean'
+    reader_result = check(dict(blocks=READER_BLOCKS, setup=[], file=reader_file))
     result = dict(status='passed', stage='4-C', checked_at=datetime.now(timezone.utc).isoformat(),
                   toolchain=(ROOT / 'lean-toolchain').read_text().strip(),
                   method='Separate Lean processes; original imports and explicit setup blocks; '
                          'warningAsError=true; autoImplicit=false; all named declarations audited',
-                  related_blocks=RELATED, checks=results)
+                  related_blocks=RELATED, checks=results,
+                  reader_example=dict(file=reader_file, **reader_result))
     result_file.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     print(f'Passed: {len(results)} cases / {len(ids)} target blocks; setup reuse counted separately', flush=True)
 
