@@ -2,9 +2,9 @@
   "revision": "volume3-exercises",
   "full_verification": {
     "status": "passed",
-    "checked_at": "2026-09-24T16:52:05.993655+00:00",
+    "checked_at": "2026-09-25T05:50:54.520417+00:00",
     "source_files": {
-      "books/lean4-formalization/ch01.md": "4d5d44b440e1d8d9554dd0ea915bcf9699697b98bccc3618878434d2dab6f1e0",
+      "books/lean4-formalization/ch01.md": "874cc3abdf1c5c2574e9eec738e6c9e3504120320e9397277e0b79149b05522b",
       "books/lean4-formalization/ch02.md": "d9256ff54d274e0515a4d44b234d7e06fb49f201f2afdfcf0019e19efd6e95bb",
       "books/lean4-formalization/ch03.md": "f96e7396d13338a19b0092b20e88def67c6207a11c64a996a843f108ffcd8c8e",
       "books/lean4-formalization/ch04.md": "445c04462c6a38e3e40b5c0deb3f830239a3830998123c88c4f648a47cbe2537",
@@ -480,7 +480,7 @@
         },
         {
           "source": "books/lean4-formalization/ch01.md",
-          "sha256": "4d5d44b440e1d8d9554dd0ea915bcf9699697b98bccc3618878434d2dab6f1e0",
+          "sha256": "874cc3abdf1c5c2574e9eec738e6c9e3504120320e9397277e0b79149b05522b",
           "lean_blocks": 14,
           "details": 9,
           "messages": 7,
@@ -1048,7 +1048,7 @@
       "chapters": [
         {
           "source": "books/lean4-formalization-vol3/intro.md",
-          "sha256": "637a9ace5e0ee5dbef564f5940c3b0e0005f165dafc640b658cf012908ea5d17",
+          "sha256": "dcadb3f19dbadc04604f284ed21ee004b871c87027baac7dbb193a42db16d028",
           "lean_blocks": 0,
           "details": 0,
           "messages": 0,
@@ -1261,7 +1261,8 @@
       "chapter18 new answers open and close",
       "chapter18 exercise math and code displayed",
       "chapter15 new figure loaded and visually inspected",
-      "chapter15 continued answer opens and contains eapprox_id_sup"
+      "chapter15 continued answer opens and contains eapprox_id_sup",
+      "volume3 configuration: price 1800, unpublished, 23 exercises"
     ],
     "not_checked": [
       "mobile device",

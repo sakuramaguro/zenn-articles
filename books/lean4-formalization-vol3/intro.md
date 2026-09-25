@@ -47,13 +47,13 @@ Git、VS Code、公式Lean 4拡張機能を準備したうえで、新しい作�
 git clone https://github.com/sakuramaguro/zenn-articles.git
 cd zenn-articles
 # 掲載コードを検証した版を使う
-git checkout de47df71b6aae0523272ef689d6d30a623bfbdc4
+git checkout 1bec6e944f89fb791fa08c691fb4f707eed175df
 cd lean
 lake exe cache get
 lake build
 ```
 
-VS Codeで開くのは `lean` フォルダです。通常の学習では `lake update` を実行せず、固定した依存関係を使ってください。詳しい手順は[検証環境のREADME](https://github.com/sakuramaguro/zenn-articles/blob/de47df71b6aae0523272ef689d6d30a623bfbdc4/lean/README.md)にあります。
+VS Codeで開くのは `lean` フォルダです。通常の学習では `lake update` を実行せず、固定した依存関係を使ってください。詳しい手順は[検証環境のREADME](https://github.com/sakuramaguro/zenn-articles/blob/1bec6e944f89fb791fa08c691fb4f707eed175df/lean/README.md)にあります。
 
 ## コード欄の読み方
 

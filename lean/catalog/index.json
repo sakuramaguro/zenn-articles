@@ -2,7 +2,7 @@
   "schema_version": 2,
   "review_base": "918e65ab659ad2750b50bef0f28891dbccf070e4",
   "source_files": {
-    "books/lean4-formalization/ch01.md": "4d5d44b440e1d8d9554dd0ea915bcf9699697b98bccc3618878434d2dab6f1e0",
+    "books/lean4-formalization/ch01.md": "874cc3abdf1c5c2574e9eec738e6c9e3504120320e9397277e0b79149b05522b",
     "books/lean4-formalization/ch02.md": "d9256ff54d274e0515a4d44b234d7e06fb49f201f2afdfcf0019e19efd6e95bb",
     "books/lean4-formalization/ch03.md": "f96e7396d13338a19b0092b20e88def67c6207a11c64a996a843f108ffcd8c8e",
     "books/lean4-formalization/ch04.md": "445c04462c6a38e3e40b5c0deb3f830239a3830998123c88c4f648a47cbe2537",
