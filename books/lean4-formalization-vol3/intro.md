@@ -39,21 +39,25 @@ Leanでは、型クラス、仮定とゴールの読み方、基本的なタク�
 
 検証に使用した組み合わせは、**Lean 4.29.0-rc6** と **Mathlib `5c8398df528176d9c87ccd9226ba8f7c8852d59c`** です。Leanはリリース候補版であり、最新版や安定版という意味ではありません。
 
-第1・2巻の固定環境を準備済みなら、同じ `lean` フォルダを使えます。初めて準備する場合は、無料公開の[第1巻・第1章の環境構築](https://zenn.dev/matsuteru/books/ab366ea6fa62f6/viewer/d579df)を参照してください。
+第1・2巻とLean・Mathlibの版は同じですが、前巻で指定したリポジトリの版 `de47df71…` には、本巻の総合演習ファイル `examples/Volume3Exercises.lean` がありません。継続して読む方も、以下の手順で本巻用の版を別フォルダへ取得してください。前巻で書いた練習ファイルは、そのまま残せます。
 
-Git、VS Code、公式Lean 4拡張機能を準備したうえで、新しい作業場所に次の手順で検証用プロジェクトを取得します。
+Git、VS Code、公式Lean 4拡張機能は、既に準備済みなら引き続き使えます。初めて準備する場合は、無料公開の[第1巻・第1章の環境構築](https://zenn.dev/matsuteru/books/ab366ea6fa62f6/viewer/d579df)でインストールの説明を確認し、リポジトリの取得には以下の手順を使ってください。
+
+ターミナルを、検証用プロジェクトを保存したい親フォルダで開きます。まだ存在しない `zenn-articles-vol3` フォルダへ、次の手順で取得します。同名のフォルダが既にある場合は、最初の2行のフォルダ名を別の未使用名に揃えてください。
 
 ```sh
-git clone https://github.com/sakuramaguro/zenn-articles.git
-cd zenn-articles
+git clone https://github.com/sakuramaguro/zenn-articles.git zenn-articles-vol3
+cd zenn-articles-vol3
 # 掲載コードを検証した版を使う
 git checkout 1bec6e944f89fb791fa08c691fb4f707eed175df
 cd lean
 lake exe cache get
 lake build
+# 総合演習ファイルの取得と実行を確認する
+lake env lean examples/Volume3Exercises.lean
 ```
 
-VS Codeで開くのは `lean` フォルダです。通常の学習では `lake update` を実行せず、固定した依存関係を使ってください。詳しい手順は[検証環境のREADME](https://github.com/sakuramaguro/zenn-articles/blob/1bec6e944f89fb791fa08c691fb4f707eed175df/lean/README.md)にあります。
+VS Codeで開くのは、今回取得した `zenn-articles-vol3/lean` フォルダです。最後のコマンドがエラーなく終了し、公理依存の出力に `sorryAx` がなければ、収録した総合演習の解答を確認できています。通常の学習では `lake update` を実行せず、固定した依存関係を使ってください。詳しい手順は[検証環境のREADME](https://github.com/sakuramaguro/zenn-articles/blob/1bec6e944f89fb791fa08c691fb4f707eed175df/lean/README.md)にあります。
 
 ## コード欄の読み方
 

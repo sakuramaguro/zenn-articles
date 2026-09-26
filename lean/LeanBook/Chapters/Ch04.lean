@@ -12,7 +12,7 @@ namespace LeanBook.Ch04
 -- ゴール②：#print で定義の中身を解剖する
 -- 数学：Nat.add_comm がどう証明されているか内部を覗く
 #print Nat.add_comm
--- 出力：theorem Nat.add_comm : ∀ (n m : ℕ), n + m = m + n := ...
+-- 出力の冒頭：protected theorem Nat.add_comm : ∀ (n m : ℕ), n + m = m + n := ...
 
 -- ゴール③：exact? でゴールにマッチする補題を自動発見する
 -- 数学：a + b = b + a を自動で探索させる
@@ -20,11 +20,13 @@ example (a b : ℕ) : a + b = b + a := by
   exact?
   -- Try this: exact Nat.add_comm a b
 
--- ゴール④：名前空間を開いて補題名を短縮する
--- 数学：Nat.add_comm を add_comm と書けるようにする
+-- ゴール④：自作定理の名前空間を開いて、短い名前で参照する
+theorem BookOpenPreview.add_swap (a b : ℕ) : a + b = b + a := by
+  exact Nat.add_comm a b
+
 example (a b : ℕ) : a + b = b + a := by
-  open Nat in
-  exact add_comm a b
+  open BookOpenPreview in
+  exact add_swap a b
   -- No goals ✓
 -- END SOURCE ch04_001
 
@@ -80,32 +82,39 @@ theorem trans_explicit (a b c : ℕ) (h1 : a ≤ b) (h2 : b ≤ c) : a ≤ c := 
 
 -- BEGIN SOURCE ch04_010
 
--- open なし：完全修飾名が必要
-example (a b : ℕ) : a + b = b + a := Nat.add_comm a b
+-- 完全な名前で宣言すると、BookOpenDemo 名前空間に定理が置かれる
+theorem BookOpenDemo.add_swap (a b : ℕ) : a + b = b + a := by
+  exact Nat.add_comm a b
 
--- open Nat in：続く式で Nat. を省略できる
--- 数学：同じ命題を短縮記法で書く
+-- 完全な名前で型を確認する
+#check BookOpenDemo.add_swap
+
+-- 続くコマンドでは短い名前で同じ定理を参照できる
+open BookOpenDemo in
+#check add_swap
+
+-- 式の中で使う
 example (a b : ℕ) : a + b = b + a :=
-  open Nat in add_comm a b
+  open BookOpenDemo in add_swap a b
 
--- ブロック全体に open を適用する
-example (a b c : ℕ) : a + b + c = c + b + a := by
-  open Nat in
-  omega
-  -- No goals ✓
+-- 続くタクティクで使う
+example (a b : ℕ) : a + b = b + a := by
+  open BookOpenDemo in
+  exact add_swap a b
 -- END SOURCE ch04_010
 
 -- BEGIN SOURCE ch04_011
--- import はモジュールの読込、open は名前の解決範囲の指定。
--- Mathlibの全定理がMathlib名前空間の中にあるわけではない。
-open Nat in
+
+-- 自然数の加法可換性。完全な名前で参照する
+#check Nat.add_comm
+
+-- Mathlib が提供する、一般の可換な加法についての別の定理
+-- open Nat を書かなくても参照できる
 #check add_comm
 
+-- MeasureTheory 名前空間の integral は open で短縮できる
 open MeasureTheory in
 #check integral
-
--- 完全修飾名なら、open の範囲によらず参照できる。
-#check Nat.add_comm
 #check MeasureTheory.integral
 -- END SOURCE ch04_011
 

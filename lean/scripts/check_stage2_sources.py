@@ -19,6 +19,11 @@ SEQUENCES = [
 ]
 
 
+def declaration_names(code: str) -> list[str]:
+    """Extract the declaration forms used here, preserving namespace prefixes."""
+    return re.findall(r'^(?:noncomputable )?(?:def|theorem|lemma) (\w+(?:\.\w+)*)', code, re.M)
+
+
 def main() -> None:
     result_file = ROOT / '.generated/stage2-source-checks.json'
     result_file.unlink(missing_ok=True)
@@ -39,7 +44,7 @@ def main() -> None:
     def check(blocks: list[str]) -> dict:
         identity = '-'.join(blocks)
         code = '\n'.join(actual[b]['code'] for b in blocks)
-        names = re.findall(r'^(?:noncomputable )?(?:def|theorem|lemma) (\w+)', code, re.M)
+        names = declaration_names(code)
         for name in names:
             if '#print axioms ' + name not in code:
                 code += '\n#print axioms ' + name + '\n'
