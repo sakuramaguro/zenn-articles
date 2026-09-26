@@ -98,9 +98,10 @@ example (n : ℕ) : 0 + n = n := by
 -- Lean：have で中間ステップを明示する
 example (a b c d : ℕ) (h1 : a ≤ b) (h2 : b ≤ c) (h3 : c ≤ d) : a ≤ d := by
   -- ステップ①：a ≤ c を先に示す（have で宣言）
-  have hac : a ≤ c := by linarith
-  -- ステップ②：a ≤ c と c ≤ d から a ≤ d
-  linarith
+  have hac : a ≤ c := by
+    exact le_trans h1 h2
+  -- ステップ②：中間結果 hac と h3 を使って a ≤ d を示す
+  exact le_trans hac h3
   -- No goals ✓
 -- END SOURCE ch02_010
 
@@ -148,23 +149,23 @@ example (n : ℕ) : n + 0 = n :=
 -- END SOURCE ch02_016
 
 -- BEGIN SOURCE ch02_018
-example (a b c : ℕ) (h1 : a ≤ b) (h2 : b < c) : a < c := by
-  -- have で「中間命題」の証明義務を明示する
-  have key : a ≤ b := h1
-  -- key : a ≤ b と h2 : b < c から linarith が a < c を導く
-  linarith
+example (a b c d : ℕ) (h1 : a ≤ b) (h2 : b ≤ c) (h3 : c < d) : a < d := by
+  have hac : a ≤ c := by
+    exact le_trans h1 h2
+  exact lt_of_le_of_lt hac h3
   -- No goals ✓
 -- END SOURCE ch02_018
 
 -- BEGIN SOURCE ch02_019
--- Mathlib の lt_of_le_of_lt を直接 exact で使う
-example (a b c : ℕ) (h1 : a ≤ b) (h2 : b < c) : a < c :=
-  lt_of_le_of_lt h1 h2
+-- 中間結果を名前にせず、その証明を直接渡す
+example (a b c d : ℕ) (h1 : a ≤ b) (h2 : b ≤ c) (h3 : c < d) : a < d :=
+  lt_of_le_of_lt (le_trans h1 h2) h3
 
--- または calc ブロックで段階的に書く
-example (a b c : ℕ) (h1 : a ≤ b) (h2 : b < c) : a < c :=
+-- または calc ブロックで3段の推移律を書く
+example (a b c d : ℕ) (h1 : a ≤ b) (h2 : b ≤ c) (h3 : c < d) : a < d :=
   calc a ≤ b := h1
-       _ < c := h2
+       _ ≤ c := h2
+       _ < d := h3
 -- END SOURCE ch02_019
 
 end LeanBook.Ch02

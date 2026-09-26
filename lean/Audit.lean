@@ -46,6 +46,10 @@ import LeanBook
 
 #print axioms LeanBook.Ch03.even_square_plus_self_calc
 
+#print axioms LeanBook.Ch04.BookOpenPreview.add_swap
+
+#print axioms LeanBook.Ch04.BookOpenDemo.add_swap
+
 #print axioms LeanBook.Ch04.test
 
 #print axioms LeanBook.Ch04.add_comm_explicit

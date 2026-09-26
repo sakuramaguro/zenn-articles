@@ -1,0 +1,589 @@
+{
+  "revision": {
+    "date": "2026-09-26",
+    "verified_working_tree_base": "4b264858b98c033eda31b64e2a7dec268a615430",
+    "pull_request_base": "0fb11bba45d578f8a0f269a914d0a2708d6aeb05",
+    "base_trees_identical": true,
+    "implemented_findings": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "S01",
+      "S02",
+      "S03"
+    ]
+  },
+  "full_verification": {
+    "status": "passed",
+    "checked_at": "2026-09-26T06:32:15.363295+00:00",
+    "source_files": {
+      "books/lean4-formalization/ch01.md": "d9d22cb84ee28e3d07a0e3fa23b67808baf8cce4bc858b09c4ba4553c9dcb0b5",
+      "books/lean4-formalization/ch02.md": "002b0e8d05519bc4d352eedd989f2bf2f1a1b3491b92f2f4db23ece8644f17cb",
+      "books/lean4-formalization/ch03.md": "4864486f6e687ba254fa6f596272cd9f259d0cd70c0abcf36973be614049f7fc",
+      "books/lean4-formalization/ch04.md": "4e0cf4548bfcc01a7cec1e9f2d438f302671894c658ab1e487763c0d006fe4d0",
+      "books/lean4-formalization/ch05.md": "e13f6455549f250f3a13e0940d6a6defdd40d085f9a54cd6fd138f39cff9a36f",
+      "books/lean4-formalization/ch06.md": "17432491f09a6269278e2691557d0142ad699339f68e83167b3d12c6c6894fc2",
+      "books/lean4-formalization/ch07.md": "e69b70730568dff542e5ef140407af2b3544a3bad7dc9a9ebbf78e7f3506c549",
+      "books/lean4-formalization/ch08.md": "3b16a01edc1657f23161e7b84dd8c190fa68a495528589b615aa2a47cbf905c3",
+      "books/lean4-formalization/ch09.md": "df671c29574c0acb6ffdd259c3b9f4eecccade8ae6acff961572498e5862e16d",
+      "books/lean4-formalization/ch10.md": "d680bdec768676698db8ed0827aa1d3ed8feac27f9f0221b0574aefba160da65",
+      "books/lean4-formalization/ch11.md": "0bdf375618e40972a450e41f49e3cb298d16fc43c1cabe96a0a429e2c74d6cc7",
+      "books/lean4-formalization/ch12.md": "089f2acd1fc73bbe5c79186622ea934a53ca131dfc6cbc41cb673d61836bc6d9",
+      "books/lean4-formalization/ch13.md": "d4acb65082539c8447962822d3dfb56438eeb3fb9ee8ca05b01a89a5e50d5d2c",
+      "books/lean4-formalization/ch14.md": "722c1dadfc873eee9decfff82a1ab9297d52c97c69f19b0e735098709574e533",
+      "books/lean4-formalization/ch15.md": "b5df9f0f568b605d7069e4bd93227e3eb23282fc12489b11b70b6dbf79d4d53d",
+      "books/lean4-formalization/ch16.md": "5ba8819f8c88da3c5727a268722068991325866325f5007877ae10d590098dd9",
+      "books/lean4-formalization/ch17.md": "c595ccf2d20701e93bc7b5cfb0b317ceacee2fda3e9e239c5cc5f3799dc61db1",
+      "books/lean4-formalization/ch18.md": "70e6951865a1714d955d620a27a0104d71ef952450e34401f6f6ad347baffc7a",
+      "books/lean4-formalization/intro.md": "383e145373760eda13d2781b6ae2868a157a01b91536a3908abb96bbb1cbbcf8",
+      "books/lean4-formalization/part1.md": "15f83784ef3e486ac9ac82c993dd242633de70a2ab9c6dc98249eb9c192cb323",
+      "books/lean4-formalization/part2.md": "dfa9e14d303ad6bf44ec03242ea75e6f4541436e5ba442fdde15cb521234ae34",
+      "books/lean4-formalization/part3.md": "6f336730d71321215bcdb7e0ea012642ee594e1c327b51629041133b2f310782",
+      "books/lean4-formalization/part4.md": "3e14877c6ef32ab1c0fa92fb9ad5d9699d8e09dc20755125bfeb17b266406301"
+    },
+    "toolchain": "leanprover/lean4:v4.29.0-rc6",
+    "dependencies": {
+      "mathlib": "5c8398df528176d9c87ccd9226ba8f7c8852d59c",
+      "plausible": "e84e3e16aea6b72cc5d311ca1bb25caad417e162",
+      "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "importGraph": "f207d9fcf0cef00ba79962a33ef156061914d9c7",
+      "proofwidgets": "2e58165a9dcdca9837b666528f974299ee1a51cc",
+      "aesop": "c3361708f266893de5d1769192b60d4b1831f2bb",
+      "Qq": "221e8088e3a066b8676dc471ff10638cf1c10835",
+      "batteries": "bd58e3506632241b59e406902d5e42b73cdeccce",
+      "Cli": "3de531c1135f5e3a01f3ac04830996fda476b28e"
+    },
+    "catalog_blocks": 429,
+    "audited_declarations": 323,
+    "diagnostic_cases": 37,
+    "reports": [
+      "verification.json",
+      "stage2-source-checks.json",
+      "stage3a-source-checks.json",
+      "stage3b-source-checks.json",
+      "stage3c-source-checks.json",
+      "stage4a-source-checks.json",
+      "stage4b-source-checks.json",
+      "stage4c-source-checks.json"
+    ],
+    "coverage": {
+      "completed_blocks": 394,
+      "diagnostic_blocks": 35,
+      "isolated_cases": 346,
+      "repeated_targets": {
+        "ch17_010": 2
+      }
+    }
+  },
+  "axiom_audit": {
+    "audited_declarations": 323,
+    "declarations_with_sorryAx": [],
+    "new_declarations": {
+      "LeanBook.Ch04.BookOpenPreview.add_swap": [],
+      "LeanBook.Ch04.BookOpenDemo.add_swap": []
+    }
+  },
+  "regression_tests": {
+    "status": "passed",
+    "tests": 32
+  },
+  "manuscript_changes": [
+    {
+      "path": "books/ab366ea6fa62f6/19a342.md",
+      "before_sha256": "300f5833f5e0bafd4578b6821d83d9dbffc1ebf1c3697ed98d05cb7eeab432d6",
+      "proposed_sha256": "711016b133679c6dd82137d734f98d3c9458608298b3f7a22153dfe85cd8c5fd"
+    },
+    {
+      "path": "books/ab366ea6fa62f6/1d5709.md",
+      "before_sha256": "64676f384d389e394f48a4017bb41aa8d4c85ce7bf3f1296e259326c5c2ea707",
+      "proposed_sha256": "c7b51d60d0a5a4e139eb3e6be950c5ed605c615fd1a26f120b50f745db7a2ce2"
+    },
+    {
+      "path": "books/ab366ea6fa62f6/415c61.md",
+      "before_sha256": "7eab14e9c04a428a5535b43ba4165455726840e15f3ea7fe9c9cb3df17f2eb66",
+      "proposed_sha256": "7efadc30e9ad4f430faf146fbceb3cae9504644d0adf6787a03b4720ac124976"
+    },
+    {
+      "path": "books/ab366ea6fa62f6/d4843b.md",
+      "before_sha256": "e4f2c1899591844db8299c93cfce51901362156cf311493526846ad85452e334",
+      "proposed_sha256": "f91b0102674e261a97bfa0424260e49f6ae5f79e5d02f76cdfced447794452ec"
+    },
+    {
+      "path": "books/ab366ea6fa62f6/d579df.md",
+      "before_sha256": "a5d75ab6519af08033cd5b0aac54e2376b43e60d57cb567cd99ba139c764734c",
+      "proposed_sha256": "24a2eaecf0d69fb143b76bd4d234b573ac8a943cf1c68b2c6bd7b9f4b8799aca"
+    },
+    {
+      "path": "books/ab366ea6fa62f6/e8d7ab.md",
+      "before_sha256": "b0e619a7c7343fbea497b9a5f122932a4a714d62562a234433755c0d7301103d",
+      "proposed_sha256": "65debaf9dfaf4c040adb35d000e982cc5c59a9986b1f345361a59c6b109c45f4"
+    },
+    {
+      "path": "books/lean4-formalization-vol2/ch06.md",
+      "before_sha256": "a9181197d916d3231cdae8d06c58fe2257b2314674b1d1aacc45c6f2c2d6775a",
+      "proposed_sha256": "8b3ba29fc4c3a4a970c4585560761140f85796a4232a28faa6ff66e10c455873"
+    },
+    {
+      "path": "books/lean4-formalization-vol2/ch08.md",
+      "before_sha256": "6c0bdf6100e7d8fc360fb8a58e97cbb57211e346875337b72ff3c52bb3f5f71d",
+      "proposed_sha256": "188ad83f21973431ce1b2d51aaed3e314b8db6c2c6b2236c9cb663e9df839e84"
+    },
+    {
+      "path": "books/lean4-formalization-vol3/ch18.md",
+      "before_sha256": "3fa0c89a309e9f2052ef844f5795f9ea3e8dc76f362e04623e19d1f727dd7be3",
+      "proposed_sha256": "9f559db8ca7b2f0c82abdfee435578cbbb1c4b4c481aaa7a735dea4f0a1cbfeb"
+    },
+    {
+      "path": "books/lean4-formalization-vol3/intro.md",
+      "before_sha256": "dcadb3f19dbadc04604f284ed21ee004b871c87027baac7dbb193a42db16d028",
+      "proposed_sha256": "6cb2ce6bc8dc62eaa66fc1a89c1d0b2a1fa0681cd1922be05e8007f3aa819a75"
+    },
+    {
+      "path": "books/lean4-formalization/ch01.md",
+      "before_sha256": "874cc3abdf1c5c2574e9eec738e6c9e3504120320e9397277e0b79149b05522b",
+      "proposed_sha256": "d9d22cb84ee28e3d07a0e3fa23b67808baf8cce4bc858b09c4ba4553c9dcb0b5"
+    },
+    {
+      "path": "books/lean4-formalization/ch02.md",
+      "before_sha256": "d9256ff54d274e0515a4d44b234d7e06fb49f201f2afdfcf0019e19efd6e95bb",
+      "proposed_sha256": "002b0e8d05519bc4d352eedd989f2bf2f1a1b3491b92f2f4db23ece8644f17cb"
+    },
+    {
+      "path": "books/lean4-formalization/ch03.md",
+      "before_sha256": "f96e7396d13338a19b0092b20e88def67c6207a11c64a996a843f108ffcd8c8e",
+      "proposed_sha256": "4864486f6e687ba254fa6f596272cd9f259d0cd70c0abcf36973be614049f7fc"
+    },
+    {
+      "path": "books/lean4-formalization/ch04.md",
+      "before_sha256": "445c04462c6a38e3e40b5c0deb3f830239a3830998123c88c4f648a47cbe2537",
+      "proposed_sha256": "4e0cf4548bfcc01a7cec1e9f2d438f302671894c658ab1e487763c0d006fe4d0"
+    },
+    {
+      "path": "books/lean4-formalization/ch05.md",
+      "before_sha256": "17c270dfa58cf08f2fbe792abc23124df71314323fe59e65cf849b946aeea3cf",
+      "proposed_sha256": "e13f6455549f250f3a13e0940d6a6defdd40d085f9a54cd6fd138f39cff9a36f"
+    },
+    {
+      "path": "books/lean4-formalization/ch06.md",
+      "before_sha256": "12827a5394f0d9612dc4c8780fe9f0204e96232503ab733b2ce971f70388e63d",
+      "proposed_sha256": "17432491f09a6269278e2691557d0142ad699339f68e83167b3d12c6c6894fc2"
+    },
+    {
+      "path": "books/lean4-formalization/ch08.md",
+      "before_sha256": "5a568dbcb15754c42a3c08a558f459e879993381fb718e8417afbb8d7f8cc6c8",
+      "proposed_sha256": "3b16a01edc1657f23161e7b84dd8c190fa68a495528589b615aa2a47cbf905c3"
+    },
+    {
+      "path": "books/lean4-formalization/ch18.md",
+      "before_sha256": "834c768aa6056edcdcd527ba366d1face12dccd900f485fa31a2cf5b54405b4d",
+      "proposed_sha256": "70e6951865a1714d955d620a27a0104d71ef952450e34401f6f6ad347baffc7a"
+    },
+    {
+      "path": "books/lean4-formalization/intro.md",
+      "before_sha256": "633824adc8cabca5888982575ee438ddbbc6404692d436d3b2df6214e89710e4",
+      "proposed_sha256": "383e145373760eda13d2781b6ae2868a157a01b91536a3908abb96bbb1cbbcf8"
+    }
+  ],
+  "changed_validation_files": {
+    "lean/Audit.lean": "aaaf9e817997d97ebfd15be85974f7d2295814a4b58ec2c752822692b459a589",
+    "lean/LeanBook/Chapters/Ch02.lean": "0df18c5e22a05ce41fa8c8ce93f2a7e53ac5e43540a0a20b3460e9185b0da1bc",
+    "lean/LeanBook/Chapters/Ch04.lean": "7d32dac56c9626526f422e024e5acd5d8892703b586ca4cf2b4e7a7747fc2f75",
+    "lean/scripts/check_stage2_sources.py": "48880b51e56317bc15238ffcf594b10b8efc84cbf4f4d16f3da7e8ad0f74d971",
+    "lean/scripts/test_validation.py": "80004ee1f1e81817a62f4f1516bd780a539d5139c66444c14673857a611422a8",
+    "lean/catalog/index.json": "8a2c3fbd4694706ede54fe048a293730b581a7ed6a53186706b2cb0fd8af4e27"
+  },
+  "npm_test": {
+    "status": "passed",
+    "combined_pages": 23,
+    "volume3_pages": 8
+  },
+  "additional_render": {
+    "scope": "All target Markdown rendered with the installed Zenn renderer; formulas, local images, and relative links checked. This is not a browser layout or external-link check.",
+    "status": "passed",
+    "pages": [
+      {
+        "source": "books/ab366ea6fa62f6/19a342.md",
+        "sha256": "711016b133679c6dd82137d734f98d3c9458608298b3f7a22153dfe85cd8c5fd",
+        "math": 18,
+        "images": 1,
+        "details": 5,
+        "errors": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/1d5709.md",
+        "sha256": "c7b51d60d0a5a4e139eb3e6be950c5ed605c615fd1a26f120b50f745db7a2ce2",
+        "math": 11,
+        "images": 10,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/415c61.md",
+        "sha256": "7efadc30e9ad4f430faf146fbceb3cae9504644d0adf6787a03b4720ac124976",
+        "math": 6,
+        "images": 0,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/d4843b.md",
+        "sha256": "f91b0102674e261a97bfa0424260e49f6ae5f79e5d02f76cdfced447794452ec",
+        "math": 3,
+        "images": 1,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/d579df.md",
+        "sha256": "24a2eaecf0d69fb143b76bd4d234b573ac8a943cf1c68b2c6bd7b9f4b8799aca",
+        "math": 9,
+        "images": 3,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/e8d7ab.md",
+        "sha256": "65debaf9dfaf4c040adb35d000e982cc5c59a9986b1f345361a59c6b109c45f4",
+        "math": 0,
+        "images": 0,
+        "details": 0,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch06.md",
+        "sha256": "8b3ba29fc4c3a4a970c4585560761140f85796a4232a28faa6ff66e10c455873",
+        "math": 250,
+        "images": 1,
+        "details": 15,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch07.md",
+        "sha256": "7c161c21fd41a2684f6433273480e17e2dbfa74d1b3775b4a45334002e3e5f21",
+        "math": 109,
+        "images": 2,
+        "details": 12,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch08.md",
+        "sha256": "188ad83f21973431ce1b2d51aaed3e314b8db6c2c6b2236c9cb663e9df839e84",
+        "math": 133,
+        "images": 1,
+        "details": 12,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch09.md",
+        "sha256": "f485a55ce3e821847dcb288940b4c0c2e12b6734c22f82158af1a9d08404ff45",
+        "math": 85,
+        "images": 1,
+        "details": 12,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch10.md",
+        "sha256": "ad16bd320aefd7ac30ca3923f04468fd6f5b126278fcf2a883d7743c46d2556e",
+        "math": 149,
+        "images": 0,
+        "details": 12,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch11.md",
+        "sha256": "ff39b21763aac7d163bc9c4eebacdb94d669b3fc8c071aaf9c8a5c1e67a9f6a6",
+        "math": 58,
+        "images": 1,
+        "details": 12,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/intro.md",
+        "sha256": "2150fc0ed1d66d3401ecbd5dcaa6b130d4f9c7b58a0eb69e65ea790405000114",
+        "math": 0,
+        "images": 0,
+        "details": 0,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch12.md",
+        "sha256": "9166eadd148af034d615265df1efa834ed7583845afed24a42af0d87b535b70e",
+        "math": 71,
+        "images": 1,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch13.md",
+        "sha256": "df55b52a1ec40986659330a648bd908ee421b92ac5a63e8ed35b0e3155e14f68",
+        "math": 55,
+        "images": 1,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch14.md",
+        "sha256": "931f89a89ca6483eb5d8bfcdfab9b06534f061b26b0009ad13c761538c81a7c7",
+        "math": 46,
+        "images": 1,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch15.md",
+        "sha256": "ddba9d4c02e811c365bdd6ae9837511b8037697a819b0105e7a8e45cf4dcc569",
+        "math": 39,
+        "images": 2,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch16.md",
+        "sha256": "6a1f1c4f98cdf86d38a9902fdb70a513b942fa047309ccce462349f63aff9dd3",
+        "math": 39,
+        "images": 0,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch17.md",
+        "sha256": "92bbd4cf072e7ebadae938c2cc720d324b7c3e4422a4f38eefdc5cae47d18544",
+        "math": 76,
+        "images": 3,
+        "details": 9,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch18.md",
+        "sha256": "9f559db8ca7b2f0c82abdfee435578cbbb1c4b4c481aaa7a735dea4f0a1cbfeb",
+        "math": 99,
+        "images": 2,
+        "details": 16,
+        "errors": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/intro.md",
+        "sha256": "6cb2ce6bc8dc62eaa66fc1a89c1d0b2a1fa0681cd1922be05e8007f3aa819a75",
+        "math": 1,
+        "images": 0,
+        "details": 0,
+        "errors": []
+      },
+      {
+        "source": "articles/lean4-ai-type-error.md",
+        "sha256": "dc82f23d0c95f20b681ff6a7a0b8b0880b79b67275c140cbd9bb50877fdd0feb",
+        "math": 0,
+        "images": 0,
+        "details": 0,
+        "errors": []
+      },
+      {
+        "source": "articles/lean4-rfl-proof-failure.md",
+        "sha256": "69609a1a817fcd021de329519c6beb45c794b2c0db865723c260bcf7ac08ed6a",
+        "math": 0,
+        "images": 0,
+        "details": 1,
+        "errors": []
+      },
+      {
+        "source": "articles/lean4-unknown-identifier.md",
+        "sha256": "08114ed54ebb1473948844829afb0dd14da4b737977e95b34ac92510dd6fc74a",
+        "math": 0,
+        "images": 0,
+        "details": 0,
+        "errors": []
+      }
+    ]
+  },
+  "volume_code_match": {
+    "status": "passed",
+    "blocks": 428,
+    "chapters": [
+      {
+        "source": "books/ab366ea6fa62f6/d579df.md",
+        "combined": "books/lean4-formalization/ch01.md",
+        "blocks": 14,
+        "differences": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/415c61.md",
+        "combined": "books/lean4-formalization/ch02.md",
+        "blocks": 19,
+        "differences": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/1d5709.md",
+        "combined": "books/lean4-formalization/ch03.md",
+        "blocks": 24,
+        "differences": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/d4843b.md",
+        "combined": "books/lean4-formalization/ch04.md",
+        "blocks": 23,
+        "differences": []
+      },
+      {
+        "source": "books/ab366ea6fa62f6/19a342.md",
+        "combined": "books/lean4-formalization/ch05.md",
+        "blocks": 31,
+        "differences": [
+          {
+            "block": 23,
+            "unchanged_from_audited_comment_difference": true
+          }
+        ]
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch06.md",
+        "combined": "books/lean4-formalization/ch06.md",
+        "blocks": 48,
+        "differences": [
+          {
+            "block": 2,
+            "unchanged_from_audited_comment_difference": true
+          },
+          {
+            "block": 3,
+            "unchanged_from_audited_comment_difference": true
+          },
+          {
+            "block": 23,
+            "unchanged_from_audited_comment_difference": true
+          }
+        ]
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch07.md",
+        "combined": "books/lean4-formalization/ch07.md",
+        "blocks": 41,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch08.md",
+        "combined": "books/lean4-formalization/ch08.md",
+        "blocks": 36,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch09.md",
+        "combined": "books/lean4-formalization/ch09.md",
+        "blocks": 28,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch10.md",
+        "combined": "books/lean4-formalization/ch10.md",
+        "blocks": 26,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol2/ch11.md",
+        "combined": "books/lean4-formalization/ch11.md",
+        "blocks": 26,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch12.md",
+        "combined": "books/lean4-formalization/ch12.md",
+        "blocks": 19,
+        "differences": [
+          {
+            "block": 2,
+            "unchanged_from_audited_comment_difference": true
+          }
+        ]
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch13.md",
+        "combined": "books/lean4-formalization/ch13.md",
+        "blocks": 17,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch14.md",
+        "combined": "books/lean4-formalization/ch14.md",
+        "blocks": 15,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch15.md",
+        "combined": "books/lean4-formalization/ch15.md",
+        "blocks": 12,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch16.md",
+        "combined": "books/lean4-formalization/ch16.md",
+        "blocks": 17,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch17.md",
+        "combined": "books/lean4-formalization/ch17.md",
+        "blocks": 13,
+        "differences": []
+      },
+      {
+        "source": "books/lean4-formalization-vol3/ch18.md",
+        "combined": "books/lean4-formalization/ch18.md",
+        "blocks": 19,
+        "differences": []
+      }
+    ]
+  },
+  "reader_steps": {
+    "status": "passed",
+    "scratch_steps": [
+      {
+        "block": "ch01_002",
+        "same_file_replaced": true,
+        "status": "passed"
+      },
+      {
+        "block": "ch01_003",
+        "same_file_replaced": true,
+        "status": "passed"
+      }
+    ],
+    "fresh_clone": {
+      "revision": "1bec6e944f89fb791fa08c691fb4f707eed175df",
+      "source": "https://github.com/sakuramaguro/zenn-articles.git",
+      "exercise_exists": true,
+      "exercise_executed": true,
+      "exercise_sha256": "2c020b72defdec11bea3ff00ef89c87ad926c838c0f6e7f0b3bcf0d5dc25dec5",
+      "execution_environment": "Existing pinned lean project and cached dependencies",
+      "fresh_dependency_download_and_build": "not performed"
+    }
+  },
+  "browser": {
+    "scope": "Targeted body preview with Zenn bundled CSS at 1280 x 720 and 390 x 844; not the published Zenn site",
+    "checked_targets": [
+      "第1章のコード置換案内",
+      "第3章の診断本文",
+      "第4章の名前空間のコード",
+      "第6章の3つの答えの開閉",
+      "第8章の開被覆の表",
+      "第3巻序文の別フォルダ取得手順"
+    ],
+    "checkpoint_answers": {
+      "count": 3,
+      "openedAndRead": true,
+      "firstClosedAndReopened": true
+    },
+    "editor_preview_limitation": "Zenn CLI editor has a fixed minimum width; mobile checks therefore use a separate body-only preview",
+    "remaining": "Published-site mobile layout and all existing images were not exhaustively reviewed"
+  },
+  "limits": [
+    "Published-site and physical smartphone layout not checked.",
+    "Fresh clone performed; exercises executed using the existing project with matching pinned dependencies.",
+    "Fresh dependency download and full build inside the new clone not performed.",
+    "All existing images and real-reader learning outcomes not exhaustively assessed."
+  ],
+  "raw_evidence": "Full logs and browser screenshots remain local; generated verifier reports can be reproduced with the commands in lean/READER_AUDIT_REVISION.md."
+}

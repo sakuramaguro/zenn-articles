@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 import catalog
+from check_stage2_sources import declaration_names
 from verify import parse_axioms, validate_diagnostic_output
 from verify_all import check_coverage
 
@@ -105,6 +106,23 @@ class AxiomChecks(unittest.TestCase):
     def test_missing_audit_output_is_rejected(self):
         with self.assertRaisesRegex(ValueError, 'coverage mismatch'):
             parse_axioms("'a' does not depend on any axioms", ['a', 'b'])
+
+
+class Stage2DeclarationChecks(unittest.TestCase):
+    def test_qualified_and_plain_names_reach_axiom_audit(self):
+        code = ('def identity (n : Nat) : Nat := n\n'
+                'theorem BookOpenDemo.add_swap : True := True.intro\n'
+                'lemma BookOpenPreview.add_swap : True := True.intro\n')
+        expected = ['identity', 'BookOpenDemo.add_swap', 'BookOpenPreview.add_swap']
+        names = declaration_names(code)
+        self.assertEqual(names, expected)
+        output = '\n'.join(f"'{name}' does not depend on any axioms" for name in expected)
+        self.assertEqual(parse_axioms(output, names), {name: [] for name in expected})
+
+    def test_missing_qualified_declaration_audit_is_rejected(self):
+        names = declaration_names('theorem BookOpenDemo.add_swap : True := True.intro\n')
+        with self.assertRaisesRegex(ValueError, 'coverage mismatch'):
+            parse_axioms('', names)
 
 
 class DiagnosticChecks(unittest.TestCase):
